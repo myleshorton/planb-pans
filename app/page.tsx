@@ -39,7 +39,7 @@ export default function Home() {
               marginBottom: '24px',
               fontWeight: 600
             }}>
-              ✨ There Is Always a Plan B
+              ✨ There Is Always a Plan B For PANS, PANDAS & Autism
             </p>
 
             <h1 style={{
@@ -102,59 +102,12 @@ export default function Home() {
               🎙️ Listen to the Podcast
             </p>
 
-            <div style={{
-              backgroundColor: '#f5f5f5',
+            <iframe style={{
               borderRadius: '8px',
-              padding: '60px 40px',
               marginBottom: '32px',
-              minHeight: '240px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              border: '1px solid #ebe0d9'
-            }}>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: '48px', marginBottom: '16px' }}>🎧</div>
-                <p style={{
-                  fontFamily: 'var(--font-inter), sans-serif',
-                  fontSize: '16px',
-                  color: '#999',
-                  marginBottom: '8px'
-                }}>
-                  Podcast coming soon
-                </p>
-                <p style={{
-                  fontFamily: 'var(--font-inter), sans-serif',
-                  fontSize: '13px',
-                  color: '#ccc'
-                }}>
-                  Interviews with parents, doctors & practitioners exploring Plans B through H
-                </p>
-              </div>
-            </div>
-
-            <button style={{
-              fontFamily: 'var(--font-inter), sans-serif',
-              fontSize: '13px',
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-              padding: '16px 36px',
-              backgroundColor: '#c41a1a',
-              color: '#fff',
-              border: 'none',
-              cursor: 'pointer',
-              borderRadius: '4px',
-              fontWeight: 600,
-              transition: 'all 0.3s ease'
-            }} onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#a01515'
-              e.currentTarget.style.transform = 'translateY(-2px)'
-            }} onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#c41a1a'
-              e.currentTarget.style.transform = 'translateY(0)'
-            }}>
-              Listen to Episodes →
-            </button>
+              width: '100%',
+              height: '352px'
+            }} src="https://open.spotify.com/embed/show/0cVlSGzG1O4m6HZCFeKan9?utm_source=generator" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
           </div>
 
         </div>
