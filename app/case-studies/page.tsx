@@ -20,7 +20,7 @@ export default function CaseStudies() {
           Case Studies
         </h1>
         <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '18px', color: '#666', lineHeight: 1.8, maxWidth: '700px', position: 'relative', zIndex: 1 }}>
-          Real families on their journey. Tracking successes, challenges, and everything in between as we explore Plans B through H.
+          Real families, real protocols, real results. See what's working, what's not, and how parents are finding their way forward.
         </p>
       </section>
 
@@ -48,7 +48,7 @@ export default function CaseStudies() {
               <div style={{ marginBottom: '24px' }}>
                 <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#999', marginBottom: '8px' }}>Journey</p>
                 <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#666', lineHeight: 1.8 }}>
-                  Started with Plan A (standard protocol). After 6 months, exploring Plan B with focus on [modality]. Documenting progress, challenges, and insights.
+                  What happens when Plan A doesn't work? This family moved to Plan B, then C. Read how they navigated new modalities, setbacks, and breakthroughs.
                 </p>
               </div>
 
@@ -109,7 +109,7 @@ export default function CaseStudies() {
             Share Your Story
           </h2>
           <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '16px', color: '#fff', lineHeight: 1.8, marginBottom: '40px', opacity: 0.95 }}>
-            We're collecting case studies from families willing to share their journey. Help other parents find hope and options.
+            Your story matters. If your family has found answers—or is still searching—we want to hear from you. Share what's working (or what isn't) and help others find their Plan B.
           </p>
           <a href="/contact" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '16px 40px', backgroundColor: '#fff', color: '#c41a1a', border: 'none', cursor: 'pointer', borderRadius: '4px', textDecoration: 'none', display: 'inline-block', fontWeight: 600, transition: 'all 0.3s ease' }} onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'scale(1.05)'
