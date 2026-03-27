@@ -36,7 +36,7 @@ export default function CaseStudies() {
             e.currentTarget.style.transform = 'translateY(0)'
           }}>
             <div style={{ padding: '32px', background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', borderBottom: '1px solid #f0e0d8' }}>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#c41a1a', marginBottom: '8px', fontWeight: 600 }}>FEATURED</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#1F6B6B', marginBottom: '8px', fontWeight: 600 }}>FEATURED</p>
               <h3 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '28px', fontWeight: 400, color: '#111', marginBottom: '12px' }}>Child's Name</h3>
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                 <span style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', backgroundColor: '#f0faf4', color: '#16a34a', padding: '4px 12px', borderRadius: '2px' }}>PANS</span>
@@ -63,10 +63,10 @@ export default function CaseStudies() {
                 </div>
               </div>
 
-              <button style={{ width: '100%', padding: '12px', fontFamily: 'var(--font-inter), sans-serif', fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', backgroundColor: '#c41a1a', color: '#fff', border: 'none', cursor: 'pointer', borderRadius: '4px', fontWeight: 600, transition: 'all 0.3s ease' }} onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#a01515'
+              <button style={{ width: '100%', padding: '12px', fontFamily: 'var(--font-inter), sans-serif', fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', backgroundColor: '#1F6B6B', color: '#fff', border: 'none', cursor: 'pointer', borderRadius: '4px', fontWeight: 600, transition: 'all 0.3s ease' }} onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#134B4B'
               }} onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#c41a1a'
+                e.currentTarget.style.backgroundColor = '#1F6B6B'
               }}>
                 Read Full Case Study →
               </button>
@@ -76,7 +76,7 @@ export default function CaseStudies() {
           {/* Phage Therapy Case Study */}
           <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#c41a1a', marginBottom: '12px', fontWeight: 600 }}>PHAGE THERAPY</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#1F6B6B', marginBottom: '12px', fontWeight: 600 }}>PHAGE THERAPY</p>
               <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '13px', color: '#666', lineHeight: 1.8, marginBottom: '16px' }}>Real kid. Real healing journey. Weekly progress updates coming soon.</p>
               <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#bbb' }}>Enrollment starting soon</p>
             </div>
@@ -85,7 +85,7 @@ export default function CaseStudies() {
           {/* Biomagnetic Therapy Case Study */}
           <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#c41a1a', marginBottom: '12px', fontWeight: 600 }}>BIOMAGNETIC THERAPY</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#1F6B6B', marginBottom: '12px', fontWeight: 600 }}>BIOMAGNETIC THERAPY</p>
               <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '13px', color: '#666', lineHeight: 1.8, marginBottom: '16px' }}>Real kid. Real healing journey. Weekly progress updates coming soon.</p>
               <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#bbb' }}>Enrollment starting soon</p>
             </div>
@@ -94,7 +94,7 @@ export default function CaseStudies() {
       </section>
 
       {/* Contribute Section */}
-      <section style={{ padding: '120px 20px', background: 'linear-gradient(135deg, #c41a1a 0%, #a01515 100%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ padding: '120px 20px', background: 'linear-gradient(135deg, #1F6B6B 0%, #134B4B 100%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{
           position: 'absolute',
           bottom: '-50px',
@@ -113,7 +113,7 @@ export default function CaseStudies() {
           <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '16px', color: '#fff', lineHeight: 1.8, marginBottom: '40px', opacity: 0.95 }}>
             Your story matters. If your family has found answers—or is still searching—we want to hear from you. Share what's working (or what isn't) and help others find their Plan B.
           </p>
-          <a href="/contact" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '16px 40px', backgroundColor: '#fff', color: '#c41a1a', border: 'none', cursor: 'pointer', borderRadius: '4px', textDecoration: 'none', display: 'inline-block', fontWeight: 600, transition: 'all 0.3s ease' }} onMouseEnter={(e) => {
+          <a href="/contact" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '16px 40px', backgroundColor: '#fff', color: '#1F6B6B', border: 'none', cursor: 'pointer', borderRadius: '4px', textDecoration: 'none', display: 'inline-block', fontWeight: 600, transition: 'all 0.3s ease' }} onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'scale(1.05)'
             e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)'
           }} onMouseLeave={(e) => {

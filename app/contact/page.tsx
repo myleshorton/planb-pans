@@ -154,7 +154,7 @@ export default function Contact() {
                   fontSize: '12px',
                   letterSpacing: '0.15em',
                   textTransform: 'uppercase',
-                  backgroundColor: submitted ? '#16a34a' : '#c41a1a',
+                  backgroundColor: submitted ? '#16a34a' : '#1F6B6B',
                   color: '#fff',
                   border: 'none',
                   borderRadius: '4px',

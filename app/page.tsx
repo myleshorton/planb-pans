@@ -35,7 +35,7 @@ export default function Home() {
               fontSize: '16px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: '#c41a1a',
+              color: '#1F6B6B',
               marginBottom: '24px',
               fontWeight: 600
             }}>
@@ -71,7 +71,7 @@ export default function Home() {
               fontSize: '16px',
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
-              color: '#c41a1a',
+              color: '#1F6B6B',
               marginTop: '60px',
               marginBottom: '40px',
               fontWeight: 600
@@ -95,7 +95,7 @@ export default function Home() {
               fontSize: '13px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: '#c41a1a',
+              color: '#1F6B6B',
               marginBottom: '32px',
               fontWeight: 600
             }}>
@@ -116,7 +116,7 @@ export default function Home() {
       {/* CTA Section - Hopeful */}
       <section style={{
         padding: '120px 20px',
-        background: 'linear-gradient(135deg, #c41a1a 0%, #a01515 100%)',
+        background: 'linear-gradient(135deg, #1F6B6B 0%, #134B4B 100%)',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden'
@@ -161,7 +161,7 @@ export default function Home() {
             textTransform: 'uppercase',
             padding: '18px 40px',
             backgroundColor: '#fff',
-            color: '#c41a1a',
+            color: '#1F6B6B',
             border: 'none',
             cursor: 'pointer',
             borderRadius: '4px',
