@@ -74,20 +74,44 @@ export default function CaseStudies() {
           </div>
 
           {/* Phage Therapy Case Study */}
-          <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+          <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', cursor: 'pointer', transition: 'all 0.3s ease' }} onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = '0 20px 50px rgba(31, 107, 107, 0.1)'
+            e.currentTarget.style.transform = 'translateY(-8px)'
+          }} onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)'
+            e.currentTarget.style.transform = 'translateY(0)'
+          }}>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#1F6B6B', marginBottom: '12px', fontWeight: 600 }}>PHAGE THERAPY</p>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '13px', color: '#666', lineHeight: 1.8, marginBottom: '16px' }}>Real kid. Real healing journey. Weekly progress updates coming soon.</p>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#bbb' }}>Enrollment starting soon</p>
+              <p style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '28px', fontWeight: 400, color: '#111', marginBottom: '16px' }}>Phage Therapy Case Study</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '16px', color: '#666', marginBottom: '24px', lineHeight: 1.8 }}>Need 10 kids</p>
+              <a href="/contact" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '12px 32px', backgroundColor: '#1F6B6B', color: '#fff', border: 'none', cursor: 'pointer', borderRadius: '4px', fontWeight: 600, textDecoration: 'none', display: 'inline-block', transition: 'all 0.3s ease' }} onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#134B4B'
+              }} onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#1F6B6B'
+              }}>
+                Enroll Here →
+              </a>
             </div>
           </div>
 
           {/* Biomagnetic Therapy Case Study */}
-          <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+          <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', cursor: 'pointer', transition: 'all 0.3s ease' }} onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = '0 20px 50px rgba(31, 107, 107, 0.1)'
+            e.currentTarget.style.transform = 'translateY(-8px)'
+          }} onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)'
+            e.currentTarget.style.transform = 'translateY(0)'
+          }}>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#1F6B6B', marginBottom: '12px', fontWeight: 600 }}>BIOMAGNETIC THERAPY</p>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '13px', color: '#666', lineHeight: 1.8, marginBottom: '16px' }}>Real kid. Real healing journey. Weekly progress updates coming soon.</p>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#bbb' }}>Enrollment starting soon</p>
+              <p style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '28px', fontWeight: 400, color: '#111', marginBottom: '16px' }}>Biomagnetic Therapy Case Study</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '16px', color: '#666', marginBottom: '24px', lineHeight: 1.8 }}>Need 10 kids</p>
+              <a href="/contact" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '12px 32px', backgroundColor: '#1F6B6B', color: '#fff', border: 'none', cursor: 'pointer', borderRadius: '4px', fontWeight: 600, textDecoration: 'none', display: 'inline-block', transition: 'all 0.3s ease' }} onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#134B4B'
+              }} onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#1F6B6B'
+              }}>
+                Enroll Here →
+              </a>
             </div>
           </div>
         </div>
