@@ -1,12 +1,23 @@
 export default function About() {
   return (
-    <main style={{ minHeight: '100vh', backgroundColor: '#fff' }}>
-      <section style={{ padding: '80px 20px', maxWidth: '900px', margin: '0 auto' }}>
-        <h1 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '64px', fontWeight: 300, marginBottom: '48px', color: '#111' }}>
+    <main style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #fff9f5 0%, #fff5f0 100%)' }}>
+      <section style={{ padding: '100px 20px', maxWidth: '900px', margin: '0 auto', position: 'relative' }}>
+        <div style={{
+          position: 'absolute',
+          top: '-100px',
+          right: '-100px',
+          width: '400px',
+          height: '400px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(196,26,26,0.1) 0%, transparent 70%)',
+          pointerEvents: 'none'
+        }}></div>
+
+        <h1 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '64px', fontWeight: 300, marginBottom: '48px', color: '#111', position: 'relative', zIndex: 1 }}>
           Our Mission
         </h1>
 
-        <div style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '16px', color: '#333', lineHeight: 2, marginBottom: '48px' }}>
+        <div style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '16px', color: '#555', lineHeight: 2, marginBottom: '60px', position: 'relative', zIndex: 1 }}>
           <p style={{ marginBottom: '32px' }}>
             <strong>Plan B for PANS, PANDAS & Autism</strong> exists for families when standard protocols fail but hope remains.
           </p>
@@ -52,11 +63,11 @@ export default function About() {
           </p>
         </div>
 
-        <div style={{ padding: '32px', backgroundColor: '#f5f5f5', borderRadius: '4px', borderLeft: '4px solid #c41a1a' }}>
-          <p style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '28px', fontWeight: 300, color: '#111', marginBottom: '12px' }}>
+        <div style={{ padding: '48px 40px', background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.05)', position: 'relative', zIndex: 1 }}>
+          <p style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '32px', fontWeight: 300, color: '#111', marginBottom: '16px' }}>
             "There is always a Plan B."
           </p>
-          <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#666' }}>
+          <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '16px', color: '#666', lineHeight: 1.8 }}>
             When standard protocols fail, hope doesn't end. It transforms.
           </p>
         </div>

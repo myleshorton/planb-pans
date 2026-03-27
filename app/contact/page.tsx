@@ -29,18 +29,29 @@ export default function Contact() {
   }
 
   return (
-    <main style={{ minHeight: '100vh', backgroundColor: '#fff' }}>
-      <section style={{ padding: '80px 20px', maxWidth: '900px', margin: '0 auto' }}>
-        <h1 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '64px', fontWeight: 300, marginBottom: '24px', color: '#111' }}>
+    <main style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #fff9f5 0%, #fff5f0 100%)' }}>
+      <section style={{ padding: '100px 20px', maxWidth: '900px', margin: '0 auto', position: 'relative' }}>
+        <div style={{
+          position: 'absolute',
+          top: '-50px',
+          right: '-100px',
+          width: '400px',
+          height: '400px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(196,26,26,0.08) 0%, transparent 70%)',
+          pointerEvents: 'none'
+        }}></div>
+
+        <h1 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '64px', fontWeight: 300, marginBottom: '24px', color: '#111', position: 'relative', zIndex: 1 }}>
           Get in Touch
         </h1>
-        <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '18px', color: '#666', lineHeight: 1.8, marginBottom: '60px', maxWidth: '700px' }}>
+        <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '18px', color: '#666', lineHeight: 1.8, marginBottom: '60px', maxWidth: '700px', position: 'relative', zIndex: 1 }}>
           Have a case study to share? Want to collaborate? Have a question? We'd love to hear from you.
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', position: 'relative', zIndex: 1 }}>
           {/* Contact Form */}
-          <div>
+          <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '12px', padding: '40px', boxShadow: '0 20px 60px rgba(0,0,0,0.05)' }}>
             <form onSubmit={handleSubmit}>
               <div style={{ marginBottom: '24px' }}>
                 <label style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#111', display: 'block', marginBottom: '8px' }}>
@@ -143,12 +154,13 @@ export default function Contact() {
                   fontSize: '12px',
                   letterSpacing: '0.15em',
                   textTransform: 'uppercase',
-                  backgroundColor: submitted ? '#16a34a' : '#111',
+                  backgroundColor: submitted ? '#16a34a' : '#c41a1a',
                   color: '#fff',
                   border: 'none',
-                  borderRadius: '2px',
+                  borderRadius: '4px',
                   cursor: 'pointer',
-                  transition: 'all 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  fontWeight: 600
                 }}
               >
                 {submitted ? '✓ Message Sent' : 'Send Message →'}
@@ -173,8 +185,8 @@ export default function Contact() {
               </div>
             </div>
 
-            <div style={{ backgroundColor: '#f5f5f5', padding: '32px', borderRadius: '4px' }}>
-              <p style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '20px', fontWeight: 400, marginBottom: '12px', color: '#111' }}>
+            <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', padding: '40px', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.05)' }}>
+              <p style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '24px', fontWeight: 400, marginBottom: '16px', color: '#111' }}>
                 Ready to share?
               </p>
               <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#666', lineHeight: 1.8 }}>
