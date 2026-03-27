@@ -89,7 +89,7 @@ export default function CaseStudies() {
               }} onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = '#1F6B6B'
               }}>
-                Enroll Here →
+                Apply Here →
               </a>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function CaseStudies() {
               }} onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = '#1F6B6B'
               }}>
-                Enroll Here →
+                Apply Here →
               </a>
             </div>
           </div>
