@@ -73,15 +73,21 @@ export default function CaseStudies() {
             </div>
           </div>
 
-          {/* Placeholder Cards */}
-          {[2, 3, 4].map((i) => (
-            <div key={i} style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
-              <div style={{ textAlign: 'center' }}>
-                <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#999', marginBottom: '8px' }}>Case Study #{i}</p>
-                <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#bbb' }}>Coming soon...</p>
-              </div>
+          {/* Phage Therapy Case Study */}
+          <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+            <div style={{ textAlign: 'center' }}>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#c41a1a', marginBottom: '8px', fontWeight: 600 }}>PHAGE THERAPY</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#bbb' }}>Case study coming soon...</p>
             </div>
-          ))}
+          </div>
+
+          {/* Biomagnetic Therapy Case Study */}
+          <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+            <div style={{ textAlign: 'center' }}>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#c41a1a', marginBottom: '8px', fontWeight: 600 }}>BIOMAGNETIC THERAPY</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#bbb' }}>Case study coming soon...</p>
+            </div>
+          </div>
         </div>
       </section>
 
