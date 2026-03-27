@@ -63,7 +63,7 @@ export default function Home() {
               margin: '0 auto',
               fontWeight: 300
             }}>
-              Hope doesn't end. It transforms. Explore alternative modalities. Share real stories. Build a roadmap together with parents and doctors who refuse to give up.
+              Learn about new modalities. Be part of case studies. Together, we build a new roadmap—a Plan B for the next generation of PANS, PANDAS, and autism. Our goal is to find solutions so we don't have to hope. This is the place where PANS, PANDAS, and some forms of autism will meet their end.
             </p>
           </div>
 
