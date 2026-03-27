@@ -65,6 +65,19 @@ export default function Home() {
             }}>
               Learn about new modalities. Be part of case studies. Together, we build a new roadmap—a Plan B for the next generation of PANS, PANDAS, and autism. Our goal is to find solutions so we don't have to hope. This is the place where PANS, PANDAS, and some forms of autism will meet their end.
             </p>
+
+            <p style={{
+              fontFamily: 'var(--font-inter), sans-serif',
+              fontSize: '16px',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              color: '#c41a1a',
+              marginTop: '60px',
+              marginBottom: '40px',
+              fontWeight: 600
+            }}>
+              Listen to the Podcast
+            </p>
           </div>
 
           {/* Podcast Player Section - Beautiful */}
