@@ -21,7 +21,7 @@ export default function RootLayout({
       <body>
         <nav style={{ borderBottom: '1px solid #e8e8e8', padding: '16px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '28px', fontWeight: 700, letterSpacing: '0.1em', color: '#111' }}>
-            PLAN B
+            PLAN B FOR PANS/PANDAS
           </div>
           <div style={{ display: 'flex', gap: '24px' }}>
             <a href="/" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#999', textDecoration: 'none' }}>Home</a>

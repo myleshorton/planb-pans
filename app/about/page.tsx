@@ -77,7 +77,7 @@ export default function About() {
 
         <div style={{ padding: '48px 40px', background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.05)', position: 'relative', zIndex: 1 }}>
           <p style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: '32px', fontWeight: 300, color: '#111', marginBottom: '16px' }}>
-            "There is always a Plan B."
+            "There is always a Plan B for PANS, PANDAS & Autism."
           </p>
           <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '16px', color: '#666', lineHeight: 1.8 }}>
             When standard protocols fail, hope doesn't end. It transforms.
