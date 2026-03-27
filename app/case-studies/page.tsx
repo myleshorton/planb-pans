@@ -20,7 +20,7 @@ export default function CaseStudies() {
           Case Studies
         </h1>
         <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '18px', color: '#666', lineHeight: 1.8, maxWidth: '700px', position: 'relative', zIndex: 1 }}>
-          Real families, real protocols, real results. See what's working, what's not, and how parents are finding their way forward.
+          Five kids. Five healing journeys. Real protocols. Real results. We're documenting everything—every week, every breakthrough, every challenge. Watch what works.
         </p>
       </section>
 
@@ -48,7 +48,7 @@ export default function CaseStudies() {
               <div style={{ marginBottom: '24px' }}>
                 <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#999', marginBottom: '8px' }}>Journey</p>
                 <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#666', lineHeight: 1.8 }}>
-                  What happens when Plan A doesn't work? This family moved to Plan B, then C. Read how they navigated new modalities, setbacks, and breakthroughs.
+                  Five kids. Five different healing protocols. Real weekly progress. Real breakthroughs. Real challenges. This is where you'll see what actually works.
                 </p>
               </div>
 
@@ -74,18 +74,20 @@ export default function CaseStudies() {
           </div>
 
           {/* Phage Therapy Case Study */}
-          <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+          <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#c41a1a', marginBottom: '8px', fontWeight: 600 }}>PHAGE THERAPY</p>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#bbb' }}>Case study coming soon...</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#c41a1a', marginBottom: '12px', fontWeight: 600 }}>PHAGE THERAPY</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '13px', color: '#666', lineHeight: 1.8, marginBottom: '16px' }}>Real kid. Real healing journey. Weekly progress updates coming soon.</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#bbb' }}>Enrollment starting soon</p>
             </div>
           </div>
 
           {/* Biomagnetic Therapy Case Study */}
-          <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+          <div style={{ background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', padding: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#c41a1a', marginBottom: '8px', fontWeight: 600 }}>BIOMAGNETIC THERAPY</p>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#bbb' }}>Case study coming soon...</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#c41a1a', marginBottom: '12px', fontWeight: 600 }}>BIOMAGNETIC THERAPY</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '13px', color: '#666', lineHeight: 1.8, marginBottom: '16px' }}>Real kid. Real healing journey. Weekly progress updates coming soon.</p>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#bbb' }}>Enrollment starting soon</p>
             </div>
           </div>
         </div>
