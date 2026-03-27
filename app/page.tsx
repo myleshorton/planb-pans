@@ -11,7 +11,7 @@ export default function Home() {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '80px 20px',
-        background: 'linear-gradient(135deg, #fff9f5 0%, #fff5f0 100%)',
+        background: 'linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%)',
         position: 'relative',
         overflow: 'hidden'
       }}>

@@ -2,7 +2,7 @@
 
 export default function CaseStudies() {
   return (
-    <main style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #fff9f5 0%, #fff5f0 100%)' }}>
+    <main style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%)' }}>
       {/* Header */}
       <section style={{ padding: '100px 20px 60px', maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
         <div style={{
@@ -28,7 +28,7 @@ export default function CaseStudies() {
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '32px' }}>
           {/* Sample Case Study */}
-          <div style={{ background: 'linear-gradient(135deg, #fff9f5 0%, #fff5f0 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', overflow: 'hidden', cursor: 'pointer', transition: 'all 0.3s ease', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} onMouseEnter={(e) => {
+          <div style={{ background: 'linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%)', border: '2px solid #f0e0d8', borderRadius: '8px', overflow: 'hidden', cursor: 'pointer', transition: 'all 0.3s ease', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }} onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 20px 50px rgba(196, 26, 26, 0.1)'
             e.currentTarget.style.transform = 'translateY(-8px)'
           }} onMouseLeave={(e) => {
