@@ -86,7 +86,7 @@ export default function Home() {
               marginBottom: '32px',
               fontWeight: 600
             }}>
-              🎙️ Listen to Real Stories
+              🎙️ Listen to the Podcast
             </p>
 
             <div style={{
