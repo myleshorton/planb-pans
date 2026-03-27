@@ -1,3 +1,5 @@
+'use client'
+
 export default function CaseStudies() {
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#fff' }}>
