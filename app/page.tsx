@@ -88,7 +88,7 @@ export default function Home() {
           }}>
             <img
               src="/rachel-podcast.jpg"
-              alt="Rachel Taylor, host of Plan B for PANS"
+              alt="Rachel Johnson, host of Plan B for PANS"
               style={{
                 width: '100%',
                 height: 'auto',
@@ -107,7 +107,7 @@ export default function Home() {
               textAlign: 'center',
               fontWeight: 500,
             }}>
-              Rachel Taylor · Host
+              Rachel Johnson · Host
             </p>
           </div>
 
