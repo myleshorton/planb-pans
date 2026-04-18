@@ -80,6 +80,37 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Rachel's portrait */}
+          <div style={{
+            maxWidth: '380px',
+            margin: '0 auto 60px',
+            position: 'relative',
+          }}>
+            <img
+              src="/rachel-podcast.jpg"
+              alt="Rachel Taylor, host of Plan B for PANS"
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+                filter: 'grayscale(100%) contrast(1.05)',
+                boxShadow: '0 30px 60px -30px rgba(0,0,0,0.4)',
+              }}
+            />
+            <p style={{
+              fontFamily: 'var(--font-inter), sans-serif',
+              fontSize: '10px',
+              letterSpacing: '0.32em',
+              textTransform: 'uppercase',
+              color: '#999',
+              marginTop: '16px',
+              textAlign: 'center',
+              fontWeight: 500,
+            }}>
+              Rachel Taylor · Host
+            </p>
+          </div>
+
           {/* Podcast Player Section - Beautiful */}
           <div style={{
             background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)',
