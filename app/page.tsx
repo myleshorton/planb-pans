@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import BucketSection from './_components/BucketSection'
 import MethodSection from './_components/MethodSection'
+import ResearchSection from './_components/ResearchSection'
 
 const marqueeTerms: { text: string; italic?: boolean }[] = [
   { text: 'PANS', italic: true },
@@ -280,6 +281,9 @@ export default function Home() {
 
       {/* METHOD */}
       <MethodSection />
+
+      {/* RESEARCH */}
+      <ResearchSection />
 
       {/* MARQUEE — what Plan B covers */}
       <section
