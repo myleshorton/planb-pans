@@ -1,91 +1,333 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
+
 export default function Home() {
+  const revealRef = useRef<HTMLElement | null>(null)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const io = new IntersectionObserver(
+      entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) e.target.classList.add('in-view')
+        })
+      },
+      { threshold: 0.14, rootMargin: '-40px 0px' },
+    )
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el))
+    return () => io.disconnect()
+  }, [])
+
   return (
-    <main>
-      {/* Hero Section - Hopeful & Warm */}
-      <section style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '80px 20px',
-        background: 'linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
-        {/* Decorative element */}
-        <div style={{
-          position: 'absolute',
-          top: '-100px',
-          right: '-100px',
-          width: '400px',
-          height: '400px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(196,26,26,0.1) 0%, transparent 70%)',
-          pointerEvents: 'none'
-        }}></div>
+    <main ref={revealRef} style={{ background: 'var(--cream)' }}>
+      {/* HERO */}
+      <section
+        style={{
+          minHeight: '94vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '80px 24px',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        <div
+          className="bloom-float"
+          style={{
+            position: 'absolute',
+            top: -220,
+            right: -200,
+            width: 560,
+            height: 560,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(31,107,107,0.14) 0%, transparent 70%)',
+            pointerEvents: 'none',
+          }}
+        />
+        <div
+          className="bloom-float-alt"
+          style={{
+            position: 'absolute',
+            bottom: -240,
+            left: -220,
+            width: 640,
+            height: 640,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(212,203,182,0.55) 0%, transparent 70%)',
+            pointerEvents: 'none',
+          }}
+        />
 
-        <div style={{ maxWidth: '900px', width: '100%', position: 'relative', zIndex: 1 }}>
-          {/* Inspiring Intro */}
-          <div style={{ marginBottom: '80px', textAlign: 'center' }}>
-            <p style={{
-              fontFamily: 'var(--font-inter), sans-serif',
-              fontSize: '16px',
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: '#1F6B6B',
-              marginBottom: '24px',
-              fontWeight: 600
-            }}>
-              ✨ There Is Always a Plan B For PANS, PANDAS & Autism
-            </p>
+        <div
+          style={{
+            maxWidth: 900,
+            width: '100%',
+            position: 'relative',
+            zIndex: 1,
+            textAlign: 'center',
+          }}
+        >
+          <p className="eyebrow rise delay-1 caret" style={{ marginBottom: 24 }}>
+            There is always a Plan B
+          </p>
 
-            <h1 style={{
-              fontFamily: 'var(--font-cormorant), Georgia, serif',
-              fontSize: 'clamp(44px, 10vw, 80px)',
+          <h1
+            className="rise-wide delay-2"
+            style={{
+              fontFamily: 'var(--font-cormorant)',
+              fontSize: 'clamp(52px, 12vw, 108px)',
               fontWeight: 300,
-              letterSpacing: '-0.02em',
-              marginBottom: '32px',
-              color: '#111',
-              lineHeight: 1.15
-            }}>
-              When Standard <br /> Protocols Fail
-            </h1>
+              letterSpacing: '-0.028em',
+              lineHeight: 1,
+              marginBottom: 32,
+              color: 'var(--ink)',
+            }}
+          >
+            When standard
+            <br />
+            <span style={{ fontStyle: 'italic', color: 'var(--teal)', fontWeight: 400 }}>
+              protocols fail.
+            </span>
+          </h1>
 
-            <p style={{
-              fontFamily: 'var(--font-inter), sans-serif',
-              fontSize: '20px',
-              color: '#555',
-              lineHeight: 2,
-              maxWidth: '700px',
-              margin: '0 auto',
-              fontWeight: 300
-            }}>
-              Learn about new modalities. Be part of case studies. Together, we build a new roadmap—a Plan B for the next generation of PANS, PANDAS, and autism. Our goal is to find solutions so we don't have to hope. This is the place where PANS, PANDAS, and some forms of autism will meet their end.
-            </p>
+          <p
+            className="rise delay-3"
+            style={{
+              fontSize: 20,
+              color: 'var(--ink-soft)',
+              lineHeight: 1.7,
+              fontWeight: 300,
+              maxWidth: 680,
+              margin: '0 auto 52px',
+            }}
+          >
+            A coordination layer for parents of kids with PANS, PANDAS, autism, and severe
+            dysregulation. Built from the specialists who rarely talk to each other. Free —
+            for as long as it can be.
+          </p>
 
-            <p style={{
-              fontFamily: 'var(--font-inter), sans-serif',
-              fontSize: '16px',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: '#1F6B6B',
-              marginTop: '60px',
-              marginBottom: '40px',
-              fontWeight: 600
-            }}>
-              Listen to the Podcast
-            </p>
+          <div
+            className="rise delay-4"
+            style={{
+              display: 'flex',
+              gap: 14,
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+            }}
+          >
+            <a
+              href="https://app.planbforpans.com/signup"
+              target="_blank"
+              rel="noopener"
+              className="cta-teal"
+              style={{ textDecoration: 'none' }}
+            >
+              Start your intake →
+            </a>
+            <a
+              href="#listen"
+              style={{
+                display: 'inline-block',
+                padding: '16px 32px',
+                fontFamily: 'var(--font-inter)',
+                fontSize: 11,
+                letterSpacing: '0.28em',
+                textTransform: 'uppercase',
+                fontWeight: 600,
+                color: 'var(--teal)',
+                border: '1px solid var(--sand)',
+                borderRadius: 4,
+                textDecoration: 'none',
+                background: 'transparent',
+                transition: 'border-color 0.3s ease, color 0.3s ease',
+              }}
+            >
+              Listen to the podcast
+            </a>
           </div>
 
-          {/* Rachel's portrait */}
-          <div style={{
-            maxWidth: '380px',
-            margin: '0 auto 60px',
-            position: 'relative',
-          }}>
+          <p
+            className="fade delay-6"
+            style={{
+              marginTop: 80,
+              fontSize: 11,
+              letterSpacing: '0.3em',
+              textTransform: 'uppercase',
+              color: 'var(--sand-dark)',
+              fontWeight: 500,
+            }}
+          >
+            ↓ &nbsp; What Plan B is
+          </p>
+        </div>
+      </section>
+
+      {/* WHAT IT IS */}
+      <section
+        style={{
+          padding: '120px 24px',
+          background: 'var(--cream-light)',
+          borderTop: '1px solid var(--sand)',
+          borderBottom: '1px solid var(--sand)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        <div style={{ maxWidth: 880, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <div className="reveal" style={{ textAlign: 'center' }}>
+            <p className="eyebrow" style={{ marginBottom: 20 }}>
+              What Plan B is
+            </p>
+            <h2
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontSize: 'clamp(34px, 6.5vw, 54px)',
+                fontWeight: 300,
+                letterSpacing: '-0.018em',
+                marginBottom: 48,
+                color: 'var(--ink)',
+                lineHeight: 1.1,
+              }}
+            >
+              The coordination layer <br />
+              <em style={{ color: 'var(--teal)' }}>parents never had.</em>
+            </h2>
+          </div>
+
+          <div className="reveal-stagger">
+            <p
+              style={{
+                fontSize: 18,
+                lineHeight: 1.85,
+                color: 'var(--ink-soft)',
+                fontWeight: 300,
+                maxWidth: 720,
+                margin: '0 auto',
+                textAlign: 'center',
+              }}
+            >
+              The microbiome specialist understands the gut but not methylation. The methylation
+              specialist understands genetics but not mold. The mold specialist doesn&apos;t know
+              what the craniosacral therapist is doing.
+            </p>
+
+            <p
+              style={{
+                fontSize: 18,
+                lineHeight: 1.85,
+                color: 'var(--ink-soft)',
+                fontWeight: 300,
+                maxWidth: 720,
+                margin: '28px auto 0',
+                textAlign: 'center',
+              }}
+            >
+              Each of them is right about their piece. None of them are seeing the whole kid.
+              None of them are talking to each other.
+            </p>
+
+            <p
+              style={{
+                fontSize: 20,
+                fontFamily: 'var(--font-cormorant)',
+                fontStyle: 'italic',
+                fontWeight: 400,
+                lineHeight: 1.6,
+                color: 'var(--teal)',
+                maxWidth: 600,
+                margin: '56px auto 0',
+                textAlign: 'center',
+              }}
+            >
+              Plan B reads your kid&apos;s full story and tells you what a team of ten
+              specialists might have said if they&apos;d actually been in a room together.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT IT DOES — three pillars */}
+      <section style={{ padding: '120px 24px', background: 'var(--cream)' }}>
+        <div style={{ maxWidth: 1080, margin: '0 auto' }}>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: 72 }}>
+            <p className="eyebrow" style={{ marginBottom: 18 }}>
+              How it works
+            </p>
+            <h2
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontSize: 'clamp(34px, 6.5vw, 54px)',
+                fontWeight: 300,
+                letterSpacing: '-0.018em',
+                color: 'var(--ink)',
+                lineHeight: 1.1,
+              }}
+            >
+              Three things, <em style={{ color: 'var(--teal)' }}>done right.</em>
+            </h2>
+          </div>
+
+          <div
+            className="reveal-stagger"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: 20,
+            }}
+          >
+            <Pillar
+              n="01"
+              title="Full intake"
+              body="Pregnancy, birth, environment, diet, every medication and modality tried, every symptom, every lab. Plan B asks the questions a careful practitioner would."
+            />
+            <Pillar
+              n="02"
+              title="Daily tracker"
+              body="One-tap symptom logging. Notice flares before you'd otherwise connect the dots. Share with your practitioner as a real timeline, not a memory."
+            />
+            <Pillar
+              n="03"
+              title="A real thinking partner"
+              body="Synthesis across practitioner silos — functional medicine, microbiome, methylation, craniosacral, mold, peptides, and more. Ask anything, 2am included."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* PODCAST */}
+      <section
+        id="listen"
+        style={{
+          padding: '120px 24px',
+          background: 'var(--cream-light)',
+          borderTop: '1px solid var(--sand)',
+          borderBottom: '1px solid var(--sand)',
+        }}
+      >
+        <div style={{ maxWidth: 880, margin: '0 auto' }}>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: 56 }}>
+            <p className="eyebrow" style={{ marginBottom: 18 }}>
+              The podcast
+            </p>
+            <h2
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontSize: 'clamp(34px, 6.5vw, 54px)',
+                fontWeight: 300,
+                letterSpacing: '-0.018em',
+                marginBottom: 18,
+                lineHeight: 1.1,
+              }}
+            >
+              Conversations with the <br />
+              <em style={{ color: 'var(--teal)' }}>practitioners who helped.</em>
+            </h2>
+          </div>
+
+          <div className="reveal" style={{ maxWidth: 360, margin: '0 auto 48px' }}>
             <img
               src="/rachel-podcast.jpg"
               alt="Rachel Johnson, host of Plan B for PANS"
@@ -93,159 +335,184 @@ export default function Home() {
                 width: '100%',
                 height: 'auto',
                 display: 'block',
-                filter: 'grayscale(100%) contrast(1.05)',
-                boxShadow: '0 30px 60px -30px rgba(0,0,0,0.4)',
+                filter: 'grayscale(100%) contrast(1.04)',
+                boxShadow: '0 40px 80px -40px rgba(0,0,0,0.45)',
               }}
             />
-            <p style={{
-              fontFamily: 'var(--font-inter), sans-serif',
-              fontSize: '10px',
-              letterSpacing: '0.32em',
-              textTransform: 'uppercase',
-              color: '#999',
-              marginTop: '16px',
-              textAlign: 'center',
-              fontWeight: 500,
-            }}>
+            <p className="label-tracked" style={{ marginTop: 14, textAlign: 'center' }}>
               Rachel Johnson · Host
             </p>
           </div>
 
-          {/* Podcast Player Section - Beautiful */}
-          <div style={{
-            background: 'linear-gradient(135deg, #fff 0%, #fef7f0 100%)',
-            border: '2px solid #f0e0d8',
-            borderRadius: '12px',
-            padding: '60px 40px',
-            marginBottom: '100px',
-            textAlign: 'center',
-            boxShadow: '0 20px 60px rgba(0,0,0,0.05)'
-          }}>
-            <p style={{
-              fontFamily: 'var(--font-inter), sans-serif',
-              fontSize: '13px',
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: '#1F6B6B',
-              marginBottom: '32px',
-              fontWeight: 600
-            }}>
-              🎙️ Listen to the Podcast
-            </p>
-
-            <iframe style={{
-              borderRadius: '8px',
-              marginBottom: '32px',
-              width: '100%',
-              height: '352px'
-            }} src="https://open.spotify.com/embed/show/0cVlSGzG1O4m6HZCFeKan9?utm_source=generator" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          <div
+            className="reveal"
+            style={{
+              background: 'var(--paper)',
+              border: '1px solid var(--sand)',
+              borderRadius: 4,
+              padding: 28,
+              boxShadow: '0 30px 80px -40px rgba(20,20,20,0.18)',
+            }}
+          >
+            <iframe
+              style={{ borderRadius: 6, width: '100%', height: 352, display: 'block', border: 0 }}
+              src="https://open.spotify.com/embed/show/0cVlSGzG1O4m6HZCFeKan9?utm_source=generator"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            />
           </div>
-
-          {/* Install on Phone Section */}
-          <div style={{
-            background: '#fff',
-            border: '1px solid #e8e8e8',
-            borderRadius: '12px',
-            padding: '48px 40px',
-            marginBottom: '80px',
-            boxShadow: '0 20px 60px rgba(0,0,0,0.04)'
-          }}>
-            <p style={{
-              fontFamily: 'var(--font-inter), sans-serif',
-              fontSize: '13px',
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: '#1F6B6B',
-              marginBottom: '16px',
-              fontWeight: 600,
-              textAlign: 'center'
-            }}>
-              📱 Put Plan B on Your Phone
-            </p>
-            <h2 style={{
-              fontFamily: 'var(--font-cormorant), Georgia, serif',
-              fontSize: 'clamp(28px, 5vw, 38px)',
-              fontWeight: 300,
-              textAlign: 'center',
-              marginBottom: '16px',
-              color: '#111',
-              letterSpacing: '-0.01em',
-              lineHeight: 1.2
-            }}>
-              No app store. No download.
-            </h2>
-            <p style={{
-              fontFamily: 'var(--font-inter), sans-serif',
-              fontSize: '16px',
-              color: '#666',
-              lineHeight: 1.7,
-              textAlign: 'center',
-              maxWidth: '560px',
-              margin: '0 auto 36px',
-              fontWeight: 300
-            }}>
-              Plan B runs as a web app that lives on your home screen — like any other app, but with no app store, no approval process, and updates automatically.
-            </p>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px', marginBottom: '32px' }}>
-              <div style={{ padding: '24px', background: '#fafafa', borderRadius: '8px' }}>
-                <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1F6B6B', marginBottom: '12px', fontWeight: 600 }}>iPhone · Safari</p>
-                <ol style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '15px', color: '#333', lineHeight: 1.7, paddingLeft: '18px', margin: 0 }}>
-                  <li>Open <strong>app.planbforpans.com</strong> in Safari</li>
-                  <li>Tap the <strong>Share</strong> button (square with arrow)</li>
-                  <li>Scroll down, tap <strong>Add to Home Screen</strong></li>
-                  <li>Tap <strong>Add</strong></li>
-                </ol>
-              </div>
-              <div style={{ padding: '24px', background: '#fafafa', borderRadius: '8px' }}>
-                <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1F6B6B', marginBottom: '12px', fontWeight: 600 }}>Android · Chrome</p>
-                <ol style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '15px', color: '#333', lineHeight: 1.7, paddingLeft: '18px', margin: 0 }}>
-                  <li>Open <strong>app.planbforpans.com</strong> in Chrome</li>
-                  <li>Tap the <strong>⋮</strong> menu (top right)</li>
-                  <li>Tap <strong>Install app</strong> (or <strong>Add to Home screen</strong>)</li>
-                  <li>Tap <strong>Install</strong></li>
-                </ol>
-              </div>
-            </div>
-
-            <div style={{ textAlign: 'center' }}>
-              <a
-                href="https://app.planbforpans.com/signup"
-                target="_blank"
-                rel="noopener"
-                style={{
-                  display: 'inline-block',
-                  background: '#1F6B6B',
-                  color: '#fff',
-                  padding: '16px 36px',
-                  borderRadius: '6px',
-                  fontFamily: 'var(--font-inter), sans-serif',
-                  fontSize: '14px',
-                  letterSpacing: '0.15em',
-                  textTransform: 'uppercase',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  boxShadow: '0 10px 30px rgba(31,107,107,0.2)',
-                }}
-              >
-                Open Plan B →
-              </a>
-              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#999', marginTop: '16px', fontWeight: 300 }}>
-                Once installed, you'll see the Plan B icon on your home screen — tap it like any app.
-              </p>
-            </div>
-          </div>
-
         </div>
       </section>
 
+      {/* INSTALL */}
+      <section style={{ padding: '120px 24px', background: 'var(--cream)' }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto' }}>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: 56 }}>
+            <p className="eyebrow" style={{ marginBottom: 18 }}>
+              Put Plan B on your phone
+            </p>
+            <h2
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontSize: 'clamp(34px, 6.5vw, 54px)',
+                fontWeight: 300,
+                letterSpacing: '-0.018em',
+                marginBottom: 18,
+                lineHeight: 1.1,
+              }}
+            >
+              No app store. <em style={{ color: 'var(--teal)' }}>No download.</em>
+            </h2>
+            <p
+              style={{
+                fontSize: 17,
+                lineHeight: 1.8,
+                color: 'var(--ink-soft)',
+                fontWeight: 300,
+                maxWidth: 600,
+                margin: '0 auto',
+              }}
+            >
+              Plan B lives on your home screen like any other app. Updates automatically. Works
+              offline for the daily tracker.
+            </p>
+          </div>
 
-      <style>{`
-        :root {
-          --font-cormorant: 'Cormorant', Georgia, serif;
-          --font-inter: 'Inter', sans-serif;
-        }
-      `}</style>
+          <div
+            className="reveal-stagger"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gap: 20,
+              marginBottom: 48,
+            }}
+          >
+            <InstallCard
+              device="iPhone · Safari"
+              steps={[
+                <>Open <strong>app.planbforpans.com</strong> in Safari</>,
+                <>Tap the <strong>Share</strong> button (square with arrow)</>,
+                <>Scroll down, tap <strong>Add to Home Screen</strong></>,
+                <>Tap <strong>Add</strong></>,
+              ]}
+            />
+            <InstallCard
+              device="Android · Chrome"
+              steps={[
+                <>Open <strong>app.planbforpans.com</strong> in Chrome</>,
+                <>Tap the <strong>⋮</strong> menu (top right)</>,
+                <>Tap <strong>Install app</strong> (or <strong>Add to Home screen</strong>)</>,
+                <>Tap <strong>Install</strong></>,
+              ]}
+            />
+          </div>
+
+          <div className="reveal" style={{ textAlign: 'center' }}>
+            <a
+              href="https://app.planbforpans.com/signup"
+              target="_blank"
+              rel="noopener"
+              className="cta-teal"
+              style={{ textDecoration: 'none' }}
+            >
+              Open Plan B →
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
+  )
+}
+
+function Pillar({ n, title, body }: { n: string; title: string; body: string }) {
+  return (
+    <div
+      className="card-hover"
+      style={{
+        background: 'var(--paper)',
+        border: '1px solid var(--sand)',
+        borderRadius: 4,
+        padding: '36px 28px',
+        position: 'relative',
+      }}
+    >
+      <p className="label-tracked" style={{ color: 'var(--teal)', marginBottom: 24 }}>
+        {n}
+      </p>
+      <h3
+        style={{
+          fontFamily: 'var(--font-cormorant)',
+          fontSize: 28,
+          fontWeight: 400,
+          letterSpacing: '-0.01em',
+          marginBottom: 12,
+          color: 'var(--ink)',
+        }}
+      >
+        {title}
+      </h3>
+      <p
+        style={{
+          fontSize: 15,
+          lineHeight: 1.75,
+          color: 'var(--ink-soft)',
+          fontWeight: 300,
+        }}
+      >
+        {body}
+      </p>
+    </div>
+  )
+}
+
+function InstallCard({ device, steps }: { device: string; steps: React.ReactNode[] }) {
+  return (
+    <div
+      className="card-hover"
+      style={{
+        background: 'var(--paper)',
+        border: '1px solid var(--sand)',
+        borderRadius: 4,
+        padding: 28,
+      }}
+    >
+      <p className="eyebrow" style={{ marginBottom: 14 }}>
+        {device}
+      </p>
+      <ol
+        style={{
+          fontFamily: 'var(--font-inter)',
+          fontSize: 15,
+          color: 'var(--ink)',
+          lineHeight: 1.9,
+          paddingLeft: 22,
+          margin: 0,
+          fontWeight: 300,
+        }}
+      >
+        {steps.map((s, i) => (
+          <li key={i}>{s}</li>
+        ))}
+      </ol>
+    </div>
   )
 }

@@ -1,3 +1,20 @@
+:root {
+  --cream: #F6F1E7;
+  --cream-light: #fdfbf4;
+  --cream-soft: #fef9ef;
+  --ink: #141414;
+  --ink-soft: #3a3a3a;
+  --sand-dark: #8a8373;
+  --sand: #d4cbb6;
+  --sand-light: #e8e0c9;
+  --teal: #1F6B6B;
+  --teal-deep: #155252;
+  --paper: #fff;
+
+  --font-cormorant: 'Cormorant', Georgia, serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,47 +26,233 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #fff;
-  color: #111;
+  font-family: var(--font-inter);
+  background-color: var(--cream);
+  color: var(--ink);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  color: #111;
+  color: var(--ink);
   text-decoration: none;
+  transition: opacity 0.3s ease, color 0.3s ease;
 }
 
 a:hover {
   opacity: 0.7;
-  transition: opacity 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cormorant', Georgia, serif;
+  font-family: var(--font-cormorant);
   font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 
 button {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter);
   transition: all 0.3s ease;
 }
 
-button:hover {
-  opacity: 0.9;
+.eyebrow {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 600;
+}
+
+.label-tracked {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--sand-dark);
+  font-weight: 500;
+}
+
+.cta-teal {
+  display: inline-block;
+  background: var(--teal);
+  color: var(--cream);
+  padding: 16px 32px;
+  border: none;
+  font-family: var(--font-inter);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-teal:hover {
+  background: var(--teal-deep);
+  transform: translateY(-1px);
+}
+
+.rule {
+  height: 1px;
+  background: var(--sand);
+  border: 0;
+  margin: 0;
+}
+
+/* Motion */
+@keyframes rise {
+  0% { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes risewide {
+  0% { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes floatslow {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(18px, -12px); }
+}
+
+@keyframes floatslower {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-22px, 14px); }
+}
+
+@keyframes underline {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+.rise {
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+.rise-wide {
+  opacity: 0;
+  animation: risewide 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+.fade {
+  opacity: 0;
+  animation: fadein 1.4s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.05s; }
+.delay-2 { animation-delay: 0.18s; }
+.delay-3 { animation-delay: 0.34s; }
+.delay-4 { animation-delay: 0.54s; }
+.delay-5 { animation-delay: 0.78s; }
+.delay-6 { animation-delay: 1.04s; }
+
+/* Scroll reveal (IntersectionObserver toggles .in-view) */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+              transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+              transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal-stagger.in-view > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in-view > *:nth-child(2) { transition-delay: 0.18s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in-view > *:nth-child(3) { transition-delay: 0.32s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in-view > *:nth-child(4) { transition-delay: 0.48s; opacity: 1; transform: translateY(0); }
+
+/* Soft card hover */
+.card-hover {
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: var(--teal) !important;
+  box-shadow: 0 20px 50px -20px rgba(31, 107, 107, 0.25);
+}
+
+/* Link underline sweep */
+.link-sweep {
+  position: relative;
+  display: inline-block;
+}
+
+.link-sweep::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: var(--teal);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.link-sweep:hover::after {
+  transform: scaleX(1);
+}
+
+/* Bloom animations */
+.bloom-float { animation: floatslow 14s ease-in-out infinite; }
+.bloom-float-alt { animation: floatslower 18s ease-in-out infinite; }
+
+.cta-teal:hover {
+  background: var(--teal-deep);
   transform: translateY(-2px);
+  box-shadow: 0 10px 24px -8px rgba(31,107,107,0.35);
+}
+
+/* Caret cursor for eyebrow accents */
+.caret::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  margin-left: 10px;
+  vertical-align: middle;
+  animation: fadein 2s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .reveal-stagger > * { opacity: 1; transform: none; }
 }
 
 @media (max-width: 768px) {
   body {
     font-size: 14px;
   }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
+  h1 { font-size: clamp(40px, 11vw, 64px); }
+  h2 { font-size: clamp(28px, 7vw, 40px); }
 }
