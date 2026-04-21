@@ -61,8 +61,24 @@ export default function RootLayout({
                 </span>
               </p>
             </Link>
-            <nav style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
+            <nav style={{ display: 'flex', gap: 18, alignItems: 'center' }}>
               <NavLink href="/tracker">Tracker</NavLink>
+              <a
+                href="https://app.planbforpans.com/community"
+                target="_blank"
+                rel="noopener"
+                style={{
+                  fontFamily: 'var(--font-inter)',
+                  fontSize: 11,
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
+                  color: 'var(--sand-dark)',
+                  fontWeight: 500,
+                  textDecoration: 'none',
+                }}
+              >
+                Community
+              </a>
               <NavLink href="/case-studies">Case Studies</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
               <NavLink href="/about">About</NavLink>
