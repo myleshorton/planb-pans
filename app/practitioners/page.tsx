@@ -27,8 +27,7 @@ export default function PractitionersPage() {
             width: 520,
             height: 520,
             borderRadius: '50%',
-            background:
-              'radial-gradient(circle, rgba(31,107,107,0.14) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(196,106,74,0.18) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -49,10 +48,10 @@ export default function PractitionersPage() {
               lineHeight: 0.96,
               margin: 0,
               color: 'var(--ink)',
-              maxWidth: 1000,
+              maxWidth: 1080,
             }}
           >
-            Calling all <em style={{ color: 'var(--teal)' }}>practitioners.</em>
+            Help us get out <em style={{ color: 'var(--teal)' }}>of the fire.</em>
           </h1>
           <p
             style={{
@@ -60,30 +59,202 @@ export default function PractitionersPage() {
               lineHeight: 1.7,
               color: 'var(--ink-soft)',
               fontWeight: 300,
-              maxWidth: 720,
+              maxWidth: 760,
               marginTop: 28,
             }}
           >
-            Hope is fleeting. Families want results. If your modality is actually moving the
-            needle for these kids, we need your practice in the case studies — and families
-            need to find you.
+            Parents are blindly choosing and hoping their kids somehow get better. We need to{' '}
+            <em>see</em> — your success rates, how you treat these kids, where your modality
+            fits in the larger picture, and where to go next when things get stuck. Be part of
+            the network that makes that possible.
           </p>
         </div>
       </section>
 
-      {/* The deal */}
+      {/* Manifesto line */}
       <section
-        style={{ padding: '100px 24px', background: 'var(--cream)' }}
+        aria-label="Manifesto"
+        style={{
+          padding: '72px 24px',
+          background: 'var(--cream)',
+          textAlign: 'center',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 900 }}>
+          <p
+            className="eyebrow"
+            style={{ marginBottom: 18, color: 'var(--sand-dark)' }}
+          >
+            All hands
+          </p>
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(28px, 4.6vw, 44px)',
+              fontWeight: 300,
+              letterSpacing: '-0.015em',
+              lineHeight: 1.2,
+              color: 'var(--ink)',
+              margin: 0,
+            }}
+          >
+            This is a puzzle. We need <em style={{ color: 'var(--teal)' }}>all hands on deck</em> to solve it.
+            <br />
+            Money aside.{' '}
+            <em style={{ color: 'var(--teal)' }}>Together we learn.</em>
+          </p>
+        </div>
+      </section>
+
+      {/* THE ASK — the 10 free clients pledge */}
+      <section
+        style={{
+          padding: '100px 24px',
+          background: 'var(--cream)',
+        }}
       >
         <div
           ref={ask}
           className="pb-container reveal"
-          style={{ maxWidth: 960 }}
+          style={{ maxWidth: 1080 }}
         >
           <div
             style={{
+              background: '#141414',
+              color: 'var(--cream)',
+              padding: 'clamp(40px, 6vw, 72px)',
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+          >
+            <div
+              style={{
+                position: 'absolute',
+                top: -60,
+                right: -60,
+                width: 280,
+                height: 280,
+                borderRadius: '50%',
+                background:
+                  'radial-gradient(circle, rgba(31,107,107,0.3) 0%, transparent 70%)',
+                pointerEvents: 'none',
+              }}
+            />
+            <p
+              className="eyebrow"
+              style={{ color: 'var(--teal-light)', marginBottom: 22, position: 'relative' }}
+            >
+              The ask
+            </p>
+            <h2
+              className="serif"
+              style={{
+                fontSize: 'clamp(36px, 6vw, 68px)',
+                fontWeight: 300,
+                letterSpacing: '-0.02em',
+                lineHeight: 0.98,
+                margin: 0,
+                marginBottom: 32,
+                color: 'var(--cream)',
+                position: 'relative',
+                maxWidth: 880,
+              }}
+            >
+              Offer your service{' '}
+              <em style={{ color: 'var(--teal-light)' }}>free to 10 clients.</em>
+            </h2>
+            <p
+              style={{
+                fontSize: 18,
+                lineHeight: 1.85,
+                color: '#d4cbb6',
+                fontWeight: 300,
+                maxWidth: 720,
+                marginBottom: 20,
+                position: 'relative',
+              }}
+            >
+              Sign up to take on ten PANS/PANDAS/autism/dysregulated kids pro-bono, matched by
+              Plan B&apos;s read of their profile. Work with them the way you normally would.
+            </p>
+            <p
+              style={{
+                fontSize: 18,
+                lineHeight: 1.85,
+                color: '#d4cbb6',
+                fontWeight: 300,
+                maxWidth: 720,
+                position: 'relative',
+              }}
+            >
+              We document the full journey — weekly, with consent, de-identified. What shifted,
+              what stalled, what ordered well with what. Your ten kids become a real case study
+              that every parent and practitioner in the network can learn from.
+            </p>
+            <div
+              style={{
+                marginTop: 40,
+                paddingTop: 32,
+                borderTop: '1px solid rgba(246,241,231,0.2)',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                gap: 24,
+                position: 'relative',
+              }}
+            >
+              {[
+                { k: '10', v: 'free clients' },
+                { k: '6 mo', v: 'documented journey' },
+                { k: 'Open', v: 'findings published' },
+                { k: 'No cost', v: 'to participate' },
+              ].map((s) => (
+                <div key={s.v}>
+                  <p
+                    className="serif"
+                    style={{
+                      fontSize: 44,
+                      fontWeight: 300,
+                      color: 'var(--teal-light)',
+                      letterSpacing: '-0.02em',
+                      lineHeight: 1,
+                      margin: 0,
+                    }}
+                  >
+                    {s.k}
+                  </p>
+                  <p
+                    className="mono"
+                    style={{
+                      fontSize: 10,
+                      color: '#bbb3a2',
+                      letterSpacing: '0.2em',
+                      textTransform: 'uppercase',
+                      marginTop: 10,
+                    }}
+                  >
+                    {s.v}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What this gives families */}
+      <section
+        style={{
+          padding: '100px 24px',
+          background: 'var(--cream-light)',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 960 }}>
+          <div
+            style={{
               display: 'grid',
-              gridTemplateColumns: '1fr 1.2fr',
+              gridTemplateColumns: '1fr 1.25fr',
               gap: 56,
               alignItems: 'start',
             }}
@@ -91,7 +262,7 @@ export default function PractitionersPage() {
           >
             <div>
               <p className="eyebrow" style={{ marginBottom: 20 }}>
-                The deal
+                Why this matters
               </p>
               <h2
                 className="serif"
@@ -104,11 +275,7 @@ export default function PractitionersPage() {
                   margin: 0,
                 }}
               >
-                Trade secrets.
-                <br />
-                <em style={{ color: 'var(--teal)' }}>
-                  Together we get out.
-                </em>
+                We need to <em style={{ color: 'var(--teal)' }}>see.</em>
               </h2>
             </div>
             <div>
@@ -121,9 +288,11 @@ export default function PractitionersPage() {
                   margin: 0,
                 }}
               >
-                PANS, PANDAS, autism, and severe dysregulation are not solved in any single
-                practice. The gut person needs the methylation person needs the mold person
-                needs the nervous-system person. No one has the whole picture alone.
+                Right now parents are choosing practitioners blind — reading reviews, asking
+                Facebook groups, gambling thousands of dollars on someone who may or may not
+                be right for their kid. We need to show actual success rates. We need to know
+                how your &ldquo;trick&rdquo; works in the larger picture. We need to know where
+                to go next when a modality stalls out.
               </p>
               <p
                 style={{
@@ -134,133 +303,11 @@ export default function PractitionersPage() {
                   marginTop: 18,
                 }}
               >
-                Plan B exists to do the synthesis — to read each kid&apos;s full story and
-                suggest the modalities, sequence, and practitioners most likely to help. That
-                works only if the best practitioners are in the loop.
-              </p>
-              <p
-                className="serif"
-                style={{
-                  fontSize: 22,
-                  fontStyle: 'italic',
-                  color: 'var(--ink)',
-                  margin: '24px 0 0',
-                  fontWeight: 400,
-                  lineHeight: 1.35,
-                  borderLeft: '3px solid var(--teal)',
-                  paddingLeft: 20,
-                }}
-              >
-                Proven methods. Proven practitioners.{' '}
-                <span style={{ color: 'var(--teal)' }}>Real results.</span>
+                The ten-client pledge is how we make that visible. Families finally get to see
+                before they choose. You finally get to prove what you already know. Every
+                parent and every practitioner learns from what your cohort revealed.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What we're asking for */}
-      <section
-        style={{
-          padding: '100px 24px',
-          background: '#141414',
-          color: 'var(--cream)',
-          borderTop: '1px solid var(--rule)',
-          borderBottom: '1px solid var(--rule)',
-        }}
-      >
-        <div className="pb-container" style={{ maxWidth: 1080 }}>
-          <p
-            className="eyebrow"
-            style={{ color: 'var(--teal-light)', marginBottom: 22 }}
-          >
-            § What we&apos;re asking for
-          </p>
-          <h2
-            className="serif"
-            style={{
-              fontSize: 'clamp(34px, 5.6vw, 58px)',
-              fontWeight: 300,
-              letterSpacing: '-0.02em',
-              lineHeight: 1,
-              color: 'var(--cream)',
-              marginBottom: 48,
-              maxWidth: 760,
-            }}
-          >
-            Three things. Simple.
-          </h2>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-              gap: 24,
-            }}
-          >
-            {[
-              {
-                n: '01',
-                t: 'Your protocols + teachings',
-                b: 'The materials you already share with patients — write-ups, lectures, webinars, published work. Plan B reads and synthesizes it (with permission) so every family using Plan B can benefit from the framework you&apos;ve built.',
-              },
-              {
-                n: '02',
-                t: 'Case-study participation',
-                b: 'Let us track a cohort of your patients (de-identified, consent-based) to see what your approach actually moves across 5–10 kids. You get the same read. Families everywhere get the pattern.',
-              },
-              {
-                n: '03',
-                t: 'Willingness to take referrals',
-                b: 'When Plan B sees a kid whose profile matches what your practice treats well, it tells the family you&apos;re a practitioner worth reaching. You never pay for a referral. You just say yes to new intakes.',
-              },
-            ].map((c) => (
-              <div
-                key={c.n}
-                style={{
-                  borderTop: '1px solid rgba(246,241,231,0.2)',
-                  paddingTop: 22,
-                }}
-              >
-                <p
-                  className="serif"
-                  style={{
-                    fontSize: 46,
-                    lineHeight: 0.9,
-                    color: 'var(--teal-light)',
-                    fontWeight: 300,
-                    letterSpacing: '-0.02em',
-                    margin: 0,
-                    marginBottom: 14,
-                  }}
-                >
-                  {c.n}
-                </p>
-                <p
-                  className="serif"
-                  style={{
-                    fontSize: 22,
-                    fontWeight: 400,
-                    lineHeight: 1.2,
-                    color: 'var(--cream)',
-                    margin: 0,
-                    marginBottom: 12,
-                  }}
-                >
-                  {c.t}
-                </p>
-                <p
-                  style={{
-                    fontSize: 13.5,
-                    color: '#bbb3a2',
-                    lineHeight: 1.75,
-                    fontWeight: 300,
-                    margin: 0,
-                  }}
-                  dangerouslySetInnerHTML={{ __html: c.b }}
-                />
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -269,7 +316,7 @@ export default function PractitionersPage() {
       <section
         style={{ padding: '100px 24px', background: 'var(--cream)' }}
       >
-        <div ref={get} className="pb-container reveal" style={{ maxWidth: 960 }}>
+        <div ref={get} className="pb-container reveal" style={{ maxWidth: 1000 }}>
           <p className="eyebrow" style={{ marginBottom: 20 }}>
             What you get
           </p>
@@ -298,20 +345,20 @@ export default function PractitionersPage() {
           >
             {[
               {
+                t: 'Documented outcomes',
+                b: 'A published six-month case study of your ten-client cohort. Clean data. Real journey. Your work visible in a way consumer reviews can never match.',
+              },
+              {
                 t: 'Targeted referrals',
-                b: 'Plan B routes families to your practice when your modality is the right match for their kid — with the clinical context already loaded.',
+                b: 'Plan B routes families to practitioners whose work fits their kid&apos;s profile. Your track record decides where they land — not ad spend.',
               },
               {
-                t: 'Published case study findings',
-                b: 'Your cohort\u2019s patterns get surfaced in our open research. With your name if you want it. Without, if you don&apos;t.',
-              },
-              {
-                t: 'Plan B\u2019s read on your patients',
-                b: 'Your patients\u2019 Plan B analyses — full intake, timeline, modality response — are available to you (with their consent) to inform their care.',
+                t: 'Your place in the network',
+                b: 'Where does your modality sequence well? Which colleague\u2019s work does it set up or complete? Plan B sees it across cohorts and tells you.',
               },
               {
                 t: 'Peer visibility',
-                b: 'When Plan B sees patterns across practitioners — where your work sequences well with a colleague\u2019s — we surface that, with permission. The silos stop being silos.',
+                b: 'When the silos stop being silos, the practitioners doing real work find each other. Join the practitioners who show up instead of marketing.',
               },
             ].map((c) => (
               <div
@@ -320,7 +367,7 @@ export default function PractitionersPage() {
                   background: 'var(--paper)',
                   border: '1px solid var(--sand)',
                   borderRadius: 4,
-                  padding: 22,
+                  padding: 24,
                 }}
               >
                 <p
@@ -359,17 +406,17 @@ export default function PractitionersPage() {
           textAlign: 'center',
         }}
       >
-        <div className="pb-container" style={{ maxWidth: 700 }}>
+        <div className="pb-container" style={{ maxWidth: 740 }}>
           <p className="eyebrow" style={{ marginBottom: 18 }}>
-            Apply to partner
+            Apply to take 10
           </p>
           <h2
             className="serif"
             style={{
-              fontSize: 'clamp(32px, 5vw, 48px)',
+              fontSize: 'clamp(32px, 5vw, 50px)',
               fontWeight: 300,
               letterSpacing: '-0.02em',
-              lineHeight: 1.05,
+              lineHeight: 1.02,
               marginBottom: 24,
               color: 'var(--ink)',
             }}
@@ -384,16 +431,15 @@ export default function PractitionersPage() {
               color: 'var(--ink-soft)',
               fontWeight: 300,
               marginBottom: 36,
-              maxWidth: 580,
+              maxWidth: 600,
               margin: '0 auto 36px',
             }}
           >
-            Email us with your practice name, modality focus, approximate PANS/PANDAS/autism
-            case volume, and what you&apos;re most curious to learn from a shared dataset.
-            We&apos;ll respond within a week.
+            Email us with your practice name, modality focus, typical PANS/PANDAS/autism case
+            volume, and the date you could start taking the ten. We respond within a week.
           </p>
           <a
-            href="mailto:rachel@planbforpans.com?subject=Practitioner%20partnership%20inquiry"
+            href="mailto:rachel@planbforpans.com?subject=Practitioner%20partnership%20%E2%80%94%20I'll%20take%2010"
             className="cta-teal"
             style={{ textDecoration: 'none' }}
           >
