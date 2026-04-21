@@ -193,8 +193,45 @@ export default function PractitionersPage() {
             </p>
             <div
               style={{
-                marginTop: 40,
-                paddingTop: 32,
+                marginTop: 36,
+                padding: '24px 28px',
+                background: 'rgba(31,107,107,0.18)',
+                borderLeft: '3px solid var(--teal-light)',
+                position: 'relative',
+              }}
+            >
+              <p
+                className="mono"
+                style={{
+                  fontSize: 10,
+                  color: 'var(--teal-light)',
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
+                  marginBottom: 10,
+                }}
+              >
+                How matching works
+              </p>
+              <p
+                style={{
+                  fontSize: 15,
+                  lineHeight: 1.8,
+                  color: '#d4cbb6',
+                  fontWeight: 300,
+                  margin: 0,
+                }}
+              >
+                Every volunteer family completes the full Plan B intake before placement.
+                We only send you the ten kids whose profiles align with each other <em>and</em>{' '}
+                with what your modality actually addresses. No mismatched cohorts. No wasted
+                sessions. Real signal, first try.
+              </p>
+            </div>
+
+            <div
+              style={{
+                marginTop: 32,
+                paddingTop: 28,
                 borderTop: '1px solid rgba(246,241,231,0.2)',
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
@@ -203,7 +240,7 @@ export default function PractitionersPage() {
               }}
             >
               {[
-                { k: '10', v: 'free clients' },
+                { k: '10', v: 'matched clients' },
                 { k: '6 mo', v: 'documented journey' },
                 { k: 'Open', v: 'findings published' },
                 { k: 'No cost', v: 'to participate' },

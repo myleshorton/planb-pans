@@ -767,14 +767,27 @@ export default function CaseStudies() {
               lineHeight: 1.85,
               color: 'var(--ink-soft)',
               fontWeight: 300,
-              marginBottom: 40,
               maxWidth: 640,
-              margin: '0 auto 40px',
+              margin: '0 auto 28px',
             }}
           >
             These case studies get built from your Tuesday log, not a paper. Track with Plan B —
             consent-based, de-identified — and your family&apos;s signal helps the next family
             skip the dead ends.
+          </p>
+          <p
+            style={{
+              fontSize: 14,
+              lineHeight: 1.8,
+              color: 'var(--sand-dark)',
+              fontWeight: 300,
+              maxWidth: 600,
+              margin: '0 auto 36px',
+            }}
+          >
+            Want your kid in a case study? Complete the full Plan B intake. Cohorts are matched
+            on profile — we place kids where the modality actually fits their kid, so every
+            study starts from aligned data.
           </p>
           <a
             href="https://app.planbforpans.com/signup"
@@ -783,7 +796,7 @@ export default function CaseStudies() {
             className="cta-teal"
             style={{ textDecoration: 'none', fontSize: 12 }}
           >
-            Join the research →
+            Complete the intake →
           </a>
         </div>
       </section>
