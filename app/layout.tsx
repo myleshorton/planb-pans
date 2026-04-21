@@ -81,6 +81,7 @@ export default function RootLayout({
               </a>
               <NavLink href="/case-studies">Case Studies</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
+              <NavLink href="/practitioners">Practitioners</NavLink>
               <NavLink href="/about">About</NavLink>
               <NavLink href="/contact">Contact</NavLink>
               <a

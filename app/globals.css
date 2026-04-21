@@ -380,6 +380,10 @@ button {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
   }
+  .practitioner-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
 }
 
 @media (max-width: 768px) {
