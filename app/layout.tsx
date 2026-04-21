@@ -3,8 +3,8 @@ import Link from 'next/link'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Plan B for PANS & PANDAS',
-  description: 'A coordination layer for parents when standard protocols fail. Synthesized from specialists who rarely talk to each other.',
+  title: 'Plan B for PANS & PANDAS — When the protocols fail, this is your Plan B',
+  description: 'When the protocols fail, this is your Plan B. A coordination layer for parents synthesized from specialists who rarely talk to each other.',
 }
 
 export default function RootLayout({
@@ -61,9 +61,10 @@ export default function RootLayout({
                 </span>
               </p>
             </Link>
-            <nav style={{ display: 'flex', gap: 22, alignItems: 'center' }}>
-              <NavLink href="/#listen">Watch the Podcast</NavLink>
+            <nav style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
+              <NavLink href="/tracker">Tracker</NavLink>
               <NavLink href="/case-studies">Case Studies</NavLink>
+              <NavLink href="/podcast">Podcast</NavLink>
               <NavLink href="/about">About</NavLink>
               <NavLink href="/contact">Contact</NavLink>
               <a
@@ -108,12 +109,33 @@ export default function RootLayout({
         <footer
           style={{
             borderTop: '1px solid var(--sand)',
-            padding: '48px 24px',
+            padding: '72px 24px 48px',
             background: 'var(--cream-light)',
             color: 'var(--sand-dark)',
+            textAlign: 'center',
           }}
         >
-          <div style={{ maxWidth: 1280, margin: '0 auto', fontSize: 13, lineHeight: 1.8 }}>
+          <div style={{ maxWidth: 820, margin: '0 auto', fontSize: 13, lineHeight: 1.8 }}>
+            <p
+              className="eyebrow"
+              style={{ marginBottom: 18, color: 'var(--sand-dark)' }}
+            >
+              Mission
+            </p>
+            <p
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontSize: 'clamp(28px, 4.2vw, 42px)',
+                fontWeight: 300,
+                color: 'var(--ink)',
+                lineHeight: 1.1,
+                letterSpacing: '-0.015em',
+                marginBottom: 40,
+              }}
+            >
+              When the protocols fail,{' '}
+              <em style={{ color: 'var(--teal)' }}>this is your Plan B.</em>
+            </p>
             <p
               style={{
                 fontFamily: 'var(--font-cormorant)',
@@ -125,9 +147,18 @@ export default function RootLayout({
             >
               Plan B <span style={{ fontStyle: 'italic', color: 'var(--teal)' }}>for PANS</span>
             </p>
-            <p>A non-profit coordination layer for parents navigating PANS, PANDAS, autism, and severe dysregulation. Built from the specialists who rarely talk to each other.</p>
-            <p style={{ marginTop: 16, fontSize: 12, color: 'var(--sand-dark)' }}>
-              © {new Date().getFullYear()} Plan B for PANS · <Link href="/privacy" style={{ color: 'var(--sand-dark)', textDecoration: 'underline' }}>Privacy</Link>
+            <p style={{ maxWidth: 560, margin: '0 auto' }}>
+              A non-profit coordination layer for parents navigating PANS, PANDAS, autism, and
+              severe dysregulation. Built from the specialists who rarely talk to each other.
+            </p>
+            <p style={{ marginTop: 20, fontSize: 12, color: 'var(--sand-dark)' }}>
+              © {new Date().getFullYear()} Plan B for PANS ·{' '}
+              <Link
+                href="/privacy"
+                style={{ color: 'var(--sand-dark)', textDecoration: 'underline' }}
+              >
+                Privacy
+              </Link>
             </p>
           </div>
         </footer>

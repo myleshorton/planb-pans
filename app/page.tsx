@@ -2,8 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 import BucketSection from './_components/BucketSection'
-import MethodSection from './_components/MethodSection'
-import ResearchSection from './_components/ResearchSection'
 
 const marqueeTerms: { text: string; italic?: boolean }[] = [
   { text: 'PANS', italic: true },
@@ -276,14 +274,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mission banner */}
+      <section
+        aria-label="Mission"
+        style={{
+          background: 'var(--ink)',
+          color: 'var(--cream)',
+          padding: '60px 24px',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+          textAlign: 'center',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 900 }}>
+          <p
+            className="eyebrow"
+            style={{ color: 'var(--teal-light)', marginBottom: 16 }}
+          >
+            Our mission
+          </p>
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(32px, 5.2vw, 54px)',
+              fontWeight: 300,
+              letterSpacing: '-0.018em',
+              lineHeight: 1.08,
+              margin: 0,
+              color: 'var(--cream)',
+            }}
+          >
+            When the protocols fail,
+            <br />
+            <em style={{ color: 'var(--teal-light)' }}>this is your Plan B.</em>
+          </p>
+        </div>
+      </section>
+
       {/* BUCKET */}
       <BucketSection />
-
-      {/* METHOD */}
-      <MethodSection />
-
-      {/* RESEARCH */}
-      <ResearchSection />
 
       {/* MARQUEE — what Plan B covers */}
       <section
@@ -306,235 +335,6 @@ export default function Home() {
                 </span>
               )),
             )}
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT IT IS */}
-      <section
-        style={{
-          padding: '120px 24px',
-          background: 'var(--cream-light)',
-          borderTop: '1px solid var(--sand)',
-          borderBottom: '1px solid var(--sand)',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
-        <div style={{ maxWidth: 880, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <div className="reveal" style={{ textAlign: 'center' }}>
-            <p className="eyebrow" style={{ marginBottom: 20 }}>
-              What Plan B is
-            </p>
-            <h2
-              style={{
-                fontFamily: 'var(--font-cormorant)',
-                fontSize: 'clamp(34px, 6.5vw, 54px)',
-                fontWeight: 300,
-                letterSpacing: '-0.018em',
-                marginBottom: 48,
-                color: 'var(--ink)',
-                lineHeight: 1.1,
-              }}
-            >
-              The coordination layer <br />
-              <em style={{ color: 'var(--teal)' }}>parents never had.</em>
-            </h2>
-          </div>
-
-          <div className="reveal-stagger">
-            <p
-              style={{
-                fontSize: 18,
-                lineHeight: 1.85,
-                color: 'var(--ink-soft)',
-                fontWeight: 300,
-                maxWidth: 720,
-                margin: '0 auto',
-                textAlign: 'center',
-              }}
-            >
-              The microbiome specialist understands the gut but not methylation. The methylation
-              specialist understands genetics but not mold. The mold specialist doesn&apos;t know
-              what the craniosacral therapist is doing.
-            </p>
-
-            <p
-              style={{
-                fontSize: 18,
-                lineHeight: 1.85,
-                color: 'var(--ink-soft)',
-                fontWeight: 300,
-                maxWidth: 720,
-                margin: '28px auto 0',
-                textAlign: 'center',
-              }}
-            >
-              Each of them is right about their piece. None of them are seeing the whole kid.
-              None of them are talking to each other.
-            </p>
-
-            <p
-              style={{
-                fontSize: 20,
-                fontFamily: 'var(--font-cormorant)',
-                fontStyle: 'italic',
-                fontWeight: 400,
-                lineHeight: 1.6,
-                color: 'var(--teal)',
-                maxWidth: 600,
-                margin: '56px auto 0',
-                textAlign: 'center',
-              }}
-            >
-              Plan B reads your kid&apos;s full story and tells you what a team of ten
-              specialists might have said if they&apos;d actually been in a room together.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT IT DOES — three pillars */}
-      <section style={{ padding: '120px 24px', background: 'var(--cream)' }}>
-        <div style={{ maxWidth: 1080, margin: '0 auto' }}>
-          <div className="reveal" style={{ textAlign: 'center', marginBottom: 72 }}>
-            <p className="eyebrow" style={{ marginBottom: 18 }}>
-              How it works
-            </p>
-            <h2
-              style={{
-                fontFamily: 'var(--font-cormorant)',
-                fontSize: 'clamp(34px, 6.5vw, 54px)',
-                fontWeight: 300,
-                letterSpacing: '-0.018em',
-                color: 'var(--ink)',
-                lineHeight: 1.1,
-              }}
-            >
-              Three things, <em style={{ color: 'var(--teal)' }}>done right.</em>
-            </h2>
-          </div>
-
-          <div
-            className="reveal-stagger"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: 20,
-            }}
-          >
-            <Pillar
-              n="01"
-              title="Full intake"
-              body="Pregnancy, birth, environment, diet, every medication and modality tried, every symptom, every lab. Plan B asks the questions a careful practitioner would."
-            />
-            <Pillar
-              n="02"
-              title="Daily tracker"
-              body="One-tap symptom logging. Notice flares before you'd otherwise connect the dots. Share with your practitioner as a real timeline, not a memory."
-            />
-            <Pillar
-              n="03"
-              title="A real thinking partner"
-              body="Synthesis across practitioner silos — functional medicine, microbiome, methylation, craniosacral, mold, peptides, and more. Ask anything, 2am included."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* PODCAST */}
-      <section
-        id="listen"
-        style={{
-          padding: '120px 24px',
-          background: 'var(--cream-light)',
-          borderTop: '1px solid var(--sand)',
-          borderBottom: '1px solid var(--sand)',
-        }}
-      >
-        <div style={{ maxWidth: 880, margin: '0 auto' }}>
-          <div className="reveal" style={{ textAlign: 'center', marginBottom: 56 }}>
-            <p className="eyebrow" style={{ marginBottom: 18 }}>
-              The podcast
-            </p>
-            <h2
-              style={{
-                fontFamily: 'var(--font-cormorant)',
-                fontSize: 'clamp(34px, 6.5vw, 54px)',
-                fontWeight: 300,
-                letterSpacing: '-0.018em',
-                marginBottom: 22,
-                lineHeight: 1.1,
-              }}
-            >
-              Finding your path when <br />
-              <em style={{ color: 'var(--teal)' }}>standard protocols fail.</em>
-            </h2>
-            <p
-              style={{
-                fontSize: 17,
-                lineHeight: 1.8,
-                color: 'var(--ink-soft)',
-                fontWeight: 300,
-                maxWidth: 640,
-                margin: '0 auto',
-              }}
-            >
-              Case studies, parent experience, and deep explorations of the fringe modalities
-              that actually moved the needle for our kids. New interviews plus the full back
-              catalog of what we&apos;ve learned along the way.
-            </p>
-          </div>
-
-          <div className="reveal" style={{ maxWidth: 360, margin: '0 auto 48px' }}>
-            <img
-              src="/rachel-podcast.jpg"
-              alt="Rachel Johnson, host of Plan B for PANS"
-              style={{
-                width: '100%',
-                height: 'auto',
-                display: 'block',
-                filter: 'grayscale(100%) contrast(1.04)',
-                boxShadow: '0 40px 80px -40px rgba(0,0,0,0.45)',
-              }}
-            />
-            <p className="label-tracked" style={{ marginTop: 14, textAlign: 'center' }}>
-              Rachel Johnson · Host
-            </p>
-          </div>
-
-          <div
-            className="reveal"
-            style={{
-              background: 'var(--paper)',
-              border: '1px solid var(--sand)',
-              borderRadius: 4,
-              padding: '48px 32px',
-              textAlign: 'center',
-              boxShadow: '0 30px 80px -40px rgba(20,20,20,0.18)',
-            }}
-          >
-            <p
-              className="eyebrow"
-              style={{ marginBottom: 14, color: 'var(--sand-dark)' }}
-            >
-              Episodes · Dropping soon
-            </p>
-            <p
-              style={{
-                fontFamily: 'var(--font-cormorant)',
-                fontSize: 22,
-                fontStyle: 'italic',
-                color: 'var(--ink)',
-                lineHeight: 1.5,
-                maxWidth: 520,
-                margin: '0 auto',
-                fontWeight: 400,
-              }}
-            >
-              New conversations, case studies, and deep-dives on the fringe modalities that
-              actually work — recorded and in edit.
-            </p>
           </div>
         </div>
       </section>
@@ -616,47 +416,6 @@ export default function Home() {
         </div>
       </section>
     </main>
-  )
-}
-
-function Pillar({ n, title, body }: { n: string; title: string; body: string }) {
-  return (
-    <div
-      className="card-hover"
-      style={{
-        background: 'var(--paper)',
-        border: '1px solid var(--sand)',
-        borderRadius: 4,
-        padding: '36px 28px',
-        position: 'relative',
-      }}
-    >
-      <p className="label-tracked" style={{ color: 'var(--teal)', marginBottom: 24 }}>
-        {n}
-      </p>
-      <h3
-        style={{
-          fontFamily: 'var(--font-cormorant)',
-          fontSize: 28,
-          fontWeight: 400,
-          letterSpacing: '-0.01em',
-          marginBottom: 12,
-          color: 'var(--ink)',
-        }}
-      >
-        {title}
-      </h3>
-      <p
-        style={{
-          fontSize: 15,
-          lineHeight: 1.75,
-          color: 'var(--ink-soft)',
-          fontWeight: 300,
-        }}
-      >
-        {body}
-      </p>
-    </div>
   )
 }
 
