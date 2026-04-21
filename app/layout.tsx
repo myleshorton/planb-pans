@@ -22,7 +22,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body className="grain">
         <header
           style={{
             borderBottom: '1px solid var(--sand)',

@@ -2,6 +2,26 @@
 
 import { useEffect, useRef } from 'react'
 
+const marqueeTerms: { text: string; italic?: boolean }[] = [
+  { text: 'PANS', italic: true },
+  { text: 'PANDAS', italic: true },
+  { text: 'Autism', italic: true },
+  { text: 'Regression' },
+  { text: 'Rage & meltdowns' },
+  { text: 'OCD' },
+  { text: 'Food aversions' },
+  { text: 'Mold' },
+  { text: 'Methylation' },
+  { text: 'Gut dysbiosis' },
+  { text: 'Lyme' },
+  { text: 'Bartonella' },
+  { text: 'Mast cell' },
+  { text: 'Peptides' },
+  { text: 'Craniosacral' },
+  { text: 'DNRS' },
+  { text: 'Severe dysregulation', italic: true },
+]
+
 export default function Home() {
   const revealRef = useRef<HTMLElement | null>(null)
 
@@ -75,7 +95,6 @@ export default function Home() {
           </p>
 
           <h1
-            className="rise-wide delay-2"
             style={{
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(52px, 12vw, 108px)',
@@ -86,10 +105,30 @@ export default function Home() {
               color: 'var(--ink)',
             }}
           >
-            When standard
+            <span className="word" style={{ animationDelay: '0.18s' }}>When</span>{' '}
+            <span className="word" style={{ animationDelay: '0.30s' }}>standard</span>
             <br />
-            <span style={{ fontStyle: 'italic', color: 'var(--teal)', fontWeight: 400 }}>
-              protocols fail.
+            <span
+              className="word word-italic"
+              style={{
+                fontStyle: 'italic',
+                color: 'var(--teal)',
+                fontWeight: 400,
+                animationDelay: '0.46s',
+              }}
+            >
+              protocols
+            </span>{' '}
+            <span
+              className="word word-italic"
+              style={{
+                fontStyle: 'italic',
+                color: 'var(--teal)',
+                fontWeight: 400,
+                animationDelay: '0.58s',
+              }}
+            >
+              fail.
             </span>
           </h1>
 
@@ -162,6 +201,31 @@ export default function Home() {
           >
             ↓ &nbsp; What Plan B is
           </p>
+        </div>
+      </section>
+
+      {/* MARQUEE — what Plan B covers */}
+      <section
+        aria-label="What Plan B covers"
+        style={{
+          padding: '44px 0',
+          background: 'var(--cream)',
+          borderTop: '1px solid var(--sand)',
+          borderBottom: '1px solid var(--sand)',
+          overflow: 'hidden',
+          position: 'relative',
+        }}
+      >
+        <div style={{ overflow: 'hidden', maskImage: 'linear-gradient(90deg, transparent, black 10%, black 90%, transparent)' }}>
+          <div className="marquee-track">
+            {[...Array(2)].flatMap((_, copy) =>
+              marqueeTerms.map((term, i) => (
+                <span key={`${copy}-${i}`} className="marquee-item">
+                  {term.italic ? <em>{term.text}</em> : term.text}
+                </span>
+              )),
+            )}
+          </div>
         </div>
       </section>
 
