@@ -80,10 +80,10 @@ export default function RootLayout({
                 Community
               </a>
               <NavLink href="/case-studies">Case Studies</NavLink>
+              <NavLink href="/vote">Vote</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
               <NavLink href="/practitioners">Practitioners</NavLink>
               <NavLink href="/about">About</NavLink>
-              <NavLink href="/contact">Contact</NavLink>
               <a
                 href="https://app.planbforpans.com/sign-in"
                 target="_blank"
@@ -169,8 +169,28 @@ export default function RootLayout({
               severe dysregulation. When the standard system runs out of answers, Plan B helps
               you keep going.
             </p>
+            <p
+              className="mono"
+              style={{
+                marginTop: 22,
+                fontSize: 10,
+                letterSpacing: '0.28em',
+                textTransform: 'uppercase',
+                color: 'var(--teal)',
+                fontWeight: 600,
+              }}
+            >
+              Led by the community · For the community
+            </p>
             <p style={{ marginTop: 20, fontSize: 12, color: 'var(--sand-dark)' }}>
               © {new Date().getFullYear()} Plan B for PANS ·{' '}
+              <Link
+                href="/contact"
+                style={{ color: 'var(--sand-dark)', textDecoration: 'underline' }}
+              >
+                Contact
+              </Link>{' '}
+              ·{' '}
               <Link
                 href="/privacy"
                 style={{ color: 'var(--sand-dark)', textDecoration: 'underline' }}

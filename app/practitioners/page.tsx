@@ -278,6 +278,146 @@ export default function PractitionersPage() {
         </div>
       </section>
 
+      {/* Public-facing + parents vote */}
+      <section
+        style={{
+          padding: '100px 24px',
+          background: 'var(--cream)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 1040 }}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1.3fr',
+              gap: 56,
+              alignItems: 'start',
+            }}
+            className="practitioner-grid"
+          >
+            <div>
+              <p className="eyebrow" style={{ marginBottom: 20 }}>
+                How it runs
+              </p>
+              <h2
+                className="serif"
+                style={{
+                  fontSize: 'clamp(34px, 5.4vw, 58px)',
+                  fontWeight: 300,
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1,
+                  color: 'var(--ink)',
+                  margin: 0,
+                }}
+              >
+                Public-facing.
+                <br />
+                <em style={{ color: 'var(--teal)' }}>Parents choose who&apos;s next.</em>
+              </h2>
+            </div>
+            <div>
+              <ol
+                style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 22,
+                }}
+              >
+                {[
+                  {
+                    n: '01',
+                    t: 'You sign up',
+                    b: 'Practice name, modality focus, what you&apos;d take on. Your listing goes public.',
+                  },
+                  {
+                    n: '02',
+                    t: 'Parents see you',
+                    b: 'Every practitioner who has volunteered is listed, along with the modality and the hypothesis they&apos;re running — not hidden behind ad buys.',
+                  },
+                  {
+                    n: '03',
+                    t: 'Parents vote',
+                    b: 'The community decides which study runs next. Which modality do the most families want to see tracked? That one goes first.',
+                  },
+                  {
+                    n: '04',
+                    t: 'Plan B matches the ten',
+                    b: 'Top-voted practitioner gets the ten aligned intakes, matched by profile. The six-month journey starts, documented openly.',
+                  },
+                ].map((s) => (
+                  <li
+                    key={s.n}
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: '60px 1fr',
+                      gap: 20,
+                      alignItems: 'start',
+                      borderTop: '1px solid var(--sand)',
+                      paddingTop: 18,
+                    }}
+                  >
+                    <p
+                      className="serif"
+                      style={{
+                        fontSize: 40,
+                        lineHeight: 0.95,
+                        color: 'var(--teal)',
+                        fontWeight: 300,
+                        letterSpacing: '-0.02em',
+                        margin: 0,
+                      }}
+                    >
+                      {s.n}
+                    </p>
+                    <div>
+                      <p
+                        className="serif"
+                        style={{
+                          fontSize: 22,
+                          fontWeight: 400,
+                          letterSpacing: '-0.01em',
+                          color: 'var(--ink)',
+                          marginBottom: 8,
+                        }}
+                      >
+                        {s.t}
+                      </p>
+                      <p
+                        style={{
+                          fontSize: 14,
+                          lineHeight: 1.75,
+                          color: 'var(--ink-soft)',
+                          fontWeight: 300,
+                        }}
+                        dangerouslySetInnerHTML={{ __html: s.b }}
+                      />
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <p
+                className="serif"
+                style={{
+                  fontSize: 20,
+                  fontStyle: 'italic',
+                  color: 'var(--ink)',
+                  margin: '28px 0 0',
+                  fontWeight: 400,
+                  lineHeight: 1.4,
+                  borderLeft: '3px solid var(--teal)',
+                  paddingLeft: 20,
+                }}
+              >
+                Transparency is the point. The practitioners who show up get seen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What this gives families */}
       <section
         style={{
