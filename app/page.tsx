@@ -141,6 +141,101 @@ export default function Home() {
             }} src="https://open.spotify.com/embed/show/0cVlSGzG1O4m6HZCFeKan9?utm_source=generator" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
           </div>
 
+          {/* Install on Phone Section */}
+          <div style={{
+            background: '#fff',
+            border: '1px solid #e8e8e8',
+            borderRadius: '12px',
+            padding: '48px 40px',
+            marginBottom: '80px',
+            boxShadow: '0 20px 60px rgba(0,0,0,0.04)'
+          }}>
+            <p style={{
+              fontFamily: 'var(--font-inter), sans-serif',
+              fontSize: '13px',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: '#1F6B6B',
+              marginBottom: '16px',
+              fontWeight: 600,
+              textAlign: 'center'
+            }}>
+              📱 Put Plan B on Your Phone
+            </p>
+            <h2 style={{
+              fontFamily: 'var(--font-cormorant), Georgia, serif',
+              fontSize: 'clamp(28px, 5vw, 38px)',
+              fontWeight: 300,
+              textAlign: 'center',
+              marginBottom: '16px',
+              color: '#111',
+              letterSpacing: '-0.01em',
+              lineHeight: 1.2
+            }}>
+              No app store. No download.
+            </h2>
+            <p style={{
+              fontFamily: 'var(--font-inter), sans-serif',
+              fontSize: '16px',
+              color: '#666',
+              lineHeight: 1.7,
+              textAlign: 'center',
+              maxWidth: '560px',
+              margin: '0 auto 36px',
+              fontWeight: 300
+            }}>
+              Plan B runs as a web app that lives on your home screen — like any other app, but with no app store, no approval process, and updates automatically.
+            </p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px', marginBottom: '32px' }}>
+              <div style={{ padding: '24px', background: '#fafafa', borderRadius: '8px' }}>
+                <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1F6B6B', marginBottom: '12px', fontWeight: 600 }}>iPhone · Safari</p>
+                <ol style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '15px', color: '#333', lineHeight: 1.7, paddingLeft: '18px', margin: 0 }}>
+                  <li>Open <strong>app.planbforpans.com</strong> in Safari</li>
+                  <li>Tap the <strong>Share</strong> button (square with arrow)</li>
+                  <li>Scroll down, tap <strong>Add to Home Screen</strong></li>
+                  <li>Tap <strong>Add</strong></li>
+                </ol>
+              </div>
+              <div style={{ padding: '24px', background: '#fafafa', borderRadius: '8px' }}>
+                <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1F6B6B', marginBottom: '12px', fontWeight: 600 }}>Android · Chrome</p>
+                <ol style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '15px', color: '#333', lineHeight: 1.7, paddingLeft: '18px', margin: 0 }}>
+                  <li>Open <strong>app.planbforpans.com</strong> in Chrome</li>
+                  <li>Tap the <strong>⋮</strong> menu (top right)</li>
+                  <li>Tap <strong>Install app</strong> (or <strong>Add to Home screen</strong>)</li>
+                  <li>Tap <strong>Install</strong></li>
+                </ol>
+              </div>
+            </div>
+
+            <div style={{ textAlign: 'center' }}>
+              <a
+                href="https://app.planbforpans.com/signup"
+                target="_blank"
+                rel="noopener"
+                style={{
+                  display: 'inline-block',
+                  background: '#1F6B6B',
+                  color: '#fff',
+                  padding: '16px 36px',
+                  borderRadius: '6px',
+                  fontFamily: 'var(--font-inter), sans-serif',
+                  fontSize: '14px',
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  boxShadow: '0 10px 30px rgba(31,107,107,0.2)',
+                }}
+              >
+                Open Plan B →
+              </a>
+              <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', color: '#999', marginTop: '16px', fontWeight: 300 }}>
+                Once installed, you'll see the Plan B icon on your home screen — tap it like any app.
+              </p>
+            </div>
+          </div>
+
         </div>
       </section>
 
