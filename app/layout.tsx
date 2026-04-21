@@ -67,6 +67,22 @@ export default function RootLayout({
               <NavLink href="/about">About</NavLink>
               <NavLink href="/contact">Contact</NavLink>
               <a
+                href="https://app.planbforpans.com/sign-in"
+                target="_blank"
+                rel="noopener"
+                style={{
+                  fontFamily: 'var(--font-inter)',
+                  fontSize: 11,
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
+                  color: 'var(--sand-dark)',
+                  fontWeight: 500,
+                  textDecoration: 'none',
+                }}
+              >
+                Sign In
+              </a>
+              <a
                 href="https://app.planbforpans.com/signup"
                 target="_blank"
                 rel="noopener"
