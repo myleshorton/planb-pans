@@ -28,6 +28,7 @@ export default function RootLayout({
             <a href="/case-studies" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#999', textDecoration: 'none' }}>Case Studies</a>
             <a href="/about" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#999', textDecoration: 'none' }}>About</a>
             <a href="/contact" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#999', textDecoration: 'none' }}>Contact</a>
+            <a href="https://app.planbforpans.com/signup" target="_blank" rel="noopener" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#1F6B6B', textDecoration: 'none', fontWeight: 600 }}>Start Intake →</a>
           </div>
         </nav>
         {children}
