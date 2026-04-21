@@ -314,6 +314,151 @@ export default function Home() {
       {/* BUCKET */}
       <BucketSection />
 
+      {/* HOW PLAN B GETS SMARTER */}
+      <section
+        style={{
+          padding: '100px 24px',
+          background: 'var(--cream-light)',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        <div
+          className="bloom-float-alt"
+          style={{
+            position: 'absolute',
+            top: -120,
+            right: -140,
+            width: 360,
+            height: 360,
+            borderRadius: '50%',
+            background:
+              'radial-gradient(circle, rgba(31,107,107,0.1) 0%, transparent 70%)',
+            pointerEvents: 'none',
+          }}
+        />
+        <div
+          className="pb-container"
+          style={{ maxWidth: 960, position: 'relative', zIndex: 1 }}
+        >
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1.3fr',
+              gap: 56,
+              alignItems: 'center',
+            }}
+            className="smarter-grid"
+          >
+            <div>
+              <p className="eyebrow" style={{ marginBottom: 20 }}>
+                How Plan B learns
+              </p>
+              <h2
+                className="serif"
+                style={{
+                  fontSize: 'clamp(36px, 5.4vw, 58px)',
+                  fontWeight: 300,
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.02,
+                  color: 'var(--ink)',
+                  margin: 0,
+                }}
+              >
+                Every family makes
+                <br />
+                the <em style={{ color: 'var(--teal)' }}>next read sharper.</em>
+              </h2>
+            </div>
+            <div>
+              <p
+                style={{
+                  fontSize: 17,
+                  lineHeight: 1.9,
+                  color: 'var(--ink-soft)',
+                  fontWeight: 300,
+                  margin: 0,
+                }}
+              >
+                Plan B has a unique, working understanding of PANS, PANDAS, and the shared
+                drivers behind severe dysregulation. As we document what modalities work and
+                what don&apos;t — what actually moves the needle, what stalls, what was wasted
+                time — the understanding gets deeper.
+              </p>
+              <p
+                style={{
+                  fontSize: 17,
+                  lineHeight: 1.9,
+                  color: 'var(--ink-soft)',
+                  fontWeight: 300,
+                  marginTop: 18,
+                }}
+              >
+                The more stories shared, the smarter the bot becomes. The 100th family&apos;s
+                read benefits from what the first 99 contributed.
+              </p>
+              <p
+                className="serif"
+                style={{
+                  fontSize: 22,
+                  fontStyle: 'italic',
+                  color: 'var(--ink)',
+                  margin: '24px 0 0',
+                  fontWeight: 400,
+                  lineHeight: 1.35,
+                  borderLeft: '3px solid var(--teal)',
+                  paddingLeft: 20,
+                }}
+              >
+                Together we can fix this —{' '}
+                <span style={{ color: 'var(--teal)' }}>if you share.</span>
+              </p>
+              <div
+                style={{
+                  display: 'flex',
+                  gap: 18,
+                  marginTop: 28,
+                  alignItems: 'center',
+                  flexWrap: 'wrap',
+                }}
+              >
+                <a
+                  href="/research"
+                  className="link-sweep"
+                  style={{
+                    fontSize: 11,
+                    letterSpacing: '0.22em',
+                    textTransform: 'uppercase',
+                    fontWeight: 600,
+                    color: 'var(--teal)',
+                    textDecoration: 'none',
+                  }}
+                >
+                  See the emerging patterns →
+                </a>
+                <span style={{ color: 'var(--sand)' }}>·</span>
+                <a
+                  href="/case-studies"
+                  className="link-sweep"
+                  style={{
+                    fontSize: 11,
+                    letterSpacing: '0.22em',
+                    textTransform: 'uppercase',
+                    fontWeight: 600,
+                    color: 'var(--teal)',
+                    textDecoration: 'none',
+                  }}
+                >
+                  Open case studies →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* MARQUEE — what Plan B covers */}
       <section
         aria-label="What Plan B covers"
