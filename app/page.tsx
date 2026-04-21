@@ -505,15 +505,32 @@ export default function Home() {
               background: 'var(--paper)',
               border: '1px solid var(--sand)',
               borderRadius: 4,
-              padding: 28,
+              padding: '48px 32px',
+              textAlign: 'center',
               boxShadow: '0 30px 80px -40px rgba(20,20,20,0.18)',
             }}
           >
-            <iframe
-              style={{ borderRadius: 6, width: '100%', height: 352, display: 'block', border: 0 }}
-              src="https://open.spotify.com/embed/show/0cVlSGzG1O4m6HZCFeKan9?utm_source=generator"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            />
+            <p
+              className="eyebrow"
+              style={{ marginBottom: 14, color: 'var(--sand-dark)' }}
+            >
+              Episodes · Dropping soon
+            </p>
+            <p
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontSize: 22,
+                fontStyle: 'italic',
+                color: 'var(--ink)',
+                lineHeight: 1.5,
+                maxWidth: 520,
+                margin: '0 auto',
+                fontWeight: 400,
+              }}
+            >
+              New conversations, case studies, and deep-dives on the fringe modalities that
+              actually work — recorded and in edit.
+            </p>
           </div>
         </div>
       </section>
