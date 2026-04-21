@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import BucketSection from './_components/BucketSection'
+import MethodSection from './_components/MethodSection'
 
 const marqueeTerms: { text: string; italic?: boolean }[] = [
   { text: 'PANS', italic: true },
@@ -41,14 +43,12 @@ export default function Home() {
 
   return (
     <main ref={revealRef} style={{ background: 'var(--cream)' }}>
-      {/* HERO */}
+      {/* HERO — editorial split */}
       <section
         style={{
           minHeight: '94vh',
           display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'center',
           padding: '80px 24px',
           position: 'relative',
           overflow: 'hidden',
@@ -83,126 +83,203 @@ export default function Home() {
 
         <div
           style={{
-            maxWidth: 900,
+            maxWidth: 1240,
             width: '100%',
+            margin: '0 auto',
             position: 'relative',
             zIndex: 1,
-            textAlign: 'center',
+            display: 'grid',
+            gridTemplateColumns: 'minmax(0, 1.25fr) minmax(0, 1fr)',
+            gap: 'clamp(40px, 6vw, 96px)',
+            alignItems: 'center',
           }}
+          className="hero-grid"
         >
-          <p className="eyebrow rise delay-1 caret" style={{ marginBottom: 24 }}>
-            There is always a Plan B
-          </p>
+          {/* Left — text */}
+          <div>
+            <p className="eyebrow rise delay-1 caret" style={{ marginBottom: 22 }}>
+              There is always a Plan B
+            </p>
 
-          <h1
-            style={{
-              fontFamily: 'var(--font-cormorant)',
-              fontSize: 'clamp(52px, 12vw, 108px)',
-              fontWeight: 300,
-              letterSpacing: '-0.028em',
-              lineHeight: 1,
-              marginBottom: 32,
-              color: 'var(--ink)',
-            }}
-          >
-            <span className="word" style={{ animationDelay: '0.18s' }}>When</span>{' '}
-            <span className="word" style={{ animationDelay: '0.30s' }}>standard</span>
-            <br />
-            <span
-              className="word word-italic"
+            <h1
               style={{
-                fontStyle: 'italic',
-                color: 'var(--teal)',
-                fontWeight: 400,
-                animationDelay: '0.46s',
+                fontFamily: 'var(--font-cormorant)',
+                fontSize: 'clamp(52px, 9vw, 104px)',
+                fontWeight: 300,
+                letterSpacing: '-0.028em',
+                lineHeight: 0.98,
+                marginBottom: 30,
+                color: 'var(--ink)',
               }}
             >
-              protocols
-            </span>{' '}
-            <span
-              className="word word-italic"
+              <span className="word" style={{ animationDelay: '0.18s' }}>When</span>{' '}
+              <span className="word" style={{ animationDelay: '0.30s' }}>standard</span>
+              <br />
+              <span
+                className="word word-italic"
+                style={{
+                  fontStyle: 'italic',
+                  color: 'var(--teal)',
+                  fontWeight: 400,
+                  animationDelay: '0.46s',
+                }}
+              >
+                protocols
+              </span>{' '}
+              <span
+                className="word word-italic"
+                style={{
+                  fontStyle: 'italic',
+                  color: 'var(--teal)',
+                  fontWeight: 400,
+                  animationDelay: '0.58s',
+                }}
+              >
+                fail.
+              </span>
+            </h1>
+
+            <p
+              className="rise delay-3"
               style={{
-                fontStyle: 'italic',
-                color: 'var(--teal)',
-                fontWeight: 400,
-                animationDelay: '0.58s',
+                fontSize: 19,
+                color: 'var(--ink-soft)',
+                lineHeight: 1.7,
+                fontWeight: 300,
+                maxWidth: 560,
+                marginBottom: 40,
               }}
             >
-              fail.
-            </span>
-          </h1>
+              A coordination layer for parents of kids with PANS, PANDAS, autism, and severe
+              dysregulation. Built from the specialists who rarely talk to each other. Free —
+              for as long as it can be.
+            </p>
 
-          <p
-            className="rise delay-3"
-            style={{
-              fontSize: 20,
-              color: 'var(--ink-soft)',
-              lineHeight: 1.7,
-              fontWeight: 300,
-              maxWidth: 680,
-              margin: '0 auto 52px',
-            }}
-          >
-            A coordination layer for parents of kids with PANS, PANDAS, autism, and severe
-            dysregulation. Built from the specialists who rarely talk to each other. Free —
-            for as long as it can be.
-          </p>
-
-          <div
-            className="rise delay-4"
-            style={{
-              display: 'flex',
-              gap: 14,
-              justifyContent: 'center',
-              flexWrap: 'wrap',
-            }}
-          >
-            <a
-              href="https://app.planbforpans.com/signup"
-              target="_blank"
-              rel="noopener"
-              className="cta-teal"
-              style={{ textDecoration: 'none' }}
-            >
-              Start your intake →
-            </a>
-            <a
-              href="#listen"
+            <div
+              className="rise delay-4"
               style={{
-                display: 'inline-block',
-                padding: '16px 32px',
-                fontFamily: 'var(--font-inter)',
+                display: 'flex',
+                gap: 14,
+                flexWrap: 'wrap',
+              }}
+            >
+              <a
+                href="https://app.planbforpans.com/signup"
+                target="_blank"
+                rel="noopener"
+                className="cta-teal"
+                style={{ textDecoration: 'none' }}
+              >
+                Start your intake →
+              </a>
+              <a
+                href="#listen"
+                style={{
+                  display: 'inline-block',
+                  padding: '16px 32px',
+                  fontFamily: 'var(--font-inter)',
+                  fontSize: 11,
+                  letterSpacing: '0.28em',
+                  textTransform: 'uppercase',
+                  fontWeight: 600,
+                  color: 'var(--teal)',
+                  border: '1px solid var(--sand)',
+                  borderRadius: 4,
+                  textDecoration: 'none',
+                  background: 'transparent',
+                }}
+              >
+                Listen to the podcast
+              </a>
+            </div>
+
+            <p
+              className="fade delay-6"
+              style={{
+                marginTop: 56,
                 fontSize: 11,
-                letterSpacing: '0.28em',
+                letterSpacing: '0.3em',
                 textTransform: 'uppercase',
-                fontWeight: 600,
-                color: 'var(--teal)',
-                border: '1px solid var(--sand)',
-                borderRadius: 4,
-                textDecoration: 'none',
-                background: 'transparent',
-                transition: 'border-color 0.3s ease, color 0.3s ease',
+                color: 'var(--sand-dark)',
+                fontWeight: 500,
               }}
             >
-              Listen to the podcast
-            </a>
+              ↓ &nbsp; What Plan B is
+            </p>
           </div>
 
-          <p
-            className="fade delay-6"
+          {/* Right — portrait block */}
+          <div
+            className="fade delay-2 hero-portrait"
             style={{
-              marginTop: 80,
-              fontSize: 11,
-              letterSpacing: '0.3em',
-              textTransform: 'uppercase',
-              color: 'var(--sand-dark)',
-              fontWeight: 500,
+              position: 'relative',
+              paddingLeft: 24,
             }}
           >
-            ↓ &nbsp; What Plan B is
-          </p>
+            <div
+              style={{
+                position: 'absolute',
+                top: 40,
+                right: 40,
+                bottom: -40,
+                left: 64,
+                background: 'var(--teal)',
+                opacity: 0.92,
+                zIndex: 0,
+              }}
+            />
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              <img
+                src="/rachel-podcast.jpg"
+                alt="Rachel Johnson, founder of Plan B for PANS"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  filter: 'grayscale(100%) contrast(1.06)',
+                  boxShadow: '0 40px 80px -30px rgba(0,0,0,0.55)',
+                }}
+              />
+              <div
+                style={{
+                  background: 'var(--cream)',
+                  border: '1px solid var(--sand)',
+                  borderTop: 'none',
+                  padding: '20px 22px',
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: 'var(--font-cormorant)',
+                    fontSize: 'clamp(18px, 2vw, 22px)',
+                    fontStyle: 'italic',
+                    fontWeight: 400,
+                    color: 'var(--ink)',
+                    lineHeight: 1.4,
+                    marginBottom: 14,
+                  }}
+                >
+                  &ldquo;What healed my son wasn&apos;t a secret buried somewhere. The problem
+                  wasn&apos;t missing information. It was that nobody in the system could see it
+                  all at once.&rdquo;
+                </p>
+                <p
+                  className="label-tracked"
+                  style={{ color: 'var(--teal)', fontWeight: 600 }}
+                >
+                  Rachel Johnson · Founder
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* BUCKET */}
+      <BucketSection />
+
+      {/* METHOD */}
+      <MethodSection />
 
       {/* MARQUEE — what Plan B covers */}
       <section
@@ -382,13 +459,27 @@ export default function Home() {
                 fontSize: 'clamp(34px, 6.5vw, 54px)',
                 fontWeight: 300,
                 letterSpacing: '-0.018em',
-                marginBottom: 18,
+                marginBottom: 22,
                 lineHeight: 1.1,
               }}
             >
-              Conversations with the <br />
-              <em style={{ color: 'var(--teal)' }}>practitioners who helped.</em>
+              Finding your path when <br />
+              <em style={{ color: 'var(--teal)' }}>standard protocols fail.</em>
             </h2>
+            <p
+              style={{
+                fontSize: 17,
+                lineHeight: 1.8,
+                color: 'var(--ink-soft)',
+                fontWeight: 300,
+                maxWidth: 640,
+                margin: '0 auto',
+              }}
+            >
+              Case studies, parent experience, and deep explorations of the fringe modalities
+              that actually moved the needle for our kids. New interviews plus the full back
+              catalog of what we&apos;ve learned along the way.
+            </p>
           </div>
 
           <div className="reveal" style={{ maxWidth: 360, margin: '0 auto 48px' }}>

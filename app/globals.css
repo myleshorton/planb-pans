@@ -9,10 +9,26 @@
   --sand-light: #e8e0c9;
   --teal: #1F6B6B;
   --teal-deep: #155252;
+  --teal-light: #5aa19f;
+  --mute: #8a8373;
+  --rule: #d4cbb6;
   --paper: #fff;
 
   --font-cormorant: 'Cormorant', Georgia, serif;
   --font-inter: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  --serif: var(--font-cormorant);
+  --mono: var(--font-mono);
+}
+
+.serif { font-family: var(--serif); }
+.mono {
+  font-family: var(--font-mono);
+  font-feature-settings: 'ss01';
+}
+.pb-container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 * {
@@ -332,6 +348,26 @@ button {
   }
   .reveal { opacity: 1; transform: none; }
   .reveal-stagger > * { opacity: 1; transform: none; }
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+  .hero-portrait {
+    padding-left: 0 !important;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .bucket-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+  .method-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
 }
 
 @media (max-width: 768px) {
