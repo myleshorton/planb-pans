@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Plan B for PANS & PANDAS — When the protocols fail, this is your Plan B',
-  description: 'When the protocols fail, this is your Plan B. A coordination layer for parents synthesized from specialists who rarely talk to each other.',
+  description: 'When the protocols fail, this is your Plan B. A coordination layer for parents navigating PANS, PANDAS, autism, and severe dysregulation.',
 }
 
 export default function RootLayout({
@@ -149,7 +149,8 @@ export default function RootLayout({
             </p>
             <p style={{ maxWidth: 560, margin: '0 auto' }}>
               A non-profit coordination layer for parents navigating PANS, PANDAS, autism, and
-              severe dysregulation. Built from the specialists who rarely talk to each other.
+              severe dysregulation. When the standard system runs out of answers, Plan B helps
+              you keep going.
             </p>
             <p style={{ marginTop: 20, fontSize: 12, color: 'var(--sand-dark)' }}>
               © {new Date().getFullYear()} Plan B for PANS ·{' '}

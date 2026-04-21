@@ -150,8 +150,8 @@ export default function Home() {
               }}
             >
               A coordination layer for parents of kids with PANS, PANDAS, autism, and severe
-              dysregulation. Built from the specialists who rarely talk to each other. Free —
-              for as long as it can be.
+              dysregulation. For the 2am questions the standard system doesn&apos;t answer.
+              Free — for as long as it can be.
             </p>
 
             <div
