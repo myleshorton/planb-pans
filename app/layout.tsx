@@ -61,7 +61,8 @@ export default function RootLayout({
                 </span>
               </p>
             </Link>
-            <nav style={{ display: 'flex', gap: 26, alignItems: 'center' }}>
+            <nav style={{ display: 'flex', gap: 22, alignItems: 'center' }}>
+              <NavLink href="/#listen">Watch the Podcast</NavLink>
               <NavLink href="/case-studies">Case Studies</NavLink>
               <NavLink href="/about">About</NavLink>
               <NavLink href="/contact">Contact</NavLink>
@@ -82,7 +83,7 @@ export default function RootLayout({
                   textDecoration: 'none',
                 }}
               >
-                Start →
+                Start Intake →
               </a>
             </nav>
           </div>
