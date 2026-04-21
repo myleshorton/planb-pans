@@ -314,10 +314,10 @@ export default function Home() {
       {/* BUCKET */}
       <BucketSection />
 
-      {/* HOW PLAN B GETS SMARTER */}
+      {/* WHY THE BOT */}
       <section
         style={{
-          padding: '100px 24px',
+          padding: '110px 24px',
           background: 'var(--cream-light)',
           borderTop: '1px solid var(--rule)',
           borderBottom: '1px solid var(--rule)',
@@ -331,8 +331,8 @@ export default function Home() {
             position: 'absolute',
             top: -120,
             right: -140,
-            width: 360,
-            height: 360,
+            width: 380,
+            height: 380,
             borderRadius: '50%',
             background:
               'radial-gradient(circle, rgba(31,107,107,0.1) 0%, transparent 70%)',
@@ -341,120 +341,176 @@ export default function Home() {
         />
         <div
           className="pb-container"
-          style={{ maxWidth: 960, position: 'relative', zIndex: 1 }}
+          style={{ maxWidth: 980, position: 'relative', zIndex: 1 }}
         >
+          <p className="eyebrow" style={{ marginBottom: 20 }}>
+            Why the bot
+          </p>
+          <h2
+            className="serif"
+            style={{
+              fontSize: 'clamp(38px, 6vw, 68px)',
+              fontWeight: 300,
+              letterSpacing: '-0.022em',
+              lineHeight: 1,
+              color: 'var(--ink)',
+              margin: 0,
+              marginBottom: 40,
+              maxWidth: 880,
+            }}
+          >
+            The parent forums are scary.
+            <br />
+            <em style={{ color: 'var(--teal)' }}>
+              There are no answers there.
+            </em>
+          </h2>
+
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: '1fr 1.3fr',
-              gap: 56,
-              alignItems: 'center',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: 28,
+              marginBottom: 40,
             }}
-            className="smarter-grid"
           >
-            <div>
-              <p className="eyebrow" style={{ marginBottom: 20 }}>
-                How Plan B learns
-              </p>
-              <h2
-                className="serif"
-                style={{
-                  fontSize: 'clamp(36px, 5.4vw, 58px)',
-                  fontWeight: 300,
-                  letterSpacing: '-0.02em',
-                  lineHeight: 1.02,
-                  color: 'var(--ink)',
-                  margin: 0,
-                }}
-              >
-                Every family makes
-                <br />
-                the <em style={{ color: 'var(--teal)' }}>next read sharper.</em>
-              </h2>
-            </div>
-            <div>
-              <p
-                style={{
-                  fontSize: 17,
-                  lineHeight: 1.9,
-                  color: 'var(--ink-soft)',
-                  fontWeight: 300,
-                  margin: 0,
-                }}
-              >
-                Plan B has a unique, working understanding of PANS, PANDAS, and the shared
-                drivers behind severe dysregulation. As we document what modalities work and
-                what don&apos;t — what actually moves the needle, what stalls, what was wasted
-                time — the understanding gets deeper.
-              </p>
-              <p
-                style={{
-                  fontSize: 17,
-                  lineHeight: 1.9,
-                  color: 'var(--ink-soft)',
-                  fontWeight: 300,
-                  marginTop: 18,
-                }}
-              >
-                The more stories shared, the smarter the bot becomes. The 100th family&apos;s
-                read benefits from what the first 99 contributed.
-              </p>
-              <p
-                className="serif"
-                style={{
-                  fontSize: 22,
-                  fontStyle: 'italic',
-                  color: 'var(--ink)',
-                  margin: '24px 0 0',
-                  fontWeight: 400,
-                  lineHeight: 1.35,
-                  borderLeft: '3px solid var(--teal)',
-                  paddingLeft: 20,
-                }}
-              >
-                Together we can fix this —{' '}
-                <span style={{ color: 'var(--teal)' }}>if you share.</span>
-              </p>
+            {[
+              {
+                k: 'This bot is listening.',
+                v: 'To every 2am search. Every thread you scrolled past at the kitchen table. Every idea you found alone in the middle of the night and saved in a note you never opened again.',
+              },
+              {
+                k: 'This bot is learning.',
+                v: 'Scraping every practitioner teaching, every paper, every case study — the fringe stuff the mainstream dismisses and the research nobody else is reading across.',
+              },
+              {
+                k: 'This bot is remembering.',
+                v: 'Compiling the research as fast as the questions come in. Your kid\u2019s onset story, your Tuesday log, your neighbor\u2019s breakthrough — all held. None lost.',
+              },
+            ].map((c) => (
               <div
+                key={c.k}
                 style={{
-                  display: 'flex',
-                  gap: 18,
-                  marginTop: 28,
-                  alignItems: 'center',
-                  flexWrap: 'wrap',
+                  borderTop: '1px solid var(--ink)',
+                  paddingTop: 18,
                 }}
               >
-                <a
-                  href="/research"
-                  className="link-sweep"
+                <p
+                  className="serif"
                   style={{
-                    fontSize: 11,
-                    letterSpacing: '0.22em',
-                    textTransform: 'uppercase',
-                    fontWeight: 600,
+                    fontSize: 24,
+                    fontWeight: 400,
+                    letterSpacing: '-0.01em',
                     color: 'var(--teal)',
-                    textDecoration: 'none',
+                    fontStyle: 'italic',
+                    marginBottom: 12,
+                    lineHeight: 1.2,
                   }}
                 >
-                  See the emerging patterns →
-                </a>
-                <span style={{ color: 'var(--sand)' }}>·</span>
-                <a
-                  href="/case-studies"
-                  className="link-sweep"
+                  {c.k}
+                </p>
+                <p
                   style={{
-                    fontSize: 11,
-                    letterSpacing: '0.22em',
-                    textTransform: 'uppercase',
-                    fontWeight: 600,
-                    color: 'var(--teal)',
-                    textDecoration: 'none',
+                    fontSize: 15,
+                    lineHeight: 1.8,
+                    color: 'var(--ink-soft)',
+                    fontWeight: 300,
                   }}
                 >
-                  Open case studies →
-                </a>
+                  {c.v}
+                </p>
               </div>
-            </div>
+            ))}
+          </div>
+
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(22px, 3vw, 30px)',
+              fontStyle: 'italic',
+              color: 'var(--ink)',
+              lineHeight: 1.4,
+              fontWeight: 400,
+              margin: 0,
+              marginBottom: 18,
+              maxWidth: 820,
+              borderLeft: '3px solid var(--teal)',
+              paddingLeft: 24,
+            }}
+          >
+            With enough people and enough information, this bot becomes something no single
+            practitioner could ever be: an actual working protocol, adapting to each kid, that
+            keeps getting sharper the more we share.
+          </p>
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(26px, 4vw, 40px)',
+              fontWeight: 300,
+              letterSpacing: '-0.015em',
+              color: 'var(--teal)',
+              lineHeight: 1.15,
+              margin: '32px 0 0',
+            }}
+          >
+            Time and information <em>are our cure.</em>
+          </p>
+
+          <div
+            style={{
+              display: 'flex',
+              gap: 18,
+              marginTop: 36,
+              alignItems: 'center',
+              flexWrap: 'wrap',
+            }}
+          >
+            <a
+              href="/research"
+              className="link-sweep"
+              style={{
+                fontSize: 11,
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                fontWeight: 600,
+                color: 'var(--teal)',
+                textDecoration: 'none',
+              }}
+            >
+              See the emerging patterns →
+            </a>
+            <span style={{ color: 'var(--sand)' }}>·</span>
+            <a
+              href="/case-studies"
+              className="link-sweep"
+              style={{
+                fontSize: 11,
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                fontWeight: 600,
+                color: 'var(--teal)',
+                textDecoration: 'none',
+              }}
+            >
+              Open case studies →
+            </a>
+            <span style={{ color: 'var(--sand)' }}>·</span>
+            <a
+              href="https://app.planbforpans.com/community"
+              target="_blank"
+              rel="noopener"
+              className="link-sweep"
+              style={{
+                fontSize: 11,
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                fontWeight: 600,
+                color: 'var(--teal)',
+                textDecoration: 'none',
+              }}
+            >
+              Move your questions here →
+            </a>
           </div>
         </div>
       </section>
