@@ -65,8 +65,24 @@ export default function PractitionersPage() {
           >
             Parents are blindly choosing and hoping their kids somehow get better. We need to{' '}
             <em>see</em> — your success rates, how you treat these kids, where your modality
-            fits in the larger picture, and where to go next when things get stuck. Be part of
-            the network that makes that possible.
+            fits in the larger picture, and where to go next when things get stuck.
+          </p>
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(19px, 2.2vw, 24px)',
+              fontStyle: 'italic',
+              color: 'var(--ink)',
+              lineHeight: 1.5,
+              fontWeight: 400,
+              marginTop: 24,
+              maxWidth: 720,
+              borderLeft: '3px solid var(--teal)',
+              paddingLeft: 22,
+            }}
+          >
+            Parents in this battle for years are choosing between eating and the next
+            treatment. There has to be a better, faster way out.
           </p>
         </div>
       </section>
@@ -85,7 +101,7 @@ export default function PractitionersPage() {
             className="eyebrow"
             style={{ marginBottom: 18, color: 'var(--sand-dark)' }}
           >
-            All hands
+            One family
           </p>
           <p
             className="serif"
@@ -98,10 +114,50 @@ export default function PractitionersPage() {
               margin: 0,
             }}
           >
-            This is a puzzle. We need <em style={{ color: 'var(--teal)' }}>all hands on deck</em> to solve it.
+            Practitioners, parents, and kids —
             <br />
-            Money aside.{' '}
-            <em style={{ color: 'var(--teal)' }}>Together we learn.</em>
+            <em style={{ color: 'var(--teal)' }}>we are a family.</em>
+            <br />
+            We get out by working together.
+          </p>
+        </div>
+      </section>
+
+      {/* We know you have a practice to run */}
+      <section
+        style={{
+          padding: '60px 24px',
+          background: 'var(--cream-light)',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+        }}
+      >
+        <div
+          className="pb-container"
+          style={{
+            maxWidth: 820,
+            display: 'flex',
+            gap: 24,
+            alignItems: 'flex-start',
+            flexWrap: 'wrap',
+          }}
+        >
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(20px, 2.4vw, 26px)',
+              fontStyle: 'italic',
+              color: 'var(--ink)',
+              lineHeight: 1.45,
+              fontWeight: 400,
+              margin: 0,
+              borderLeft: '3px solid var(--teal)',
+              paddingLeft: 22,
+            }}
+          >
+            We know you have a practice to run. The 10-free-clients pledge is an optional
+            research contribution — the ballot and referral network work whether you take the
+            pledge or not. This isn&apos;t a subsidy request. It&apos;s an invitation.
           </p>
         </div>
       </section>
@@ -571,6 +627,51 @@ export default function PractitionersPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Opt-out / consent */}
+      <section
+        style={{
+          padding: '60px 24px',
+          background: 'var(--cream)',
+          borderTop: '1px solid var(--rule)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 820 }}>
+          <p
+            className="eyebrow"
+            style={{ color: 'var(--sand-dark)', marginBottom: 14 }}
+          >
+            On consent
+          </p>
+          <p
+            style={{
+              fontSize: 15,
+              lineHeight: 1.85,
+              color: 'var(--ink-soft)',
+              fontWeight: 300,
+            }}
+          >
+            Practitioners whose public teachings we&apos;ve studied appear on{' '}
+            <a
+              href="https://app.planbforpans.com/vote"
+              target="_blank"
+              rel="noopener"
+              style={{ color: 'var(--teal)', textDecoration: 'underline' }}
+            >
+              the ballot
+            </a>{' '}
+            as &ldquo;community-nominated.&rdquo; That&apos;s an invitation — not a claim of
+            partnership. If you&apos;re listed and would rather not be, email{' '}
+            <a
+              href="mailto:rachel@planbforpans.com?subject=Please%20remove%20my%20listing"
+              style={{ color: 'var(--teal)', textDecoration: 'underline' }}
+            >
+              rachel@planbforpans.com
+            </a>
+            . We take your listing down the same day. No friction, no awkwardness.
+          </p>
         </div>
       </section>
 
