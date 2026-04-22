@@ -94,7 +94,7 @@ export default function Home() {
               }}
             >
               <span className="word" style={{ animationDelay: '0.18s' }}>When</span>{' '}
-              <span className="word" style={{ animationDelay: '0.30s' }}>standard</span>
+              <span className="word" style={{ animationDelay: '0.28s' }}>there&apos;s</span>
               <br />
               <span
                 className="word word-italic"
@@ -102,10 +102,10 @@ export default function Home() {
                   fontStyle: 'italic',
                   color: 'var(--teal)',
                   fontWeight: 400,
-                  animationDelay: '0.46s',
+                  animationDelay: '0.40s',
                 }}
               >
-                protocols
+                no 911
               </span>{' '}
               <span
                 className="word word-italic"
@@ -113,10 +113,10 @@ export default function Home() {
                   fontStyle: 'italic',
                   color: 'var(--teal)',
                   fontWeight: 400,
-                  animationDelay: '0.58s',
+                  animationDelay: '0.54s',
                 }}
               >
-                fail.
+                to call.
               </span>
             </h1>
 
@@ -131,9 +131,12 @@ export default function Home() {
                 marginBottom: 40,
               }}
             >
-              A clinical synthesis engine for PANS, PANDAS, autism, and severe dysregulation.
-              Plan B reads every modality, every practitioner teaching, every family&apos;s
-              hard-won answer — and builds the protocol a single doctor never could.{' '}
+              <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
+                Plan B is an AI
+              </em>{' '}
+              trained on every PANS modality — standard, functional, fringe — plus every
+              practitioner teaching and every family&apos;s hard-won answer. It reads your
+              kid&apos;s full story and builds the protocol a single doctor never could.{' '}
               <em style={{ color: 'var(--ink)' }}>A protocol, not a guess.</em>
             </p>
 
