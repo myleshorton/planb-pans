@@ -131,9 +131,8 @@ export default function Home() {
               }}
             >
               A clinical synthesis engine for PANS, PANDAS, autism, and severe dysregulation.
-              Plan B reads every modality on record — standard medicine, functional medicine,
-              fringe protocols, live cohort data — and matches them against your kid&apos;s
-              full intake.{' '}
+              Plan B reads every modality, every practitioner teaching, every family&apos;s
+              hard-won answer — and builds the protocol a single doctor never could.{' '}
               <em style={{ color: 'var(--ink)' }}>A protocol, not a guess.</em>
             </p>
 
@@ -509,22 +508,39 @@ export default function Home() {
           >
             Our thesis
           </p>
-          <p
-            className="serif"
-            style={{
-              fontSize: 'clamp(28px, 4.2vw, 46px)',
-              fontWeight: 300,
-              letterSpacing: '-0.018em',
-              lineHeight: 1.08,
-              margin: 0,
-              color: 'var(--ink)',
-            }}
-          >
-            For the kids{' '}
-            <em style={{ color: 'var(--teal)' }}>the system left behind</em> —
-            a protocol{' '}
-            <em style={{ color: 'var(--teal)' }}>the system couldn&apos;t build.</em>
-          </p>
+          <div>
+            <p
+              className="serif"
+              style={{
+                fontSize: 'clamp(28px, 4.2vw, 46px)',
+                fontWeight: 300,
+                letterSpacing: '-0.018em',
+                lineHeight: 1.08,
+                margin: 0,
+                color: 'var(--ink)',
+              }}
+            >
+              A <em style={{ color: 'var(--teal)' }}>path out of the fire</em> —
+              built from every modality, every family,{' '}
+              <em style={{ color: 'var(--teal)' }}>every hard-won answer.</em>
+            </p>
+            <p
+              className="mono"
+              style={{
+                fontSize: 10,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: 'var(--sand-dark)',
+                fontWeight: 500,
+                marginTop: 18,
+                paddingTop: 14,
+                borderTop: '1px solid var(--sand-light)',
+              }}
+            >
+              Clinical synthesis engine · Compounded across cohorts · Findings
+              published openly
+            </p>
+          </div>
         </div>
       </section>
 
