@@ -544,6 +544,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* COMPOUNDING PROMISE — it gets better the more of us join */}
+      <section
+        style={{
+          padding: '64px 24px',
+          background: 'var(--cream)',
+          borderBottom: '1px solid var(--rule)',
+          textAlign: 'center',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 900 }}>
+          <p
+            className="mono"
+            style={{
+              fontSize: 10,
+              letterSpacing: '0.28em',
+              textTransform: 'uppercase',
+              color: 'var(--teal)',
+              fontWeight: 600,
+              marginBottom: 16,
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 10,
+            }}
+          >
+            <span aria-hidden="true">↺</span> Compounding promise
+          </p>
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(26px, 4.2vw, 44px)',
+              fontWeight: 300,
+              fontStyle: 'italic',
+              letterSpacing: '-0.015em',
+              lineHeight: 1.2,
+              margin: 0,
+              color: 'var(--ink)',
+            }}
+          >
+            It gets better with every family who joins.{' '}
+            <span style={{ color: 'var(--teal)' }}>
+              Over time — together — we build the way out.
+            </span>
+          </p>
+        </div>
+      </section>
+
       {/* BUCKET — the problem */}
       <BucketSection />
 
