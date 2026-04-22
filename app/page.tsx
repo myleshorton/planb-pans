@@ -429,9 +429,10 @@ export default function Home() {
                     }}
                   >
                     &ldquo;My son was eight when he told me he wanted to die. The doctors
-                    didn&apos;t have an answer. Neither did I. I spent two years finding the
-                    pieces — in a dozen different practices none of them talked to each other.
-                    Plan B is what I wish I&apos;d had at 2am.&rdquo;
+                    didn&apos;t have an answer. Neither did I. I spent two years at 2am —
+                    alone, researching every modality anyone said had helped — and then
+                    piecing it together across a dozen practices none of which talked to each
+                    other. Plan B is what I wish I&apos;d had.&rdquo;
                   </p>
                   <p
                     className="label-tracked"
@@ -678,8 +679,9 @@ export default function Home() {
             >
               Parent forums have suggestions. Plan B builds a path. It reads every modality on
               record, every practitioner teaching, every cohort study we run, and every kid&apos;s
-              full intake — and synthesizes them into a targeted protocol. The more families
-              tracking, the more studies we fund, the faster every family gets to solutions.
+              full intake — and synthesizes them into a real starting place. The more
+              families tracking, the more cohort studies we fund, the faster the real paths
+              emerge — together.
             </p>
           </div>
 
@@ -911,7 +913,7 @@ export default function Home() {
                 Outputs · What it produces
               </p>
               {[
-                'Your kid\u2019s targeted protocol, not a guess',
+'A starting place shaped to your kid\u2019s specific profile',
                 'Matched placement into a cohort study',
                 'Referrals to practitioners whose work fits',
                 'Real-time answers to your 2am questions',
@@ -1009,8 +1011,10 @@ export default function Home() {
               paddingLeft: 22,
             }}
           >
-            A protocol, not a guess.{' '}
-            <span style={{ color: 'var(--teal)' }}>Compounding with every family.</span>
+            A real starting place, not silence.{' '}
+            <span style={{ color: 'var(--teal)' }}>
+              Sharpened with every family. Together we get out.
+            </span>
           </p>
         </div>
       </section>
