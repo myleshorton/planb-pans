@@ -406,71 +406,38 @@ export default function Home() {
                   <span>Rage · Meltdowns</span>
                 </div>
 
-                {/* Clinical caption — chart row style */}
+                {/* Caption — Rachel's voice */}
                 <div
                   style={{
                     background: 'var(--cream)',
                     borderTop: '1px solid var(--ink)',
-                    padding: '18px 22px',
+                    padding: '22px 24px',
                     position: 'relative',
                     zIndex: 2,
                   }}
                 >
                   <p
-                    className="mono"
                     style={{
-                      fontSize: 9,
-                      letterSpacing: '0.2em',
-                      textTransform: 'uppercase',
-                      color: 'var(--sand-dark)',
-                      fontWeight: 600,
-                      marginBottom: 10,
+                      fontFamily: 'var(--font-cormorant)',
+                      fontSize: 'clamp(17px, 1.95vw, 21px)',
+                      fontStyle: 'italic',
+                      fontWeight: 400,
+                      color: 'var(--ink)',
+                      lineHeight: 1.45,
+                      marginBottom: 12,
                     }}
                   >
-                    Subject P-0001 · Intake summary
+                    &ldquo;My son was eight when he told me he wanted to die. The doctors
+                    didn&apos;t have an answer. Neither did I. I spent two years finding the
+                    pieces — in a dozen different practices none of them talked to each other.
+                    Plan B is what I wish I&apos;d had at 2am.&rdquo;
                   </p>
-                  <dl
-                    style={{
-                      display: 'grid',
-                      gridTemplateColumns: 'auto 1fr',
-                      columnGap: 16,
-                      rowGap: 6,
-                      margin: 0,
-                      fontFamily: 'var(--font-mono)',
-                      fontSize: 11,
-                    }}
+                  <p
+                    className="label-tracked"
+                    style={{ color: 'var(--teal)', fontWeight: 600 }}
                   >
-                    {[
-                      ['Onset', 'Age 8.3 · overnight'],
-                      ['Trigger', 'Strep + Myco IgG+'],
-                      ['New symptoms', '12 in 6 weeks'],
-                      ['Protocols tried', '4 · partial response'],
-                    ].map(([k, v]) => (
-                      <Fragment key={k}>
-                        <dt
-                          style={{
-                            color: 'var(--sand-dark)',
-                            letterSpacing: '0.08em',
-                            textTransform: 'uppercase',
-                            fontSize: 9,
-                            alignSelf: 'center',
-                            fontWeight: 500,
-                          }}
-                        >
-                          {k}
-                        </dt>
-                        <dd
-                          style={{
-                            color: 'var(--ink)',
-                            margin: 0,
-                            fontWeight: 500,
-                          }}
-                        >
-                          {v}
-                        </dd>
-                      </Fragment>
-                    ))}
-                  </dl>
+                    Rachel Johnson · Founder
+                  </p>
                 </div>
               </div>
             </div>
@@ -541,8 +508,7 @@ export default function Home() {
                 borderTop: '1px solid var(--sand-light)',
               }}
             >
-              Clinical synthesis engine · Compounded across cohorts · Findings
-              published openly
+              Built by a mother &middot; Trained by every family &middot; Published openly
             </p>
           </div>
         </div>
