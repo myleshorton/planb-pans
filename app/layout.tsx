@@ -61,8 +61,9 @@ export default function RootLayout({
                 </span>
               </p>
             </Link>
-            <nav style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
+            <nav style={{ display: 'flex', gap: 18, alignItems: 'center' }}>
               <NavLink href="/">Home</NavLink>
+              <NavLink href="/about">About</NavLink>
               <NavLink href="/tracker">Tracker</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
               <NavLink href="/case-studies">Cohort Studies</NavLink>
@@ -206,12 +207,6 @@ export default function RootLayout({
               </a>
               <Link href="/practitioners" style={{ color: 'var(--sand-dark)' }}>
                 Practitioners
-              </Link>
-              <Link href="/about" style={{ color: 'var(--sand-dark)' }}>
-                About
-              </Link>
-              <Link href="/faq" style={{ color: 'var(--sand-dark)' }}>
-                FAQ
               </Link>
               <Link href="/contact" style={{ color: 'var(--sand-dark)' }}>
                 Contact
