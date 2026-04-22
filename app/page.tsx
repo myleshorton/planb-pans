@@ -135,10 +135,12 @@ export default function Home() {
                 Plan B is an AI
               </em>{' '}
               that reads across every PANS approach — standard, functional, fringe —
-              alongside your kid&apos;s full story. When the system has no answer, it gives
-              you a starting place. Through the cohort studies we run together, the real
-              protocols emerge.{' '}
-              <em style={{ color: 'var(--ink)' }}>Together we find what works.</em>
+              alongside your kid&apos;s full story. Today it gives you a real understanding
+              of every option out there when the system has none. Through the cohort studies
+              we run together, the path itself emerges.{' '}
+              <em style={{ color: 'var(--ink)' }}>
+                Together we find a definitive way out.
+              </em>
             </p>
 
             <div
@@ -496,6 +498,23 @@ export default function Home() {
               A <em style={{ color: 'var(--teal)' }}>path out of the fire</em> —
               built from every modality, every family,{' '}
               <em style={{ color: 'var(--teal)' }}>every hard-won answer.</em>
+            </p>
+            <p
+              style={{
+                fontSize: 15,
+                lineHeight: 1.8,
+                color: 'var(--ink-soft)',
+                fontWeight: 300,
+                marginTop: 18,
+                maxWidth: 760,
+              }}
+            >
+              <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Today:</strong> a real
+              understanding of every option out there.{' '}
+              <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Tomorrow:</strong> the
+              path itself. The bot is learning which modalities actually work for which
+              symptoms — sharpening with every family who joins, every cohort we run,
+              together.
             </p>
             <p
               className="mono"
@@ -1158,8 +1177,8 @@ export default function Home() {
               {
                 n: '04',
                 tag: 'It sharpens',
-                title: 'Every success story makes the next troubleshoot better.',
-                body: "Your kid&apos;s data (consent-based, de-identified) joins every other family&apos;s data in the library. Every successful protocol teaches the bot what to suggest. Every failed protocol teaches it what not to. Every cohort run adds signal. The read you get today is only as sharp as what the first families contributed. The read the hundredth family gets is sharper still.",
+                title: 'We&rsquo;re teaching the bot to spot patterns.',
+                body: "Your kid&apos;s data (consent-based, de-identified) joins every other family&apos;s data in the library. As stories come in, the bot is learning which modalities actually work for which symptoms — spotting the patterns no single family can see alone. Every successful story teaches it what to suggest. Every failed one teaches it what not to. Every cohort run adds signal. The read you get today is only as sharp as what the first families contributed. The read the hundredth family gets is sharper still.",
               },
             ].map((s) => (
               <li
