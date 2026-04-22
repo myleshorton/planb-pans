@@ -1078,17 +1078,26 @@ export default function Home() {
                 margin: '32px 0 0',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 14,
-                maxWidth: 800,
+                gap: 18,
+                maxWidth: 820,
               }}
             >
               {[
-                'The doctor willing to talk at 2am — for free.',
-                "The friend who'll help you troubleshoot when you're out of options and can't sleep.",
-                'The specialist who knows every modality — and will help you figure out your next lane.',
+                {
+                  lead: 'Continuous clinical consultation.',
+                  body: '24/7 access to a synthesis engine trained on your kid\u2019s complete record. No appointment, no wait, no copay.',
+                },
+                {
+                  lead: 'Differential reasoning on your kid\u2019s longitudinal record',
+                  body: 'when first-line interventions stall — the bot reads every symptom, every med change, every flare to surface the correlations a single visit can\u2019t.',
+                },
+                {
+                  lead: 'Multi-disciplinary synthesis.',
+                  body: 'Trained across standard, functional, and integrative medicine to guide evidence-informed next-protocol selection — the specialist who actually knows every modality.',
+                },
               ].map((line) => (
                 <li
-                  key={line}
+                  key={line.lead}
                   style={{
                     display: 'grid',
                     gridTemplateColumns: '24px 1fr',
@@ -1110,14 +1119,20 @@ export default function Home() {
                   <span
                     className="serif"
                     style={{
-                      fontSize: 'clamp(19px, 2.2vw, 24px)',
-                      fontStyle: 'italic',
+                      fontSize: 'clamp(18px, 2.1vw, 22px)',
                       fontWeight: 400,
                       color: 'var(--ink)',
-                      lineHeight: 1.4,
+                      lineHeight: 1.45,
                     }}
                   >
-                    {line}
+                    <strong
+                      style={{ fontWeight: 600, fontStyle: 'italic', color: 'var(--teal)' }}
+                    >
+                      {line.lead}
+                    </strong>{' '}
+                    <span style={{ color: 'var(--ink-soft)', fontWeight: 300 }}>
+                      {line.body}
+                    </span>
                   </span>
                 </li>
               ))}
