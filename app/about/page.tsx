@@ -123,23 +123,6 @@ export default function AboutPage() {
               of watching my children suffer. I&apos;m still here because I refused to leave
               them in the middle of this, with the answers still missing.
             </p>
-            <p
-              className="serif"
-              style={{
-                ...quoteStyle,
-                marginTop: 28,
-              }}
-            >
-              &ldquo;If you&apos;re reading this in that same darkness — please call{' '}
-              <a
-                href="tel:988"
-                style={{ color: 'var(--teal)', textDecoration: 'underline' }}
-              >
-                988
-              </a>{' '}
-              (US) or reach out to someone who loves you. You don&apos;t have to stay there
-              tonight.&rdquo;
-            </p>
           </div>
 
           {/* § 03 — The search */}
@@ -149,8 +132,8 @@ export default function AboutPage() {
               Every top specialist. Every protocol.
             </h2>
             <p style={textStyle}>
-              I visited every top PANS doctor I could reach. We tried the standard protocols —
-              antibiotics, steroids, IVIG. Every single one made him worse. We ended up
+              I visited every top PANS doctor I could reach. We went through multiple rounds
+              of antibiotics. None of them helped — and several made him worse. We ended up
               homeless for a stretch because of mold exposure. My son had Lyme, mold, COVID,
               and a body that wouldn&apos;t tolerate the things that were supposed to help.
             </p>
