@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, Fragment } from 'react'
+import { useEffect, useRef, useState, Fragment } from 'react'
 import BucketSection from './_components/BucketSection'
 import MethodSection from './_components/MethodSection'
 
@@ -149,11 +149,14 @@ export default function Home() {
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
                 Welcome.
               </em>{' '}
-              You aren&apos;t meant to navigate the complexities of PANS/PANDAS alone. At Plan
-              B, we use advanced AI to synthesize every research-backed treatment approach and
-              modality alongside your child&apos;s unique history. Our goal is to cut through
-              the noise and provide a customized plan that addresses your child&apos;s
-              specific symptoms and needs.
+              You aren&apos;t meant to navigate the complexities of PANS/PANDAS alone. Plan B
+              is a non-profit, and{' '}
+              <em style={{ color: 'var(--teal)', fontStyle: 'normal', fontWeight: 600 }}>
+                Ada
+              </em>{' '}
+              is our bot. She synthesizes every research-backed treatment approach and modality
+              alongside your child&apos;s unique history — to cut through the noise and help
+              you find what your kid specifically needs.
             </p>
             <p
               className="rise delay-3 serif"
@@ -1619,6 +1622,445 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PRIVACY PROMISE — three lines */}
+      <section
+        style={{
+          padding: '80px 24px',
+          background: 'var(--paper)',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 1080 }}>
+          <p
+            className="eyebrow"
+            style={{ marginBottom: 28, textAlign: 'center' }}
+          >
+            Our promise on your kid&apos;s data
+          </p>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gap: 20,
+            }}
+          >
+            {[
+              {
+                k: 'Yours, always',
+                v: "Your kid's intake, logs, and conversations are your data. We don't sell it. We don't share it with advertisers, insurance, or schools.",
+              },
+              {
+                k: 'Deleted on request',
+                v: 'One click and everything your family put into Plan B is gone — from the tracker, the chat, the aggregate library. No questions asked.',
+              },
+              {
+                k: 'Never shared without consent',
+                v: "Aggregate patterns (de-identified) help the next family's read — but only if you opt in. No consent, no contribution. Default is private.",
+              },
+            ].map((c) => (
+              <div
+                key={c.k}
+                style={{
+                  borderTop: '1px solid var(--ink)',
+                  paddingTop: 18,
+                }}
+              >
+                <p
+                  className="serif"
+                  style={{
+                    fontSize: 22,
+                    fontWeight: 400,
+                    letterSpacing: '-0.01em',
+                    color: 'var(--teal)',
+                    fontStyle: 'italic',
+                    marginBottom: 10,
+                  }}
+                >
+                  {c.k}
+                </p>
+                <p
+                  style={{
+                    fontSize: 14,
+                    lineHeight: 1.75,
+                    color: 'var(--ink-soft)',
+                    fontWeight: 300,
+                  }}
+                >
+                  {c.v}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p
+            style={{
+              fontSize: 13,
+              color: 'var(--sand-dark)',
+              textAlign: 'center',
+              marginTop: 28,
+              fontStyle: 'italic',
+            }}
+          >
+            Read the full{' '}
+            <a
+              href="/privacy"
+              style={{ color: 'var(--teal)', textDecoration: 'underline' }}
+            >
+              privacy policy
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+
+      {/* HOW TO START — 3 steps */}
+      <section
+        style={{
+          padding: '100px 24px',
+          background: 'var(--cream)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 1080 }}>
+          <div style={{ marginBottom: 44, textAlign: 'center' }}>
+            <p className="eyebrow" style={{ marginBottom: 18 }}>
+              How to start
+            </p>
+            <h2
+              className="serif"
+              style={{
+                fontSize: 'clamp(34px, 5.4vw, 54px)',
+                fontWeight: 300,
+                letterSpacing: '-0.018em',
+                lineHeight: 1.05,
+                margin: 0,
+                color: 'var(--ink)',
+              }}
+            >
+              Three steps.{' '}
+              <em style={{ color: 'var(--teal)' }}>Nothing else to figure out.</em>
+            </h2>
+          </div>
+          <div
+            className="how-start-grid"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: 0,
+              borderTop: '1px solid var(--ink)',
+              borderBottom: '1px solid var(--ink)',
+            }}
+          >
+            {[
+              {
+                n: '01',
+                t: 'Do the intake',
+                b: "Twenty minutes, or break it across days. Pregnancy, birth, triggers, meds, symptoms, everything you&apos;ve tried. The more detail, the sharper Ada&apos;s read.",
+                eta: '~20 min',
+              },
+              {
+                n: '02',
+                t: 'Log daily',
+                b: 'Thirty seconds before bed. Mood rating, med changes, new symptoms, flare notes. Six weeks in, the pattern becomes visible.',
+                eta: '30 sec / day',
+              },
+              {
+                n: '03',
+                t: 'Ask Ada anything',
+                b: "2am meltdown, new symptom, stuck on protocol choice — Ada has your full record and runs the correlations a single visit can&apos;t.",
+                eta: 'anytime',
+              },
+            ].map((s, i, arr) => (
+              <div
+                key={s.n}
+                style={{
+                  padding: '32px 28px',
+                  borderRight: i < arr.length - 1 ? '1px solid var(--sand)' : 'none',
+                  position: 'relative',
+                }}
+              >
+                <p
+                  className="serif"
+                  style={{
+                    fontSize: 52,
+                    fontWeight: 300,
+                    letterSpacing: '-0.02em',
+                    lineHeight: 1,
+                    color: 'var(--teal)',
+                    margin: 0,
+                    marginBottom: 12,
+                  }}
+                >
+                  {s.n}
+                </p>
+                <p
+                  className="serif"
+                  style={{
+                    fontSize: 26,
+                    fontWeight: 400,
+                    letterSpacing: '-0.01em',
+                    lineHeight: 1.15,
+                    color: 'var(--ink)',
+                    margin: 0,
+                    marginBottom: 14,
+                  }}
+                >
+                  {s.t}
+                </p>
+                <p
+                  style={{
+                    fontSize: 14,
+                    lineHeight: 1.75,
+                    color: 'var(--ink-soft)',
+                    fontWeight: 300,
+                    marginBottom: 14,
+                  }}
+                  dangerouslySetInnerHTML={{ __html: s.b }}
+                />
+                <p
+                  className="mono"
+                  style={{
+                    fontSize: 10,
+                    letterSpacing: '0.2em',
+                    color: 'var(--sand-dark)',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                  }}
+                >
+                  {s.eta}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* COMPARISON — why Plan B vs. the alternatives */}
+      <section
+        style={{
+          padding: '100px 24px',
+          background: 'var(--cream-light)',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 1100 }}>
+          <div style={{ marginBottom: 44, maxWidth: 880 }}>
+            <p className="eyebrow" style={{ marginBottom: 18 }}>
+              What makes Plan B different
+            </p>
+            <h2
+              className="serif"
+              style={{
+                fontSize: 'clamp(34px, 5.4vw, 54px)',
+                fontWeight: 300,
+                letterSpacing: '-0.018em',
+                lineHeight: 1.05,
+                margin: 0,
+                color: 'var(--ink)',
+              }}
+            >
+              You&apos;ve already tried the other places.
+            </h2>
+          </div>
+
+          <div style={{ overflowX: 'auto' }}>
+            <table
+              style={{
+                width: '100%',
+                borderCollapse: 'collapse',
+                fontSize: 14,
+                minWidth: 720,
+              }}
+            >
+              <thead>
+                <tr style={{ borderBottom: '1px solid var(--ink)' }}>
+                  {['', 'Facebook groups', 'PANS forums', 'Doctor visits', 'Plan B'].map(
+                    (h, i) => (
+                      <th
+                        key={i}
+                        className="mono"
+                        style={{
+                          padding: '16px 12px',
+                          fontSize: 10,
+                          letterSpacing: '0.18em',
+                          textTransform: 'uppercase',
+                          color: i === 4 ? 'var(--teal)' : 'var(--sand-dark)',
+                          fontWeight: 700,
+                          textAlign: i === 0 ? 'left' : 'center',
+                        }}
+                      >
+                        {h}
+                      </th>
+                    ),
+                  )}
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['2am access', '✓', '✓', '—', '✓'],
+                  ['Specific to YOUR kid', '—', '—', '✓', '✓'],
+                  ['Reads every modality together', '—', '—', '—', '✓'],
+                  ['Remembers your kid&apos;s full history', '—', '—', 'partial', '✓'],
+                  ['Gets sharper with every family', '—', '—', '—', '✓'],
+                  ['Cost', 'free', 'free', '$300–$2,000 per visit', 'free'],
+                  ['Data belongs to', 'Meta', 'forum owner', 'their chart', 'you'],
+                ].map((row, i) => (
+                  <tr
+                    key={i}
+                    style={{
+                      borderBottom: '1px solid var(--sand-light)',
+                    }}
+                  >
+                    {row.map((cell, j) => (
+                      <td
+                        key={j}
+                        style={{
+                          padding: '14px 12px',
+                          fontSize: j === 0 ? 14 : 13,
+                          color:
+                            j === 4
+                              ? 'var(--teal)'
+                              : j === 0
+                              ? 'var(--ink)'
+                              : 'var(--ink-soft)',
+                          fontWeight: j === 0 ? 500 : 400,
+                          textAlign: j === 0 ? 'left' : 'center',
+                          fontFamily:
+                            j > 0 && (cell === '✓' || cell === '—') ? 'var(--font-mono)' : 'inherit',
+                        }}
+                        dangerouslySetInnerHTML={{ __html: cell }}
+                      />
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(20px, 2.6vw, 26px)',
+              fontStyle: 'italic',
+              color: 'var(--ink)',
+              lineHeight: 1.4,
+              fontWeight: 400,
+              margin: '36px 0 0',
+              maxWidth: 780,
+              borderLeft: '3px solid var(--teal)',
+              paddingLeft: 22,
+            }}
+          >
+            Parent forums have suggestions. Doctors see their slice. Plan B is the only place
+            that holds <span style={{ color: 'var(--teal)' }}>everything together</span> —
+            your kid, every modality, every family&apos;s story.
+          </p>
+        </div>
+      </section>
+
+      {/* VOICES — social proof placeholder */}
+      <section
+        style={{
+          padding: '80px 24px',
+          background: 'var(--cream)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 960 }}>
+          <p className="eyebrow" style={{ marginBottom: 24, textAlign: 'center' }}>
+            Voices · From the families using Plan B
+          </p>
+          <div
+            style={{
+              padding: '48px 30px',
+              textAlign: 'center',
+              border: '1px dashed var(--sand)',
+              borderRadius: 4,
+              background: 'var(--paper)',
+            }}
+          >
+            <p
+              className="serif"
+              style={{
+                fontSize: 'clamp(22px, 3vw, 28px)',
+                fontStyle: 'italic',
+                color: 'var(--ink)',
+                lineHeight: 1.4,
+                fontWeight: 400,
+                marginBottom: 16,
+                maxWidth: 620,
+                margin: '0 auto 16px',
+              }}
+            >
+              Our first families are joining now.
+            </p>
+            <p
+              style={{
+                fontSize: 15,
+                color: 'var(--ink-soft)',
+                lineHeight: 1.75,
+                fontWeight: 300,
+                maxWidth: 560,
+                margin: '0 auto 24px',
+              }}
+            >
+              As stories come in — breakthroughs, stalls, real journeys — we&apos;ll share
+              them here (with consent). If you&apos;re using Plan B and want yours included,{' '}
+              <a
+                href="mailto:rachel@planbforpans.com?subject=Plan%20B%20story"
+                style={{ color: 'var(--teal)', textDecoration: 'underline' }}
+              >
+                email Rachel
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* EMAIL CAPTURE — stay in the loop */}
+      <section
+        style={{
+          padding: '80px 24px',
+          background: 'var(--cream-light)',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 680, textAlign: 'center' }}>
+          <p className="eyebrow" style={{ marginBottom: 18 }}>
+            Stay in the loop
+          </p>
+          <h2
+            className="serif"
+            style={{
+              fontSize: 'clamp(28px, 4.4vw, 42px)',
+              fontWeight: 300,
+              letterSpacing: '-0.018em',
+              lineHeight: 1.1,
+              marginBottom: 20,
+              color: 'var(--ink)',
+            }}
+          >
+            Not ready yet? <em style={{ color: 'var(--teal)' }}>Stay in touch.</em>
+          </h2>
+          <p
+            style={{
+              fontSize: 15,
+              lineHeight: 1.75,
+              color: 'var(--ink-soft)',
+              fontWeight: 300,
+              marginBottom: 28,
+              maxWidth: 520,
+              margin: '0 auto 28px',
+            }}
+          >
+            Monthly update on what Ada&apos;s learning, which cohort studies are running,
+            and what&apos;s emerging. No spam. One-click unsubscribe.
+          </p>
+          <NewsletterForm />
+        </div>
+      </section>
+
       {/* INSTALL */}
       <section style={{ padding: '120px 24px', background: 'var(--cream)' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto' }}>
@@ -1696,6 +2138,73 @@ export default function Home() {
         </div>
       </section>
     </main>
+  )
+}
+
+function NewsletterForm() {
+  const [email, setEmail] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email.trim()) return
+    const subject = encodeURIComponent('Subscribe to Plan B updates')
+    const body = encodeURIComponent(`Please add me to the Plan B mailing list: ${email.trim()}`)
+    window.location.href = `mailto:rachel@planbforpans.com?subject=${subject}&body=${body}`
+    setSubmitted(true)
+  }
+  if (submitted) {
+    return (
+      <p
+        className="serif"
+        style={{
+          fontSize: 18,
+          fontStyle: 'italic',
+          color: 'var(--teal)',
+          fontWeight: 400,
+        }}
+      >
+        Your email client just opened. Send that email and you&apos;re on the list.
+      </p>
+    )
+  }
+  return (
+    <form
+      onSubmit={handleSubmit}
+      style={{
+        display: 'flex',
+        gap: 10,
+        maxWidth: 440,
+        margin: '0 auto',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+      }}
+    >
+      <input
+        type="email"
+        required
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="your@email.com"
+        style={{
+          flex: '1 1 220px',
+          padding: '14px 16px',
+          fontSize: 15,
+          border: '1px solid var(--sand)',
+          borderRadius: 4,
+          background: 'var(--paper)',
+          color: 'var(--ink)',
+          fontFamily: 'var(--font-inter)',
+          outline: 'none',
+        }}
+      />
+      <button
+        type="submit"
+        className="cta-teal"
+        style={{ border: 'none', cursor: 'pointer', flexShrink: 0 }}
+      >
+        Subscribe →
+      </button>
+    </form>
   )
 }
 

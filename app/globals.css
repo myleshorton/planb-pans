@@ -439,6 +439,16 @@ button {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
   }
+  .how-start-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .how-start-grid > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--sand);
+  }
+  .how-start-grid > div:last-child {
+    border-bottom: none;
+  }
   .pillars-grid > div {
     border-right: none !important;
     border-bottom: 1px solid var(--sand) !important;
