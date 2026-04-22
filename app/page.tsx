@@ -335,11 +335,9 @@ export default function Home() {
 
                 {/* Symptoms dispersed around the head — annotated-diagram style */}
                 {[
-                  { top: '14%', left: '52%', text: 'OCD' },
-                  { top: '20%', left: '36%', text: 'ARFID' },
-                  { top: '30%', left: '56%', text: 'Fear of germs' },
-                  { top: '42%', left: '68%', text: 'Rage' },
-                  { top: '54%', left: '72%', text: 'Agoraphobia' },
+                  { top: '16%', left: '50%', text: 'OCD' },
+                  { top: '26%', left: '42%', text: 'ARFID' },
+                  { top: '38%', left: '52%', text: 'Agoraphobia' },
                 ].map((pin) => (
                   <div
                     key={pin.text}
