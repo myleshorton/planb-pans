@@ -79,7 +79,7 @@ export default function Home() {
           {/* Left — text */}
           <div>
             <p className="eyebrow rise delay-1 caret" style={{ marginBottom: 22 }}>
-              There is always a Plan B
+              Welcome to Plan B
             </p>
 
             <h1
@@ -132,12 +132,12 @@ export default function Home() {
               }}
             >
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
-                Plan B is an AI
+                Plan B is a non-profit. When you use it, you&rsquo;re talking to the bot
               </em>{' '}
-              that reads across every PANS approach — standard, functional, fringe —
-              alongside your kid&apos;s full story. Today it gives you a real understanding
-              of every option out there when the system has none. Through the cohort studies
-              we run together, the path itself emerges.{' '}
+              — an AI that reads across every PANS approach — standard, functional, fringe —
+              alongside your kid&apos;s full story. Today the bot gives you a real
+              understanding of every option out there when the system has none. Through the
+              cohort studies we run together, the path itself emerges.{' '}
               <em style={{ color: 'var(--ink)' }}>
                 Together we find a definitive way out.
               </em>
