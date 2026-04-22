@@ -475,7 +475,83 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHAT PLAN B DOES — three pillars */}
+      {/* BUCKET — the problem */}
+      <BucketSection />
+
+      {/* STAKES — no 911 */}
+      <section
+        style={{
+          background: 'var(--ink)',
+          color: 'var(--cream)',
+          padding: '80px 24px',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        <div
+          className="graph-paper"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            opacity: 0.04,
+            pointerEvents: 'none',
+          }}
+        />
+        <div
+          className="pb-container"
+          style={{ maxWidth: 900, position: 'relative', zIndex: 1 }}
+        >
+          <p
+            className="mono"
+            style={{
+              fontSize: 10,
+              letterSpacing: '0.3em',
+              textTransform: 'uppercase',
+              color: '#a02020',
+              fontWeight: 700,
+              marginBottom: 18,
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 10,
+            }}
+          >
+            <span className="pulse-dot" />
+            The stakes
+          </p>
+          <h2
+            className="serif"
+            style={{
+              fontSize: 'clamp(34px, 6vw, 64px)',
+              fontWeight: 300,
+              letterSpacing: '-0.02em',
+              lineHeight: 1.02,
+              margin: 0,
+              color: 'var(--cream)',
+              maxWidth: 880,
+            }}
+          >
+            There is no 911 to call when your kid gets bad. Psych hospitals rarely help.
+          </h2>
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(22px, 3vw, 32px)',
+              fontStyle: 'italic',
+              color: 'var(--teal-light)',
+              lineHeight: 1.35,
+              fontWeight: 400,
+              margin: '28px 0 0',
+              maxWidth: 780,
+            }}
+          >
+            This is where you go when there&apos;s no other place — for solutions.
+          </p>
+        </div>
+      </section>
+
+      {/* THE ENGINE — one synthesized system */}
       <section
         style={{
           padding: '100px 24px',
@@ -485,27 +561,24 @@ export default function Home() {
         }}
       >
         <div className="pb-container" style={{ maxWidth: 1080 }}>
-          <div style={{ marginBottom: 56, maxWidth: 860 }}>
-            <p className="eyebrow" style={{ marginBottom: 22 }}>
-              What Plan B does
+          <div style={{ marginBottom: 48, maxWidth: 900 }}>
+            <p className="eyebrow" style={{ marginBottom: 20 }}>
+              § 02 · The engine
             </p>
             <h2
               className="serif"
               style={{
-                fontSize: 'clamp(32px, 5.4vw, 54px)',
+                fontSize: 'clamp(36px, 6vw, 68px)',
                 fontWeight: 300,
-                letterSpacing: '-0.018em',
-                lineHeight: 1.05,
+                letterSpacing: '-0.022em',
+                lineHeight: 1,
                 margin: 0,
                 color: 'var(--ink)',
               }}
             >
-              Explain every option.
+              One system.
               <br />
-              Read your kid.{' '}
-              <em style={{ color: 'var(--teal)' }}>
-                Build a protocol.
-              </em>
+              <em style={{ color: 'var(--teal)' }}>Every facet feeds it.</em>
             </h2>
             <p
               style={{
@@ -514,108 +587,477 @@ export default function Home() {
                 color: 'var(--ink-soft)',
                 fontWeight: 300,
                 marginTop: 24,
-                maxWidth: 680,
-              }}
-            >
-              The parent forums don&apos;t always have solutions — they have suggestions. What
-              parents need is a path. In the beginning we&apos;ll be guessing and learning
-              together. But as real cohorts run and real data comes in, we move — together —
-              from hope to solutions.
-            </p>
-            <p
-              className="serif"
-              style={{
-                fontSize: 'clamp(22px, 3vw, 30px)',
-                fontStyle: 'italic',
-                color: 'var(--ink)',
-                lineHeight: 1.3,
-                fontWeight: 400,
-                margin: '28px 0 0',
                 maxWidth: 720,
-                borderLeft: '3px solid var(--teal)',
-                paddingLeft: 22,
               }}
             >
-              We need more than hope.{' '}
-              <span style={{ color: 'var(--teal)' }}>We need a path.</span>
+              Parent forums have suggestions. Plan B builds a path. It reads every modality on
+              record, every practitioner teaching, every cohort study we run, and every kid&apos;s
+              full intake — and synthesizes them into a targeted protocol. The more families
+              tracking, the more studies we fund, the faster every family gets to solutions.
             </p>
           </div>
 
+          {/* Engine schematic */}
           <div
+            className="engine-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: 0,
-              borderTop: '1px solid var(--ink)',
-              borderBottom: '1px solid var(--ink)',
+              gridTemplateColumns: '1fr auto 1fr',
+              gap: 'clamp(20px, 4vw, 56px)',
+              alignItems: 'stretch',
+              marginBottom: 40,
             }}
-            className="pillars-grid"
           >
-            {[
-              {
-                n: '01',
-                label: 'The podcast',
-                title: 'The landscape',
-                body: "Every fringe modality explained honestly — functional medicine, homeopathy, phage therapy, biomagnetism, methylation, craniosacral, peptides, mold protocols, and the rest. Which kind of kid each one actually works for. Who the good practitioners are. What the standard system doesn&apos;t tell you.",
-              },
-              {
-                n: '02',
-                label: 'The bot',
-                title: "Your kid\u2019s protocol",
-                body: "Plan B reads every modality, every practitioner teaching, every clinical study we run — then reads your kid&apos;s full history on top of that. Synthesizes all of it into a protocol tailored to your kid. So you aren&apos;t guessing in the dark.",
-              },
-              {
-                n: '03',
-                label: 'The cohorts',
-                title: 'Real case studies',
-                body: "Ten-kid cohorts tracked for six months on one modality at a time. Documented openly. As the data comes in, Plan B gets sharper — which modalities actually move the needle, in which sequence, for which kind of kid. Hope becomes signal.",
-              },
-            ].map((c, i, arr) => (
-              <div
-                key={c.n}
+            {/* Inputs */}
+            <div
+              style={{
+                border: '1px solid var(--ink)',
+                padding: '26px 24px',
+                position: 'relative',
+              }}
+            >
+              <p
+                className="mono"
                 style={{
-                  padding: '32px 28px',
-                  borderRight: i < arr.length - 1 ? '1px solid var(--sand)' : 'none',
-                  position: 'relative',
+                  fontSize: 10,
+                  letterSpacing: '0.24em',
+                  color: 'var(--sand-dark)',
+                  fontWeight: 600,
+                  marginBottom: 18,
+                  textTransform: 'uppercase',
                 }}
               >
+                Inputs · What feeds it
+              </p>
+              {[
+                'Every modality (standard · functional · fringe)',
+                'Every practitioner teaching & published work',
+                'Live cohort data from running case studies',
+                'Your kid\u2019s full intake, onset story, labs',
+                'Community questions and corrections',
+              ].map((x, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '28px 1fr',
+                    gap: 10,
+                    alignItems: 'baseline',
+                    padding: '10px 0',
+                    borderTop: i === 0 ? 'none' : '1px solid var(--sand-light)',
+                  }}
+                >
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 10,
+                      color: 'var(--teal)',
+                      letterSpacing: '0.12em',
+                      fontWeight: 600,
+                    }}
+                  >
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: 13.5,
+                      color: 'var(--ink)',
+                      lineHeight: 1.55,
+                      fontWeight: 300,
+                    }}
+                  >
+                    {x}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Engine center */}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minWidth: 180,
+                position: 'relative',
+              }}
+              aria-hidden="false"
+            >
+              <div
+                className="engine-arrow-in"
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: -40,
+                  transform: 'translateY(-50%)',
+                  width: 40,
+                  height: 1,
+                  background: 'var(--ink)',
+                }}
+              />
+              <div
+                className="engine-arrow-in"
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  top: 'calc(50% - 5px)',
+                  left: -12,
+                  width: 0,
+                  height: 0,
+                  borderTop: '5px solid transparent',
+                  borderBottom: '5px solid transparent',
+                  borderLeft: '8px solid var(--ink)',
+                }}
+              />
+              <div
+                style={{
+                  background: 'var(--ink)',
+                  color: 'var(--cream)',
+                  padding: '36px 28px',
+                  textAlign: 'center',
+                  width: '100%',
+                  position: 'relative',
+                  overflow: 'hidden',
+                }}
+              >
+                <div
+                  className="graph-paper"
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    opacity: 0.05,
+                    pointerEvents: 'none',
+                  }}
+                />
                 <p
                   className="mono"
                   style={{
-                    fontSize: 10,
-                    letterSpacing: '0.24em',
-                    color: 'var(--teal)',
+                    fontSize: 9,
+                    letterSpacing: '0.28em',
+                    color: 'var(--teal-light)',
                     fontWeight: 600,
-                    marginBottom: 6,
+                    marginBottom: 14,
+                    position: 'relative',
+                    zIndex: 1,
                   }}
                 >
-                  § {c.n} · {c.label}
+                  Synthesis engine
                 </p>
                 <p
                   className="serif"
                   style={{
-                    fontSize: 26,
-                    fontWeight: 400,
-                    letterSpacing: '-0.01em',
-                    lineHeight: 1.15,
-                    color: 'var(--ink)',
-                    margin: '6px 0 14px',
+                    fontSize: 28,
+                    fontWeight: 300,
+                    color: 'var(--cream)',
+                    letterSpacing: '-0.015em',
+                    lineHeight: 1,
+                    margin: '0 0 8px',
+                    position: 'relative',
+                    zIndex: 1,
                   }}
                 >
-                  {c.title}
+                  Plan B
                 </p>
                 <p
                   style={{
-                    fontSize: 14,
-                    lineHeight: 1.8,
-                    color: 'var(--ink-soft)',
+                    fontSize: 11,
+                    color: '#bbb3a2',
+                    lineHeight: 1.7,
                     fontWeight: 300,
+                    margin: 0,
+                    position: 'relative',
+                    zIndex: 1,
                   }}
-                  dangerouslySetInnerHTML={{ __html: c.body }}
-                />
+                >
+                  Reads it all together.
+                </p>
               </div>
-            ))}
+              <div
+                className="engine-arrow-out"
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  right: -40,
+                  transform: 'translateY(-50%)',
+                  width: 40,
+                  height: 1,
+                  background: 'var(--ink)',
+                }}
+              />
+              <div
+                className="engine-arrow-out"
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  top: 'calc(50% - 5px)',
+                  right: -12,
+                  width: 0,
+                  height: 0,
+                  borderTop: '5px solid transparent',
+                  borderBottom: '5px solid transparent',
+                  borderLeft: '8px solid var(--ink)',
+                }}
+              />
+            </div>
+
+            {/* Outputs */}
+            <div
+              style={{
+                border: '1px solid var(--ink)',
+                padding: '26px 24px',
+                position: 'relative',
+              }}
+            >
+              <p
+                className="mono"
+                style={{
+                  fontSize: 10,
+                  letterSpacing: '0.24em',
+                  color: 'var(--sand-dark)',
+                  fontWeight: 600,
+                  marginBottom: 18,
+                  textTransform: 'uppercase',
+                }}
+              >
+                Outputs · What it produces
+              </p>
+              {[
+                'Your kid\u2019s targeted protocol, not a guess',
+                'Matched placement into a case study',
+                'Referrals to practitioners whose work fits',
+                'Real-time answers to your 2am questions',
+                'Published cohort findings, for every family after',
+              ].map((x, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '28px 1fr',
+                    gap: 10,
+                    alignItems: 'baseline',
+                    padding: '10px 0',
+                    borderTop: i === 0 ? 'none' : '1px solid var(--sand-light)',
+                  }}
+                >
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 10,
+                      color: 'var(--teal)',
+                      letterSpacing: '0.12em',
+                      fontWeight: 600,
+                    }}
+                  >
+                    →
+                  </span>
+                  <span
+                    style={{
+                      fontSize: 13.5,
+                      color: 'var(--ink)',
+                      lineHeight: 1.55,
+                      fontWeight: 300,
+                    }}
+                  >
+                    {x}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* Feedback loop callout */}
+          <div
+            style={{
+              borderTop: '1px dashed var(--sand)',
+              paddingTop: 24,
+              display: 'flex',
+              gap: 16,
+              alignItems: 'baseline',
+              flexWrap: 'wrap',
+            }}
+          >
+            <span
+              className="mono"
+              style={{
+                fontSize: 10,
+                letterSpacing: '0.24em',
+                color: 'var(--teal)',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              ↺ Feedback loop
+            </span>
+            <p
+              style={{
+                fontSize: 14,
+                lineHeight: 1.75,
+                color: 'var(--ink-soft)',
+                fontWeight: 300,
+                margin: 0,
+                flex: 1,
+                minWidth: 280,
+              }}
+            >
+              Your family&apos;s journey feeds back into the library. The 100th family&apos;s
+              read benefits from what the first 99 contributed. More people in → more studies
+              funded → faster to solutions, for everyone.
+            </p>
+          </div>
+
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(24px, 3.4vw, 34px)',
+              fontStyle: 'italic',
+              color: 'var(--ink)',
+              lineHeight: 1.3,
+              fontWeight: 400,
+              margin: '48px 0 0',
+              maxWidth: 800,
+              borderLeft: '3px solid var(--teal)',
+              paddingLeft: 22,
+            }}
+          >
+            A protocol, not a guess.{' '}
+            <span style={{ color: 'var(--teal)' }}>Compounding with every family.</span>
+          </p>
+        </div>
+      </section>
+
+      {/* THE WHY — mechanism questions */}
+      <section
+        style={{
+          padding: '100px 24px',
+          background: 'var(--cream-light)',
+          borderBottom: '1px solid var(--rule)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 1000 }}>
+          <div style={{ marginBottom: 36, maxWidth: 860 }}>
+            <p className="eyebrow" style={{ marginBottom: 20 }}>
+              § 03 · The why
+            </p>
+            <h2
+              className="serif"
+              style={{
+                fontSize: 'clamp(34px, 5.6vw, 60px)',
+                fontWeight: 300,
+                letterSpacing: '-0.022em',
+                lineHeight: 1,
+                margin: 0,
+                color: 'var(--ink)',
+              }}
+            >
+              Understanding the mechanism — <em style={{ color: 'var(--teal)' }}>so solutions get easier to craft.</em>
+            </h2>
+            <p
+              style={{
+                fontSize: 17,
+                lineHeight: 1.85,
+                color: 'var(--ink-soft)',
+                fontWeight: 300,
+                marginTop: 20,
+                maxWidth: 720,
+              }}
+            >
+              Plan B isn&apos;t only matching modalities to kids. It&apos;s pursuing the
+              questions underneath — which behavior is which driver? Every added family,
+              every added cohort, every added data point pushes these questions closer to
+              answers.
+            </p>
+          </div>
+
+          <ul
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: 0,
+              borderTop: '1px solid var(--ink)',
+            }}
+          >
+            {[
+              {
+                n: 'Q1',
+                q: 'Are these behaviors pathogen-driven?',
+                s: 'When sudden OCD, rage, or regression appears — is the brain reacting to a specific infection? Which one, and in which kid?',
+              },
+              {
+                n: 'Q2',
+                q: 'Or are they symptoms of an inflamed brain?',
+                s: 'Is the driver the pathogen itself, or the inflammation it provoked? Different answers mean different protocols.',
+              },
+              {
+                n: 'Q3',
+                q: 'Does strep have a personality? Does mold? Does lyme?',
+                s: 'Do specific pathogens produce specific behavioral signatures? Does a kid picking their nose constantly mean parasites? Does a kid saying "I want to die" mean lyme? We&apos;re collecting the data to find out.',
+              },
+              {
+                n: 'Q4',
+                q: 'Which combinations load the bucket fastest?',
+                s: 'Mold + strep + methylation stall + stress — what order? Which is the bottleneck for which kid?',
+              },
+              {
+                n: 'Q5',
+                q: 'Where does each modality actually fit?',
+                s: 'Not &ldquo;does it work&rdquo; — where in the sequence does it belong, for which kind of kid?',
+              },
+            ].map((x) => (
+              <li
+                key={x.n}
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '56px 1fr',
+                  gap: 18,
+                  padding: '26px 0',
+                  borderBottom: '1px solid var(--sand)',
+                  alignItems: 'baseline',
+                }}
+              >
+                <span
+                  className="mono"
+                  style={{
+                    fontSize: 12,
+                    color: 'var(--teal)',
+                    letterSpacing: '0.14em',
+                    fontWeight: 600,
+                    textAlign: 'right',
+                    textTransform: 'uppercase',
+                  }}
+                >
+                  {x.n}
+                </span>
+                <div>
+                  <p
+                    className="serif"
+                    style={{
+                      fontSize: 'clamp(22px, 2.8vw, 30px)',
+                      fontStyle: 'italic',
+                      color: 'var(--ink)',
+                      fontWeight: 400,
+                      lineHeight: 1.25,
+                      marginBottom: 10,
+                    }}
+                  >
+                    {x.q}
+                  </p>
+                  <p
+                    style={{
+                      fontSize: 14,
+                      color: 'var(--ink-soft)',
+                      lineHeight: 1.75,
+                      fontWeight: 300,
+                    }}
+                    dangerouslySetInnerHTML={{ __html: x.s }}
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
 
           <p
             className="serif"
@@ -623,22 +1065,21 @@ export default function Home() {
               fontSize: 'clamp(22px, 3vw, 30px)',
               fontStyle: 'italic',
               color: 'var(--ink)',
-              lineHeight: 1.4,
+              lineHeight: 1.35,
               fontWeight: 400,
-              margin: '56px 0 0',
-              maxWidth: 760,
+              margin: '48px 0 0',
+              maxWidth: 820,
               borderLeft: '3px solid var(--teal)',
               paddingLeft: 22,
             }}
           >
-            From <span style={{ color: 'var(--teal)' }}>hope</span> to{' '}
-            <span style={{ color: 'var(--teal)' }}>solutions.</span> That&apos;s the whole idea.
+            The why is how the solution gets precise.{' '}
+            <span style={{ color: 'var(--teal)' }}>
+              Every family helps us answer it.
+            </span>
           </p>
         </div>
       </section>
-
-      {/* BUCKET */}
-      <BucketSection />
 
       {/* INSTALL */}
       <section style={{ padding: '120px 24px', background: 'var(--cream)' }}>
