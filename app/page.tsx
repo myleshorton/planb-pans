@@ -207,7 +207,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Right — portrait block */}
+          {/* Right — silhouette editorial block */}
           <div
             className="fade delay-2 hero-portrait"
             style={{
@@ -215,59 +215,131 @@ export default function Home() {
               paddingLeft: 24,
             }}
           >
+            {/* Teal offset panel behind the image */}
             <div
               style={{
                 position: 'absolute',
-                top: 40,
-                right: 40,
-                bottom: -40,
-                left: 64,
+                top: 28,
+                right: 28,
+                bottom: -32,
+                left: 52,
                 background: 'var(--teal)',
-                opacity: 0.92,
                 zIndex: 0,
               }}
             />
+            {/* Vertical editorial masthead strip */}
+            <p
+              className="mono"
+              style={{
+                position: 'absolute',
+                top: 32,
+                left: 2,
+                writingMode: 'vertical-rl',
+                transform: 'rotate(180deg)',
+                fontSize: 10,
+                letterSpacing: '0.3em',
+                textTransform: 'uppercase',
+                color: 'var(--teal)',
+                zIndex: 2,
+                fontWeight: 600,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              № 01 &middot; A mother&apos;s protocol &middot; Plan B for PANS
+            </p>
+
             <div style={{ position: 'relative', zIndex: 1 }}>
-              <img
-                src="/rachel-podcast.jpg"
-                alt="Rachel Johnson, founder of Plan B for PANS"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  display: 'block',
-                  filter: 'grayscale(100%) contrast(1.06)',
-                  boxShadow: '0 40px 80px -30px rgba(0,0,0,0.55)',
-                }}
-              />
               <div
                 style={{
+                  position: 'relative',
                   background: 'var(--cream)',
-                  border: '1px solid var(--sand)',
-                  borderTop: 'none',
-                  padding: '20px 22px',
+                  border: '1px solid var(--ink)',
+                  overflow: 'hidden',
                 }}
               >
-                <p
+                <img
+                  src="/kid-silhouette.png"
+                  alt="Silhouette of a child — representing every kid Plan B is built for"
                   style={{
-                    fontFamily: 'var(--font-cormorant)',
-                    fontSize: 'clamp(18px, 2vw, 22px)',
-                    fontStyle: 'italic',
-                    fontWeight: 400,
-                    color: 'var(--ink)',
-                    lineHeight: 1.4,
-                    marginBottom: 14,
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block',
+                    mixBlendMode: 'multiply',
+                    padding: '20px 30px 0',
+                  }}
+                />
+
+                {/* Circular seal overlay, top-right */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: 20,
+                    right: 20,
+                    width: 92,
+                    height: 92,
+                    borderRadius: '50%',
+                    border: '1px solid var(--ink)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    background: 'var(--cream)',
+                    zIndex: 3,
                   }}
                 >
-                  &ldquo;What healed my son wasn&apos;t a secret buried somewhere. The problem
-                  wasn&apos;t missing information. It was that nobody in the system could see it
-                  all at once.&rdquo;
-                </p>
-                <p
-                  className="label-tracked"
-                  style={{ color: 'var(--teal)', fontWeight: 600 }}
+                  <svg viewBox="0 0 92 92" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
+                    <defs>
+                      <path id="sealArc" d="M 46 46 m -34 0 a 34 34 0 1 1 68 0 a 34 34 0 1 1 -68 0" />
+                    </defs>
+                    <text fontFamily="var(--mono)" fontSize="7" fill="#141414" letterSpacing="2">
+                      <textPath href="#sealArc" startOffset="0">
+                        PLAN B · FOR PANS · EST. 2026 · FOR THE KIDS ·
+                      </textPath>
+                    </text>
+                  </svg>
+                  <p
+                    className="serif"
+                    style={{
+                      fontSize: 26,
+                      fontStyle: 'italic',
+                      color: 'var(--teal)',
+                      fontWeight: 400,
+                      lineHeight: 1,
+                      margin: 0,
+                    }}
+                  >
+                    №01
+                  </p>
+                </div>
+
+                {/* Caption under the image inside the frame */}
+                <div
+                  style={{
+                    background: 'var(--cream)',
+                    borderTop: '1px solid var(--ink)',
+                    padding: '18px 22px',
+                  }}
                 >
-                  Rachel Johnson · Founder
-                </p>
+                  <p
+                    style={{
+                      fontFamily: 'var(--font-cormorant)',
+                      fontSize: 'clamp(17px, 1.9vw, 21px)',
+                      fontStyle: 'italic',
+                      fontWeight: 400,
+                      color: 'var(--ink)',
+                      lineHeight: 1.4,
+                      marginBottom: 12,
+                    }}
+                  >
+                    &ldquo;What healed my son wasn&apos;t a secret buried somewhere. It was that
+                    nobody in the system could see it all at once.&rdquo;
+                  </p>
+                  <p
+                    className="label-tracked"
+                    style={{ color: 'var(--teal)', fontWeight: 600 }}
+                  >
+                    Rachel Johnson · Founder
+                  </p>
+                </div>
               </div>
             </div>
           </div>
