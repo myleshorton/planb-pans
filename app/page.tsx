@@ -78,7 +78,18 @@ export default function Home() {
         >
           {/* Left — text */}
           <div>
-            <p className="eyebrow rise delay-1 caret" style={{ marginBottom: 22 }}>
+            <p
+              className="rise delay-1 caret"
+              style={{
+                fontFamily: 'var(--font-inter)',
+                fontSize: 13,
+                letterSpacing: '0.36em',
+                textTransform: 'uppercase',
+                color: 'var(--teal)',
+                fontWeight: 700,
+                marginBottom: 26,
+              }}
+            >
               Welcome to Plan B
             </p>
 
@@ -125,22 +136,24 @@ export default function Home() {
               style={{
                 fontSize: 19,
                 color: 'var(--ink-soft)',
-                lineHeight: 1.7,
+                lineHeight: 1.75,
                 fontWeight: 300,
-                maxWidth: 580,
+                maxWidth: 560,
                 marginBottom: 40,
               }}
             >
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
-                Plan B is a non-profit. When you use it, you&rsquo;re talking to the bot
+                Plan B is a non-profit.
               </em>{' '}
-              — an AI that reads across every PANS approach — standard, functional, fringe —
-              alongside your kid&apos;s full story. Today the bot gives you a real
-              understanding of every option out there when the system has none. Through the
-              cohort studies we run together, the path itself emerges.{' '}
-              <em style={{ color: 'var(--ink)' }}>
-                Together we find a definitive way out.
-              </em>
+              The bot reads every PANS approach alongside your kid&apos;s full story.{' '}
+              <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
+                Today:
+              </em>{' '}
+              a real understanding of every option.{' '}
+              <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
+                Tomorrow:
+              </em>{' '}
+              the path, <em style={{ color: 'var(--teal)' }}>together.</em>
             </p>
 
             <div
