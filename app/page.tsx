@@ -343,6 +343,69 @@ export default function Home() {
                 </div>
 
 
+                {/* Symptoms labeled inside the head — annotated-diagram style w/ teal dots */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '22%',
+                    left: '44%',
+                    zIndex: 3,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 6,
+                    pointerEvents: 'none',
+                  }}
+                >
+                  <p
+                    className="mono"
+                    style={{
+                      fontSize: 8,
+                      letterSpacing: '0.28em',
+                      textTransform: 'uppercase',
+                      color: 'rgba(246,241,231,0.55)',
+                      fontWeight: 600,
+                      marginBottom: 4,
+                    }}
+                  >
+                    Tracking
+                  </p>
+                  {['OCD', 'Rage', 'ARFID', 'Agoraphobia', 'Fear of germs'].map((s) => (
+                    <div
+                      key={s}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 8,
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: 7,
+                          height: 7,
+                          borderRadius: '50%',
+                          background: 'var(--teal)',
+                          boxShadow: '0 0 0 3px rgba(31,107,107,0.25)',
+                          flexShrink: 0,
+                        }}
+                      />
+                      <span
+                        className="mono"
+                        style={{
+                          fontSize: 11,
+                          letterSpacing: '0.18em',
+                          textTransform: 'uppercase',
+                          color: 'var(--cream)',
+                          fontWeight: 600,
+                          lineHeight: 1.1,
+                          textShadow: '0 1px 2px rgba(0,0,0,0.5)',
+                        }}
+                      >
+                        {s}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
                 {/* Caption — Rachel's voice */}
                 <div
                   style={{
