@@ -328,68 +328,6 @@ export default function Home() {
                   </span>
                 </div>
 
-                {/* Anatomical symptom pins — cream pill labels for legibility */}
-                {[
-                  { top: '20%', left: '54%', text: 'Cognitive regression', dotFirst: true },
-                  { top: '36%', left: '58%', text: 'Sensory overload', dotFirst: true },
-                  { top: '52%', left: '22%', text: 'OCD · Food fear', dotFirst: false },
-                  { top: '68%', left: '60%', text: 'Rage · Meltdowns', dotFirst: true },
-                ].map((pin) => (
-                  <div
-                    key={pin.text}
-                    style={{
-                      position: 'absolute',
-                      top: pin.top,
-                      left: pin.left,
-                      zIndex: 3,
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 6,
-                    }}
-                  >
-                    {pin.dotFirst && (
-                      <span
-                        style={{
-                          width: 7,
-                          height: 7,
-                          borderRadius: '50%',
-                          background: 'var(--teal)',
-                          boxShadow: '0 0 0 3px rgba(31,107,107,0.18), 0 0 0 4px rgba(246,241,231,0.9)',
-                          flexShrink: 0,
-                        }}
-                      />
-                    )}
-                    <span
-                      className="mono"
-                      style={{
-                        fontSize: 9,
-                        color: 'var(--ink)',
-                        letterSpacing: '0.12em',
-                        textTransform: 'uppercase',
-                        fontWeight: 600,
-                        background: 'rgba(246,241,231,0.94)',
-                        padding: '3px 7px',
-                        border: '1px solid var(--sand)',
-                        borderRadius: 2,
-                        whiteSpace: 'nowrap',
-                      }}
-                    >
-                      {pin.text}
-                    </span>
-                    {!pin.dotFirst && (
-                      <span
-                        style={{
-                          width: 7,
-                          height: 7,
-                          borderRadius: '50%',
-                          background: 'var(--teal)',
-                          boxShadow: '0 0 0 3px rgba(31,107,107,0.18), 0 0 0 4px rgba(246,241,231,0.9)',
-                          flexShrink: 0,
-                        }}
-                      />
-                    )}
-                  </div>
-                ))}
 
                 {/* Caption — Rachel's voice */}
                 <div
