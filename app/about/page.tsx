@@ -224,7 +224,7 @@ export default function AboutPage() {
             </h2>
             <p style={textStyle}>
               Plan B is the coordination layer we never had. It reads every modality that
-              isn&apos;t in the standard protocol, every published teaching, every case study
+              isn&apos;t in the standard protocol, every published teaching, every cohort study
               we can get onto the record. It reads your kid&apos;s full story — the pregnancy,
               the onset, every medication and supplement, every flare, every lab. It
               synthesizes all of it into a protocol for your kid specifically.

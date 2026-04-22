@@ -46,7 +46,7 @@ export default function Contact() {
           Get in Touch
         </h1>
         <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '18px', color: '#666', lineHeight: 1.8, marginBottom: '60px', maxWidth: '700px', position: 'relative', zIndex: 1 }}>
-          Have a case study to share? Want to collaborate? Have a question? We'd love to hear from you.
+          Have a cohort study to share? Want to collaborate? Have a question? We'd love to hear from you.
         </p>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', position: 'relative', zIndex: 1 }}>
@@ -116,7 +116,7 @@ export default function Contact() {
                   }}
                 >
                   <option value="inquiry">General Inquiry</option>
-                  <option value="case-study">Share Case Study</option>
+                  <option value="case-study">Share Cohort Study</option>
                   <option value="podcast">Podcast Guest</option>
                   <option value="collaboration">Collaboration</option>
                 </select>
@@ -190,7 +190,7 @@ export default function Contact() {
                 Ready to share?
               </p>
               <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#666', lineHeight: 1.8 }}>
-                We're actively seeking case studies from families and doctors. Your story could give hope to another parent just starting their Plan B journey.
+                We're actively seeking cohort studies from families and doctors. Your story could give hope to another parent just starting their Plan B journey.
               </p>
             </div>
           </div>

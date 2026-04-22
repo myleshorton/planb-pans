@@ -61,7 +61,7 @@ export default function PodcastPage() {
               marginTop: 28,
             }}
           >
-            Case studies, parent experience, and deep explorations of the fringe modalities that
+            Cohort studies, parent experience, and deep explorations of the fringe modalities that
             actually moved the needle for our kids. Not a single-lens medical podcast — a
             multi-modal conversation about real healing, real setbacks, and what the standard
             system keeps missing.
@@ -172,13 +172,13 @@ export default function PodcastPage() {
                 },
                 {
                   n: 'IV',
-                  k: 'Case studies, live',
+                  k: 'Cohort studies, live',
                   v: 'Real ten-kid cohorts running a single modality for six months. What shifts, what stalls, what the practitioner notices, what the parents see. Documented openly as it unfolds.',
                 },
                 {
                   n: 'V',
                   k: 'Plan B synthesizes',
-                  v: 'The AI reading across every modality, every case study, every family\u2019s log — producing actual personalized protocols. Hope turning into solutions.',
+                  v: 'The AI reading across every modality, every cohort study, every family\u2019s log — producing actual personalized protocols. Hope turning into solutions.',
                 },
               ].map((x) => (
                 <li
@@ -288,7 +288,7 @@ export default function PodcastPage() {
                 fontWeight: 400,
               }}
             >
-              New conversations, case studies, and deep-dives on the fringe modalities that
+              New conversations, cohort studies, and deep-dives on the fringe modalities that
               actually work — recorded and in edit.
             </p>
             <p

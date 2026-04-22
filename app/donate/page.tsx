@@ -99,7 +99,7 @@ export default function DonatePage() {
             }}
           >
             Parents in this battle for years are choosing between eating and the next
-            treatment. Every dollar here goes to running case studies — labs, supplements,
+            treatment. Every dollar here goes to running cohort studies — labs, supplements,
             practitioner time when the practitioner needs to charge — so families can
             participate without paying for the research.
           </p>
@@ -263,7 +263,7 @@ export default function DonatePage() {
                   margin: '0 auto 20px',
                 }}
               >
-                Most of our early case studies are practitioner-funded via the 10-free-clients
+                Most of our early cohort studies are practitioner-funded via the 10-free-clients
                 pledge. When a study needs donations to run (labs, supplements, travel
                 accommodations for families), it will appear here with a goal and a running
                 tally.

@@ -244,7 +244,7 @@ export default function PractitionersPage() {
               }}
             >
               We document the full journey — weekly, with consent, de-identified. What shifted,
-              what stalled, what ordered well with what. Your ten kids become a real case study
+              what stalled, what ordered well with what. Your ten kids become a real cohort study
               that every parent and practitioner in the network can learn from.
             </p>
             <div
@@ -579,7 +579,7 @@ export default function PractitionersPage() {
             {[
               {
                 t: 'Documented outcomes',
-                b: 'A published six-month case study of your ten-client cohort. Clean data. Real journey. Your work visible in a way consumer reviews can never match.',
+                b: 'A published six-month cohort study of your ten-client cohort. Clean data. Real journey. Your work visible in a way consumer reviews can never match.',
               },
               {
                 t: 'Targeted referrals',

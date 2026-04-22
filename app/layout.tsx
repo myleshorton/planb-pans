@@ -64,7 +64,7 @@ export default function RootLayout({
             <nav style={{ display: 'flex', gap: 22, alignItems: 'center' }}>
               <NavLink href="/">Home</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
-              <NavLink href="/case-studies">Case Studies</NavLink>
+              <NavLink href="/case-studies">Cohort Studies</NavLink>
               <NavLink href="/vote">Vote</NavLink>
               <NavLink href="/donate">Donate</NavLink>
               <a

@@ -718,7 +718,7 @@ export default function Home() {
               {[
                 'Every modality (standard · functional · fringe)',
                 'Every practitioner teaching & published work',
-                'Live cohort data from running case studies',
+                'Live cohort data from running cohort studies',
                 'Your kid\u2019s full intake, onset story, labs',
                 'Community questions and corrections',
               ].map((x, i) => (
@@ -912,7 +912,7 @@ export default function Home() {
               </p>
               {[
                 'Your kid\u2019s targeted protocol, not a guess',
-                'Matched placement into a case study',
+                'Matched placement into a cohort study',
                 'Referrals to practitioners whose work fits',
                 'Real-time answers to your 2am questions',
                 'Published cohort findings, for every family after',

@@ -123,7 +123,7 @@ export default function CaseStudies() {
           style={{ position: 'relative', zIndex: 1, maxWidth: 1080 }}
         >
           <p className="eyebrow" style={{ marginBottom: 22 }}>
-            Case studies · Fringe modalities in real time
+            Cohort studies · Fringe modalities in real time
           </p>
           <h1
             className="serif"
@@ -149,7 +149,7 @@ export default function CaseStudies() {
               marginTop: 28,
             }}
           >
-            Every case study here is a single modality, tracked across 5–12 real kids in real
+            Every cohort study here is a single modality, tracked across 5–12 real kids in real
             time. We follow each child through the full arc — what shifts, what stalls,
             what&apos;s worth 12 weeks and what&apos;s noise. Published as the signal emerges.
           </p>
@@ -228,7 +228,7 @@ export default function CaseStudies() {
         </div>
       </section>
 
-      {/* Featured case study — Yasko */}
+      {/* Featured cohort study — Yasko */}
       <section
         style={{
           padding: '100px 24px',
@@ -771,7 +771,7 @@ export default function CaseStudies() {
               margin: '0 auto 28px',
             }}
           >
-            These case studies get built from your Tuesday log, not a paper. Track with Plan B —
+            These cohort studies get built from your Tuesday log, not a paper. Track with Plan B —
             consent-based, de-identified — and your family&apos;s signal helps the next family
             skip the dead ends.
           </p>
@@ -785,7 +785,7 @@ export default function CaseStudies() {
               margin: '0 auto 36px',
             }}
           >
-            Want your kid in a case study? Complete the full Plan B intake. Cohorts are matched
+            Want your kid in a cohort study? Complete the full Plan B intake. Cohorts are matched
             on profile — we place kids where the modality actually fits their kid, so every
             study starts from aligned data.
           </p>
