@@ -61,13 +61,14 @@ export default function RootLayout({
                 </span>
               </p>
             </Link>
-            <nav style={{ display: 'flex', gap: 22, alignItems: 'center' }}>
+            <nav style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
               <NavLink href="/">Home</NavLink>
               <NavLink href="/tracker">Tracker</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
               <NavLink href="/case-studies">Cohort Studies</NavLink>
               <NavLink href="/vote">Vote</NavLink>
               <NavLink href="/donate">Donate</NavLink>
+              <NavLink href="/faq">FAQ</NavLink>
               <a
                 href="https://app.planbforpans.com/sign-in"
                 target="_blank"
