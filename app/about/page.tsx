@@ -4,12 +4,13 @@ import { useReveal } from '../_components/hooks'
 
 export default function AboutPage() {
   const head = useReveal()
+  const body = useReveal()
   return (
     <main style={{ background: 'var(--cream)' }}>
       {/* Header */}
       <section
         style={{
-          padding: '120px 24px 80px',
+          padding: '120px 24px 60px',
           borderBottom: '1px solid var(--rule)',
           background: 'var(--cream-light)',
           position: 'relative',
@@ -25,8 +26,7 @@ export default function AboutPage() {
             width: 480,
             height: 480,
             borderRadius: '50%',
-            background:
-              'radial-gradient(circle, rgba(31,107,107,0.12) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(31,107,107,0.12) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -41,13 +41,13 @@ export default function AboutPage() {
           <h1
             className="serif"
             style={{
-              fontSize: 'clamp(48px, 8vw, 96px)',
+              fontSize: 'clamp(44px, 7vw, 80px)',
               fontWeight: 300,
-              letterSpacing: '-0.026em',
-              lineHeight: 0.98,
+              letterSpacing: '-0.024em',
+              lineHeight: 1,
               margin: 0,
               color: 'var(--ink)',
-              maxWidth: 920,
+              maxWidth: 900,
             }}
           >
             I was the mom{' '}
@@ -55,174 +55,116 @@ export default function AboutPage() {
           </h1>
           <p
             style={{
-              fontSize: 19,
-              lineHeight: 1.7,
+              fontSize: 18,
+              lineHeight: 1.6,
               color: 'var(--ink-soft)',
               fontWeight: 300,
-              maxWidth: 720,
-              marginTop: 28,
+              maxWidth: 640,
+              marginTop: 24,
             }}
           >
-            Then I became the one building it. This is how it started — and why it has to
-            exist.
+            Then I became the one building it.
           </p>
         </div>
       </section>
 
-      {/* Chapters */}
-      <section style={{ padding: '80px 24px', background: 'var(--cream)' }}>
-        <div className="pb-container" style={{ maxWidth: 760 }}>
-          {/* § 01 — Before */}
-          <div style={{ marginBottom: 80 }}>
-            <p
-              className="mono"
-              style={{
-                fontSize: 10,
-                letterSpacing: '0.28em',
-                textTransform: 'uppercase',
-                color: 'var(--teal)',
-                fontWeight: 600,
-                marginBottom: 16,
-              }}
-            >
-              § 01 · Before
+      {/* The story — condensed */}
+      <section style={{ padding: '72px 24px', background: 'var(--cream)' }}>
+        <div ref={body} className="pb-container reveal" style={{ maxWidth: 680 }}>
+          <div style={{ fontSize: 17, lineHeight: 1.85, color: 'var(--ink-soft)', fontWeight: 300 }}>
+            <p style={{ marginBottom: 22 }}>
+              I&apos;m Rachel. A mom of three, two with PANS. When my son was eight, he woke
+              up a different kid — and then told me he wanted to die. That was year one:
+              acute crisis. It was the hardest year of my life. There was a moment I nearly
+              took my own — I couldn&apos;t hold the pain of watching my children suffer.
             </p>
-            <h2
+
+            <p style={{ marginBottom: 22 }}>
+              I visited every top PANS doctor I could reach. We went through multiple rounds
+              of antibiotics. None of them helped. We ended up homeless for a stretch because
+              of mold exposure. The doctors at the top of the field couldn&apos;t help us.
+            </p>
+
+            <p style={{ marginBottom: 22 }}>
+              What eventually healed him wasn&apos;t hidden in a paper or behind a paywall.
+              Biomagnetism, classical homeopathy, targeted functional medicine, nervous-system
+              regulation — each one held a piece. He&apos;s 99% healed now.{' '}
+              <em style={{ color: 'var(--ink)' }}>
+                I still can&apos;t tell you exactly which part did what.
+              </em>
+            </p>
+
+            <p
               className="serif"
               style={{
-                fontSize: 'clamp(30px, 5vw, 48px)',
-                fontWeight: 300,
-                letterSpacing: '-0.018em',
-                lineHeight: 1.05,
-                margin: 0,
-                marginBottom: 24,
+                fontSize: 'clamp(22px, 2.8vw, 28px)',
+                fontStyle: 'italic',
                 color: 'var(--ink)',
+                lineHeight: 1.35,
+                fontWeight: 400,
+                margin: '36px 0',
+                borderLeft: '3px solid var(--teal)',
+                paddingLeft: 22,
               }}
             >
-              A mom of three. Two with PANS.
-            </h2>
-            <p style={textStyle}>
-              I&apos;m Rachel. Before any of this, I was a mom of three kids in the kind of
-              life parents take for granted — schedules, sports, normal problems. Then our
-              life turned into something I couldn&apos;t have imagined.
+              The problem was never missing information.{' '}
+              <span style={{ color: 'var(--teal)' }}>
+                The problem was that nobody in the system could see it all at once.
+              </span>
             </p>
-          </div>
 
-          {/* § 02 — The change */}
-          <div style={{ marginBottom: 80 }}>
-            <p className="sectionLabel" style={labelStyle}>
-              § 02 · The change
-            </p>
-            <h2 className="serif" style={chapterTitleStyle}>
-              My son woke up a different kid.
-            </h2>
-            <p style={textStyle}>
-              He told me, at eight, that he wanted to die. That was year one: acute crisis.
-              Everything I thought I knew about my child was gone. It was the hardest year of
-              my life. There was a moment I nearly took my own — I couldn&apos;t hold the pain
-              of watching my children suffer. I&apos;m still here because I refused to leave
-              them in the middle of this, with the answers still missing.
-            </p>
-          </div>
-
-          {/* § 03 — The search */}
-          <div style={{ marginBottom: 80 }}>
-            <p style={labelStyle}>§ 03 · The search</p>
-            <h2 className="serif" style={chapterTitleStyle}>
-              Every top specialist. Every protocol.
-            </h2>
-            <p style={textStyle}>
-              I visited every top PANS doctor I could reach. We went through multiple rounds
-              of antibiotics. None of them helped — and several made him worse. We ended up
-              homeless for a stretch because of mold exposure. My son had Lyme, mold, COVID,
-              and a body that wouldn&apos;t tolerate the things that were supposed to help.
-            </p>
-            <p style={textStyle}>
-              The doctors at the top of the PANS field couldn&apos;t help us. That was the
-              moment I stopped trusting the protocols and started listening to something else.
-            </p>
-          </div>
-
-          {/* § 04 — What worked */}
-          <div style={{ marginBottom: 80 }}>
-            <p style={labelStyle}>§ 04 · What actually worked</p>
-            <h2 className="serif" style={chapterTitleStyle}>
-              The thing that healed him <em style={{ color: 'var(--teal)' }}>wasn&apos;t a secret.</em>
-            </h2>
-            <p style={textStyle}>
-              It wasn&apos;t hidden in a paper. It wasn&apos;t behind a paywall. Every piece of
-              what eventually healed my son already existed somewhere. Biomagnetism, classical
-              homeopathy, targeted functional medicine, nervous-system regulation — each one
-              held a piece. He&apos;s 99% healed now. I still can&apos;t tell you exactly
-              which part did what.
-            </p>
-            <p style={textStyle}>
-              What I can tell you is that the problem was never missing information.
-              <em> The problem was that nobody in the system could see it all at once.</em>
-            </p>
-          </div>
-
-          {/* § 05 — The realization */}
-          <div style={{ marginBottom: 80 }}>
-            <p style={labelStyle}>§ 05 · The realization</p>
-            <h2 className="serif" style={chapterTitleStyle}>
-              Specialists don&apos;t talk to each other.
-            </h2>
-            <p style={textStyle}>
+            <p style={{ marginBottom: 22 }}>
               The microbiome person understood the gut but not methylation. The methylation
-              person understood genetics but not mold. The mold person didn&apos;t know what
-              the craniosacral therapist was doing. Each of them was right about their piece.
-              None of them were seeing the whole kid.
+              person understood genetics but not mold. The moms who had already gotten through
+              had figured this out — leaving breadcrumbs for each other in encrypted threads
+              and 3am searches. When one found a real answer, her family needed her back. The
+              threads went cold. The next family stayed lost.
             </p>
-            <p style={textStyle}>
-              The moms who had already gotten through had figured this out. They were leaving
-              breadcrumbs for each other in encrypted threads, in 3am searches, in private
-              messages. When one found a real answer, she couldn&apos;t stay to guide the rest
-              — her family needed her back. The threads went cold. And the next family stayed
-              lost.
-            </p>
-            <p style={{ ...quoteStyle, marginTop: 24 }}>
-              It wasn&apos;t a knowledge problem. It was a coordination problem.
-            </p>
-          </div>
 
-          {/* § 06 — 300 families */}
-          <div style={{ marginBottom: 80 }}>
-            <p style={labelStyle}>§ 06 · 300 families in 12 hours</p>
-            <h2 className="serif" style={chapterTitleStyle}>
-              I quietly offered to help.
-            </h2>
-            <p style={textStyle}>
-              Three hundred families wrote back in twelve hours. Desperate. That&apos;s the
-              scale of the need. That&apos;s what nobody is coordinating for. Kids on fire,
-              parents choosing between eating and the next treatment, nowhere clear to go.
+            <p style={{ marginBottom: 22 }}>
+              When I quietly offered to help, <strong style={{ color: 'var(--ink)' }}>300
+              families wrote back in twelve hours.</strong> Desperate. That&apos;s the scale
+              of the need.
             </p>
-          </div>
 
-          {/* § 07 — Plan B */}
-          <div style={{ marginBottom: 40 }}>
-            <p style={labelStyle}>§ 07 · Plan B</p>
-            <h2 className="serif" style={chapterTitleStyle}>
-              So I started building the thing that didn&apos;t exist.
-            </h2>
-            <p style={textStyle}>
-              Plan B is the coordination layer we never had. It reads every modality that
-              isn&apos;t in the standard protocol, every published teaching, every cohort study
-              we can get onto the record. It reads your kid&apos;s full story — the pregnancy,
-              the onset, every medication and supplement, every flare, every lab. It
-              synthesizes all of it into a protocol for your kid specifically.
+            <p style={{ marginBottom: 22 }}>
+              So I built Plan B. A coordination layer. Ada — our bot — reads every modality
+              outside the standard protocol, every published teaching, every cohort study we
+              can put on the record, and reads your kid&apos;s full story on top of that. She
+              synthesizes all of it into guidance specific to your child. She doesn&apos;t
+              replace your practitioners — she helps you use them together. And she gets
+              sharper every time a family joins.
             </p>
-            <p style={textStyle}>
-              It doesn&apos;t replace your practitioners. It helps you use them together. It
-              gets sharper every time a family joins, every time a cohort runs, every time
-              another parent logs what worked and what didn&apos;t. The 100th family&apos;s
-              read benefits from what the first 99 contributed. Together — over time — we
-              build the way out.
+
+            <p
+              className="serif"
+              style={{
+                fontSize: 'clamp(20px, 2.6vw, 26px)',
+                fontStyle: 'italic',
+                color: 'var(--ink)',
+                lineHeight: 1.4,
+                fontWeight: 400,
+                margin: '36px 0 0',
+                borderLeft: '3px solid var(--teal)',
+                paddingLeft: 22,
+              }}
+            >
+              Your child does not deserve to rage, to be locked in their room, or to try to
+              leave this world. There is always a Plan B —{' '}
+              <span style={{ color: 'var(--teal)' }}>
+                and I&apos;m building it for them.
+              </span>
             </p>
-            <p style={{ ...quoteStyle, marginTop: 28 }}>
-              Your child does not deserve to rage. They don&apos;t deserve to be locked in
-              their room. They don&apos;t deserve to try to leave this world. There is always
-              a Plan B — and I&apos;m building it for them.
+
+            <p
+              className="label-tracked"
+              style={{
+                color: 'var(--sand-dark)',
+                marginTop: 28,
+                fontWeight: 600,
+              }}
+            >
+              — Rachel Johnson
             </p>
           </div>
         </div>
@@ -231,78 +173,22 @@ export default function AboutPage() {
       {/* CTA */}
       <section
         style={{
-          padding: '100px 24px 120px',
+          padding: '80px 24px 120px',
           background: 'var(--cream-light)',
           borderTop: '1px solid var(--rule)',
           textAlign: 'center',
         }}
       >
-        <div className="pb-container" style={{ maxWidth: 700 }}>
-          <h2
-            className="serif"
-            style={{
-              fontSize: 'clamp(28px, 4.8vw, 44px)',
-              fontWeight: 300,
-              letterSpacing: '-0.02em',
-              lineHeight: 1.1,
-              marginBottom: 30,
-              color: 'var(--ink)',
-            }}
-          >
-            Start with your intake.{' '}
-            <em style={{ color: 'var(--teal)' }}>Your kid, your story.</em>
-          </h2>
-          <a
-            href="https://app.planbforpans.com/signup"
-            target="_blank"
-            rel="noopener"
-            className="cta-teal"
-            style={{ textDecoration: 'none' }}
-          >
-            Start your intake →
-          </a>
-        </div>
+        <a
+          href="https://app.planbforpans.com/signup"
+          target="_blank"
+          rel="noopener"
+          className="cta-teal"
+          style={{ textDecoration: 'none' }}
+        >
+          Start your intake →
+        </a>
       </section>
     </main>
   )
-}
-
-const labelStyle: React.CSSProperties = {
-  fontFamily: 'var(--font-mono)',
-  fontSize: 10,
-  letterSpacing: '0.28em',
-  textTransform: 'uppercase',
-  color: 'var(--teal)',
-  fontWeight: 600,
-  marginBottom: 16,
-}
-
-const chapterTitleStyle: React.CSSProperties = {
-  fontFamily: 'var(--font-cormorant)',
-  fontSize: 'clamp(30px, 5vw, 48px)',
-  fontWeight: 300,
-  letterSpacing: '-0.018em',
-  lineHeight: 1.05,
-  margin: '0 0 24px',
-  color: 'var(--ink)',
-}
-
-const textStyle: React.CSSProperties = {
-  fontSize: 17,
-  lineHeight: 1.9,
-  color: 'var(--ink-soft)',
-  fontWeight: 300,
-  marginBottom: 20,
-}
-
-const quoteStyle: React.CSSProperties = {
-  fontSize: 'clamp(20px, 2.6vw, 26px)',
-  fontStyle: 'italic',
-  fontWeight: 400,
-  color: 'var(--ink)',
-  lineHeight: 1.4,
-  borderLeft: '3px solid var(--teal)',
-  paddingLeft: 22,
-  margin: 0,
-  fontFamily: 'var(--font-cormorant)',
 }
