@@ -43,7 +43,7 @@ export default function Home() {
             width: 560,
             height: 560,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(30,58,95,0.12) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(31,107,107,0.12) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -56,7 +56,7 @@ export default function Home() {
             width: 640,
             height: 640,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(198,193,181,0.45) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(212,203,182,0.45) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />

@@ -69,13 +69,13 @@ const moreStudies: {
 const statusMeta: Record<Status, { label: string; color: string; dot: string }> = {
   recruiting: {
     label: 'Recruiting',
-    color: '#1E3A5F',
-    dot: '#1E3A5F',
+    color: '#1F6B6B',
+    dot: '#1F6B6B',
   },
   active: {
     label: 'Active — tracking',
-    color: '#1E3A5F',
-    dot: '#1E3A5F',
+    color: '#1F6B6B',
+    dot: '#1F6B6B',
   },
   'early-signal': {
     label: 'Early signal',
@@ -114,7 +114,7 @@ export default function CaseStudies() {
             height: 480,
             borderRadius: '50%',
             background:
-              'radial-gradient(circle, rgba(30,58,95,0.12) 0%, transparent 70%)',
+              'radial-gradient(circle, rgba(31,107,107,0.12) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />

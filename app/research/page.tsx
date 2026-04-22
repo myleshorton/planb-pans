@@ -27,7 +27,7 @@ export default function ResearchPage() {
             height: 480,
             borderRadius: '50%',
             background:
-              'radial-gradient(circle, rgba(30,58,95,0.12) 0%, transparent 70%)',
+              'radial-gradient(circle, rgba(31,107,107,0.12) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />

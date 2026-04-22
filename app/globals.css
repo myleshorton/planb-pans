@@ -1,24 +1,21 @@
 :root {
-  /* Aliases kept as --cream/--sand/--teal for minimal churn, but remapped to a
-     cooler, more scientific palette: paper-white page, graphite ink,
-     research-blue accent, cool grey rules. */
-  --cream: #F4F2ED;
-  --cream-light: #FAF9F5;
-  --cream-soft: #FDFCF9;
-  --ink: #0E0E10;
-  --ink-soft: #2F2F33;
-  --sand-dark: #6F6C63;
-  --sand: #C6C1B5;
-  --sand-light: #E3E0D6;
-  --teal: #1E3A5F;
-  --teal-deep: #14284A;
-  --teal-light: #6A8FBF;
-  --mute: #6F6C63;
-  --rule: #C6C1B5;
-  --paper: #FFFFFF;
+  --cream: #F6F1E7;
+  --cream-light: #fdfbf4;
+  --cream-soft: #fef9ef;
+  --ink: #141414;
+  --ink-soft: #3a3a3a;
+  --sand-dark: #8a8373;
+  --sand: #d4cbb6;
+  --sand-light: #e8e0c9;
+  --teal: #1F6B6B;
+  --teal-deep: #155252;
+  --teal-light: #5aa19f;
+  --mute: #8a8373;
+  --rule: #d4cbb6;
+  --paper: #fff;
 
-  /* Scientific-notebook graph paper (very faint) */
-  --grid: rgba(14, 14, 16, 0.035);
+  /* Notebook graph paper (very faint) */
+  --grid: rgba(20, 20, 20, 0.035);
 
   --font-cormorant: 'Cormorant', Georgia, serif;
   --font-inter: 'Inter', sans-serif;

@@ -13,16 +13,16 @@ function BucketFill() {
           <path d="M 40 80 L 60 290 Q 60 300 70 300 L 190 300 Q 200 300 200 290 L 220 80 Z" />
         </clipPath>
         <linearGradient id="liq" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0" stopColor="#1E3A5F" stopOpacity="0.78" />
-          <stop offset="1" stopColor="#0F2342" stopOpacity="0.96" />
+          <stop offset="0" stopColor="#1F6B6B" stopOpacity="0.75" />
+          <stop offset="1" stopColor="#134848" stopOpacity="0.95" />
         </linearGradient>
       </defs>
-      <ellipse cx="130" cy="80" rx="92" ry="14" fill="none" stroke="#0E0E10" strokeWidth="1.2" />
+      <ellipse cx="130" cy="80" rx="92" ry="14" fill="none" stroke="#141414" strokeWidth="1.5" />
       <path
         d="M 40 80 L 60 290 Q 60 300 70 300 L 190 300 Q 200 300 200 290 L 220 80"
         fill="none"
-        stroke="#0E0E10"
-        strokeWidth="1.2"
+        stroke="#141414"
+        strokeWidth="1.5"
       />
       <g clipPath="url(#bucket-clip)">
         <rect x="30" y={320 - fill * 240} width="220" height="240" fill="url(#liq)" />
@@ -30,7 +30,7 @@ function BucketFill() {
           d={`M 30 ${320 - fill * 240} Q 80 ${315 - fill * 240} 130 ${320 - fill * 240} T 260 ${
             320 - fill * 240
           } L 260 320 L 30 320 Z`}
-          fill="#0F2342"
+          fill="#134848"
           opacity="0.5"
         />
       </g>

@@ -192,7 +192,7 @@ export default function PractitionersPage() {
                 height: 280,
                 borderRadius: '50%',
                 background:
-                  'radial-gradient(circle, rgba(30,58,95,0.3) 0%, transparent 70%)',
+                  'radial-gradient(circle, rgba(31,107,107,0.3) 0%, transparent 70%)',
                 pointerEvents: 'none',
               }}
             />
@@ -251,7 +251,7 @@ export default function PractitionersPage() {
               style={{
                 marginTop: 36,
                 padding: '24px 28px',
-                background: 'rgba(30,58,95,0.18)',
+                background: 'rgba(31,107,107,0.18)',
                 borderLeft: '3px solid var(--teal-light)',
                 position: 'relative',
               }}

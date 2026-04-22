@@ -31,7 +31,7 @@ function MethodVisual({ step }: { step: StepKey }) {
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              background: i === 3 ? 'rgba(30,58,95,0.15)' : 'transparent',
+              background: i === 3 ? 'rgba(31,107,107,0.15)' : 'transparent',
             }}
           >
             <span style={{ fontSize: 13, color: '#ddd' }}>{f}</span>
@@ -150,7 +150,7 @@ function MethodVisual({ step }: { step: StepKey }) {
       </p>
       <div
         style={{
-          border: '1px solid rgba(30,58,95,0.5)',
+          border: '1px solid rgba(31,107,107,0.5)',
           padding: 16,
           marginBottom: 12,
         }}
