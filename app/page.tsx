@@ -134,10 +134,11 @@ export default function Home() {
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
                 Plan B is an AI
               </em>{' '}
-              trained on every PANS modality — standard, functional, fringe — plus every
-              practitioner teaching and every family&apos;s hard-won answer. It reads your
-              kid&apos;s full story and builds the protocol a single doctor never could.{' '}
-              <em style={{ color: 'var(--ink)' }}>A protocol, not a guess.</em>
+              that reads across every PANS approach — standard, functional, fringe —
+              alongside your kid&apos;s full story. When the system has no answer, it gives
+              you a starting place. Through the cohort studies we run together, the real
+              protocols emerge.{' '}
+              <em style={{ color: 'var(--ink)' }}>Together we find what works.</em>
             </p>
 
             <div
