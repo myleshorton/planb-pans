@@ -153,7 +153,7 @@ export default function Home() {
                 lineHeight: 1.75,
                 fontWeight: 300,
                 maxWidth: 600,
-                marginBottom: 40,
+                marginBottom: 20,
               }}
             >
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
@@ -164,6 +164,26 @@ export default function Home() {
               modality alongside your child&apos;s unique history. Our goal is to cut through
               the noise and provide a customized plan that addresses your child&apos;s
               specific symptoms and needs.
+            </p>
+            <p
+              className="rise delay-3 serif"
+              style={{
+                fontSize: 'clamp(15px, 1.55vw, 17px)',
+                color: 'var(--ink)',
+                lineHeight: 1.55,
+                fontStyle: 'italic',
+                fontWeight: 400,
+                maxWidth: 580,
+                marginBottom: 40,
+                borderLeft: '2px solid var(--teal)',
+                paddingLeft: 16,
+              }}
+            >
+              The bot is still learning. Today it offers thoughtful suggestions shaped to your
+              kid. Soon — as every family who joins adds their story —{' '}
+              <span style={{ color: 'var(--teal)' }}>
+                a real protocol emerges for every child.
+              </span>
             </p>
 
             <div
@@ -1045,6 +1065,26 @@ export default function Home() {
               intake, extended daily by the tracker. Without that, there&apos;s nothing to
               synthesize. With it, the engine works for your kid specifically, and sharpens
               every time you come back.
+            </p>
+            <p
+              className="serif"
+              style={{
+                fontSize: 'clamp(15px, 1.55vw, 17px)',
+                lineHeight: 1.5,
+                color: 'var(--ink)',
+                fontStyle: 'italic',
+                fontWeight: 400,
+                marginTop: 22,
+                maxWidth: 720,
+                borderLeft: '2px solid var(--teal)',
+                paddingLeft: 16,
+              }}
+            >
+              The bot is still learning — today it offers suggestions. Soon, with every family
+              who joins,{' '}
+              <span style={{ color: 'var(--teal)' }}>
+                a real protocol emerges for every child.
+              </span>
             </p>
           </div>
 
