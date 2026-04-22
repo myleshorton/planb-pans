@@ -125,10 +125,23 @@ export default function PodcastPage() {
             </div>
           </div>
 
-          {/* What it covers */}
+          {/* The arc */}
           <div>
             <p className="eyebrow" style={{ marginBottom: 20 }}>
-              What you&apos;ll hear
+              The arc · A curriculum
+            </p>
+            <p
+              style={{
+                fontSize: 15,
+                color: 'var(--ink-soft)',
+                lineHeight: 1.75,
+                fontWeight: 300,
+                marginBottom: 28,
+              }}
+            >
+              Not a random-interview podcast. A deliberate journey, chapter by chapter, from
+              understanding what PANS even is all the way to AI-assisted protocols built from
+              real cohort data.
             </p>
             <ul
               style={{
@@ -137,64 +150,103 @@ export default function PodcastPage() {
                 margin: 0,
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 22,
+                gap: 0,
+                borderTop: '1px solid var(--ink)',
               }}
             >
               {[
                 {
-                  k: 'Case studies',
-                  v: 'Real kids, real protocols, real outcomes — the fringe modalities tracked across our cohort.',
+                  n: 'I',
+                  k: 'What we\u2019re dealing with',
+                  v: 'PANS and PANDAS from the ground up. What\u2019s known, what\u2019s contested, what causes the sudden-onset picture. The standard medical protocol and what it does and doesn\u2019t do.',
                 },
                 {
-                  k: 'Parent experience',
-                  v: 'What it was like from the inside. The 2am googling. The specialists we got right. The ones we didn’t.',
+                  n: 'II',
+                  k: 'How functional medicine sees it',
+                  v: 'A different frame. What functional MDs test for, how they think about drivers, where the standard system fails these kids — and where functional medicine has its own blind spots.',
                 },
                 {
-                  k: 'Deep dives on fringe modalities',
-                  v: 'Craniosacral, methylation, phage, peptides, DNRS, biomagnetism, homeopathy, mold, and more — explained honestly, not pitched.',
+                  n: 'III',
+                  k: 'The fringe modalities, one by one',
+                  v: 'Homeopathy. Methylation. Craniosacral. Phage therapy. Biomagnetism. Peptides. DNRS. Mold protocols. Each explained plainly — what it is, what it assumes about the body, what kind of kid it works for, and how it differs from the one before.',
                 },
                 {
-                  k: 'Practitioner conversations',
-                  v: 'When they come, they come with real questions — not infomercials. How they actually think about these kids.',
+                  n: 'IV',
+                  k: 'Case studies, live',
+                  v: 'Real ten-kid cohorts running a single modality for six months. What shifts, what stalls, what the practitioner notices, what the parents see. Documented openly as it unfolds.',
                 },
                 {
-                  k: 'Finding your path',
-                  v: 'How to sequence modalities when the system gives you nothing. What to try, what to pause, what to rule out.',
+                  n: 'V',
+                  k: 'Plan B synthesizes',
+                  v: 'The AI reading across every modality, every case study, every family\u2019s log — producing actual personalized protocols. Hope turning into solutions.',
                 },
               ].map((x) => (
                 <li
-                  key={x.k}
+                  key={x.n}
                   style={{
-                    borderTop: '1px solid var(--ink)',
-                    paddingTop: 18,
+                    borderBottom: '1px solid var(--sand)',
+                    padding: '22px 0',
+                    display: 'grid',
+                    gridTemplateColumns: '50px 1fr',
+                    gap: 18,
+                    alignItems: 'baseline',
                   }}
                 >
                   <p
-                    className="serif"
+                    className="mono"
                     style={{
-                      fontSize: 26,
-                      fontWeight: 400,
-                      letterSpacing: '-0.01em',
-                      lineHeight: 1.15,
-                      color: 'var(--ink)',
-                      marginBottom: 10,
+                      fontSize: 14,
+                      color: 'var(--teal)',
+                      letterSpacing: '0.12em',
+                      fontWeight: 600,
+                      textAlign: 'right',
                     }}
                   >
-                    {x.k}
+                    {x.n}
                   </p>
-                  <p
-                    style={{
-                      fontSize: 15,
-                      color: 'var(--ink-soft)',
-                      lineHeight: 1.75,
-                      fontWeight: 300,
-                    }}
-                  >
-                    {x.v}
-                  </p>
+                  <div>
+                    <p
+                      className="serif"
+                      style={{
+                        fontSize: 24,
+                        fontWeight: 400,
+                        letterSpacing: '-0.01em',
+                        lineHeight: 1.2,
+                        color: 'var(--ink)',
+                        marginBottom: 8,
+                      }}
+                    >
+                      {x.k}
+                    </p>
+                    <p
+                      style={{
+                        fontSize: 14,
+                        color: 'var(--ink-soft)',
+                        lineHeight: 1.75,
+                        fontWeight: 300,
+                      }}
+                    >
+                      {x.v}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ul>
+            <p
+              className="serif"
+              style={{
+                fontSize: 22,
+                fontStyle: 'italic',
+                color: 'var(--ink)',
+                lineHeight: 1.4,
+                fontWeight: 400,
+                margin: '32px 0 0',
+                borderLeft: '3px solid var(--teal)',
+                paddingLeft: 20,
+              }}
+            >
+              From &ldquo;what is this?&rdquo; to &ldquo;what worked, for whom, and why.&rdquo;
+            </p>
           </div>
         </div>
       </section>
