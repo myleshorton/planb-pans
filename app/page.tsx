@@ -611,7 +611,7 @@ export default function Home() {
               maxWidth: 880,
             }}
           >
-            There is no 911 to call when your kid gets bad. Psych hospitals rarely help.
+            There&apos;s no 911 for this. When your kid is in crisis, the emergency system has no answer for what&apos;s actually driving it underneath.
           </h2>
           <p
             className="serif"
