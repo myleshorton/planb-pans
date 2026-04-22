@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, Fragment } from 'react'
 import BucketSection from './_components/BucketSection'
+import MethodSection from './_components/MethodSection'
 
 export default function Home() {
   const revealRef = useRef<HTMLElement | null>(null)
@@ -1138,6 +1139,15 @@ export default function Home() {
               synthesize. With it, the engine works for your kid specifically, and sharpens
               every time you come back.
             </p>
+          </div>
+
+          {/* Live view of the tracker — sees it before reads about it */}
+          <div
+            style={{
+              margin: '0 calc(-1 * clamp(12px, 2vw, 24px)) 56px',
+            }}
+          >
+            <MethodSection />
           </div>
 
           {/* Four blocks — intake → tracker → bot troubleshoots → sharpens */}
