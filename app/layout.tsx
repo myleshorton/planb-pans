@@ -209,6 +209,9 @@ export default function RootLayout({
               <Link href="/about" style={{ color: 'var(--sand-dark)' }}>
                 About
               </Link>
+              <Link href="/faq" style={{ color: 'var(--sand-dark)' }}>
+                FAQ
+              </Link>
               <Link href="/contact" style={{ color: 'var(--sand-dark)' }}>
                 Contact
               </Link>

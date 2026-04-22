@@ -194,7 +194,9 @@ export default function Home() {
                 Start your intake →
               </a>
               <a
-                href="#listen"
+                href="https://app.planbforpans.com/try"
+                target="_blank"
+                rel="noopener"
                 style={{
                   display: 'inline-block',
                   padding: '16px 32px',
@@ -210,7 +212,7 @@ export default function Home() {
                   background: 'transparent',
                 }}
               >
-                Listen to the podcast
+                Try Plan B — ask a question →
               </a>
             </div>
 
