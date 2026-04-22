@@ -96,11 +96,11 @@ export default function Home() {
             <h1
               style={{
                 fontFamily: 'var(--font-cormorant)',
-                fontSize: 'clamp(48px, 8.2vw, 96px)',
+                fontSize: 'clamp(50px, 8.8vw, 100px)',
                 fontWeight: 300,
-                letterSpacing: '-0.026em',
-                lineHeight: 1.02,
-                marginBottom: 30,
+                letterSpacing: '-0.028em',
+                lineHeight: 1,
+                marginBottom: 16,
                 color: 'var(--ink)',
               }}
             >
@@ -115,21 +115,25 @@ export default function Home() {
                   animationDelay: '0.34s',
                 }}
               >
-                no 911 to call,
-              </span>
-              <br />
-              <span
-                className="word"
-                style={{
-                  fontStyle: 'italic',
-                  color: 'var(--teal)',
-                  fontWeight: 400,
-                  animationDelay: '0.50s',
-                }}
-              >
-                Plan B is your answer.
+                no 911 to call.
               </span>
             </h1>
+            <p
+              className="rise delay-2"
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontSize: 'clamp(22px, 3vw, 34px)',
+                fontWeight: 400,
+                fontStyle: 'italic',
+                letterSpacing: '-0.01em',
+                lineHeight: 1.25,
+                color: 'var(--teal)',
+                margin: 0,
+                marginBottom: 32,
+              }}
+            >
+              Plan B is your answer.
+            </p>
 
             <p
               className="rise delay-3"
@@ -332,10 +336,10 @@ export default function Home() {
                 {/* Symptoms dispersed around the head — annotated-diagram style */}
                 {[
                   { top: '14%', left: '52%', text: 'OCD' },
-                  { top: '26%', left: '42%', text: 'Fear of germs' },
-                  { top: '38%', left: '66%', text: 'Rage' },
-                  { top: '52%', left: '72%', text: 'Agoraphobia' },
-                  { top: '62%', left: '40%', text: 'ARFID' },
+                  { top: '20%', left: '36%', text: 'ARFID' },
+                  { top: '30%', left: '56%', text: 'Fear of germs' },
+                  { top: '42%', left: '68%', text: 'Rage' },
+                  { top: '54%', left: '72%', text: 'Agoraphobia' },
                 ].map((pin) => (
                   <div
                     key={pin.text}
@@ -1253,6 +1257,144 @@ export default function Home() {
             Nothing works without your intake. Nothing sharpens without your log.{' '}
             <span style={{ color: 'var(--teal)' }}>This is where the compounding lives.</span>
           </p>
+
+          {/* A day with the tracker — concrete example */}
+          <div
+            style={{
+              marginTop: 48,
+              padding: '32px 30px',
+              background: '#141414',
+              color: 'var(--cream)',
+              border: '1px solid var(--ink)',
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+          >
+            <div
+              className="graph-paper"
+              style={{
+                position: 'absolute',
+                inset: 0,
+                opacity: 0.05,
+                pointerEvents: 'none',
+              }}
+            />
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              <p
+                className="mono"
+                style={{
+                  fontSize: 10,
+                  letterSpacing: '0.28em',
+                  textTransform: 'uppercase',
+                  color: 'var(--teal-light)',
+                  fontWeight: 700,
+                  marginBottom: 10,
+                }}
+              >
+                A day with the tracker
+              </p>
+              <p
+                className="serif"
+                style={{
+                  fontSize: 'clamp(24px, 3.2vw, 32px)',
+                  fontWeight: 400,
+                  fontStyle: 'italic',
+                  letterSpacing: '-0.01em',
+                  lineHeight: 1.2,
+                  margin: 0,
+                  marginBottom: 24,
+                  color: 'var(--cream)',
+                  maxWidth: 700,
+                }}
+              >
+                Thirty seconds at a time. Six weeks of these and the pattern finally becomes
+                visible.
+              </p>
+
+              <div style={{ display: 'grid', gap: 8, maxWidth: 640 }}>
+                {[
+                  { t: '07:12', k: 'Mood', v: '4 / 10 · Woke up anxious', c: '#d4a24a' },
+                  { t: '08:30', k: 'Symptom', v: 'New tic — throat clear', c: '#c76a4a' },
+                  { t: '12:00', k: 'Food', v: 'Lunch refusal · tagged ARFID', c: '#c76a4a' },
+                  { t: '15:10', k: 'Rage', v: '8 / 10 · triggered by screen time', c: '#c76a4a' },
+                  { t: '19:00', k: 'Dose', v: 'Binder · 1/2 scoop', c: '#5aa19f' },
+                  { t: '22:45', k: 'Note', v: '30s before bed · day logged', c: '#bbb3a2' },
+                ].map((r, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: '56px 80px 1fr',
+                      gap: 14,
+                      alignItems: 'center',
+                      padding: '10px 12px',
+                      border: '1px solid rgba(246,241,231,0.1)',
+                    }}
+                  >
+                    <span
+                      className="mono"
+                      style={{ fontSize: 11, color: '#8a8373', letterSpacing: '0.08em' }}
+                    >
+                      {r.t}
+                    </span>
+                    <span
+                      className="mono"
+                      style={{
+                        fontSize: 10,
+                        color: r.c,
+                        letterSpacing: '0.14em',
+                        textTransform: 'uppercase',
+                        fontWeight: 600,
+                      }}
+                    >
+                      {r.k}
+                    </span>
+                    <span style={{ fontSize: 13.5, color: '#eee', lineHeight: 1.4 }}>{r.v}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div
+                style={{
+                  marginTop: 26,
+                  paddingTop: 20,
+                  borderTop: '1px solid rgba(246,241,231,0.15)',
+                  display: 'grid',
+                  gridTemplateColumns: 'auto 1fr',
+                  gap: 18,
+                  alignItems: 'baseline',
+                }}
+              >
+                <p
+                  className="mono"
+                  style={{
+                    fontSize: 10,
+                    color: 'var(--teal-light)',
+                    letterSpacing: '0.22em',
+                    textTransform: 'uppercase',
+                    fontWeight: 700,
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  Saturday →
+                </p>
+                <p
+                  style={{
+                    fontSize: 14,
+                    color: '#d4cbb6',
+                    lineHeight: 1.75,
+                    fontWeight: 300,
+                    margin: 0,
+                  }}
+                >
+                  Weekly roll-up: rage spiked Mon &amp; Wed — both after binder increases.
+                  Food refusals clustered around screen-time days. ARFID tagged 5x this week
+                  (up from 2 last week). A pattern you couldn&apos;t see before becomes
+                  visible in a way no memory could hold.
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* The usage loop */}
           <div
