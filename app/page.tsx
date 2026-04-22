@@ -1044,6 +1044,295 @@ export default function Home() {
         </div>
       </section>
 
+      {/* THE CENTER — intake + tracker + troubleshooting */}
+      <section
+        style={{
+          padding: '100px 24px',
+          background: 'var(--cream)',
+          borderBottom: '1px solid var(--rule)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 1080 }}>
+          <div style={{ marginBottom: 44, maxWidth: 920 }}>
+            <p className="eyebrow" style={{ marginBottom: 20 }}>
+              § 03 · The center
+            </p>
+            <h2
+              className="serif"
+              style={{
+                fontSize: 'clamp(38px, 6.2vw, 72px)',
+                fontWeight: 300,
+                letterSpacing: '-0.024em',
+                lineHeight: 0.98,
+                margin: 0,
+                color: 'var(--ink)',
+              }}
+            >
+              The tracker <em style={{ color: 'var(--teal)' }}>is</em> Plan B.
+            </h2>
+
+            <ul
+              style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: '32px 0 0',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 14,
+                maxWidth: 800,
+              }}
+            >
+              {[
+                'The doctor willing to talk at 2am — for free.',
+                "The friend who'll help you troubleshoot when you're out of options and can't sleep.",
+                'The specialist who knows every modality — and will help you figure out your next lane.',
+              ].map((line) => (
+                <li
+                  key={line}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '24px 1fr',
+                    gap: 14,
+                    alignItems: 'baseline',
+                  }}
+                >
+                  <span
+                    className="mono"
+                    style={{
+                      fontSize: 12,
+                      color: 'var(--teal)',
+                      letterSpacing: '0.12em',
+                      fontWeight: 700,
+                    }}
+                  >
+                    →
+                  </span>
+                  <span
+                    className="serif"
+                    style={{
+                      fontSize: 'clamp(19px, 2.2vw, 24px)',
+                      fontStyle: 'italic',
+                      fontWeight: 400,
+                      color: 'var(--ink)',
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {line}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <p
+              style={{
+                fontSize: 17,
+                lineHeight: 1.85,
+                color: 'var(--ink-soft)',
+                fontWeight: 300,
+                marginTop: 36,
+                maxWidth: 760,
+              }}
+            >
+              Every answer Plan B gives starts from your kid&apos;s full story — captured in
+              intake, extended daily by the tracker. Without that, there&apos;s nothing to
+              synthesize. With it, the engine works for your kid specifically, and sharpens
+              every time you come back.
+            </p>
+          </div>
+
+          {/* Four blocks — intake → tracker → bot troubleshoots → sharpens */}
+          <ol
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: 0,
+              display: 'grid',
+              gridTemplateColumns: '1fr',
+              gap: 0,
+              borderTop: '1px solid var(--ink)',
+            }}
+          >
+            {[
+              {
+                n: '01',
+                tag: 'Intake',
+                title: 'The whole story, captured once.',
+                body: "Pregnancy, birth, environment, diet. Every medication ever tried, every supplement, every modality. Every symptom, every flare, every weird behavior that nobody else took seriously. Labs, tests, imaging. The onset story — told in your own words, in conversation with the bot, at your pace. About twenty minutes in one sitting, or broken up across days. It all saves as you go.",
+              },
+              {
+                n: '02',
+                tag: 'Tracker',
+                title: 'The intake, extended daily.',
+                body: "One-tap symptom logging (0&ndash;10 ratings), med changes, flare notes, new symptoms the moment they appear. Weekly roll-ups spot trends before you&apos;d otherwise connect the dots. Six weeks of daily taps and the pattern becomes visible — in a way no memory could hold. The tracker is the notebook. Not paperwork — signal.",
+              },
+              {
+                n: '03',
+                tag: 'The bot troubleshoots',
+                title: 'Reads everything. Runs the correlations a human can&rsquo;t.',
+                body: "When something changes — a bad week, a new symptom, a question at 2am — the bot already has the whole record. Your intake + every day of your tracker + every prior conversation. It reads across all of it and surfaces the correlations. <em>&lsquo;Rage dropped 72% the week you paused guanfacine. Tics ticked up same week — may be rebound. Try reintroducing at half-dose, hold other variables 10 days.&rsquo;</em> Specific. Grounded in your kid, not generalities.",
+              },
+              {
+                n: '04',
+                tag: 'It sharpens',
+                title: 'Every success story makes the next troubleshoot better.',
+                body: "Your kid&apos;s data (consent-based, de-identified) joins every other family&apos;s data in the library. Every successful protocol teaches the bot what to suggest. Every failed protocol teaches it what not to. Every cohort run adds signal. The read you get today is only as sharp as what the first families contributed. The read the hundredth family gets is sharper still.",
+              },
+            ].map((s) => (
+              <li
+                key={s.n}
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'minmax(60px, 80px) 1fr',
+                  gap: 'clamp(18px, 3vw, 36px)',
+                  padding: '32px 0',
+                  borderBottom: '1px solid var(--sand)',
+                  alignItems: 'baseline',
+                }}
+              >
+                <div>
+                  <p
+                    className="serif"
+                    style={{
+                      fontSize: 48,
+                      fontWeight: 300,
+                      color: 'var(--teal)',
+                      letterSpacing: '-0.02em',
+                      lineHeight: 1,
+                      margin: 0,
+                      marginBottom: 6,
+                    }}
+                  >
+                    {s.n}
+                  </p>
+                  <p
+                    className="mono"
+                    style={{
+                      fontSize: 10,
+                      letterSpacing: '0.2em',
+                      color: 'var(--sand-dark)',
+                      fontWeight: 600,
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                    {s.tag}
+                  </p>
+                </div>
+                <div>
+                  <p
+                    className="serif"
+                    style={{
+                      fontSize: 'clamp(22px, 2.8vw, 30px)',
+                      fontWeight: 400,
+                      letterSpacing: '-0.01em',
+                      lineHeight: 1.2,
+                      color: 'var(--ink)',
+                      marginBottom: 12,
+                    }}
+                    dangerouslySetInnerHTML={{ __html: s.title }}
+                  />
+                  <p
+                    style={{
+                      fontSize: 15,
+                      color: 'var(--ink-soft)',
+                      lineHeight: 1.8,
+                      fontWeight: 300,
+                    }}
+                    dangerouslySetInnerHTML={{ __html: s.body }}
+                  />
+                </div>
+              </li>
+            ))}
+          </ol>
+
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(22px, 3vw, 30px)',
+              fontStyle: 'italic',
+              color: 'var(--ink)',
+              lineHeight: 1.35,
+              fontWeight: 400,
+              margin: '40px 0 0',
+              maxWidth: 800,
+              borderLeft: '3px solid var(--teal)',
+              paddingLeft: 22,
+            }}
+          >
+            Nothing works without your intake. Nothing sharpens without your log.{' '}
+            <span style={{ color: 'var(--teal)' }}>This is where the compounding lives.</span>
+          </p>
+
+          {/* The usage loop */}
+          <div
+            style={{
+              marginTop: 48,
+              padding: '32px 30px',
+              background: 'var(--paper)',
+              border: '1px solid var(--ink)',
+              position: 'relative',
+            }}
+          >
+            <p
+              className="mono"
+              style={{
+                fontSize: 10,
+                letterSpacing: '0.3em',
+                textTransform: 'uppercase',
+                color: 'var(--teal)',
+                fontWeight: 700,
+                marginBottom: 18,
+              }}
+            >
+              Use · Share · Use again
+            </p>
+            <p
+              className="serif"
+              style={{
+                fontSize: 'clamp(22px, 2.8vw, 28px)',
+                fontWeight: 400,
+                fontStyle: 'italic',
+                letterSpacing: '-0.01em',
+                lineHeight: 1.3,
+                color: 'var(--ink)',
+                margin: 0,
+                marginBottom: 16,
+                maxWidth: 780,
+              }}
+            >
+              The more you log — what&apos;s failing, what&apos;s working — the faster the bot
+              sees your kid&apos;s patterns and the path out.
+            </p>
+            <p
+              style={{
+                fontSize: 15,
+                lineHeight: 1.85,
+                color: 'var(--ink-soft)',
+                fontWeight: 300,
+                margin: 0,
+                maxWidth: 780,
+              }}
+            >
+              Make this your trusted advisor while you&apos;re waiting six weeks for the next
+              intake appointment — or when the $2,000 half-hour consult isn&apos;t an option.
+              Every log adds to your kid&apos;s picture <em>and</em> the library that helps the
+              next family. Use it. Share it. Come back.
+            </p>
+          </div>
+
+          <div style={{ marginTop: 36 }}>
+            <a
+              href="https://app.planbforpans.com/signup"
+              target="_blank"
+              rel="noopener"
+              className="cta-teal"
+              style={{ textDecoration: 'none' }}
+            >
+              Start your intake →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* THE WHY — mechanism questions */}
       <section
         style={{
