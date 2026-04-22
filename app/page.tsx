@@ -152,24 +152,18 @@ export default function Home() {
                 color: 'var(--ink-soft)',
                 lineHeight: 1.75,
                 fontWeight: 300,
-                maxWidth: 580,
+                maxWidth: 600,
                 marginBottom: 40,
               }}
             >
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
-                Plan B is a bot.
+                Welcome.
               </em>{' '}
-              You tell it your kid&apos;s full story — onset, meds, symptoms, everything
-              you&apos;ve tried. It reads every treatment option out there —{' '}
-              standard, functional, fringe — and helps you figure out what to try next.{' '}
-              <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
-                Today:
-              </em>{' '}
-              a clearer picture of every option.{' '}
-              <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
-                Tomorrow:
-              </em>{' '}
-              a real path — <em style={{ color: 'var(--teal)' }}>together.</em>
+              You aren&apos;t meant to navigate the complexities of PANS/PANDAS alone. At Plan
+              B, we use advanced AI to synthesize every research-backed treatment approach and
+              modality alongside your child&apos;s unique history. Our goal is to cut through
+              the noise and provide a customized plan that addresses your child&apos;s
+              specific symptoms and needs.
             </p>
 
             <div
