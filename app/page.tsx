@@ -130,9 +130,11 @@ export default function Home() {
                 marginBottom: 40,
               }}
             >
-              Plan B explains every treatment option out there, reads your kid&apos;s full
-              story, and builds a protocol so you stop guessing. For PANS, PANDAS, autism, and
-              severe dysregulation. Free, for as long as it can be.
+              A clinical synthesis engine for PANS, PANDAS, autism, and severe dysregulation.
+              Plan B reads every modality on record — standard medicine, functional medicine,
+              fringe protocols, live cohort data — and matches them against your kid&apos;s
+              full intake.{' '}
+              <em style={{ color: 'var(--ink)' }}>A protocol, not a guess.</em>
             </p>
 
             <div

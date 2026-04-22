@@ -147,9 +147,22 @@ export default function RootLayout({
               Plan B <span style={{ fontStyle: 'italic', color: 'var(--teal)' }}>for PANS</span>
             </p>
             <p style={{ maxWidth: 560, margin: '0 auto' }}>
-              A non-profit coordination layer for parents navigating PANS, PANDAS, autism, and
-              severe dysregulation. When the standard system runs out of answers, Plan B helps
-              you keep going.
+              A non-profit clinical synthesis engine for PANS, PANDAS, autism, and severe
+              dysregulation. When the standard system runs out of answers, Plan B helps you
+              keep going.
+            </p>
+            <p
+              className="mono"
+              style={{
+                marginTop: 16,
+                fontSize: 10,
+                letterSpacing: '0.28em',
+                textTransform: 'uppercase',
+                color: 'var(--sand-dark)',
+                fontWeight: 500,
+              }}
+            >
+              Free for families · Donation-funded
             </p>
             <p
               className="mono"
