@@ -79,20 +79,6 @@ export default function Home() {
           {/* Left — text */}
           <div>
             <p
-              className="rise delay-1 caret"
-              style={{
-                fontFamily: 'var(--font-inter)',
-                fontSize: 13,
-                letterSpacing: '0.36em',
-                textTransform: 'uppercase',
-                color: 'var(--teal)',
-                fontWeight: 700,
-                marginBottom: 6,
-              }}
-            >
-              Welcome to Plan B
-            </p>
-            <p
               className="rise delay-1"
               style={{
                 fontFamily: 'var(--font-inter)',
@@ -110,38 +96,38 @@ export default function Home() {
             <h1
               style={{
                 fontFamily: 'var(--font-cormorant)',
-                fontSize: 'clamp(52px, 9vw, 104px)',
+                fontSize: 'clamp(48px, 8.2vw, 96px)',
                 fontWeight: 300,
-                letterSpacing: '-0.028em',
-                lineHeight: 0.98,
+                letterSpacing: '-0.026em',
+                lineHeight: 1.02,
                 marginBottom: 30,
                 color: 'var(--ink)',
               }}
             >
-              <span className="word" style={{ animationDelay: '0.18s' }}>When</span>{' '}
-              <span className="word" style={{ animationDelay: '0.28s' }}>there&apos;s</span>
+              <span className="word" style={{ animationDelay: '0.16s' }}>When</span>{' '}
+              <span className="word" style={{ animationDelay: '0.24s' }}>there&apos;s</span>{' '}
+              <span
+                className="word"
+                style={{
+                  fontStyle: 'italic',
+                  color: 'var(--teal)',
+                  fontWeight: 400,
+                  animationDelay: '0.34s',
+                }}
+              >
+                no 911 to call,
+              </span>
               <br />
               <span
-                className="word word-italic"
+                className="word"
                 style={{
                   fontStyle: 'italic',
                   color: 'var(--teal)',
                   fontWeight: 400,
-                  animationDelay: '0.40s',
+                  animationDelay: '0.50s',
                 }}
               >
-                no 911
-              </span>{' '}
-              <span
-                className="word word-italic"
-                style={{
-                  fontStyle: 'italic',
-                  color: 'var(--teal)',
-                  fontWeight: 400,
-                  animationDelay: '0.54s',
-                }}
-              >
-                to call.
+                Plan B is your answer.
               </span>
             </h1>
 
@@ -343,68 +329,54 @@ export default function Home() {
                 </div>
 
 
-                {/* Symptoms labeled inside the head — annotated-diagram style w/ teal dots */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '22%',
-                    left: '44%',
-                    zIndex: 3,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: 6,
-                    pointerEvents: 'none',
-                  }}
-                >
-                  <p
-                    className="mono"
+                {/* Symptoms dispersed around the head — annotated-diagram style */}
+                {[
+                  { top: '14%', left: '52%', text: 'OCD' },
+                  { top: '26%', left: '42%', text: 'Fear of germs' },
+                  { top: '38%', left: '66%', text: 'Rage' },
+                  { top: '52%', left: '72%', text: 'Agoraphobia' },
+                  { top: '62%', left: '40%', text: 'ARFID' },
+                ].map((pin) => (
+                  <div
+                    key={pin.text}
                     style={{
-                      fontSize: 8,
-                      letterSpacing: '0.28em',
-                      textTransform: 'uppercase',
-                      color: 'rgba(246,241,231,0.55)',
-                      fontWeight: 600,
-                      marginBottom: 4,
+                      position: 'absolute',
+                      top: pin.top,
+                      left: pin.left,
+                      zIndex: 3,
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 7,
+                      pointerEvents: 'none',
                     }}
                   >
-                    Tracking
-                  </p>
-                  {['OCD', 'Rage', 'ARFID', 'Agoraphobia', 'Fear of germs'].map((s) => (
-                    <div
-                      key={s}
+                    <span
                       style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 8,
+                        width: 7,
+                        height: 7,
+                        borderRadius: '50%',
+                        background: 'var(--teal)',
+                        boxShadow: '0 0 0 3px rgba(31,107,107,0.3)',
+                        flexShrink: 0,
+                      }}
+                    />
+                    <span
+                      className="mono"
+                      style={{
+                        fontSize: 10.5,
+                        letterSpacing: '0.18em',
+                        textTransform: 'uppercase',
+                        color: 'var(--cream)',
+                        fontWeight: 600,
+                        lineHeight: 1,
+                        textShadow: '0 1px 3px rgba(0,0,0,0.55)',
+                        whiteSpace: 'nowrap',
                       }}
                     >
-                      <span
-                        style={{
-                          width: 7,
-                          height: 7,
-                          borderRadius: '50%',
-                          background: 'var(--teal)',
-                          boxShadow: '0 0 0 3px rgba(31,107,107,0.25)',
-                          flexShrink: 0,
-                        }}
-                      />
-                      <span
-                        className="mono"
-                        style={{
-                          fontSize: 11,
-                          letterSpacing: '0.18em',
-                          textTransform: 'uppercase',
-                          color: 'var(--cream)',
-                          fontWeight: 600,
-                          lineHeight: 1.1,
-                          textShadow: '0 1px 2px rgba(0,0,0,0.5)',
-                        }}
-                      >
-                        {s}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+                      {pin.text}
+                    </span>
+                  </div>
+                ))}
 
                 {/* Caption — Rachel's voice */}
                 <div
