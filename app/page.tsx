@@ -1161,15 +1161,15 @@ export default function Home() {
               },
               {
                 n: '02',
-                tag: 'Tracker',
-                title: 'The intake, extended daily.',
-                body: "One-tap symptom logging (0&ndash;10 ratings), med changes, flare notes, new symptoms the moment they appear. Weekly roll-ups spot trends before you&apos;d otherwise connect the dots. Six weeks of daily taps and the pattern becomes visible — in a way no memory could hold. The tracker is the notebook. Not paperwork — signal.",
+                tag: 'After intake, the tracker opens',
+                title: 'Daily check-ins. Thirty seconds before bed.',
+                body: "Once your intake is in, the tracker takes over — from your phone, every day. Tap a mood rating (0&ndash;10). Log any med change, new supplement, dose tweak. Rate each symptom you care about — OCD, rage, sleep, tics, food aversion, anxiety — on the same 0&ndash;10 scale. When a new weird behavior shows up (a tic, a food fear, a rage episode, a 2am wake-up), tag it the moment you see it. Free text for context when you need it: <em>&lsquo;meltdown at 4pm, right after screen time and missed lunch.&rsquo;</em> <br/><br/>Saturday gives you a weekly rollup — bar charts for every symptom, a timeline of every med change, all your flare notes in one place. Patterns you couldn&apos;t see before start to jump out: <em>rage was 8/10 Monday, 3/10 Wednesday — what changed? The binder dose, probably.</em> Six weeks in, the pattern is visible in a way no memory, no folder of doctor notes, no stack of Google tabs could ever hold.",
               },
               {
                 n: '03',
-                tag: 'The bot troubleshoots',
-                title: 'Reads everything. Runs the correlations a human can&rsquo;t.',
-                body: "When something changes — a bad week, a new symptom, a question at 2am — the bot already has the whole record. Your intake + every day of your tracker + every prior conversation. It reads across all of it and surfaces the correlations. <em>&lsquo;Rage dropped 72% the week you paused guanfacine. Tics ticked up same week — may be rebound. Try reintroducing at half-dose, hold other variables 10 days.&rsquo;</em> Specific. Grounded in your kid, not generalities.",
+                tag: 'The bot reads both',
+                title: 'Troubleshoots from the full record, 2am included.',
+                body: "The bot already has your intake. Now it has every day you&apos;ve logged. Ask anything — <em>&lsquo;why did we have a bad week?&rsquo;</em>, <em>&lsquo;is this new symptom concerning?&rsquo;</em>, <em>&lsquo;what should we try next?&rsquo;</em> — and it reads the whole record before answering. It runs correlations across meds, symptoms, timing, triggers: <em>&lsquo;Rage spiked the week you raised guanfacine AND started the new binder. Tics ticked up same week — may be rebound. Pause the binder at half-dose for 10 days to isolate which one is the driver.&rsquo;</em> Specific to your kid. Grounded in your data. Not generic advice.",
               },
               {
                 n: '04',
