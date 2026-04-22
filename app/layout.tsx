@@ -61,30 +61,11 @@ export default function RootLayout({
                 </span>
               </p>
             </Link>
-            <nav style={{ display: 'flex', gap: 18, alignItems: 'center' }}>
-              <NavLink href="/tracker">Tracker</NavLink>
-              <a
-                href="https://app.planbforpans.com/community"
-                target="_blank"
-                rel="noopener"
-                style={{
-                  fontFamily: 'var(--font-inter)',
-                  fontSize: 11,
-                  letterSpacing: '0.22em',
-                  textTransform: 'uppercase',
-                  color: 'var(--sand-dark)',
-                  fontWeight: 500,
-                  textDecoration: 'none',
-                }}
-              >
-                Community
-              </a>
+            <nav style={{ display: 'flex', gap: 22, alignItems: 'center' }}>
+              <NavLink href="/podcast">Podcast</NavLink>
               <NavLink href="/case-studies">Case Studies</NavLink>
               <NavLink href="/vote">Vote</NavLink>
               <NavLink href="/donate">Donate</NavLink>
-              <NavLink href="/podcast">Podcast</NavLink>
-              <NavLink href="/practitioners">Practitioners</NavLink>
-              <NavLink href="/about">About</NavLink>
               <a
                 href="https://app.planbforpans.com/sign-in"
                 target="_blank"
@@ -183,21 +164,45 @@ export default function RootLayout({
             >
               Led by the community · For the community
             </p>
-            <p style={{ marginTop: 20, fontSize: 12, color: 'var(--sand-dark)' }}>
-              © {new Date().getFullYear()} Plan B for PANS ·{' '}
-              <Link
-                href="/contact"
-                style={{ color: 'var(--sand-dark)', textDecoration: 'underline' }}
+            <nav
+              style={{
+                marginTop: 32,
+                display: 'flex',
+                gap: 22,
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                fontSize: 11,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                fontWeight: 500,
+              }}
+            >
+              <Link href="/tracker" style={{ color: 'var(--sand-dark)' }}>
+                Tracker
+              </Link>
+              <a
+                href="https://app.planbforpans.com/community"
+                target="_blank"
+                rel="noopener"
+                style={{ color: 'var(--sand-dark)', textDecoration: 'none' }}
               >
+                Community
+              </a>
+              <Link href="/practitioners" style={{ color: 'var(--sand-dark)' }}>
+                Practitioners
+              </Link>
+              <Link href="/about" style={{ color: 'var(--sand-dark)' }}>
+                About
+              </Link>
+              <Link href="/contact" style={{ color: 'var(--sand-dark)' }}>
                 Contact
-              </Link>{' '}
-              ·{' '}
-              <Link
-                href="/privacy"
-                style={{ color: 'var(--sand-dark)', textDecoration: 'underline' }}
-              >
+              </Link>
+              <Link href="/privacy" style={{ color: 'var(--sand-dark)' }}>
                 Privacy
               </Link>
+            </nav>
+            <p style={{ marginTop: 22, fontSize: 12, color: 'var(--sand-dark)' }}>
+              © {new Date().getFullYear()} Plan B for PANS
             </p>
           </div>
         </footer>
