@@ -71,6 +71,21 @@
   font-weight: 500;
 }
 
+/* Pulsing status dot — acute-alert indicator */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(160,32,32,0.55); }
+  70% { box-shadow: 0 0 0 10px rgba(160,32,32,0); }
+  100% { box-shadow: 0 0 0 0 rgba(160,32,32,0); }
+}
+.pulse-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #a02020;
+  animation: pulse-ring 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) infinite;
+}
+
 * {
   margin: 0;
   padding: 0;

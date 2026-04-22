@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, Fragment } from 'react'
 import BucketSection from './_components/BucketSection'
 
 export default function Home() {
@@ -188,7 +188,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Right — silhouette editorial block */}
+          {/* Right — silhouette as clinical figure */}
           <div
             className="fade delay-2 hero-portrait"
             style={{
@@ -208,7 +208,7 @@ export default function Home() {
                 zIndex: 0,
               }}
             />
-            {/* Vertical editorial masthead strip */}
+            {/* Vertical masthead strip */}
             <p
               className="mono"
               style={{
@@ -226,7 +226,7 @@ export default function Home() {
                 whiteSpace: 'nowrap',
               }}
             >
-              № 01 &middot; The Plan B protocol &middot; Synthesized by the bot
+              FIG. 01 &middot; Subject P-0001 &middot; Plan B for PANS
             </p>
 
             <div style={{ position: 'relative', zIndex: 1 }}>
@@ -238,88 +238,234 @@ export default function Home() {
                   overflow: 'hidden',
                 }}
               >
-                <img
-                  src="/kid-silhouette.png"
-                  alt="Silhouette of a child — representing every kid Plan B is built for"
+                {/* Light graph-paper inside the image frame */}
+                <div
+                  className="graph-paper"
                   style={{
-                    width: '100%',
-                    height: 'auto',
-                    display: 'block',
-                    mixBlendMode: 'multiply',
-                    padding: '20px 30px 0',
+                    position: 'absolute',
+                    inset: 0,
+                    opacity: 0.55,
+                    pointerEvents: 'none',
+                    zIndex: 0,
                   }}
                 />
 
-                {/* Circular seal overlay, top-right */}
+                <div style={{ position: 'relative', zIndex: 1 }}>
+                  <img
+                    src="/kid-silhouette.png"
+                    alt="Clinical silhouette — representative subject, Plan B for PANS"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      display: 'block',
+                      mixBlendMode: 'multiply',
+                      padding: '28px 40px 0',
+                    }}
+                  />
+                </div>
+
+                {/* Acute indicator, top-left */}
                 <div
                   style={{
                     position: 'absolute',
-                    top: 20,
-                    right: 20,
-                    width: 92,
-                    height: 92,
-                    borderRadius: '50%',
-                    border: '1px solid var(--ink)',
+                    top: 18,
+                    left: 18,
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    background: 'var(--cream)',
+                    gap: 8,
                     zIndex: 3,
                   }}
                 >
-                  <svg viewBox="0 0 92 92" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-                    <defs>
-                      <path id="sealArc" d="M 46 46 m -34 0 a 34 34 0 1 1 68 0 a 34 34 0 1 1 -68 0" />
-                    </defs>
-                    <text fontFamily="var(--mono)" fontSize="7" fill="#141414" letterSpacing="2">
-                      <textPath href="#sealArc" startOffset="0">
-                        PLAN B · FOR PANS · EST. 2026 · FOR THE KIDS ·
-                      </textPath>
-                    </text>
-                  </svg>
-                  <p
-                    className="serif"
+                  <span className="pulse-dot" />
+                  <span
+                    className="mono"
                     style={{
-                      fontSize: 26,
-                      fontStyle: 'italic',
-                      color: 'var(--teal)',
-                      fontWeight: 400,
-                      lineHeight: 1,
-                      margin: 0,
+                      fontSize: 10,
+                      letterSpacing: '0.24em',
+                      textTransform: 'uppercase',
+                      color: '#a02020',
+                      fontWeight: 700,
                     }}
                   >
-                    №01
-                  </p>
+                    Acute · Ongoing
+                  </span>
                 </div>
 
-                {/* Caption under the image inside the frame */}
+                {/* Anatomical symptom pins */}
+                <div
+                  className="mono"
+                  style={{
+                    position: 'absolute',
+                    top: '20%',
+                    left: '54%',
+                    fontSize: 9,
+                    color: 'var(--ink)',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    zIndex: 3,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 6,
+                  }}
+                >
+                  <span
+                    style={{
+                      width: 6,
+                      height: 6,
+                      borderRadius: '50%',
+                      background: 'var(--teal)',
+                      boxShadow: '0 0 0 3px rgba(31,107,107,0.15)',
+                    }}
+                  />
+                  <span>Cognitive regression</span>
+                </div>
+                <div
+                  className="mono"
+                  style={{
+                    position: 'absolute',
+                    top: '36%',
+                    left: '58%',
+                    fontSize: 9,
+                    color: 'var(--ink)',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    zIndex: 3,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 6,
+                  }}
+                >
+                  <span
+                    style={{
+                      width: 6,
+                      height: 6,
+                      borderRadius: '50%',
+                      background: 'var(--teal)',
+                      boxShadow: '0 0 0 3px rgba(31,107,107,0.15)',
+                    }}
+                  />
+                  <span>Sensory overload</span>
+                </div>
+                <div
+                  className="mono"
+                  style={{
+                    position: 'absolute',
+                    top: '52%',
+                    left: '22%',
+                    fontSize: 9,
+                    color: 'var(--ink)',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    zIndex: 3,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 6,
+                  }}
+                >
+                  <span>OCD · Food fear</span>
+                  <span
+                    style={{
+                      width: 6,
+                      height: 6,
+                      borderRadius: '50%',
+                      background: 'var(--teal)',
+                      boxShadow: '0 0 0 3px rgba(31,107,107,0.15)',
+                    }}
+                  />
+                </div>
+                <div
+                  className="mono"
+                  style={{
+                    position: 'absolute',
+                    top: '68%',
+                    left: '60%',
+                    fontSize: 9,
+                    color: 'var(--ink)',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    zIndex: 3,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 6,
+                  }}
+                >
+                  <span
+                    style={{
+                      width: 6,
+                      height: 6,
+                      borderRadius: '50%',
+                      background: 'var(--teal)',
+                      boxShadow: '0 0 0 3px rgba(31,107,107,0.15)',
+                    }}
+                  />
+                  <span>Rage · Meltdowns</span>
+                </div>
+
+                {/* Clinical caption — chart row style */}
                 <div
                   style={{
                     background: 'var(--cream)',
                     borderTop: '1px solid var(--ink)',
                     padding: '18px 22px',
+                    position: 'relative',
+                    zIndex: 2,
                   }}
                 >
                   <p
+                    className="mono"
                     style={{
-                      fontFamily: 'var(--font-cormorant)',
-                      fontSize: 'clamp(17px, 1.9vw, 21px)',
-                      fontStyle: 'italic',
-                      fontWeight: 400,
-                      color: 'var(--ink)',
-                      lineHeight: 1.4,
-                      marginBottom: 12,
+                      fontSize: 9,
+                      letterSpacing: '0.2em',
+                      textTransform: 'uppercase',
+                      color: 'var(--sand-dark)',
+                      fontWeight: 600,
+                      marginBottom: 10,
                     }}
                   >
-                    &ldquo;What healed my son wasn&apos;t a secret buried somewhere. It was that
-                    nobody in the system could see it all at once.&rdquo;
+                    Subject P-0001 · Intake summary
                   </p>
-                  <p
-                    className="label-tracked"
-                    style={{ color: 'var(--teal)', fontWeight: 600 }}
+                  <dl
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'auto 1fr',
+                      columnGap: 16,
+                      rowGap: 6,
+                      margin: 0,
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: 11,
+                    }}
                   >
-                    Rachel Johnson · Founder
-                  </p>
+                    {[
+                      ['Onset', 'Age 8.3 · overnight'],
+                      ['Trigger', 'Strep + Myco IgG+'],
+                      ['New symptoms', '12 in 6 weeks'],
+                      ['Protocols tried', '4 · partial response'],
+                    ].map(([k, v]) => (
+                      <Fragment key={k}>
+                        <dt
+                          style={{
+                            color: 'var(--sand-dark)',
+                            letterSpacing: '0.08em',
+                            textTransform: 'uppercase',
+                            fontSize: 9,
+                            alignSelf: 'center',
+                            fontWeight: 500,
+                          }}
+                        >
+                          {k}
+                        </dt>
+                        <dd
+                          style={{
+                            color: 'var(--ink)',
+                            margin: 0,
+                            fontWeight: 500,
+                          }}
+                        >
+                          {v}
+                        </dd>
+                      </Fragment>
+                    ))}
+                  </dl>
                 </div>
               </div>
             </div>
