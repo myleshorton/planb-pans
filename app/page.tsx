@@ -520,9 +520,10 @@ export default function Home() {
               color: 'var(--ink)',
             }}
           >
-            Plan B is a{' '}
-            <em style={{ color: 'var(--teal)' }}>compounding clinical engine</em>{' '}
-            for the kids the standard system fails.
+            For the kids{' '}
+            <em style={{ color: 'var(--teal)' }}>the system left behind</em> —
+            a protocol{' '}
+            <em style={{ color: 'var(--teal)' }}>the system couldn&apos;t build.</em>
           </p>
         </div>
       </section>

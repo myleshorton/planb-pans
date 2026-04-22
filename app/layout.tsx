@@ -3,8 +3,8 @@ import Link from 'next/link'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Plan B for PANS & PANDAS — When the protocols fail, this is your Plan B',
-  description: 'When the protocols fail, this is your Plan B. A coordination layer for parents navigating PANS, PANDAS, autism, and severe dysregulation.',
+  title: 'Plan B for PANS & PANDAS — For the kids the system left behind',
+  description: 'For the kids the system left behind — a protocol the system couldn\u2019t build. A clinical synthesis engine for PANS, PANDAS, autism, and severe dysregulation.',
 }
 
 export default function RootLayout({
