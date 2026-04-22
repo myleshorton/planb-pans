@@ -44,6 +44,7 @@ export default function Home() {
     <main ref={revealRef} style={{ background: 'var(--cream)' }}>
       {/* HERO — editorial split */}
       <section
+        className="graph-paper"
         style={{
           minHeight: '94vh',
           display: 'flex',
@@ -62,7 +63,7 @@ export default function Home() {
             width: 560,
             height: 560,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(31,107,107,0.14) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(30,58,95,0.12) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -75,7 +76,7 @@ export default function Home() {
             width: 640,
             height: 640,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(212,203,182,0.55) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(198,193,181,0.45) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -245,7 +246,7 @@ export default function Home() {
                 whiteSpace: 'nowrap',
               }}
             >
-              № 01 &middot; A mother&apos;s protocol &middot; Plan B for PANS
+              № 01 &middot; The Plan B protocol &middot; Synthesized by the bot
             </p>
 
             <div style={{ position: 'relative', zIndex: 1 }}>
@@ -407,7 +408,7 @@ export default function Home() {
             height: 380,
             borderRadius: '50%',
             background:
-              'radial-gradient(circle, rgba(31,107,107,0.1) 0%, transparent 70%)',
+              'radial-gradient(circle, rgba(30,58,95,0.1) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
