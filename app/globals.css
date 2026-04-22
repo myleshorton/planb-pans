@@ -427,6 +427,13 @@ button {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
   }
+  .pillars-grid > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--sand) !important;
+  }
+  .pillars-grid > div:last-child {
+    border-bottom: none !important;
+  }
 }
 
 @media (max-width: 768px) {

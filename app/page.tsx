@@ -347,6 +347,150 @@ export default function Home() {
         </div>
       </section>
 
+      {/* WHAT PLAN B DOES — three pillars */}
+      <section
+        style={{
+          padding: '100px 24px',
+          background: 'var(--paper)',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 1080 }}>
+          <div style={{ marginBottom: 56, maxWidth: 860 }}>
+            <p className="eyebrow" style={{ marginBottom: 22 }}>
+              What Plan B does
+            </p>
+            <h2
+              className="serif"
+              style={{
+                fontSize: 'clamp(32px, 5.4vw, 54px)',
+                fontWeight: 300,
+                letterSpacing: '-0.018em',
+                lineHeight: 1.05,
+                margin: 0,
+                color: 'var(--ink)',
+              }}
+            >
+              Explain every option.
+              <br />
+              Read your kid.{' '}
+              <em style={{ color: 'var(--teal)' }}>
+                Build a protocol.
+              </em>
+            </h2>
+            <p
+              style={{
+                fontSize: 17,
+                lineHeight: 1.85,
+                color: 'var(--ink-soft)',
+                fontWeight: 300,
+                marginTop: 24,
+                maxWidth: 680,
+              }}
+            >
+              In the beginning we&apos;ll be guessing and learning together. That&apos;s honest.
+              But as real cohorts run and real data comes in, we move — together — from hope
+              to solutions.
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: 0,
+              borderTop: '1px solid var(--ink)',
+              borderBottom: '1px solid var(--ink)',
+            }}
+            className="pillars-grid"
+          >
+            {[
+              {
+                n: '01',
+                label: 'The podcast',
+                title: 'The landscape',
+                body: "Every fringe modality explained honestly — functional medicine, homeopathy, phage therapy, biomagnetism, methylation, craniosacral, peptides, mold protocols, and the rest. Which kind of kid each one actually works for. Who the good practitioners are. What the standard system doesn&apos;t tell you.",
+              },
+              {
+                n: '02',
+                label: 'The bot',
+                title: "Your kid\u2019s protocol",
+                body: "Plan B reads every modality, every practitioner teaching, every clinical study we run — then reads your kid&apos;s full history on top of that. Synthesizes all of it into a protocol tailored to your kid. So you aren&apos;t guessing in the dark.",
+              },
+              {
+                n: '03',
+                label: 'The cohorts',
+                title: 'Real case studies',
+                body: "Ten-kid cohorts tracked for six months on one modality at a time. Documented openly. As the data comes in, Plan B gets sharper — which modalities actually move the needle, in which sequence, for which kind of kid. Hope becomes signal.",
+              },
+            ].map((c, i, arr) => (
+              <div
+                key={c.n}
+                style={{
+                  padding: '32px 28px',
+                  borderRight: i < arr.length - 1 ? '1px solid var(--sand)' : 'none',
+                  position: 'relative',
+                }}
+              >
+                <p
+                  className="mono"
+                  style={{
+                    fontSize: 10,
+                    letterSpacing: '0.24em',
+                    color: 'var(--teal)',
+                    fontWeight: 600,
+                    marginBottom: 6,
+                  }}
+                >
+                  § {c.n} · {c.label}
+                </p>
+                <p
+                  className="serif"
+                  style={{
+                    fontSize: 26,
+                    fontWeight: 400,
+                    letterSpacing: '-0.01em',
+                    lineHeight: 1.15,
+                    color: 'var(--ink)',
+                    margin: '6px 0 14px',
+                  }}
+                >
+                  {c.title}
+                </p>
+                <p
+                  style={{
+                    fontSize: 14,
+                    lineHeight: 1.8,
+                    color: 'var(--ink-soft)',
+                    fontWeight: 300,
+                  }}
+                  dangerouslySetInnerHTML={{ __html: c.body }}
+                />
+              </div>
+            ))}
+          </div>
+
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(22px, 3vw, 30px)',
+              fontStyle: 'italic',
+              color: 'var(--ink)',
+              lineHeight: 1.4,
+              fontWeight: 400,
+              margin: '56px 0 0',
+              maxWidth: 760,
+              borderLeft: '3px solid var(--teal)',
+              paddingLeft: 22,
+            }}
+          >
+            From <span style={{ color: 'var(--teal)' }}>hope</span> to{' '}
+            <span style={{ color: 'var(--teal)' }}>solutions.</span> That&apos;s the whole idea.
+          </p>
+        </div>
+      </section>
+
       {/* Mission banner */}
       <section
         aria-label="Mission"
