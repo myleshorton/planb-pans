@@ -369,9 +369,27 @@ export default function Home() {
                 maxWidth: 680,
               }}
             >
-              In the beginning we&apos;ll be guessing and learning together. That&apos;s honest.
-              But as real cohorts run and real data comes in, we move — together — from hope
-              to solutions.
+              The parent forums don&apos;t always have solutions — they have suggestions. What
+              parents need is a path. In the beginning we&apos;ll be guessing and learning
+              together. But as real cohorts run and real data comes in, we move — together —
+              from hope to solutions.
+            </p>
+            <p
+              className="serif"
+              style={{
+                fontSize: 'clamp(22px, 3vw, 30px)',
+                fontStyle: 'italic',
+                color: 'var(--ink)',
+                lineHeight: 1.3,
+                fontWeight: 400,
+                margin: '28px 0 0',
+                maxWidth: 720,
+                borderLeft: '3px solid var(--teal)',
+                paddingLeft: 22,
+              }}
+            >
+              We need more than hope.{' '}
+              <span style={{ color: 'var(--teal)' }}>We need a path.</span>
             </p>
           </div>
 
