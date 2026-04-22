@@ -87,10 +87,24 @@ export default function Home() {
                 textTransform: 'uppercase',
                 color: 'var(--teal)',
                 fontWeight: 700,
-                marginBottom: 26,
+                marginBottom: 6,
               }}
             >
               Welcome to Plan B
+            </p>
+            <p
+              className="rise delay-1"
+              style={{
+                fontFamily: 'var(--font-inter)',
+                fontSize: 11,
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                color: 'var(--sand-dark)',
+                fontWeight: 500,
+                marginBottom: 26,
+              }}
+            >
+              A non-profit for PANS, PANDAS, autism &amp; severe dysregulation
             </p>
 
             <h1
@@ -138,22 +152,24 @@ export default function Home() {
                 color: 'var(--ink-soft)',
                 lineHeight: 1.75,
                 fontWeight: 300,
-                maxWidth: 560,
+                maxWidth: 580,
                 marginBottom: 40,
               }}
             >
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
-                Plan B is a non-profit.
+                Plan B is a bot.
               </em>{' '}
-              The bot reads every PANS approach alongside your kid&apos;s full story.{' '}
+              You tell it your kid&apos;s full story — onset, meds, symptoms, everything
+              you&apos;ve tried. It reads every treatment option out there —{' '}
+              standard, functional, fringe — and helps you figure out what to try next.{' '}
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
                 Today:
               </em>{' '}
-              a real understanding of every option.{' '}
+              a clearer picture of every option.{' '}
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
                 Tomorrow:
               </em>{' '}
-              the path, <em style={{ color: 'var(--teal)' }}>together.</em>
+              a real path — <em style={{ color: 'var(--teal)' }}>together.</em>
             </p>
 
             <div
