@@ -475,6 +475,58 @@ export default function Home() {
         </div>
       </section>
 
+      {/* THESIS — stated plainly */}
+      <section
+        aria-label="Thesis"
+        style={{
+          background: 'var(--paper)',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+          padding: '56px 24px',
+        }}
+      >
+        <div
+          className="pb-container"
+          style={{
+            maxWidth: 1080,
+            display: 'grid',
+            gridTemplateColumns: 'auto 1fr',
+            gap: 'clamp(18px, 4vw, 40px)',
+            alignItems: 'start',
+          }}
+        >
+          <p
+            className="mono"
+            style={{
+              fontSize: 10,
+              letterSpacing: '0.3em',
+              textTransform: 'uppercase',
+              color: 'var(--teal)',
+              fontWeight: 600,
+              whiteSpace: 'nowrap',
+              paddingTop: 6,
+            }}
+          >
+            Our thesis
+          </p>
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(28px, 4.2vw, 46px)',
+              fontWeight: 300,
+              letterSpacing: '-0.018em',
+              lineHeight: 1.08,
+              margin: 0,
+              color: 'var(--ink)',
+            }}
+          >
+            Plan B is a{' '}
+            <em style={{ color: 'var(--teal)' }}>compounding clinical engine</em>{' '}
+            for the kids the standard system fails.
+          </p>
+        </div>
+      </section>
+
       {/* BUCKET — the problem */}
       <BucketSection />
 
