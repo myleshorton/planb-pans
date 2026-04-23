@@ -140,23 +140,38 @@ export default function Home() {
               style={{
                 fontSize: 19,
                 color: 'var(--ink-soft)',
-                lineHeight: 1.75,
+                lineHeight: 1.7,
                 fontWeight: 300,
                 maxWidth: 600,
                 marginBottom: 20,
               }}
             >
+              When your kid is in free-fall and no practitioner can see the full picture —{' '}
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
-                Welcome.
+                Plan B is the layer that can.
               </em>{' '}
-              You aren&apos;t meant to navigate the complexities of PANS/PANDAS alone. Plan B
-              is a non-profit, and{' '}
               <em style={{ color: 'var(--teal)', fontStyle: 'normal', fontWeight: 600 }}>
                 Ada
               </em>{' '}
-              is our bot. She synthesizes every research-backed treatment approach and modality
-              alongside your child&apos;s unique history — to cut through the noise and help
-              you find what your kid specifically needs.
+              — our bot — reads every research-backed modality, every published teaching, every
+              cohort study we can put on the record, alongside your child&apos;s full history.
+              Then she hands you what to try next.
+            </p>
+            <p
+              className="rise delay-3"
+              style={{
+                fontSize: 14,
+                color: 'var(--sand-dark)',
+                lineHeight: 1.7,
+                fontWeight: 500,
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                maxWidth: 600,
+                marginBottom: 24,
+              }}
+            >
+              Free <span style={{ opacity: 0.45, margin: '0 8px' }}>·</span> Non-profit{' '}
+              <span style={{ opacity: 0.45, margin: '0 8px' }}>·</span> Built by a family who&apos;s lived it
             </p>
             <p
               className="rise delay-3 serif"

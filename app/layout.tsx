@@ -23,6 +23,21 @@ export default function RootLayout({
         />
       </head>
       <body className="grain">
+        <div
+          style={{
+            background: 'var(--teal)',
+            color: 'var(--cream)',
+            textAlign: 'center',
+            padding: '9px 16px',
+            fontSize: 10,
+            letterSpacing: '0.26em',
+            textTransform: 'uppercase',
+            fontWeight: 500,
+            fontFamily: 'var(--font-inter)',
+          }}
+        >
+          Preview release <span style={{ opacity: 0.55, margin: '0 10px' }}>·</span> Public launch early June 2026
+        </div>
         <header
           style={{
             borderBottom: '1px solid var(--sand)',
