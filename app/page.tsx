@@ -151,7 +151,7 @@ export default function Home() {
                 Plan B is the layer that can.
               </em>{' '}
               <em style={{ color: 'var(--teal)', fontStyle: 'normal', fontWeight: 600 }}>
-                Ada
+                Minta
               </em>{' '}
               — our bot — reads every research-backed modality, every published teaching, every
               cohort study we can put on the record, alongside your child&apos;s full history.
@@ -1769,7 +1769,7 @@ export default function Home() {
               {
                 n: '01',
                 t: 'Do the intake',
-                b: "Twenty minutes, or break it across days. Pregnancy, birth, triggers, meds, symptoms, everything you&apos;ve tried. The more detail, the sharper Ada&apos;s read.",
+                b: "Twenty minutes, or break it across days. Pregnancy, birth, triggers, meds, symptoms, everything you&apos;ve tried. The more detail, the sharper Minta&apos;s read.",
                 eta: '~20 min',
               },
               {
@@ -1780,8 +1780,8 @@ export default function Home() {
               },
               {
                 n: '03',
-                t: 'Ask Ada anything',
-                b: "2am meltdown, new symptom, stuck on protocol choice — Ada has your full record and runs the correlations a single visit can&apos;t.",
+                t: 'Ask Minta anything',
+                b: "2am meltdown, new symptom, stuck on protocol choice — Minta has your full record and runs the correlations a single visit can&apos;t.",
                 eta: 'anytime',
               },
             ].map((s, i, arr) => (
@@ -2069,7 +2069,7 @@ export default function Home() {
               margin: '0 auto 28px',
             }}
           >
-            Monthly update on what Ada&apos;s learning, which cohort studies are running,
+            Monthly update on what Minta&apos;s learning, which cohort studies are running,
             and what&apos;s emerging. No spam. One-click unsubscribe.
           </p>
           <NewsletterForm />
