@@ -5,7 +5,7 @@ import { useReveal } from '../_components/hooks'
 const faqs = [
   {
     q: 'Is this really free?',
-    a: "Yes. Plan B is a non-profit, donation-funded. Intake, the daily tracker, and the bot cost you nothing — and always will. Free for families, full stop.",
+    a: "Yes. Plan B is a non-profit, donation-funded. Intake, the daily tracker, and Minta cost you nothing — and always will. Free for families, full stop.",
   },
   {
     q: "What about my kid\u2019s privacy?",
@@ -16,16 +16,16 @@ const faqs = [
     a: "No. Plan B is a thinking partner, not a replacement for clinical care. It helps you understand what's out there, track what's actually moving the needle for your kid, and walk into appointments with sharper questions. Your doctors stay your doctors. Plan B helps you use them better.",
   },
   {
-    q: 'What if the bot is wrong?',
-    a: "The bot is still learning. It can and does make mistakes — especially on unusual presentations. Always verify anything critical with a practitioner. Flag bad responses and the bot gets smarter for every family after you. That's how it compounds.",
+    q: 'What if Minta is wrong?',
+    a: "Minta is still learning. She can and does make mistakes — especially on unusual presentations. Always verify anything critical with a practitioner. Flag bad responses and Minta gets sharper for every family after you. That's how it compounds.",
   },
   {
     q: "What if I don\u2019t know where to start?",
-    a: "Just do the intake. It takes about twenty minutes, or you can break it up across days. The bot works off what you give it — so the more detail you put in, the more useful every answer becomes. There's no wrong starting point.",
+    a: "Just do the intake. It takes about twenty minutes, or you can break it up across days. Minta works off what you give her — so the more detail you put in, the more useful every answer becomes. There's no wrong starting point.",
   },
   {
-    q: 'How does the bot get smarter?',
-    a: "Every family that tracks contributes (consent-based, de-identified) to a growing library. The bot learns which modalities work for which symptoms across cohorts — patterns no single family can see alone. Your log today makes the next family's read sharper. It's a compounding engine.",
+    q: 'How does Minta get sharper?',
+    a: "Every family that tracks contributes (consent-based, de-identified) to a growing library. Minta learns which modalities work for which symptoms across cohorts — patterns no single family can see alone. Your log today makes the next family's read sharper. It's a compounding engine.",
   },
   {
     q: 'Is this PANS-only?',

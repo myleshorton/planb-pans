@@ -128,7 +128,7 @@ export default function AboutPage() {
             </p>
 
             <p style={{ marginBottom: 22 }}>
-              So I built Plan B. A coordination layer. Minta — our bot — reads every modality
+              So I built Plan B. A coordination layer. Minta reads every modality
               outside the standard protocol, every published teaching, every cohort study we
               can put on the record, and reads your kid&apos;s full story on top of that. She
               synthesizes all of it into guidance specific to your child. She doesn&apos;t

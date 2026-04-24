@@ -153,7 +153,7 @@ export default function Home() {
               <em style={{ color: 'var(--teal)', fontStyle: 'normal', fontWeight: 600 }}>
                 Minta
               </em>{' '}
-              — our bot — reads every research-backed modality, every published teaching, every
+              reads every research-backed modality, every published teaching, every
               cohort study we can put on the record, alongside your child&apos;s full history.
               Then she hands you what to try next.
             </p>
@@ -187,7 +187,7 @@ export default function Home() {
                 paddingLeft: 16,
               }}
             >
-              The bot is still learning. Today it offers thoughtful suggestions shaped to your
+              Minta is still learning. Today she offers thoughtful suggestions shaped to your
               kid. Soon — as every family who joins adds their story —{' '}
               <span style={{ color: 'var(--teal)' }}>
                 a real protocol emerges for every child.
@@ -503,7 +503,7 @@ export default function Home() {
               <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Today:</strong> a real
               understanding of every option out there.{' '}
               <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Tomorrow:</strong> the
-              path itself. The bot is learning which modalities actually work for which
+              path itself. Minta is learning which modalities actually work for which
               symptoms — sharpening with every family who joins, every cohort we run,
               together.
             </p>
@@ -568,6 +568,155 @@ export default function Home() {
             <span style={{ color: 'var(--teal)' }}>
               Over time — together — we build the way out.
             </span>
+          </p>
+        </div>
+      </section>
+
+      {/* TRY MINTA — tangible interaction moment before the problem */}
+      <section
+        aria-label="Try Minta"
+        style={{
+          padding: 'clamp(72px, 10vw, 120px) 24px',
+          background: 'var(--cream-light)',
+          borderBottom: '1px solid var(--rule)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        <div
+          className="bloom-float"
+          style={{
+            position: 'absolute',
+            top: -180,
+            right: -160,
+            width: 520,
+            height: 520,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(31,107,107,0.10) 0%, transparent 70%)',
+            pointerEvents: 'none',
+          }}
+        />
+        <div
+          className="pb-container reveal"
+          style={{
+            maxWidth: 900,
+            textAlign: 'center',
+            position: 'relative',
+            zIndex: 1,
+          }}
+        >
+          <p
+            className="eyebrow"
+            style={{ color: 'var(--teal)', fontWeight: 600, marginBottom: 22 }}
+          >
+            Try Minta &middot; Free &middot; No sign-up
+          </p>
+          <h2
+            className="serif"
+            style={{
+              fontSize: 'clamp(40px, 6vw, 68px)',
+              fontWeight: 300,
+              letterSpacing: '-0.022em',
+              lineHeight: 1.05,
+              margin: '0 0 24px',
+              color: 'var(--ink)',
+            }}
+          >
+            Ask Minta{' '}
+            <em style={{ color: 'var(--teal)', fontStyle: 'italic', fontWeight: 400 }}>
+              anything.
+            </em>
+          </h2>
+          <p
+            style={{
+              fontSize: 'clamp(17px, 1.9vw, 20px)',
+              lineHeight: 1.7,
+              color: 'var(--ink-soft)',
+              fontWeight: 300,
+              maxWidth: 680,
+              margin: '0 auto 44px',
+            }}
+          >
+            A question about your kid. A modality you keep hearing about. A symptom
+            that isn&rsquo;t in any textbook. Type it in your own words &mdash; Minta
+            will give you a real read, grounded in everything she&rsquo;s learned from
+            the families and research papers she reads.
+          </p>
+
+          <div style={{ marginBottom: 44 }}>
+            <p
+              className="mono"
+              style={{
+                fontSize: 10,
+                letterSpacing: '0.28em',
+                textTransform: 'uppercase',
+                color: 'var(--sand-dark)',
+                fontWeight: 600,
+                marginBottom: 18,
+              }}
+            >
+              For example
+            </p>
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                gap: 12,
+                maxWidth: 820,
+                margin: '0 auto',
+              }}
+            >
+              {[
+                'My 9yo has new OCD and food refusal after strep. Where do I start?',
+                'What&rsquo;s the difference between PANS and PANDAS?',
+                'My kid plateaued on IVIG &mdash; what are we missing?',
+                'Is mold the reason nothing else is working?',
+              ].map((q, i) => (
+                <span
+                  key={i}
+                  style={{
+                    display: 'inline-block',
+                    padding: '11px 18px',
+                    fontFamily: 'var(--font-cormorant)',
+                    fontSize: 'clamp(14px, 1.4vw, 16px)',
+                    fontStyle: 'italic',
+                    color: 'var(--ink)',
+                    background: 'white',
+                    border: '1px solid var(--sand)',
+                    borderRadius: 999,
+                    lineHeight: 1.35,
+                    maxWidth: 360,
+                  }}
+                  dangerouslySetInnerHTML={{ __html: `&ldquo;${q}&rdquo;` }}
+                />
+              ))}
+            </div>
+          </div>
+
+          <a
+            href="https://app.planbforpans.com/try"
+            target="_blank"
+            rel="noopener"
+            className="cta-teal"
+            style={{
+              textDecoration: 'none',
+              display: 'inline-block',
+            }}
+          >
+            Ask Minta now &rarr;
+          </a>
+
+          <p
+            style={{
+              marginTop: 26,
+              fontSize: 12,
+              color: 'var(--sand-dark)',
+              fontStyle: 'italic',
+              lineHeight: 1.6,
+            }}
+          >
+            Three questions per hour. No data saved. No sign-up. Just a real read.
           </p>
         </div>
       </section>
@@ -1137,7 +1286,7 @@ export default function Home() {
                 paddingLeft: 16,
               }}
             >
-              The bot is still learning — today it offers suggestions. Soon, with every family
+              Minta is still learning — today she offers suggestions. Soon, with every family
               who joins,{' '}
               <span style={{ color: 'var(--teal)' }}>
                 a real protocol emerges for every child.
@@ -1154,7 +1303,7 @@ export default function Home() {
             <MethodSection />
           </div>
 
-          {/* Four blocks — intake → tracker → bot troubleshoots → sharpens */}
+          {/* Four blocks — intake → tracker → Minta troubleshoots → sharpens */}
           <ol
             style={{
               listStyle: 'none',
@@ -1171,7 +1320,7 @@ export default function Home() {
                 n: '01',
                 tag: 'Intake',
                 title: 'The whole story, captured once.',
-                body: "Pregnancy, birth, environment, diet. Every medication ever tried, every supplement, every modality. Every symptom, every flare, every weird behavior that nobody else took seriously. Labs, tests, imaging. The onset story — told in your own words, in conversation with the bot, at your pace. About twenty minutes in one sitting, or broken up across days. It all saves as you go.",
+                body: "Pregnancy, birth, environment, diet. Every medication ever tried, every supplement, every modality. Every symptom, every flare, every weird behavior that nobody else took seriously. Labs, tests, imaging. The onset story — told in your own words, in conversation with Minta, at your pace. About twenty minutes in one sitting, or broken up across days. It all saves as you go.",
               },
               {
                 n: '02',
@@ -1181,15 +1330,15 @@ export default function Home() {
               },
               {
                 n: '03',
-                tag: 'The bot reads both',
+                tag: 'Minta reads both',
                 title: 'Troubleshoots from the full record, 2am included.',
-                body: "The bot already has your intake. Now it has every day you&apos;ve logged. Ask anything — <em>&lsquo;why did we have a bad week?&rsquo;</em>, <em>&lsquo;is this new symptom concerning?&rsquo;</em>, <em>&lsquo;what should we try next?&rsquo;</em> — and it reads the whole record before answering. It runs correlations across meds, symptoms, timing, triggers: <em>&lsquo;Rage spiked the week you raised guanfacine AND started the new binder. Tics ticked up same week — may be rebound. Pause the binder at half-dose for 10 days to isolate which one is the driver.&rsquo;</em> Specific to your kid. Grounded in your data. Not generic advice.",
+                body: "Minta already has your intake. Now she has every day you&apos;ve logged. Ask anything — <em>&lsquo;why did we have a bad week?&rsquo;</em>, <em>&lsquo;is this new symptom concerning?&rsquo;</em>, <em>&lsquo;what should we try next?&rsquo;</em> — and she reads the whole record before answering. She runs correlations across meds, symptoms, timing, triggers: <em>&lsquo;Rage spiked the week you raised guanfacine AND started the new binder. Tics ticked up same week — may be rebound. Pause the binder at half-dose for 10 days to isolate which one is the driver.&rsquo;</em> Specific to your kid. Grounded in your data. Not generic advice.",
               },
               {
                 n: '04',
                 tag: 'It sharpens',
-                title: 'We&rsquo;re teaching the bot to spot patterns.',
-                body: "Your kid&apos;s data (consent-based, de-identified) joins every other family&apos;s data in the library. As stories come in, the bot is learning which modalities actually work for which symptoms — spotting the patterns no single family can see alone. Every successful story teaches it what to suggest. Every failed one teaches it what not to. Every cohort run adds signal. The read you get today is only as sharp as what the first families contributed. The read the hundredth family gets is sharper still.",
+                title: 'We&rsquo;re teaching Minta to spot patterns.',
+                body: "Your kid&apos;s data (consent-based, de-identified) joins every other family&apos;s data in the library. As stories come in, Minta is learning which modalities actually work for which symptoms — spotting the patterns no single family can see alone. Every successful story teaches her what to suggest. Every failed one teaches her what not to. Every cohort run adds signal. The read you get today is only as sharp as what the first families contributed. The read the hundredth family gets is sharper still.",
               },
             ].map((s) => (
               <li
@@ -1451,7 +1600,7 @@ export default function Home() {
                 maxWidth: 780,
               }}
             >
-              The more you log — what&apos;s failing, what&apos;s working — the faster the bot
+              The more you log — what&apos;s failing, what&apos;s working — the faster Minta
               sees your kid&apos;s patterns and the path out.
             </p>
             <p
