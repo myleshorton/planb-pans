@@ -716,7 +716,7 @@ export default function Home() {
               lineHeight: 1.6,
             }}
           >
-            Three questions per hour. No data saved. No sign-up. Just a real read.
+            Ask as many questions as you need. No data saved. No sign-up. Just a real read.
           </p>
         </div>
       </section>
