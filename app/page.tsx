@@ -204,7 +204,6 @@ export default function Home() {
             >
               <a
                 href="https://app.planbforpans.com/signup"
-                target="_blank"
                 rel="noopener"
                 className="cta-teal"
                 style={{ textDecoration: 'none' }}
@@ -213,7 +212,6 @@ export default function Home() {
               </a>
               <a
                 href="https://app.planbforpans.com/try"
-                target="_blank"
                 rel="noopener"
                 style={{
                   display: 'inline-block',
@@ -696,7 +694,6 @@ export default function Home() {
 
           <a
             href="https://app.planbforpans.com/try"
-            target="_blank"
             rel="noopener"
             className="cta-teal"
             style={{
@@ -1623,7 +1620,6 @@ export default function Home() {
           <div style={{ marginTop: 36 }}>
             <a
               href="https://app.planbforpans.com/signup"
-              target="_blank"
               rel="noopener"
               className="cta-teal"
               style={{ textDecoration: 'none' }}
@@ -2291,7 +2287,6 @@ export default function Home() {
           <div className="reveal" style={{ textAlign: 'center' }}>
             <a
               href="https://app.planbforpans.com/signup"
-              target="_blank"
               rel="noopener"
               className="cta-teal"
               style={{ textDecoration: 'none' }}

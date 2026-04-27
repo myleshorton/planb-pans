@@ -304,7 +304,6 @@ export default function VotePage() {
           </p>
           <a
             href="https://app.planbforpans.com/signup"
-            target="_blank"
             rel="noopener"
             className="cta-teal"
             style={{ textDecoration: 'none' }}

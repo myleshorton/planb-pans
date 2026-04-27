@@ -94,7 +94,6 @@ export default function RootLayout({
               <NavLink href="/faq">FAQ</NavLink>
               <a
                 href="https://app.planbforpans.com/sign-in"
-                target="_blank"
                 rel="noopener"
                 style={{
                   fontFamily: 'var(--font-inter)',
@@ -110,7 +109,6 @@ export default function RootLayout({
               </a>
               <a
                 href="https://app.planbforpans.com/signup"
-                target="_blank"
                 rel="noopener"
                 style={{
                   fontFamily: 'var(--font-inter)',
@@ -221,7 +219,6 @@ export default function RootLayout({
               </Link>
               <a
                 href="https://app.planbforpans.com/community"
-                target="_blank"
                 rel="noopener"
                 style={{ color: 'var(--sand-dark)', textDecoration: 'none' }}
               >

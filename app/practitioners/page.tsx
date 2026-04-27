@@ -656,7 +656,6 @@ export default function PractitionersPage() {
             Practitioners whose public teachings we&apos;ve studied appear on{' '}
             <a
               href="https://app.planbforpans.com/vote"
-              target="_blank"
               rel="noopener"
               style={{ color: 'var(--teal)', textDecoration: 'underline' }}
             >

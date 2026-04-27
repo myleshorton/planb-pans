@@ -200,7 +200,6 @@ export default function FAQPage() {
       >
         <a
           href="https://app.planbforpans.com/signup"
-          target="_blank"
           rel="noopener"
           className="cta-teal"
           style={{ textDecoration: 'none' }}
