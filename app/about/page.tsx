@@ -180,7 +180,7 @@ export default function AboutPage() {
         }}
       >
         <a
-          href="https://app.planbforpans.com/signup"
+          href="https://app.planbforpans.com/intake"
           rel="noopener"
           className="cta-teal"
           style={{ textDecoration: 'none' }}

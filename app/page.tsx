@@ -150,12 +150,15 @@ export default function Home() {
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
                 Plan B is the layer that can.
               </em>{' '}
+              At its core is{' '}
               <em style={{ color: 'var(--teal)', fontStyle: 'normal', fontWeight: 600 }}>
                 Minta
-              </em>{' '}
+              </em>
+              , our free AI clinical companion built for PANS families. She
               reads every research-backed modality, every published teaching, every
-              cohort study we can put on the record, alongside your child&apos;s full history.
-              Then she hands you what to try next.
+              cohort study we can put on the record, alongside your child&apos;s full
+              history. Then she hands you what to try next — and the questions to
+              bring to your next appointment.
             </p>
             <p
               className="rise delay-3"
@@ -203,7 +206,7 @@ export default function Home() {
               }}
             >
               <a
-                href="https://app.planbforpans.com/signup"
+                href="https://app.planbforpans.com/intake"
                 rel="noopener"
                 className="cta-teal"
                 style={{ textDecoration: 'none' }}
@@ -1619,7 +1622,7 @@ export default function Home() {
 
           <div style={{ marginTop: 36 }}>
             <a
-              href="https://app.planbforpans.com/signup"
+              href="https://app.planbforpans.com/intake"
               rel="noopener"
               className="cta-teal"
               style={{ textDecoration: 'none' }}
@@ -2286,7 +2289,7 @@ export default function Home() {
 
           <div className="reveal" style={{ textAlign: 'center' }}>
             <a
-              href="https://app.planbforpans.com/signup"
+              href="https://app.planbforpans.com/intake"
               rel="noopener"
               className="cta-teal"
               style={{ textDecoration: 'none' }}
