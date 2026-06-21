@@ -82,9 +82,10 @@ export default function WhyBoth() {
           <em style={{ color: 'var(--teal)' }}>A human who&apos;s lived it and makes the call.</em>
         </h2>
         <p style={{ fontSize: 18, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, maxWidth: 700, margin: '0 0 52px' }}>
-          Most PANS parents are handed a stack of labs and a 21-page protocol and left to integrate
-          it alone. You can&apos;t — and you shouldn&apos;t have to. Plan B is two things working
-          together.
+          Most PANS parents are handed a half-baked protocol — one that treats a single issue at a
+          time and never integrates the whole. Plan B does the opposite: it brings every healing
+          modality and every issue your child faces into one compact healing journey, and it knows
+          things your doctor doesn&apos;t. Doing that takes two things working together.
         </p>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 22 }}>
