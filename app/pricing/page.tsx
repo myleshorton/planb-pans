@@ -203,12 +203,17 @@ export default function PricingPage() {
               maxWidth: 760,
             }}
           >
+            <p className="serif" style={{ fontSize: 'clamp(18px, 2.2vw, 23px)', fontStyle: 'italic', color: 'var(--ink)', lineHeight: 1.4, fontWeight: 400, margin: '0 0 12px' }}>
+              Can&apos;t afford the $397? No problem.
+            </p>
             <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, margin: 0 }}>
-              <strong style={{ color: 'var(--teal)' }}>If $397 is genuinely out of reach</strong>, email{' '}
-              <a href="mailto:info@planbforpans.com" style={{ color: 'var(--teal)' }}>info@planbforpans.com</a>.
-              PANS families have already spent fortunes — we keep scholarship spots open and would
-              rather help you than hold the price. Tax-deductible donations from others fund those
-              spots; you can <a href="/donate" style={{ color: 'var(--teal)' }}>support a family</a> too.
+              Cost should never be why your child doesn&apos;t get this. Every week, Rachel takes{' '}
+              <strong style={{ color: 'var(--teal)' }}>one family at no cost</strong> — the full
+              Synthesis. The waitlist is open and public, and the finished synthesis is published
+              anonymized so we all learn from it.{' '}
+              <a href="/waitlist" style={{ color: 'var(--teal)', fontWeight: 600 }}>Join the waitlist →</a>{' '}
+              Others&apos; tax-deductible donations fund these spots; you can{' '}
+              <a href="/donate" style={{ color: 'var(--teal)' }}>support a family</a> too.
             </p>
           </div>
         </div>

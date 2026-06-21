@@ -2203,6 +2203,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FREE SPOT — waitlist */}
+      <section
+        style={{
+          padding: 'clamp(56px, 7vw, 88px) 24px',
+          background: 'var(--cream-light)',
+          borderTop: '1px solid var(--sand)',
+          borderBottom: '1px solid var(--sand)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 820, textAlign: 'center' }}>
+          <p className="eyebrow" style={{ marginBottom: 16 }}>The free spot · Non-profit</p>
+          <h2
+            className="serif"
+            style={{
+              fontSize: 'clamp(28px, 4.5vw, 52px)',
+              fontWeight: 300,
+              letterSpacing: '-0.02em',
+              lineHeight: 1.05,
+              color: 'var(--ink)',
+              margin: '0 0 16px',
+            }}
+          >
+            Can&apos;t afford it?{' '}
+            <em style={{ color: 'var(--teal)' }}>One family a week, free.</em>
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, maxWidth: 620, margin: '0 auto 28px' }}>
+            Cost should never be the reason your child doesn&apos;t get this. The waitlist is open and
+            public; the finished synthesis is published anonymized, so we all learn together from
+            what Minta finds.
+          </p>
+          <a
+            href="/waitlist"
+            style={{
+              display: 'inline-block',
+              padding: '15px 32px',
+              background: 'var(--teal)',
+              color: 'var(--cream)',
+              borderRadius: 6,
+              textDecoration: 'none',
+              fontSize: 15,
+              fontWeight: 500,
+            }}
+          >
+            Join the waitlist →
+          </a>
+        </div>
+      </section>
+
       {/* EMAIL CAPTURE — stay in the loop */}
       <section
         style={{
