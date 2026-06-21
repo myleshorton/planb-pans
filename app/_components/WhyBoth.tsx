@@ -85,7 +85,12 @@ export default function WhyBoth() {
           Most PANS parents are handed a half-baked protocol — one that treats a single issue at a
           time and never integrates the whole. Plan B does the opposite: it brings every healing
           modality and every issue your child faces into one compact healing journey, and it knows
-          things your doctor doesn&apos;t. Doing that takes two things working together.
+          things your doctor doesn&apos;t.{' '}
+          <strong style={{ color: 'var(--teal)', fontWeight: 600 }}>
+            When you&apos;re stalled, Minta has your Plan B
+          </strong>{' '}
+          — a real idea of <em>why</em>, and many new things to try. Doing that takes two things
+          working together.
         </p>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 22 }}>
