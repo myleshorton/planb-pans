@@ -519,12 +519,12 @@ export default function Home() {
                 maxWidth: 760,
               }}
             >
-              <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Today:</strong> a real
-              understanding of every option out there.{' '}
-              <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Tomorrow:</strong> the
-              path itself. Minta is learning which modalities actually work for which
-              symptoms — sharpening with every family who joins, every cohort we run,
-              together.
+              <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Today:</strong> a synthesis
+              that reads every lab, every modality, and your child&apos;s whole history together —
+              and names what&apos;s been missed and what hasn&apos;t been tried.{' '}
+              <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>Tomorrow:</strong> as more
+              families join, the patterns sharpen — which modality actually helps, for which child,
+              in what order.
             </p>
             <p
               className="mono"
@@ -539,7 +539,7 @@ export default function Home() {
                 borderTop: '1px solid var(--sand-light)',
               }}
             >
-              Built by a mother &middot; Trained by every family &middot; Published openly
+              Built by a mother who&apos;s lived it &middot; We never prescribe &middot; Every number checked against the source
             </p>
           </div>
         </div>
@@ -658,8 +658,8 @@ export default function Home() {
           >
             A question about your kid. A modality you keep hearing about. A symptom
             that isn&rsquo;t in any textbook. Type it in your own words &mdash; Minta
-            will give you a real read, grounded in everything she&rsquo;s learned from
-            the families and research papers she reads.
+            will give you a straight, plain-English read. A taste of the conversation
+            that comes with every Synthesis.
           </p>
 
           <div style={{ marginBottom: 44 }}>
@@ -854,11 +854,10 @@ export default function Home() {
                 maxWidth: 720,
               }}
             >
-              Parent forums have suggestions. Plan B builds a path. It reads every modality on
-              record, every practitioner teaching, every cohort study we run, and every kid&apos;s
-              full intake — and synthesizes them into a real starting place. The more
-              families tracking, the more cohort studies we fund, the faster the real paths
-              emerge — together.
+              Parent forums have suggestions. A doctor sees one slice. Plan B reads every modality,
+              every practitioner teaching, and your child&apos;s full history together — and
+              synthesizes them into one plan, sequenced for your kid. The more families who join,
+              the sharper that synthesis gets for the next child.
             </p>
           </div>
 
@@ -1090,11 +1089,11 @@ export default function Home() {
                 Outputs · What it produces
               </p>
               {[
-'A starting place shaped to your kid\u2019s specific profile',
-                'Matched placement into a cohort study',
-                'Referrals to practitioners whose work fits',
-                'Real-time answers to your 2am questions',
-                'Published cohort findings, for every family after',
+'A synthesis shaped to your kid\u2019s specific profile',
+                'What\u2019s been missed \u2014 and what hasn\u2019t been tried yet',
+                'Referrals to practitioners whose work fits \u2014 and the questions to bring them',
+                '30 days of Minta to troubleshoot the plan',
+                'Patterns that sharpen the read for every family after',
               ].map((x, i) => (
                 <div
                   key={i}
@@ -1169,8 +1168,8 @@ export default function Home() {
               }}
             >
               Your family&apos;s journey feeds back into the library. The 100th family&apos;s
-              read benefits from what the first 99 contributed. More people in → more studies
-              funded → faster to solutions, for everyone.
+              synthesis benefits from what the first 99 contributed. More families in → sharper
+              patterns → faster to answers, for everyone.
             </p>
           </div>
 
@@ -1188,7 +1187,7 @@ export default function Home() {
               paddingLeft: 22,
             }}
           >
-            A real starting place, not silence.{' '}
+            A real plan, not silence.{' '}
             <span style={{ color: 'var(--teal)' }}>
               Sharpened with every family. Together we get out.
             </span>
@@ -1235,9 +1234,9 @@ export default function Home() {
               }}
             >
               {[
-                'The doctor willing to talk at 2am.',
+                'Answers at 2am, when there’s nowhere else to turn.',
                 "The friend who'll help you troubleshoot when you're out of options and can't sleep.",
-                'The specialist who knows every modality — and will help you figure out your next lane.',
+                'Every modality, held in one place — so you can see your next lane.',
               ].map((line) => (
                 <li
                   key={line}
@@ -1304,10 +1303,10 @@ export default function Home() {
                 paddingLeft: 16,
               }}
             >
-              Minta is still learning — today she offers suggestions. Soon, with every family
-              who joins,{' '}
+              Your Synthesis is real today — built by a person, checked against the source. And it
+              keeps getting sharper:{' '}
               <span style={{ color: 'var(--teal)' }}>
-                a real protocol emerges for every child.
+                with every family who joins, the patterns behind it grow stronger.
               </span>
             </p>
           </div>
@@ -2235,8 +2234,8 @@ export default function Home() {
               margin: '0 auto 28px',
             }}
           >
-            Monthly update on what Minta&apos;s learning, which cohort studies are running,
-            and what&apos;s emerging. No spam. One-click unsubscribe.
+            A monthly note on what we&apos;re learning across families, and what&apos;s emerging
+            in PANS care. No spam. One-click unsubscribe.
           </p>
           <NewsletterForm />
         </div>
