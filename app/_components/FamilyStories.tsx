@@ -69,14 +69,14 @@ export const FAMILY_STORIES: FamilyStory[] = [
     found: [
       'Why the kills kept backfiring. Undermethylation + a CBS sulfur block + low ceruloplasmin throttle drainage at the source — so biomagnetism and antimicrobials produced more die-off than his body could clear. The “regression” after treatment wasn’t the protocol failing; it was working too fast for a body that couldn’t keep up. Even his “freezing in positions” on sulfur supplements was a clue, not a random reaction.',
       'Why his histamine never came down. A histadelic biotype, slow histamine-clearing genetics, and histamine-producing gut bacteria — three inputs stacking into one stubborn number no diet alone could move.',
-      'Why the strep wouldn’t clear and the mycoplasma kept climbing. After two years of “why won’t these infections resolve,” no one had screened his immune function. Recurrent infections that never clear point straight at a specific-antibody / CVID-spectrum deficiency — his body literally couldn’t finish the job.',
+      'Why the strep wouldn’t clear and the mycoplasma kept climbing — and the door it opened. Two years of “why won’t these infections resolve,” and no one had screened his immune function. Testing confirmed Specific Antibody Deficiency (SPAD): his body can’t mount a durable response to the bacteria it keeps fighting, so it never finishes the job. SPAD is a recognized diagnosis — which unlocks insurance-covered IVIG, a treatment two years of protocols never put on the table.',
       'The mold, in context. Off-the-charts mycotoxins are alarming on their own — but the insight was the stacking: a heavy mold load sitting on a detox system that genetically can’t process it. No one had sequenced the mold against his drainage capacity before going after it.',
     ],
     extraLabel: 'So the plan flipped the order everything had been done in:',
     extra: [
       'Open drainage and support the methylation + copper engine first — before any more killing.',
       'Then sequence the infections and the mold so die-off never outruns what his body can clear.',
-      'Confirm the immune gap with a CVID / antibody screen — it may unlock a different treatment path entirely.',
+      'Pursue the confirmed SPAD diagnosis into insurance-covered IVIG — a path two years of treatment never opened.',
     ],
     unlock:
       'The kill-first approach had been backfiring for two years. Reading every lab together — genetics, infections, histamine, mold and immune function as one system — showed exactly why, and put the steps in an order his body could finally handle.',
