@@ -148,22 +148,22 @@ export default function WhyBoth() {
 
         <div style={{ marginTop: 40, display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
           <a
-            href="/pricing"
+            href={`${APP}/intake`}
             style={{
               display: 'inline-block', padding: '16px 32px', background: 'var(--teal)', color: 'var(--cream)',
               borderRadius: 6, textDecoration: 'none', fontSize: 15, fontWeight: 500,
             }}
           >
-            Start with a Synthesis — $397 →
+            Start free — upload your labs →
           </a>
           <a
-            href={`${APP}/intake`}
+            href="/pricing"
             style={{
               display: 'inline-block', padding: '16px 30px', background: 'transparent', color: 'var(--teal)',
               border: '1px solid var(--rule)', borderRadius: 6, textDecoration: 'none', fontSize: 15, fontWeight: 500,
             }}
           >
-            Start free — upload your labs →
+            Or book a Synthesis — $397 →
           </a>
         </div>
       </div>
