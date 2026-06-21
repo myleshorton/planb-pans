@@ -201,6 +201,52 @@ function CategoryHead({
   )
 }
 
+function RouteCard({
+  num, title, tag, body, links, footnote,
+}: {
+  num: string; title: string; tag: string; body: string
+  links: [string, string][]; footnote?: string
+}) {
+  return (
+    <div
+      style={{
+        background: 'var(--cream)',
+        border: '1px solid var(--sand)',
+        borderRadius: 10,
+        padding: 'clamp(22px, 3vw, 30px)',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 6 }}>
+        <span
+          style={{
+            fontFamily: 'var(--font-cormorant)', fontSize: 30, fontWeight: 300,
+            color: 'var(--teal)', lineHeight: 1,
+          }}
+        >
+          {num}
+        </span>
+        <h3 style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 24, lineHeight: 1.1, color: 'var(--ink)', margin: 0 }}>
+          {title}
+        </h3>
+      </div>
+      <p className="serial" style={{ color: 'var(--sand-dark)', marginBottom: 14, fontSize: 12 }}>{tag}</p>
+      <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--ink-soft)', margin: '0 0 16px', flex: 1 }}>{body}</p>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 12px' }}>
+        {links.map(([label, href]) => (
+          <ExtLink key={href} href={href}>{label}</ExtLink>
+        ))}
+      </div>
+      {footnote && (
+        <p style={{ fontSize: 12, lineHeight: 1.55, color: 'var(--sand-dark)', margin: '16px 0 0', paddingTop: 12, borderTop: '1px solid var(--sand-light)' }}>
+          {footnote}
+        </p>
+      )}
+    </div>
+  )
+}
+
 export default function TestsPage() {
   return (
     <main style={{ background: 'var(--cream)' }}>
@@ -261,6 +307,93 @@ export default function TestsPage() {
               yourself.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* HOW TO GET THEM — the route, no doctor required */}
+      <section
+        style={{
+          padding: 'clamp(48px, 7vw, 80px) 24px',
+          background: 'var(--cream-deep, #ece2cd)',
+          borderBottom: '1px solid var(--sand)',
+        }}
+      >
+        <div className="pb-container">
+          <p className="serial" style={{ color: 'var(--teal)', marginBottom: 14 }}>
+            How to actually get them
+          </p>
+          <h2
+            style={{
+              fontFamily: 'var(--font-cormorant)',
+              fontWeight: 300,
+              fontSize: 'clamp(32px, 4.8vw, 52px)',
+              lineHeight: 1,
+              letterSpacing: '-0.02em',
+              color: 'var(--ink)',
+              marginBottom: 18,
+              maxWidth: 880,
+            }}
+          >
+            Most parents don&apos;t have a doctor who&apos;ll order these.{' '}
+            <em style={{ fontStyle: 'italic', color: 'var(--teal)' }}>You don&apos;t need one.</em>
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--ink-soft)', maxWidth: 680, marginBottom: 36 }}>
+            Almost everything on this page can be ordered <strong>without your pediatrician</strong>.
+            There are three routes — most families use all three. Each test below also lists exactly
+            where to order it.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 18 }}>
+            {/* Route 1 */}
+            <RouteCard
+              num="1"
+              title="Self-order blood tests"
+              tag="No doctor · ~most of this page"
+              body="Order online, get a lab requisition signed by their physician network, walk into a LabCorp or Quest draw site, results come to you. This covers most of the bloodwork here — vitamin D, ferritin, CBC, immunoglobulins, ASO / anti-DNase B, thyroid, histamine + tryptase."
+              links={[
+                ['Ulta Lab Tests', 'https://www.ultalabtests.com'],
+                ['Quest Direct', 'https://www.questhealth.com'],
+                ['Labcorp OnDemand', 'https://www.ondemand.labcorp.com'],
+                ['Request A Test', 'https://www.requestatest.com'],
+                ['Walk-In Lab', 'https://www.walkinlab.com'],
+              ]}
+            />
+            {/* Route 2 */}
+            <RouteCard
+              num="2"
+              title="Mail-in kits, done at home"
+              tag="No doctor · collected at home"
+              body="A kit arrives, you collect at home (saliva, stool, urine, or a nasal swab), mail it back. This is the route for the tests a draw site can't do."
+              links={[
+                ['Genetic → StrateGene*', 'https://www.strategene.org'],
+                ['Tiny Health (gut)', 'https://www.tinyhealth.com'],
+                ['Mosaic GI360 (gut)', 'https://mosaicdx.com'],
+                ['EverlyWell (strep)', 'https://www.everlywell.com'],
+                ['RealTime Labs (mold)', 'https://www.realtimelab.com'],
+                ['ZRT (neurotransmitters)', 'https://www.zrtlab.com'],
+              ]}
+              footnote="*Run an AncestryDNA or 23andMe raw-data file through StrateGene (free) for methylation SNPs. Note: 23andMe went through bankruptcy and its database was sold — AncestryDNA or Nebula Genomics are privacy-safer ways to get the same raw file."
+            />
+            {/* Route 3 */}
+            <RouteCard
+              num="3"
+              title="A telehealth provider for the rest"
+              tag="One visit · orders anything"
+              body="A few specialty tests (full IGeneX tickborne panels, the immune workup that leads to IVIG) need a clinician's requisition. A PANS-literate telehealth provider can order all of them in a single visit — far easier than convincing a skeptical pediatrician. Many tickborne labs also allow direct ordering in most states."
+              links={[
+                ['IGeneX (direct in many states)', 'https://igenex.com'],
+                ['Galaxy Diagnostics', 'https://galaxydx.com'],
+              ]}
+            />
+          </div>
+
+          <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-soft)', maxWidth: 680, marginTop: 32 }}>
+            Not sure which tests <em>your</em> kid needs, or the cheapest route for each?{' '}
+            <Link href="/pricing" style={{ color: 'var(--teal)', fontWeight: 600 }}>
+              A Plan B Synthesis
+            </Link>{' '}
+            builds the exact list, prioritized, with where to order every one.
+          </p>
         </div>
       </section>
 

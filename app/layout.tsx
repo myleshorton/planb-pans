@@ -91,8 +91,6 @@ export default function RootLayout({
               <NavLink href="/tests">Tests</NavLink>
               <NavLink href="/tracker">Tracker</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
-              <NavLink href="/case-studies">Cohort Studies</NavLink>
-              <NavLink href="/vote">Vote</NavLink>
               <NavLink href="/donate">Donate</NavLink>
               <NavLink href="/faq">FAQ</NavLink>
               <a
