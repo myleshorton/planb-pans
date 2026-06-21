@@ -2151,45 +2151,51 @@ export default function Home() {
           </p>
           <div
             style={{
-              padding: '48px 30px',
+              padding: 'clamp(40px, 6vw, 64px) clamp(28px, 5vw, 56px)',
               textAlign: 'center',
-              border: '1px dashed var(--sand)',
-              borderRadius: 4,
+              border: '1px solid var(--sand)',
+              borderRadius: 8,
               background: 'var(--paper)',
             }}
           >
             <p
               className="serif"
               style={{
-                fontSize: 'clamp(22px, 3vw, 28px)',
+                fontSize: 'clamp(24px, 3.4vw, 34px)',
                 fontStyle: 'italic',
                 color: 'var(--ink)',
-                lineHeight: 1.4,
+                lineHeight: 1.38,
                 fontWeight: 400,
-                marginBottom: 16,
-                maxWidth: 620,
-                margin: '0 auto 16px',
+                maxWidth: 720,
+                margin: '0 auto 22px',
               }}
             >
-              Our first families are joining now.
+              &ldquo;This is the most comprehensive document I have ever received concerning my
+              son&apos;s health and test results. You and Minta are excellent —{' '}
+              <span style={{ color: 'var(--teal)' }}>it makes so much sense.</span>&rdquo;
+            </p>
+            <p className="serial" style={{ color: 'var(--sand-dark)', marginBottom: 18 }}>
+              Mother of a teen son · Europe ·{' '}
+              <a href="/stories#europe-teen" style={{ color: 'var(--teal)', textDecoration: 'underline' }}>
+                read his story
+              </a>
             </p>
             <p
               style={{
-                fontSize: 15,
+                fontSize: 14,
                 color: 'var(--ink-soft)',
-                lineHeight: 1.75,
+                lineHeight: 1.7,
                 fontWeight: 300,
-                maxWidth: 560,
-                margin: '0 auto 24px',
+                maxWidth: 520,
+                margin: '0 auto',
               }}
             >
-              As stories come in — breakthroughs, stalls, real journeys — we&apos;ll share
-              them here (with consent). If you&apos;re using Plan B and want yours included,{' '}
+              Using Plan B and want your story here (with consent)?{' '}
               <a
                 href="mailto:rachel@planbforpans.com?subject=Plan%20B%20story"
                 style={{ color: 'var(--teal)', textDecoration: 'underline' }}
               >
-                email Rachel
+                Email Rachel
               </a>
               .
             </p>
