@@ -35,7 +35,7 @@ export default function StoriesPage() {
         />
         <div ref={head} className="pb-container reveal" style={{ position: 'relative', zIndex: 1, maxWidth: 1080 }}>
           <p className="eyebrow" style={{ marginBottom: 22 }}>
-            Stories · Where they were · The new angle
+            Stories · Where they were · What the synthesis found
           </p>
           <h1
             className="serif"
@@ -50,7 +50,7 @@ export default function StoriesPage() {
             }}
           >
             Stuck for years.{' '}
-            <em style={{ color: 'var(--teal)' }}>Then a new angle.</em>
+            <em style={{ color: 'var(--teal)' }}>Then the whole picture.</em>
           </h1>
           <p
             style={{
@@ -63,8 +63,9 @@ export default function StoriesPage() {
             }}
           >
             Two families who&apos;d done everything — specialists, labs, protocols — and still
-            couldn&apos;t see the whole picture. Here&apos;s where they were, and the angle Minta
-            surfaced that changed the plan. Names anonymized. Details shared with permission.
+            couldn&apos;t see the whole picture. Here&apos;s where they were, and what the synthesis
+            surfaced once every lab was read together. Names anonymized; clinical details shared
+            with permission.
           </p>
         </div>
       </section>
@@ -81,7 +82,7 @@ export default function StoriesPage() {
 
           <div style={{ textAlign: 'center', marginTop: 72 }}>
             <p className="serif" style={{ fontSize: 'clamp(20px, 2.6vw, 28px)', fontStyle: 'italic', fontWeight: 300, color: 'var(--ink)', lineHeight: 1.4, maxWidth: 560, margin: '0 auto 28px' }}>
-              Your kid&apos;s new angle is in the data you already have. Minta + the Synthesis find it.
+              Your kid&apos;s picture is already in the data you have. Minta + the Synthesis connect it.
             </p>
             <a
               href="/pricing"

@@ -1,6 +1,7 @@
 'use client'
 
 import { useReveal } from '../_components/hooks'
+import { FAMILY_STORIES, FamilyStoryFull } from '../_components/FamilyStories'
 
 // Public pricing page for planbforpans.com.
 //
@@ -85,7 +86,7 @@ export default function PricingPage() {
               maxWidth: 720,
             }}
           >
-            Built by Rachel — a mom of three PANS kids, not a doctor. Every recommendation is a
+            Built by Rachel — a mom of three recovered PANS kids, not a doctor. Every recommendation is a
             question to bring to your practitioner.
           </p>
         </div>
@@ -223,37 +224,12 @@ export default function PricingPage() {
             Names anonymized. Details shared with permission.
           </p>
 
-          <Story
-            tag="Family 01 · Teen son · Europe · 3 years, 5 specialists"
-            head="Three years. Thirty labs."
-            headEm="The picture nobody saw."
-            intake="Son with PANS-spectrum symptoms — OCD, anxiety, recurrent infections, gut problems that wouldn't resolve. Five specialists across three years. Hospital bloodwork, functional genomics, EU lab work. Thirty-plus tests across twenty-five categories. Every practitioner looking at their slice; nobody integrated the whole."
-            foundLabel="The synthesis revealed three drivers stacked:"
-            found={[
-              'An active multi-pathogen tickborne stack — visible on dark-field microscopy prior practitioners hadn’t ordered.',
-              'A CVID-spectrum immune deficiency explaining why infections never cleared. The immunologist had named "immune dysfunction" but never connected it to the failure-to-clear pattern.',
-              'A genetic methylation block — his body couldn’t use the B12 he was being supplemented with.',
-            ]}
-            close="It flipped his treatment from kill the infections (failed three times) to fix the cleanup engine first, then layer killing on top — and surfaced an IVIG access roadmap that unlocked national coverage his mom couldn't otherwise afford."
-            quote="After three years of doctors not connecting the dots, this was the first time I saw the whole picture."
-          />
-
-          <div style={{ width: 60, height: 1, background: 'var(--ink)', opacity: 0.2, margin: '56px auto' }} />
-
-          <Story
-            tag="Family 02 · Teen son · U.S. Northeast · Multi-driver PANS"
-            head="Twenty-one pages of supplements."
-            headEm="No clear roadmap."
-            intake="Teen son with multi-driver PANS — specific antibody deficiency, chronic strep, chronic Coxsackie B, Mycoplasma, Aspergillus, histadelic biotype. Months with a major PANS clinic. The latest protocol — a 21-page supplement list on top of a Top 8 sheet — sat on the counter. She didn't know where to start, what was urgent, or how to ramp the methyl donors versus the detox stack."
-            foundLabel="Plan B did three things:"
-            found={[
-              'Decoded the 21-page letter into a week-by-week timeline — what to add, in what order, at what dose, what to watch for at each ramp.',
-              'Built 60-second daily tracking her son could actually use — symptom log + AM/midday/evening protocol checklist.',
-              'Was reachable within the hour for urgent questions — practitioner scripts, ER red-flag checklists, parent-to-kid dialogue.',
-            ]}
-            close="The clinic wrote the prescription. Plan B made it usable for the parent who had to actually deliver it."
-            quote="The letter sat on my counter for weeks. Plan B turned it into something I could actually follow."
-          />
+          {FAMILY_STORIES.map((s, i) => (
+            <div key={s.id} id={s.id} style={{ scrollMarginTop: 100 }}>
+              {i > 0 && <div style={{ width: 60, height: 1, background: 'var(--ink)', opacity: 0.2, margin: '56px auto' }} />}
+              <FamilyStoryFull s={s} />
+            </div>
+          ))}
 
           <div style={{ textAlign: 'center', marginTop: 64 }}>
             <a
@@ -339,34 +315,3 @@ function Tier({
   )
 }
 
-function Story({
-  tag, head, headEm, intake, foundLabel, found, close, quote,
-}: {
-  tag: string; head: string; headEm: string; intake: string
-  foundLabel: string; found: string[]; close: string; quote: string
-}) {
-  const p: React.CSSProperties = { fontSize: 16, lineHeight: 1.75, color: 'var(--ink-soft)', fontWeight: 300, margin: '0 0 18px' }
-  return (
-    <article>
-      <p className="mono" style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-soft)', marginBottom: 16 }}>{tag}</p>
-      <h3 className="serif" style={{ fontSize: 'clamp(24px, 3.4vw, 34px)', fontWeight: 300, letterSpacing: '-0.015em', lineHeight: 1.12, color: 'var(--ink)', margin: '0 0 22px' }}>
-        {head}{' '}
-        <span style={{ fontStyle: 'italic', color: 'var(--teal)' }}>{headEm}</span>
-      </h3>
-      <p style={p}>{intake}</p>
-      <p style={{ ...p, marginBottom: 10 }}><strong style={{ color: 'var(--ink)' }}>{foundLabel}</strong></p>
-      <ol style={{ margin: '0 0 18px', paddingLeft: 22, display: 'grid', gap: 10 }}>
-        {found.map((f, i) => (
-          <li key={i} style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300 }}>{f}</li>
-        ))}
-      </ol>
-      <p style={p}>{close}</p>
-      <blockquote style={{ margin: '28px 0 0', paddingLeft: 22, borderLeft: '2px solid var(--teal)' }}>
-        <span className="serif" style={{ fontSize: 'clamp(18px, 2.3vw, 23px)', fontStyle: 'italic', color: 'var(--ink)', lineHeight: 1.45, display: 'block' }}>
-          &ldquo;{quote}&rdquo;
-        </span>
-        <p className="mono" style={{ fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ink-soft)', marginTop: 14 }}>— His mom</p>
-      </blockquote>
-    </article>
-  )
-}

@@ -111,7 +111,7 @@ export default function WhyBoth() {
               'The judgment a model won&apos;t make: what&apos;s urgent, what order to try things, and <strong>what hasn&apos;t been tried that should be.</strong>',
               '<strong>Catches what the AI misses</strong> and checks every number against the source.',
               'Writes the practitioner letters that get you in the door and unlock coverage.',
-              'A <strong>mom of three PANS kids</strong> — she gets the parent side, not just the clinical one.',
+              'A <strong>mom of three recovered PANS kids</strong> — she gets the parent side, not just the clinical one.',
             ]}
             cant="Deep, but not always at your side every day. That&apos;s Minta&apos;s job."
           />
