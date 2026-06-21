@@ -50,27 +50,28 @@ export const FAMILY_STORIES: FamilyStory[] = [
   },
   {
     id: 'us-teen',
-    tag: 'Family 02 · Teen son · U.S. · multi-driver PANS · months at a major clinic',
-    head: 'Twenty-one pages of supplements.',
-    headEm: 'No one had asked why they kept backfiring.',
+    tag: 'Family 02 · Teen son · U.S. · multi-driver PANS · 2 years of treatment',
+    head: 'Two years of treatment. The labs never moved.',
+    headEm: 'Minta knew why.',
     where:
-      'A teen son with multi-driver PANS, working with a major PANS clinic for months. The latest protocol — a 21-page supplement list on top of a “Top 8” priority sheet — sat on the kitchen counter. He had severe, unexplained supplement intolerances. She didn’t know where to start, what was urgent, or how to ramp the methyl donors against the detox stack.',
-    foundLabel: 'His intolerances weren’t random sensitivity. Read against his own genetics, they were predictable:',
+      'Two years of homeopathy, functional medicine and biomagnetism. Every panel run, more than once. And the labs kept coming back the same — histamine high, strep that never came down, mycoplasma climbing, mold through the roof. Treatment after treatment, and nothing held.',
+    foundLabel: 'Minta knew why nothing was holding: his body couldn’t clear what they kept trying to kill.',
     found: [
-      'The reframe that changed everything: every prior protocol had pushed standard zinc-heavy undermethylator treatment without first confirming his copper status. His methylation panel — undermethylation + a CBS sulfur bottleneck + low ceruloplasmin — finally explained why those protocols hurt instead of helped (the “freezing in positions” on sulfur supplements included).',
-      'A documented multi-pathogen load underneath: chronic strep, chronic Coxsackie B across all six serotypes, and chronic Mycoplasma — calling for cardiac-protective sequencing, not a one-size kill.',
-      'Why an earlier biomagnetism round had set him back: the kill was outrunning his drainage capacity — endotoxin overflow. So the protocol was re-sequenced — molybdenum first, hydroxy-B12 (not methyl), copper-safe support before any zinc, the infection layer held until week 7–8. Order, not just ingredients.',
+      'A genetic detox bottleneck — undermethylation, a CBS sulfur block, low ceruloplasmin. His drainage was throttled at the source, so biomagnetism killed pathogens faster than he could clear them — the endotoxin overflow that set him back instead of forward.',
+      'A histadelic biotype with slow histamine clearance — the reason his histamine stayed high no matter the protocol or the diet.',
+      'A likely immune deficiency (specific-antibody / CVID-spectrum) — why the strep never cleared and the mycoplasma kept climbing. His body couldn’t finish the job on its own.',
+      'Mold through the roof, sitting on top of a detox system that couldn’t process it — a load no one had sequenced against his drainage capacity.',
     ],
-    extraLabel: 'And three foundational gaps no prior workup had tested — now ordered:',
+    extraLabel: 'So the plan flipped the order everything had been done in:',
     extra: [
-      'Histamine-pathway labs — his panel flagged a histadelic biotype that had never actually been measured.',
-      'A CVID / specific-antibody-deficiency screen — recurrent infections that never clear carry a high rate of undetected immune deficiency that can qualify for IVIG.',
-      'Bifidobacterium-subspecies gut testing — the keystone depletion standard GI panels miss.',
+      'Open drainage and support the methylation + copper engine first — before any more killing.',
+      'Then sequence the infections and the mold so die-off never outruns what his body can clear.',
+      'Confirm the immune gap with a CVID / antibody screen — it may unlock a different treatment path entirely.',
     ],
     unlock:
-      'The clinic had written the prescription. The synthesis turned it into a week-by-week sequence the parent who actually had to deliver it could follow — plus a 60-second daily tracker to catch the next flare early.',
+      'The kill-first approach had been backfiring for two years. Reading every lab together showed why — and put the steps in an order his body could finally handle.',
     quote:
-      'The letter sat on my counter for weeks. Plan B turned it into something I could actually follow.',
+      'Two years of treatment, and every lab kept coming back the same. Minta was the first to tell me why.',
   },
 ]
 
