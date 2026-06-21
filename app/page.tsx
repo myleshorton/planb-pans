@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState, Fragment } from 'react'
 import BucketSection from './_components/BucketSection'
 import MethodSection from './_components/MethodSection'
+import WhyBoth from './_components/WhyBoth'
+import { FamilyStoriesTeaser } from './_components/FamilyStories'
 
 export default function Home() {
   const revealRef = useRef<HTMLElement | null>(null)
@@ -154,11 +156,21 @@ export default function Home() {
               <em style={{ color: 'var(--teal)', fontStyle: 'normal', fontWeight: 600 }}>
                 Minta
               </em>
-              , our free AI clinical companion built for PANS families. She
-              reads every research-backed modality, every published teaching, every
-              cohort study we can put on the record, alongside your child&apos;s full
-              history. Then she hands you what to try next — and the questions to
-              bring to your next appointment.
+              {' '}— a clinical AI{' '}
+              <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
+                trained on PANS
+              </em>
+              : every research-backed modality, every published teaching, every cohort study
+              we can put on the record. She learns{' '}
+              <em style={{ color: 'var(--ink)', fontStyle: 'italic', fontWeight: 600 }}>
+                your
+              </em>{' '}
+              child&apos;s full history — then works alongside our human-led{' '}
+              <em style={{ color: 'var(--teal)', fontStyle: 'normal', fontWeight: 600 }}>
+                Synthesis
+              </em>{' '}
+              to hand you what to try next, and the exact questions to bring to your next
+              appointment.
             </p>
             <p
               className="rise delay-3"
@@ -173,7 +185,7 @@ export default function Home() {
                 marginBottom: 24,
               }}
             >
-              Free <span style={{ opacity: 0.45, margin: '0 8px' }}>·</span> Non-profit{' '}
+              Trained on PANS <span style={{ opacity: 0.45, margin: '0 8px' }}>·</span> Non-profit{' '}
               <span style={{ opacity: 0.45, margin: '0 8px' }}>·</span> Built by a family who&apos;s lived it
             </p>
             <p
@@ -441,6 +453,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why you need both — the bot + the human */}
+      <WhyBoth />
+
+      {/* Where they were → the new angle (Tommy + Daniel, anonymized) */}
+      <FamilyStoriesTeaser />
+
       {/* THESIS — stated plainly */}
       <section
         aria-label="Thesis"
@@ -610,7 +628,7 @@ export default function Home() {
             className="eyebrow"
             style={{ color: 'var(--teal)', fontWeight: 600, marginBottom: 22 }}
           >
-            Try Minta &middot; Free &middot; No sign-up
+            Try Minta &middot; Free sample &middot; No sign-up
           </p>
           <h2
             className="serif"
@@ -1217,7 +1235,7 @@ export default function Home() {
               }}
             >
               {[
-                'The doctor willing to talk at 2am — for free.',
+                'The doctor willing to talk at 2am.',
                 "The friend who'll help you troubleshoot when you're out of options and can't sleep.",
                 'The specialist who knows every modality — and will help you figure out your next lane.',
               ].map((line) => (
