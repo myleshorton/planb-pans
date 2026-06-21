@@ -149,13 +149,13 @@ export default function PricingPage() {
               price="$49"
               unit="/month"
               items={[
-                'Unlimited Minta — ask anything, any time',
-                'A quarterly synthesis refresh included',
+                'Keep Minta after your 30 days — ask anything, any time',
+                'She evolves daily — fed new studies + learning across every family',
                 'Symptom + lab trend monitoring with alerts',
                 'Cross-kid pattern detection',
-                'Direct access for urgent flare questions',
+                'A quarterly synthesis refresh included',
               ]}
-              footnote="For families in active treatment. Cancel anytime."
+              footnote="Covers Minta’s AI cost. For families staying in active treatment. Cancel anytime."
               ctaLabel="Start Continuous →"
               ctaHref={`${APP}/checkout/start?service=continuous`}
             />

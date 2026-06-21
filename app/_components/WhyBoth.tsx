@@ -65,7 +65,7 @@ export default function WhyBoth() {
   return (
     <section style={{ padding: 'clamp(72px, 9vw, 120px) 24px', background: 'var(--cream)' }}>
       <div className="pb-container" style={{ maxWidth: 1080 }}>
-        <p className="eyebrow" style={{ marginBottom: 18 }}>The bot + the human</p>
+        <p className="eyebrow" style={{ marginBottom: 18 }}>Why buy the synthesis</p>
         <h2
           className="serif"
           style={{
@@ -78,8 +78,8 @@ export default function WhyBoth() {
             maxWidth: 880,
           }}
         >
-          A trained bot you can use at 2am.{' '}
-          <em style={{ color: 'var(--teal)' }}>A human who&apos;s lived it and makes the call.</em>
+          You don&apos;t need another opinion.{' '}
+          <em style={{ color: 'var(--teal)' }}>You need every piece connected.</em>
         </h2>
         <p style={{ fontSize: 18, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, maxWidth: 700, margin: '0 0 52px' }}>
           Most PANS parents are handed a half-baked protocol — one that treats a single issue at a
@@ -95,31 +95,30 @@ export default function WhyBoth() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 22 }}>
           <Col
-            who="Minta"
-            role="The AI · always on"
+            who="The Synthesis"
+            role="What you actually get · $397"
             color="var(--teal)"
-            lead="Breadth, speed, memory."
+            lead="Every piece, in one place."
             points={[
-              '<strong>Trained on all of PANS</strong> — every modality, framework, and cohort study, plus thousands of papers.',
-              'Reads <strong>your kid&apos;s full history and every lab together</strong> — the integration no single specialist does.',
-              'Available at <strong>2am, instantly, every day.</strong> Decodes a 21-page protocol into a week-by-week timeline.',
-              'Runs the daily tracker, surfaces patterns, remembers everything.',
+              'Every lab, symptom, prior treatment and practitioner letter — read <strong>together</strong>, not in slices.',
+              'Every healing modality your child&apos;s picture calls for — methylation, infections, gut, immune, detox — woven into <strong>one sequenced plan.</strong>',
+              '<strong>What&apos;s been missed, and what hasn&apos;t been tried</strong> — the drivers no single specialist connected.',
+              'A compact, week-by-week healing journey you can actually follow — with a practitioner letter to bring to each visit.',
             ]}
-            cant="She&apos;s still learning, not a licensed clinician — she doesn&apos;t carry the judgment or the accountability for the call."
+            cant="Then ask Minta anything for 30 days to troubleshoot. Keep her after for $49/mo — fed new studies and learning across every family, she evolves daily."
           />
           <Col
             who="Rachel"
-            role="The human · the integrator"
+            role="Why trust it — and why “not a doctor” is the point"
             color="var(--ink)"
-            lead="Depth, judgment, accountability."
+            lead="The doctors are who failed you."
             points={[
-              'The <strong>Synthesis</strong> — 4–6 hours with your kid&apos;s complete picture, integrated by a person.',
-              'The judgment a model won&apos;t make: what&apos;s urgent, what order to try things, and <strong>what hasn&apos;t been tried that should be.</strong>',
-              '<strong>Catches what the AI misses</strong> and checks every number against the source.',
-              'Writes the practitioner letters that get you in the door and unlock coverage.',
-              'A <strong>mom of three recovered PANS kids</strong> — she gets the parent side, not just the clinical one.',
+              'Every family here has already been failed by doctors — the “wait and see,” the specialist who read only their slice. You&apos;re not missing a doctor. <strong>You&apos;re missing the integration.</strong>',
+              'No one doctor has the hours or the cross-training to connect Walsh, Shoemaker, Buhner, methylation, immune and gut against your child&apos;s labs. That&apos;s the work — and it isn&apos;t a prescription.',
+              '<strong>We never prescribe.</strong> Every recommendation is a question to bring to your practitioner, plus the test or driver they overlooked — leverage, not a competing opinion.',
+              'Built by a <strong>mom of three recovered PANS kids</strong> who did this homework for years — and every number checked against the source.',
             ]}
-            cant="Deep, but not always at your side every day. That&apos;s Minta&apos;s job."
+            cant="Not a doctor — and the doctors are exactly why you&apos;re here."
           />
         </div>
 
@@ -134,15 +133,16 @@ export default function WhyBoth() {
             padding: 'clamp(26px, 3.4vw, 40px)',
           }}
         >
-          <p className="mono" style={{ ...eyebrowMono, color: 'var(--teal)' }}>Why you need both</p>
+          <p className="mono" style={{ ...eyebrowMono, color: 'var(--teal)' }}>Why it works</p>
           <p className="serif" style={{ fontSize: 'clamp(20px, 2.6vw, 28px)', fontWeight: 300, fontStyle: 'italic', lineHeight: 1.4, color: 'var(--ink)', margin: '6px 0 14px', maxWidth: 820 }}>
-            Rachel builds the foundation — the deep, integrated Synthesis that maps your kid&apos;s
-            whole picture and the path forward. Minta keeps it alive, day after day.
+            You don&apos;t need another doctor&apos;s opinion. You need someone to connect every
+            piece — and tell you exactly what to ask for next.
           </p>
           <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, maxWidth: 760, margin: 0 }}>
-            AI alone is a lot of information with nobody accountable for the decision. A human alone
-            can&apos;t be at your side at 2am. Together you get the foundation <em>and</em> the
-            daily companion — and a real person who&apos;s been exactly where you are.
+            That&apos;s the synthesis. The receipts are on the{' '}
+            <a href="/stories" style={{ color: 'var(--teal)', fontWeight: 500 }}>stories page</a>: in one
+            case it surfaced an immune deficiency, a tickborne infection, and a methylation block
+            that five specialists had missed over three years.
           </p>
         </div>
 

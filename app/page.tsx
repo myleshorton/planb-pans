@@ -134,7 +134,7 @@ export default function Home() {
                 marginBottom: 32,
               }}
             >
-              Plan B is your answer.
+              When you&apos;re stalled, Minta has your Plan B.
             </p>
 
             <p
