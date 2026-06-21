@@ -23,28 +23,6 @@ export default function RootLayout({
         />
       </head>
       <body className="grain">
-        <div
-          style={{
-            background: 'var(--teal)',
-            color: 'var(--cream)',
-            textAlign: 'center',
-            padding: '14px 16px',
-            fontSize: 13,
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase',
-            fontWeight: 600,
-            fontFamily: 'var(--font-inter)',
-            position: 'relative',
-            zIndex: 60,
-          }}
-        >
-          <span style={{ fontWeight: 700 }}>Preview release</span>
-          <span style={{ opacity: 0.5, margin: '0 14px' }}>·</span>
-          Public launch{' '}
-          <span style={{ fontStyle: 'italic', fontFamily: 'var(--font-cormorant)', fontWeight: 400, textTransform: 'none', letterSpacing: 0, fontSize: 16 }}>
-            early June 2026
-          </span>
-        </div>
         <header
           style={{
             borderBottom: '1px solid var(--sand)',
