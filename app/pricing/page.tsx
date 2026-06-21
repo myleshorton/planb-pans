@@ -2,6 +2,7 @@
 
 import { useReveal } from '../_components/hooks'
 import { FAMILY_STORIES, FamilyStoryFull } from '../_components/FamilyStories'
+import DeliverablePreview from '../_components/DeliverablePreview'
 
 // Public pricing page for planbforpans.com.
 //
@@ -212,6 +213,9 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+
+      {/* What you actually receive — synthesis doc, tests-to-order, calendar */}
+      <DeliverablePreview />
 
       {/* Proof — two anonymized families */}
       <section style={{ padding: '72px 24px 96px', background: 'var(--cream-light)', borderTop: '1px solid var(--rule)' }}>

@@ -12,6 +12,8 @@ export type FamilyStory = {
   headEm: string
   // "Where they were" — the stuck before-state.
   where: string
+  // the single most counterintuitive connection — the genius re-read.
+  leap?: { label: string; text: string }
   // "What the synthesis found" — framing line + the specific findings.
   foundLabel: string
   found: string[]
@@ -30,12 +32,16 @@ export const FAMILY_STORIES: FamilyStory[] = [
     head: 'Three years. Thirty labs.',
     headEm: 'Three drivers nobody had stacked together.',
     where:
-      'A teen son with PANS-spectrum symptoms — OCD, anxiety, recurrent infections, gut problems that wouldn’t resolve. Five specialists across three years. Hospital bloodwork, full functional-genomics SNP panel, EU lab work — thirty-plus tests across twenty-five categories. The neurologist read the brain. The immunologist read the antibodies. The gastroenterologist read the gut. A prior synthesis had framed the whole thing as “gut + neuroinflammation.” Nobody had read all thirty labs against each other.',
-    foundLabel: 'Read together, the data showed three drivers stacked on top of one another:',
+      'A teen son with PANS-spectrum symptoms — OCD, anxiety, recurrent infections, gut problems that wouldn’t resolve. Five specialists across three years. Hospital bloodwork, a full functional-genomics SNP panel, EU lab work — thirty-plus tests across twenty-five categories, each sitting in its own report. The neurologist read the brain. The immunologist read the antibodies. The gastroenterologist read the gut. A prior synthesis had called the whole thing “gut + neuroinflammation.” Every number that mattered was already on paper. Nobody had read them against each other.',
+    leap: {
+      label: 'The connection no one else made',
+      text: 'His serum B12 came back at 1,360 — nearly double the top of range. Every prior reader saw a high, reassuring number and moved on. Minta cross-read it against his genetics — homozygous-slow MTRR — and saw the opposite: a methyl-trap. His body couldn’t convert the B12 it was being flooded with, so it pooled in his blood while his cells starved. The “good” result was actually proof of a functional deficiency — and it quietly rewrote his entire methylation plan.',
+    },
+    foundLabel: 'From there, three drivers no single specialist had connected fell into place:',
     found: [
-      'An active multi-pathogen tickborne infection — Borrelia, Bartonella, Babesia and Mycoplasma, positive on dark-field microscopy no prior practitioner had ordered. Current blood backed it: ferritin 20, neutropenia, and a high CD57 — the iron-sequestration and cytopenia pattern these infections leave behind.',
-      'A CVID-spectrum immune deficiency — IgA 0.74 and IgM 0.29 (both low), class-switched memory B-cells at 5.6%. The reason his body could never clear those infections on its own. An earlier immunologist had written “immune dysfunction” but never tied it to the failure-to-clear pattern.',
-      'A proven methylation block — homozygous-slow MTRR with a serum B12 of 1,360, nearly double the top of range. He was being dosed with B12 his body genetically couldn’t use. Slow COMT plus a kynurenine shift were pulling tryptophan away from serotonin toward a neuro-inflammatory byproduct — the biochemical substrate under his OCD.',
+      'An infection no one had named out loud — and the proof was already in his routine blood. Borrelia, Bartonella, Babesia and Mycoplasma showed on dark-field microscopy nobody had ordered. Minta didn’t stop at the image: it corroborated the load from labs everyone already had — ferritin 20 (Bartonella sequesters iron), neutropenia and a high CD57 (the Babesia/Bartonella cytopenia signature). Three “unrelated” abnormalities, one cause.',
+      'Why his immune system could never close the deal — and what it unlocked. IgA 0.74, IgM 0.29, class-switched memory B-cells at 5.6%: a CVID-spectrum deficiency. A prior immunologist had written “immune dysfunction” and left it there. Minta tied those exact numbers to the failure-to-clear pattern — then to the funding: the same bloodwork qualifies him for IVIG under national health coverage his mom could never have paid for privately.',
+      'Where the OCD actually came from. His genetics throttle the kynurenine pathway and slow COMT — pulling tryptophan away from serotonin toward quinolinic acid, a neuro-inflammatory byproduct. Not “he has OCD.” A measurable, addressable substrate underneath it.',
     ],
     extraLabel: 'Just as important — what reading it all together ruled OUT, so the family could stop chasing them:',
     extra: [
@@ -44,7 +50,7 @@ export const FAMILY_STORIES: FamilyStory[] = [
       'Mold / mycotoxins, and folate-receptor antibody — both negative.',
     ],
     unlock:
-      'That reordered the whole plan. Instead of killing the infections first — the move every prior protocol had made, and that had failed three times — it led with an immunologist referral: his existing bloodwork already qualified him for IVIG under national health coverage, which his mom had wanted but couldn’t pay for privately. Fix the immune gap and the cleanup engine, then kill. In that order.',
+      'Every prior protocol had led with killing the infection — and failed three times. Reading it all as one system showed why: kill anything in a body that can’t clear it, with an immune system that can’t finish, and you make it worse. The order had to invert — immune support and the cleanup engine first, infection last. That is the plan five specialists over three years never assembled, because no one had the whole picture in front of them at once.',
     quote:
       'After three years of doctors not connecting the dots, this was the first time I saw the whole picture.',
   },
@@ -55,12 +61,16 @@ export const FAMILY_STORIES: FamilyStory[] = [
     headEm: 'Minta knew why.',
     where:
       'Two years of homeopathy, functional medicine and biomagnetism. Every panel run, more than once. And the labs kept coming back the same — histamine high, strep that never came down, mycoplasma climbing, mold through the roof. Treatment after treatment, and nothing held.',
-    foundLabel: 'Minta knew why nothing was holding: his body couldn’t clear what they kept trying to kill.',
+    leap: {
+      label: 'The connection no one else made',
+      text: 'Two years of providers had treated his sky-high histamine, his stuck strep, his climbing mycoplasma and his off-the-charts mold as four separate problems. Minta saw one cause sitting under all four — a genetically throttled detox and immune system. His body simply could not clear what every protocol kept trying to kill, so each aggressive round drove die-off faster than he could drain it, and he got worse. Same labs everyone already had. One read nobody had made.',
+    },
+    foundLabel: 'Pulled apart, every stuck number had a reason — and they were the same reason:',
     found: [
-      'A genetic detox bottleneck — undermethylation, a CBS sulfur block, low ceruloplasmin. His drainage was throttled at the source, so biomagnetism killed pathogens faster than he could clear them — the endotoxin overflow that set him back instead of forward.',
-      'A histadelic biotype with slow histamine clearance — the reason his histamine stayed high no matter the protocol or the diet.',
-      'A likely immune deficiency (specific-antibody / CVID-spectrum) — why the strep never cleared and the mycoplasma kept climbing. His body couldn’t finish the job on its own.',
-      'Mold through the roof, sitting on top of a detox system that couldn’t process it — a load no one had sequenced against his drainage capacity.',
+      'Why the kills kept backfiring. Undermethylation + a CBS sulfur block + low ceruloplasmin throttle drainage at the source — so biomagnetism and antimicrobials produced more die-off than his body could clear. The “regression” after treatment wasn’t the protocol failing; it was working too fast for a body that couldn’t keep up. Even his “freezing in positions” on sulfur supplements was a clue, not a random reaction.',
+      'Why his histamine never came down. A histadelic biotype, slow histamine-clearing genetics, and histamine-producing gut bacteria — three inputs stacking into one stubborn number no diet alone could move.',
+      'Why the strep wouldn’t clear and the mycoplasma kept climbing. After two years of “why won’t these infections resolve,” no one had screened his immune function. Recurrent infections that never clear point straight at a specific-antibody / CVID-spectrum deficiency — his body literally couldn’t finish the job.',
+      'The mold, in context. Off-the-charts mycotoxins are alarming on their own — but the insight was the stacking: a heavy mold load sitting on a detox system that genetically can’t process it. No one had sequenced the mold against his drainage capacity before going after it.',
     ],
     extraLabel: 'So the plan flipped the order everything had been done in:',
     extra: [
@@ -69,7 +79,7 @@ export const FAMILY_STORIES: FamilyStory[] = [
       'Confirm the immune gap with a CVID / antibody screen — it may unlock a different treatment path entirely.',
     ],
     unlock:
-      'The kill-first approach had been backfiring for two years. Reading every lab together showed why — and put the steps in an order his body could finally handle.',
+      'The kill-first approach had been backfiring for two years. Reading every lab together — genetics, infections, histamine, mold and immune function as one system — showed exactly why, and put the steps in an order his body could finally handle.',
     quote:
       'Two years of treatment, and every lab kept coming back the same. Minta was the first to tell me why.',
   },
@@ -113,6 +123,23 @@ export function FamilyStoryFull({ s }: { s: FamilyStory }) {
       {/* Where they were */}
       <p className="mono" style={{ ...label, color: 'var(--sand-dark)' }}>Where they were</p>
       <p style={p}>{s.where}</p>
+
+      {/* The leap — the genius re-read */}
+      {s.leap && (
+        <div
+          style={{
+            background: 'var(--cream-light)',
+            border: '1px solid var(--teal)',
+            borderLeft: '4px solid var(--teal)',
+            borderRadius: 6,
+            padding: 'clamp(18px, 2.6vw, 26px)',
+            margin: '22px 0',
+          }}
+        >
+          <p className="mono" style={{ ...label, color: 'var(--teal)' }}>{s.leap.label}</p>
+          <p style={{ fontSize: 16.5, lineHeight: 1.65, color: 'var(--ink)', fontWeight: 400, margin: 0 }}>{s.leap.text}</p>
+        </div>
+      )}
 
       {/* What the synthesis found */}
       <div
