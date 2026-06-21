@@ -1,0 +1,372 @@
+'use client'
+
+import { useReveal } from '../_components/hooks'
+
+// Public pricing page for planbforpans.com.
+//
+// Plan B is a non-profit (501(c)(3) application pending). The Vault tier stays
+// free; the Synthesis is a paid concierge service ($397). Checkout itself lives
+// on the app domain — CTAs link to app.planbforpans.com/checkout/start, where
+// sign-in + Stripe happen.
+
+const APP = 'https://app.planbforpans.com'
+
+export default function PricingPage() {
+  const head = useReveal()
+
+  return (
+    <main style={{ background: 'var(--cream)' }}>
+      {/* Hero */}
+      <section
+        style={{
+          padding: '120px 24px 72px',
+          borderBottom: '1px solid var(--rule)',
+          background: 'var(--cream-light)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        <div
+          className="bloom-float"
+          style={{
+            position: 'absolute',
+            top: -180,
+            right: -180,
+            width: 480,
+            height: 480,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(31,107,107,0.14) 0%, transparent 70%)',
+            pointerEvents: 'none',
+          }}
+        />
+        <div ref={head} className="pb-container reveal" style={{ position: 'relative', zIndex: 1, maxWidth: 1080 }}>
+          <p className="eyebrow" style={{ marginBottom: 22 }}>
+            What it costs · Non-profit
+          </p>
+          <h1
+            className="serif"
+            style={{
+              fontSize: 'clamp(48px, 9vw, 104px)',
+              fontWeight: 300,
+              letterSpacing: '-0.028em',
+              lineHeight: 0.96,
+              margin: 0,
+              color: 'var(--ink)',
+              maxWidth: 1080,
+            }}
+          >
+            One synthesis.{' '}
+            <em style={{ color: 'var(--teal)' }}>One source of truth.</em>
+          </h1>
+          <p
+            style={{
+              fontSize: 19,
+              lineHeight: 1.7,
+              color: 'var(--ink-soft)',
+              fontWeight: 300,
+              maxWidth: 720,
+              marginTop: 28,
+            }}
+          >
+            Plan B is a non-profit. The Vault — labs, tracking, your first synthesis — stays
+            free. The full <strong>Synthesis</strong> is a paid concierge service, because
+            integrating a complex case takes hours of a real person&apos;s time. What you pay
+            funds the work and free access for families who can&apos;t.
+          </p>
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(18px, 2.1vw, 23px)',
+              fontStyle: 'italic',
+              color: 'var(--ink)',
+              lineHeight: 1.5,
+              fontWeight: 400,
+              marginTop: 24,
+              maxWidth: 720,
+            }}
+          >
+            Built by Rachel — a mom of three PANS kids, not a doctor. Every recommendation is a
+            question to bring to your practitioner.
+          </p>
+        </div>
+      </section>
+
+      {/* Tiers */}
+      <section style={{ padding: '72px 24px 24px', background: 'var(--cream)' }}>
+        <div className="pb-container" style={{ maxWidth: 1080 }}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: 20,
+            }}
+          >
+            {/* Vault — free */}
+            <Tier
+              eyebrow="Free entry"
+              name="Vault"
+              price="$0"
+              unit="/month"
+              items={[
+                'Lab upload & storage',
+                'Symptom + behavior tracking',
+                'One baseline synthesis (self-serve)',
+                '3 Minta questions / month',
+                'Pediatric safety gates',
+              ]}
+              footnote="Start here. Get organized. Decide if you want the full Synthesis."
+              ctaLabel="Start free →"
+              ctaHref={`${APP}/intake`}
+            />
+
+            {/* Synthesis — flagship */}
+            <Tier
+              featured
+              badge="The flagship"
+              eyebrow="One-time service"
+              name="Synthesis"
+              price="$397"
+              unit="one-time"
+              items={[
+                'Upload every lab, symptom log, prior treatment, practitioner letter',
+                '90-minute onboarding call with Rachel',
+                'Full integration — Yasko, Walsh, Buhner, Crista, Klinghardt, PANS Consortium, Frankovich/Murphy',
+                'One PDF synthesis: what’s going on + what hasn’t been tried + what to bring to which practitioner',
+                'Up to 4 hours of iteration support over 30 days',
+                'One practitioner referral letter',
+                '30 days of Minta access',
+              ]}
+              footnote="What only happens when someone who's done the homework spends 4–6 hours with your kid's full picture."
+              ctaLabel="Book a Synthesis →"
+              ctaHref={`${APP}/checkout/start?service=synthesis`}
+            />
+
+            {/* Continuous */}
+            <Tier
+              eyebrow="Ongoing"
+              name="Continuous"
+              price="$49"
+              unit="/month"
+              items={[
+                'Unlimited Minta — ask anything, any time',
+                'A quarterly synthesis refresh included',
+                'Symptom + lab trend monitoring with alerts',
+                'Cross-kid pattern detection',
+                'Direct access for urgent flare questions',
+              ]}
+              footnote="For families in active treatment. Cancel anytime."
+              ctaLabel="Start Continuous →"
+              ctaHref={`${APP}/checkout/start?service=continuous`}
+            />
+          </div>
+
+          {/* Add-ons */}
+          <div
+            style={{
+              marginTop: 28,
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+              gap: 16,
+            }}
+          >
+            {[
+              ['Additional synthesis', '$97', 'Refresh after 3–6 months as labs + symptoms shift.'],
+              ['Additional kid (same family)', '$97', 'Sibling synthesis at family rate, coordinated across siblings.'],
+              ['Practitioner letter', '$49', 'Extra referral letters for new specialists (one is included).'],
+            ].map(([label, price, sub]) => (
+              <div
+                key={label}
+                style={{
+                  background: 'var(--paper)',
+                  border: '1px solid var(--rule)',
+                  borderRadius: 4,
+                  padding: '20px 22px',
+                }}
+              >
+                <p className="mono" style={{ fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ink-soft)', margin: 0 }}>{label}</p>
+                <p className="serif" style={{ fontSize: 30, fontWeight: 300, color: 'var(--ink)', margin: '6px 0 8px' }}>{price}</p>
+                <p style={{ fontSize: 13.5, lineHeight: 1.6, color: 'var(--ink-soft)', fontWeight: 300, margin: 0 }}>{sub}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Non-profit + scholarship note */}
+          <div
+            style={{
+              marginTop: 28,
+              background: 'var(--cream-soft)',
+              border: '1px solid var(--rule)',
+              borderRadius: 6,
+              padding: 'clamp(20px, 3vw, 30px)',
+              maxWidth: 760,
+            }}
+          >
+            <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, margin: 0 }}>
+              <strong style={{ color: 'var(--teal)' }}>If $397 is genuinely out of reach</strong>, email{' '}
+              <a href="mailto:info@planbforpans.com" style={{ color: 'var(--teal)' }}>info@planbforpans.com</a>.
+              PANS families have already spent fortunes — we keep scholarship spots open and would
+              rather help you than hold the price. Tax-deductible donations from others fund those
+              spots; you can <a href="/donate" style={{ color: 'var(--teal)' }}>support a family</a> too.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Proof — two anonymized families */}
+      <section style={{ padding: '72px 24px 96px', background: 'var(--cream-light)', borderTop: '1px solid var(--rule)' }}>
+        <div className="pb-container" style={{ maxWidth: 820 }}>
+          <p className="eyebrow" style={{ marginBottom: 18 }}>What the Synthesis actually does</p>
+          <h2 className="serif" style={{ fontSize: 'clamp(30px, 4.5vw, 52px)', fontWeight: 300, letterSpacing: '-0.02em', lineHeight: 1.05, color: 'var(--ink)', margin: '0 0 14px' }}>
+            Two families. <em style={{ color: 'var(--teal)' }}>What we found.</em>
+          </h2>
+          <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, maxWidth: 640, marginBottom: 52 }}>
+            Names anonymized. Details shared with permission.
+          </p>
+
+          <Story
+            tag="Family 01 · Teen son · Europe · 3 years, 5 specialists"
+            head="Three years. Thirty labs."
+            headEm="The picture nobody saw."
+            intake="Son with PANS-spectrum symptoms — OCD, anxiety, recurrent infections, gut problems that wouldn't resolve. Five specialists across three years. Hospital bloodwork, functional genomics, EU lab work. Thirty-plus tests across twenty-five categories. Every practitioner looking at their slice; nobody integrated the whole."
+            foundLabel="The synthesis revealed three drivers stacked:"
+            found={[
+              'An active multi-pathogen tickborne stack — visible on dark-field microscopy prior practitioners hadn’t ordered.',
+              'A CVID-spectrum immune deficiency explaining why infections never cleared. The immunologist had named "immune dysfunction" but never connected it to the failure-to-clear pattern.',
+              'A genetic methylation block — his body couldn’t use the B12 he was being supplemented with.',
+            ]}
+            close="It flipped his treatment from kill the infections (failed three times) to fix the cleanup engine first, then layer killing on top — and surfaced an IVIG access roadmap that unlocked national coverage his mom couldn't otherwise afford."
+            quote="After three years of doctors not connecting the dots, this was the first time I saw the whole picture."
+          />
+
+          <div style={{ width: 60, height: 1, background: 'var(--ink)', opacity: 0.2, margin: '56px auto' }} />
+
+          <Story
+            tag="Family 02 · Teen son · U.S. Northeast · Multi-driver PANS"
+            head="Twenty-one pages of supplements."
+            headEm="No clear roadmap."
+            intake="Teen son with multi-driver PANS — specific antibody deficiency, chronic strep, chronic Coxsackie B, Mycoplasma, Aspergillus, histadelic biotype. Months with a major PANS clinic. The latest protocol — a 21-page supplement list on top of a Top 8 sheet — sat on the counter. She didn't know where to start, what was urgent, or how to ramp the methyl donors versus the detox stack."
+            foundLabel="Plan B did three things:"
+            found={[
+              'Decoded the 21-page letter into a week-by-week timeline — what to add, in what order, at what dose, what to watch for at each ramp.',
+              'Built 60-second daily tracking her son could actually use — symptom log + AM/midday/evening protocol checklist.',
+              'Was reachable within the hour for urgent questions — practitioner scripts, ER red-flag checklists, parent-to-kid dialogue.',
+            ]}
+            close="The clinic wrote the prescription. Plan B made it usable for the parent who had to actually deliver it."
+            quote="The letter sat on my counter for weeks. Plan B turned it into something I could actually follow."
+          />
+
+          <div style={{ textAlign: 'center', marginTop: 64 }}>
+            <a
+              href={`${APP}/checkout/start?service=synthesis`}
+              style={{
+                display: 'inline-block',
+                padding: '16px 32px',
+                background: 'var(--teal)',
+                color: 'var(--cream)',
+                borderRadius: 6,
+                textDecoration: 'none',
+                fontSize: 15,
+                fontWeight: 500,
+                letterSpacing: '0.01em',
+              }}
+            >
+              Book a Synthesis — $397 →
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
+
+function Tier({
+  eyebrow, name, price, unit, items, footnote, ctaLabel, ctaHref, featured, badge,
+}: {
+  eyebrow: string; name: string; price: string; unit: string; items: string[]
+  footnote: string; ctaLabel: string; ctaHref: string; featured?: boolean; badge?: string
+}) {
+  return (
+    <div
+      style={{
+        background: 'var(--paper)',
+        border: featured ? '2px solid var(--teal)' : '1px solid var(--rule)',
+        borderRadius: 6,
+        padding: 'clamp(24px, 3vw, 32px)',
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      {badge && (
+        <span
+          className="mono"
+          style={{
+            position: 'absolute', top: -11, left: 24, background: 'var(--teal)', color: 'var(--cream)',
+            fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '3px 10px', borderRadius: 3, fontWeight: 600,
+          }}
+        >
+          {badge}
+        </span>
+      )}
+      <p className="mono" style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-soft)', margin: 0 }}>{eyebrow}</p>
+      <h2 className="serif" style={{ fontSize: 28, fontWeight: 400, color: 'var(--ink)', margin: '4px 0 10px' }}>{name}</h2>
+      <p style={{ margin: '0 0 18px', display: 'flex', alignItems: 'baseline', gap: 6 }}>
+        <span className="serif" style={{ fontSize: 44, fontWeight: 300, color: 'var(--ink)', letterSpacing: '-0.02em' }}>{price}</span>
+        <span style={{ fontSize: 14, color: 'var(--ink-soft)', fontWeight: 300 }}>{unit}</span>
+      </p>
+      <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 20px', display: 'grid', gap: 9, flex: 1 }}>
+        {items.map((it) => (
+          <li key={it} style={{ fontSize: 13.5, lineHeight: 1.55, color: 'var(--ink-soft)', fontWeight: 300, paddingLeft: 18, position: 'relative' }}>
+            <span style={{ position: 'absolute', left: 0, top: 1, color: 'var(--teal)' }}>·</span>
+            {it}
+          </li>
+        ))}
+      </ul>
+      <p style={{ fontSize: 12.5, lineHeight: 1.55, color: 'var(--ink-soft)', fontStyle: 'italic', opacity: 0.85, margin: '0 0 18px' }}>{footnote}</p>
+      <a
+        href={ctaHref}
+        style={{
+          display: 'inline-block', textAlign: 'center', padding: '12px 18px',
+          background: featured ? 'var(--teal)' : 'transparent',
+          color: featured ? 'var(--cream)' : 'var(--teal)',
+          border: featured ? '1px solid var(--teal)' : '1px solid var(--rule)',
+          borderRadius: 6, textDecoration: 'none', fontSize: 14, fontWeight: 500,
+        }}
+      >
+        {ctaLabel}
+      </a>
+    </div>
+  )
+}
+
+function Story({
+  tag, head, headEm, intake, foundLabel, found, close, quote,
+}: {
+  tag: string; head: string; headEm: string; intake: string
+  foundLabel: string; found: string[]; close: string; quote: string
+}) {
+  const p: React.CSSProperties = { fontSize: 16, lineHeight: 1.75, color: 'var(--ink-soft)', fontWeight: 300, margin: '0 0 18px' }
+  return (
+    <article>
+      <p className="mono" style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-soft)', marginBottom: 16 }}>{tag}</p>
+      <h3 className="serif" style={{ fontSize: 'clamp(24px, 3.4vw, 34px)', fontWeight: 300, letterSpacing: '-0.015em', lineHeight: 1.12, color: 'var(--ink)', margin: '0 0 22px' }}>
+        {head}{' '}
+        <span style={{ fontStyle: 'italic', color: 'var(--teal)' }}>{headEm}</span>
+      </h3>
+      <p style={p}>{intake}</p>
+      <p style={{ ...p, marginBottom: 10 }}><strong style={{ color: 'var(--ink)' }}>{foundLabel}</strong></p>
+      <ol style={{ margin: '0 0 18px', paddingLeft: 22, display: 'grid', gap: 10 }}>
+        {found.map((f, i) => (
+          <li key={i} style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300 }}>{f}</li>
+        ))}
+      </ol>
+      <p style={p}>{close}</p>
+      <blockquote style={{ margin: '28px 0 0', paddingLeft: 22, borderLeft: '2px solid var(--teal)' }}>
+        <span className="serif" style={{ fontSize: 'clamp(18px, 2.3vw, 23px)', fontStyle: 'italic', color: 'var(--ink)', lineHeight: 1.45, display: 'block' }}>
+          &ldquo;{quote}&rdquo;
+        </span>
+        <p className="mono" style={{ fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ink-soft)', marginTop: 14 }}>— His mom</p>
+      </blockquote>
+    </article>
+  )
+}
