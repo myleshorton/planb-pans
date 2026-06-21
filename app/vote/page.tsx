@@ -70,6 +70,54 @@ export default function VotePage() {
         </div>
       </section>
 
+      {/* Suggest a modality — parent-led exploration */}
+      <section
+        style={{
+          padding: 'clamp(48px, 6vw, 80px) 24px',
+          background: 'var(--cream-light)',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 820, textAlign: 'center' }}>
+          <p className="eyebrow" style={{ marginBottom: 16 }}>Parent-led exploration</p>
+          <h2
+            className="serif"
+            style={{
+              fontSize: 'clamp(28px, 4.4vw, 48px)',
+              fontWeight: 300,
+              letterSpacing: '-0.02em',
+              lineHeight: 1.05,
+              color: 'var(--ink)',
+              margin: '0 0 16px',
+            }}
+          >
+            Heard of something nobody&apos;s tried?{' '}
+            <em style={{ color: 'var(--teal)' }}>Suggest it.</em>
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, maxWidth: 640, margin: '0 auto 28px' }}>
+            The best leads come from parents. Suggest a modality and Minta writes up the evidence —
+            what it is, who it&apos;s helped, the risks — for the whole community to read and vote on.
+            The ones families most want to see become the next cohort study.
+          </p>
+          <a
+            href="mailto:rachel@planbforpans.com?subject=Modality%20suggestion&body=The%20modality%20or%20approach%3A%0A%0AWhere%20I%20heard%20about%20it%3A%0A%0AWhy%20I%20think%20it%20might%20help%3A%0A"
+            style={{
+              display: 'inline-block',
+              padding: '15px 32px',
+              background: 'var(--teal)',
+              color: 'var(--cream)',
+              borderRadius: 6,
+              textDecoration: 'none',
+              fontSize: 15,
+              fontWeight: 500,
+            }}
+          >
+            Suggest a modality →
+          </a>
+        </div>
+      </section>
+
       {/* How it works */}
       <section style={{ padding: '80px 24px 60px', background: 'var(--cream)' }}>
         <div ref={how} className="pb-container reveal" style={{ maxWidth: 1040 }}>
