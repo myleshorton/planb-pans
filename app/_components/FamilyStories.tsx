@@ -14,6 +14,8 @@ export type FamilyStory = {
   where: string
   // the single most counterintuitive connection — the genius re-read.
   leap?: { label: string; text: string }
+  // the methylation/detox pieces no prior protocol matched to the child.
+  methyl?: { label: string; text: string }
   // "What the synthesis found" — framing line + the specific findings.
   foundLabel: string
   found: string[]
@@ -49,10 +51,14 @@ export const FAMILY_STORIES: FamilyStory[] = [
       'Autoimmune encephalitis — NMDAR, LGI1, CASPR2 and GAD all negative.',
       'Mold / mycotoxins, and folate-receptor antibody — both negative.',
     ],
+    methyl: {
+      label: 'The methylation pieces no one supplied',
+      text: 'His methylation and detox machinery was impaired at multiple steps — slow MTRR, slow COMT on both variants, an NRF2/glutathione block, and a Vitamin-D pathway broken at nearly every gene in the chain. The plan got specific: confirm the functional B12 with an MMA + homocysteine panel, then move him onto the active forms his body can actually use — methylcobalamin and folinic acid in place of the plain B12 and folate he’d been given, titrated to his slow COMT — with targeted glutathione support to open detox. Not more supplements. The right forms, matched to his genetics.',
+    },
     unlock:
-      'Every prior protocol had led with killing the infection — and failed three times. Reading it all as one system showed why: kill anything in a body that can’t clear it, with an immune system that can’t finish, and you make it worse. The order had to invert — immune support and the cleanup engine first, infection last. That is the plan five specialists over three years never assembled, because no one had the whole picture in front of them at once.',
+      'Every prior protocol had led with killing the infection — and failed three times. Reading it all as one system inverted the plan. First: a pediatric-immunologist referral to turn his existing bloodwork into insurance-covered IVIG. Alongside it: the methylation correction above, a Vitamin-D rebuild, and a histamine-pathway workup to settle what was driving his agitation. Only then — once his body could actually clear — targeted antimicrobials, sequenced so die-off never outruns drainage. That is the plan five specialists over three years never assembled, because no one had the whole picture in front of them at once.',
     quote:
-      'After three years of doctors not connecting the dots, this was the first time I saw the whole picture.',
+      'This is the most comprehensive document I have ever received concerning my son’s health and test results. You and Minta are excellent — it makes so much sense.',
   },
   {
     id: 'us-teen',
@@ -78,6 +84,10 @@ export const FAMILY_STORIES: FamilyStory[] = [
       'Then sequence the infections and the mold so die-off never outruns what his body can clear.',
       'Pursue the confirmed SPAD diagnosis into insurance-covered IVIG — a path two years of treatment never opened.',
     ],
+    methyl: {
+      label: 'The methylation pieces no one had matched to him',
+      text: 'His methylation machinery was the throttle under everything — an undermethylation pattern on the Yasko panel, a CBS sulfur bottleneck, and low ceruloplasmin. The missing piece wasn’t another supplement; it was the framework and the order. The plan ran Yasko first to open his cycle safely — molybdenum and hydroxy-B12, copper-safe support before any zinc — and only layered in Walsh once his copper status was confirmed. The zinc-heavy Walsh protocols he’d already been put on had been crashing him for exactly the reason no one had checked: you can’t run Walsh before you’ve cleared the Yasko bottleneck.',
+    },
     unlock:
       'The kill-first approach had been backfiring for two years. Reading every lab together — genetics, infections, histamine, mold and immune function as one system — showed exactly why, and put the steps in an order his body could finally handle.',
     quote:
@@ -173,6 +183,22 @@ export function FamilyStoryFull({ s }: { s: FamilyStory }) {
           </div>
         )}
       </div>
+
+      {/* The methylation pieces no one matched to the child */}
+      {s.methyl && (
+        <div
+          style={{
+            background: 'var(--paper)',
+            border: '1px dashed var(--teal)',
+            borderRadius: 6,
+            padding: 'clamp(16px, 2.4vw, 24px)',
+            margin: '0 0 20px',
+          }}
+        >
+          <p className="mono" style={{ ...label, color: 'var(--teal)' }}>{s.methyl.label}</p>
+          <p style={{ ...p, margin: 0 }}>{s.methyl.text}</p>
+        </div>
+      )}
 
       <p style={p}>{s.unlock}</p>
 
