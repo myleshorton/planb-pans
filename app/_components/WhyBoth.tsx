@@ -167,7 +167,7 @@ export default function WhyBoth() {
           >
             Or book a Synthesis — $397 →
           </a>
-          <TalkToRachel variant="quiet" />
+          <TalkToRachel />
         </div>
       </div>
     </section>

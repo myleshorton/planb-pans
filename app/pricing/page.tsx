@@ -91,8 +91,8 @@ export default function PricingPage() {
             Built by Rachel — a mom of three recovered PANS kids, not a doctor. Every recommendation is a
             question to bring to your practitioner.
           </p>
-          <div style={{ marginTop: 24 }}>
-            <TalkToRachel variant="quiet" />
+          <div style={{ marginTop: 28 }}>
+            <TalkToRachel />
           </div>
         </div>
       </section>
