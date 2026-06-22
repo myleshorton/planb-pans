@@ -153,11 +153,13 @@ export default function AboutPage() {
           <p style={p}>And then, after COVID, it came for my son.</p>
 
           <p style={p}>
-            His came slowly — slow enough that I almost missed it. First he stopped eating most foods.
-            Then the anxiety. Then he couldn&apos;t touch a doorknob. Then, one night, the intrusive
-            thoughts closed over his head. We were living in mold and didn&apos;t know it. We pulled
-            ticks off our kids like it was normal. He&apos;d just had the virus. He was{' '}
-            <strong style={{ color: 'var(--ink)' }}>gone,</strong> and I was watching it happen.
+            He&apos;d had COVID — a normal case — and recovered. And then, within{' '}
+            <strong style={{ color: 'var(--ink)' }}>fourteen days, he was gone.</strong> His didn&apos;t
+            arrive in a single night like his sister&apos;s; it crept, slow enough that I almost missed
+            the start. First he stopped eating most foods. Then the anxiety. Then he couldn&apos;t touch
+            a doorknob. Then, one night, the intrusive thoughts closed over his head. We were living in
+            mold and didn&apos;t know it. We pulled ticks off our kids like it was normal. Two weeks
+            after a childhood virus, I was watching my son disappear.
           </p>
 
           <p style={p}>
@@ -175,11 +177,13 @@ export default function AboutPage() {
           </p>
 
           <p style={p}>
-            He came back. But it haunted me that I couldn&apos;t tell you <em>what</em> had saved him —
-            or what might undo it. What if the next fever sent him, or his siblings, back? I
-            couldn&apos;t live inside that not-knowing. So when AI arrived, I started building{' '}
-            <strong style={{ color: 'var(--ink)' }}>Minta</strong> — at first, only to understand my own
-            kids.
+            He came back — but it took a year. Three hundred and sixty-five days lived minute to
+            minute, holding our breath, waiting for the floor to crumble beneath us. And it did — over
+            and over again. Even after he was whole, it haunted me that I couldn&apos;t tell you{' '}
+            <em>what</em> had saved him — or what might undo it. What if the next fever sent him, or his
+            siblings, back? I couldn&apos;t live inside that not-knowing. So when AI arrived, I started
+            building <strong style={{ color: 'var(--ink)' }}>Minta</strong> — at first, only to
+            understand my own kids.
           </p>
 
           <p style={p}>
