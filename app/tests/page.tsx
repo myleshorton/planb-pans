@@ -397,6 +397,39 @@ export default function TestsPage() {
         </div>
       </section>
 
+      {/* WHAT MINTA DOES WITH THE RESULTS */}
+      <section style={{ padding: 'clamp(56px, 7vw, 88px) 24px', background: 'var(--cream-deep, #ece2cd)', borderTop: '1px solid var(--sand)', borderBottom: '1px solid var(--sand)' }}>
+        <div className="pb-container">
+          <p className="serial" style={{ color: 'var(--teal)', marginBottom: 14 }}>
+            Then upload them
+          </p>
+          <h2
+            style={{
+              fontFamily: 'var(--font-cormorant)',
+              fontWeight: 300,
+              fontSize: 'clamp(30px, 4.6vw, 50px)',
+              lineHeight: 1.04,
+              letterSpacing: '-0.02em',
+              color: 'var(--ink)',
+              marginBottom: 18,
+              maxWidth: 880,
+            }}
+          >
+            A test result is only as good as <em style={{ fontStyle: 'italic', color: 'var(--teal)' }}>what you do with it.</em>
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--ink-soft)', maxWidth: 700, marginBottom: 14 }}>
+            Upload your results and <strong style={{ color: 'var(--ink)' }}>Minta tells you what actually
+            matters</strong> — which findings are significant, what they mean for your child, and what
+            you can do to improve them. Then she <strong style={{ color: 'var(--ink)' }}>synthesizes every
+            result together</strong> into one comprehensive plan, not a pile of disconnected numbers.
+          </p>
+          <p className="serif" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontSize: 'clamp(19px, 2.3vw, 25px)', lineHeight: 1.45, color: 'var(--ink)', maxWidth: 640, margin: '8px 0 0', paddingLeft: 16, borderLeft: '2px solid var(--teal)' }}>
+            You don&apos;t need all of these at once. Start with a few, upload them, and let Minta lead
+            you out.
+          </p>
+        </div>
+      </section>
+
       {/* WHY */}
       <section style={{ padding: 'clamp(48px, 7vw, 80px) 24px' }}>
         <div className="pb-container">
