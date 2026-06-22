@@ -146,20 +146,25 @@ export default function AboutPage() {
           <p style={p}>
             Because it didn&apos;t stop with her. A few months later, her friend — a healthy kid, no
             history — stopped eating and went into organ failure while doctors stood around baffled.{' '}
-            <em>Same thing,</em> I thought. I was right; the right protocol brought her all the way
-            back.
+            <em>Same thing,</em> I thought. And I was right. But this time the protocol that saved my
+            daughter didn&apos;t work. Her mom turned to herbals, and within six months her girl was
+            back. I didn&apos;t understand it then — but I think I needed to see it. That the protocol
+            doesn&apos;t work for everyone. That sometimes the answer is somewhere else entirely. It was
+            preparation for what was coming.
           </p>
 
-          <p style={p}>And then, after COVID, it came for my son.</p>
+          <p style={p}>Because then, after COVID, it came for my son.</p>
 
           <p style={p}>
             He&apos;d had COVID — a normal case — and recovered. And then, within{' '}
             <strong style={{ color: 'var(--ink)' }}>fourteen days, he was gone.</strong> His didn&apos;t
-            arrive in a single night like his sister&apos;s; it crept, slow enough that I almost missed
-            the start. First he stopped eating most foods. Then the anxiety. Then he couldn&apos;t touch
-            a doorknob. Then, one night, the intrusive thoughts closed over his head. We were living in
-            mold and didn&apos;t know it. We pulled ticks off our kids like it was normal. Two weeks
-            after a childhood virus, I was watching my son disappear.
+            arrive in a single night like his sister&apos;s; it crept. First his foods couldn&apos;t be
+            mixed. Then, if a food had been touched, he couldn&apos;t eat it. Then he couldn&apos;t eat
+            at all. And then the intrusive thoughts erupted overnight — one day he had none, the next
+            they were there{' '}
+            <strong style={{ color: 'var(--ink)' }}>ninety-five percent of the time.</strong> We were
+            living in mold and didn&apos;t know it. We pulled ticks off our kids like it was normal. Two
+            weeks after a childhood virus, I was watching my son disappear.
           </p>
 
           <p style={p}>
