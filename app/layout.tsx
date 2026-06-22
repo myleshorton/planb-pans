@@ -86,26 +86,24 @@ export default function RootLayout({
               >
                 Sign In
               </a>
-              {CALENDLY_URL !== '#' && (
-                <a
-                  href={CALENDLY_URL}
-                  style={{
-                    fontFamily: 'var(--font-inter)',
-                    fontSize: 11,
-                    letterSpacing: '0.22em',
-                    textTransform: 'uppercase',
-                    color: 'var(--teal)',
-                    background: 'transparent',
-                    border: '1px solid var(--teal)',
-                    padding: '9px 16px',
-                    fontWeight: 600,
-                    borderRadius: 4,
-                    textDecoration: 'none',
-                  }}
-                >
-                  Book a Consult
-                </a>
-              )}
+              <a
+                href={CALENDLY_URL}
+                style={{
+                  fontFamily: 'var(--font-inter)',
+                  fontSize: 11,
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
+                  color: 'var(--teal)',
+                  background: 'transparent',
+                  border: '1px solid var(--teal)',
+                  padding: '9px 16px',
+                  fontWeight: 600,
+                  borderRadius: 4,
+                  textDecoration: 'none',
+                }}
+              >
+                Book a Consult
+              </a>
               <a
                 href="https://app.planbforpans.com/signup"
                 rel="noopener"
