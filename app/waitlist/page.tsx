@@ -119,6 +119,27 @@ export default function WaitlistPage() {
               </li>
             ))}
           </ol>
+
+          <div
+            style={{
+              marginTop: 36,
+              background: 'var(--cream-light)',
+              border: '1px solid var(--rule)',
+              borderLeft: '3px solid var(--teal)',
+              borderRadius: 8,
+              padding: 'clamp(22px, 3vw, 30px)',
+            }}
+          >
+            <p className="serif" style={{ fontSize: 'clamp(18px, 2.2vw, 23px)', fontStyle: 'italic', color: 'var(--ink)', lineHeight: 1.4, fontWeight: 400, margin: '0 0 12px' }}>
+              One thing we need from you: be willing to test.
+            </p>
+            <p style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, margin: 0 }}>
+              <strong style={{ color: 'var(--teal)' }}>Plan B doesn&apos;t guess.</strong> If your
+              child&apos;s current labs aren&apos;t enough to see the whole picture, Minta won&apos;t
+              make something up — she&apos;ll tell you exactly which tests to run first, and you go get
+              them. This works best for families who are ready to chase the data.
+            </p>
+          </div>
         </div>
       </section>
 
