@@ -146,7 +146,7 @@ function MethodVisual({ step }: { step: StepKey }) {
   return (
     <div style={{ padding: 24 }}>
       <p className="eyebrow" style={{ color: 'var(--teal-light)', marginBottom: 18 }}>
-        04 — Claude&apos;s read
+        04 — Minta&apos;s read
       </p>
       <div
         style={{
@@ -240,7 +240,7 @@ export default function MethodSection() {
       num: '01',
       title: 'Intake',
       body:
-        "Log your kid's baseline — symptoms, meds, onset, history, and everything already tried. Takes about fifteen minutes, or an unhurried conversation with Claude.",
+        "Log your kid's baseline — symptoms, meds, onset, history, and everything already tried. Takes about fifteen minutes, or an unhurried conversation with Minta.",
     },
     {
       num: '02',
@@ -258,7 +258,7 @@ export default function MethodSection() {
       num: '04',
       title: 'Analysis',
       body:
-        "Claude reads your full timeline and flags likely correlations, possible reactions, and the one thing most worth pausing — or trying next.",
+        "Minta reads your full timeline and flags likely correlations, possible reactions, and the one thing most worth pausing — or trying next.",
     },
   ]
 

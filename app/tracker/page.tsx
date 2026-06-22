@@ -65,7 +65,7 @@ export default function TrackerPage() {
             }}
           >
             A PANS kid on a protocol generates more variables in a week than anyone can hold in
-            their head. The tracker is how you stop guessing — and how Claude gets the signal
+            their head. The tracker is how you stop guessing — and how Minta gets the signal
             it needs to tell you what&apos;s actually working.
           </p>
 
@@ -88,7 +88,7 @@ export default function TrackerPage() {
               },
               {
                 k: 'Analysis on demand',
-                v: 'Claude reads your full timeline and flags correlations you&apos;d miss.',
+                v: 'Minta reads your full timeline and flags correlations you&apos;d miss.',
               },
               {
                 k: 'Share-ready',

@@ -4,8 +4,8 @@ import { useReveal } from '../_components/hooks'
 
 const faqs = [
   {
-    q: 'Is this really free?',
-    a: "Yes. Plan B is a non-profit, donation-funded. Intake, the daily tracker, and Minta cost you nothing — and always will. Free for families, full stop.",
+    q: 'Is it free?',
+    a: "Plan B is a non-profit, and getting started is free — upload your labs, track your kid, and ask Minta a few questions at no cost. The full Synthesis — a complete, integrated read of everything that's going on, built by a real person — is $397, because it takes hours of human time. And every week, one family gets that Synthesis for free; if cost is the barrier, get on the waitlist.",
   },
   {
     q: "What about my kid\u2019s privacy?",
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: "Who\u2019s behind this?",
-    a: "Rachel Johnson — a mom of three, two with PANS, who spent two years piecing together what eventually healed her son across a dozen practices that didn't talk to each other. Plan B is what she wishes she'd had at 2am. Read the full story on the About page.",
+    a: "Rachel Johnson — a mom of three recovered PANS kids who taught herself this entire field at 2am because the system couldn't. She built Minta to understand her own children when no doctor would, and it found what they'd all missed. Plan B is what she wishes she'd had on the worst nights of her life. Read the full story on the About page.",
   },
   {
     q: "I\u2019m a practitioner. How do I get involved?",
