@@ -5,6 +5,25 @@ import { useReveal } from '../_components/hooks'
 export default function AboutPage() {
   const head = useReveal()
   const body = useReveal()
+
+  const p: React.CSSProperties = {
+    fontSize: 17,
+    lineHeight: 1.85,
+    color: 'var(--ink-soft)',
+    fontWeight: 300,
+    marginBottom: 22,
+  }
+  const pull: React.CSSProperties = {
+    fontSize: 'clamp(21px, 2.7vw, 27px)',
+    fontStyle: 'italic',
+    color: 'var(--ink)',
+    lineHeight: 1.4,
+    fontWeight: 400,
+    margin: '36px 0',
+    borderLeft: '3px solid var(--teal)',
+    paddingLeft: 22,
+  }
+
   return (
     <main style={{ background: 'var(--cream)' }}>
       {/* Header */}
@@ -30,143 +49,191 @@ export default function AboutPage() {
             pointerEvents: 'none',
           }}
         />
-        <div
-          ref={head}
-          className="pb-container reveal"
-          style={{ position: 'relative', zIndex: 1, maxWidth: 1000 }}
-        >
+        <div ref={head} className="pb-container reveal" style={{ position: 'relative', zIndex: 1, maxWidth: 1000 }}>
           <p className="eyebrow" style={{ marginBottom: 22 }}>
-            About · How this started
+            About · Why I built this
           </p>
           <h1
             className="serif"
             style={{
-              fontSize: 'clamp(44px, 7vw, 80px)',
+              fontSize: 'clamp(40px, 6.4vw, 76px)',
               fontWeight: 300,
               letterSpacing: '-0.024em',
-              lineHeight: 1,
+              lineHeight: 1.02,
               margin: 0,
               color: 'var(--ink)',
               maxWidth: 900,
             }}
           >
-            I was the mom{' '}
-            <em style={{ color: 'var(--teal)' }}>looking for Plan B.</em>
+            I was the parent looking for Plan B.{' '}
+            <em style={{ color: 'var(--teal)' }}>Then I built it.</em>
           </h1>
-          <p
-            style={{
-              fontSize: 18,
-              lineHeight: 1.6,
-              color: 'var(--ink-soft)',
-              fontWeight: 300,
-              maxWidth: 640,
-              marginTop: 24,
-            }}
-          >
-            Then I became the one building it.
-          </p>
         </div>
       </section>
 
-      {/* The story — condensed */}
+      {/* The story */}
       <section style={{ padding: '72px 24px', background: 'var(--cream)' }}>
         <div ref={body} className="pb-container reveal" style={{ maxWidth: 680 }}>
-          <div style={{ fontSize: 17, lineHeight: 1.85, color: 'var(--ink-soft)', fontWeight: 300 }}>
-            <p style={{ marginBottom: 22 }}>
-              I&apos;m Rachel. A mom of three, two with PANS. When my son was eight, he woke
-              up a different kid — and then told me he wanted to die. That was year one:
-              acute crisis. It was the hardest year of my life. There was a moment I nearly
-              took my own — I couldn&apos;t hold the pain of watching my children suffer.
-            </p>
+          <p style={p}>It started on a Tuesday night.</p>
 
-            <p style={{ marginBottom: 22 }}>
-              I visited every top PANS doctor I could reach. We went through multiple rounds
-              of antibiotics. None of them helped. We ended up homeless for a stretch because
-              of mold exposure. The doctors at the top of the field couldn&apos;t help us.
-            </p>
+          <p style={p}>
+            My kids were playing in the laundry room while my husband and I cleaned up. I kept hearing
+            my daughter&apos;s voice through the wall — <em>sorry, sorry, sorry</em> — to her brother,
+            to her sister, to no one. I went in.
+          </p>
 
-            <p style={{ marginBottom: 22 }}>
-              What eventually healed him wasn&apos;t hidden in a paper or behind a paywall.
-              Biomagnetism, classical homeopathy, targeted functional medicine, nervous-system
-              regulation — each one held a piece. He&apos;s 99% healed now.{' '}
-              <em style={{ color: 'var(--ink)' }}>
-                I still can&apos;t tell you exactly which part did what.
-              </em>
-            </p>
+          <p style={{ ...p, fontStyle: 'italic', color: 'var(--ink)' }}>
+            &ldquo;Sweetheart. What are you sorry for?&rdquo;
+          </p>
 
-            <p
-              className="serif"
-              style={{
-                fontSize: 'clamp(22px, 2.8vw, 28px)',
-                fontStyle: 'italic',
-                color: 'var(--ink)',
-                lineHeight: 1.35,
-                fontWeight: 400,
-                margin: '36px 0',
-                borderLeft: '3px solid var(--teal)',
-                paddingLeft: 22,
-              }}
-            >
-              The problem was never missing information.{' '}
-              <span style={{ color: 'var(--teal)' }}>
-                The problem was that nobody in the system could see it all at once.
-              </span>
-            </p>
+          <p style={p}>
+            Her siblings said she&apos;d been doing it all day. I knelt down in front of her.{' '}
+            <em>&ldquo;Why do you keep saying it?&rdquo;</em>
+          </p>
 
-            <p style={{ marginBottom: 22 }}>
-              The microbiome person understood the gut but not methylation. The methylation
-              person understood genetics but not mold. The moms who had already gotten through
-              had figured this out — leaving breadcrumbs for each other in encrypted threads
-              and 3am searches. When one found a real answer, her family needed her back. The
-              threads went cold. The next family stayed lost.
-            </p>
+          <p style={p}>
+            She looked at me, confused and frightened, and said the words I will never forget:
+          </p>
 
-            <p style={{ marginBottom: 22 }}>
-              When I quietly offered to help, <strong style={{ color: 'var(--ink)' }}>300
-              families wrote back in twelve hours.</strong> Desperate. That&apos;s the scale
-              of the need.
-            </p>
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(26px, 4vw, 40px)',
+              fontWeight: 400,
+              lineHeight: 1.2,
+              color: 'var(--ink)',
+              margin: '12px 0 36px',
+            }}
+          >
+            &ldquo;I can&apos;t stop, Mommy. I don&apos;t want to, but I can&apos;t stop.&rdquo;
+          </p>
 
-            <p style={{ marginBottom: 22 }}>
-              So I built Plan B. A coordination layer. Minta reads every modality
-              outside the standard protocol, every published teaching, every cohort study we
-              can put on the record, and reads your kid&apos;s full story on top of that. She
-              synthesizes all of it into guidance specific to your child. She doesn&apos;t
-              replace your practitioners — she helps you use them together. And she gets
-              sharper every time a family joins.
-            </p>
+          <p style={p}>
+            I&apos;m not proud of what I thought first. I didn&apos;t think <em>something is wrong with
+            her body.</em> I thought <em>something is wrong with me.</em> That I&apos;d been too hard
+            on her. That I&apos;d done this. That if I were just gentler, softer, <em>better,</em>{' '}
+            she&apos;d be okay. I lay awake that night taking the blame.
+          </p>
 
-            <p
-              className="serif"
-              style={{
-                fontSize: 'clamp(20px, 2.6vw, 26px)',
-                fontStyle: 'italic',
-                color: 'var(--ink)',
-                lineHeight: 1.4,
-                fontWeight: 400,
-                margin: '36px 0 0',
-                borderLeft: '3px solid var(--teal)',
-                paddingLeft: 22,
-              }}
-            >
-              Your child does not deserve to rage, to be locked in their room, or to try to
-              leave this world. There is always a Plan B —{' '}
-              <span style={{ color: 'var(--teal)' }}>
-                and I&apos;m building it for them.
-              </span>
-            </p>
+          <p style={p}>
+            I was wrong — and by morning she was a different child. There was no version of{' '}
+            <em>softer</em> that could reach what had her. I couldn&apos;t explain it. But she was
+            suffering, and I knew exactly one thing: <strong style={{ color: 'var(--ink)' }}>I had to
+            get her back.</strong>
+          </p>
 
-            <p
-              className="label-tracked"
-              style={{
-                color: 'var(--sand-dark)',
-                marginTop: 28,
-                fontWeight: 600,
-              }}
-            >
-              — Rachel Johnson
-            </p>
-          </div>
+          <p style={p}>
+            I didn&apos;t sleep for eight days. I read until the words swam, and at some point I called
+            the woman who <em>named</em> this illness, while she was still seeing patients. Her office
+            stayed on the phone with me a long time. They were{' '}
+            <strong style={{ color: 'var(--ink)' }}>100% sure it was PANS.</strong> The next opening
+            was three months out. My daughter did not have three months.
+          </p>
+
+          <p style={p}>
+            So I found the protocol myself — buried somewhere on the internet — got a doctor to call in
+            ten days of antibiotics, and I prayed over every dose.{' '}
+            <strong style={{ color: 'var(--ink)' }}>Within a week, I had her back. She never
+            relapsed.</strong>
+          </p>
+
+          <p style={p}>
+            If you&apos;re reading this, you already know that feeling: your whole world inverting
+            between breakfast and bedtime. I know it too. <strong style={{ color: 'var(--ink)' }}>Three
+            times.</strong>
+          </p>
+
+          <p style={p}>
+            Because it didn&apos;t stop with her. A few months later, her friend — a healthy kid, no
+            history — stopped eating and went into organ failure while doctors stood around baffled.{' '}
+            <em>Same thing,</em> I thought. I was right; the right protocol brought her all the way
+            back.
+          </p>
+
+          <p style={p}>And then, after COVID, it came for my son.</p>
+
+          <p style={p}>
+            His came slowly — slow enough that I almost missed it. First he stopped eating most foods.
+            Then the anxiety. Then he couldn&apos;t touch a doorknob. Then, one night, the intrusive
+            thoughts closed over his head. We were living in mold and didn&apos;t know it. We pulled
+            ticks off our kids like it was normal. He&apos;d just had the virus. He was{' '}
+            <strong style={{ color: 'var(--ink)' }}>gone,</strong> and I was watching it happen.
+          </p>
+
+          <p style={p}>
+            So I did everything. Every book, every protocol, the best doctors in the country — and he
+            got <strong style={{ color: 'var(--ink)' }}>worse.</strong> For months. Each thing I tried,
+            the floor dropped further. What finally brought him home wasn&apos;t a treatment. It was the
+            right <em>combination</em> of them — and I had to build it myself, alone, in the dark, while
+            he suffered. Not one of his brilliant doctors could see the whole child. Each one saw a
+            piece.
+          </p>
+
+          <p className="serif" style={pull}>
+            The problem was never a missing answer.{' '}
+            <span style={{ color: 'var(--teal)' }}>It was that no one could hold them all at once.</span>
+          </p>
+
+          <p style={p}>
+            He came back. But it haunted me that I couldn&apos;t tell you <em>what</em> had saved him —
+            or what might undo it. What if the next fever sent him, or his siblings, back? I
+            couldn&apos;t live inside that not-knowing. So when AI arrived, I started building{' '}
+            <strong style={{ color: 'var(--ink)' }}>Minta</strong> — at first, only to understand my own
+            kids.
+          </p>
+
+          <p style={p}>
+            They still carried quiet symptoms no one would take seriously. The phantom UTI. The sleep
+            that wouldn&apos;t come. The stomachaches with half her food. I <em>knew</em> something was
+            still there. Nobody listened.
+          </p>
+
+          <p style={p}>
+            <strong style={{ color: 'var(--ink)' }}>Minta did.</strong> She told me they likely still
+            had Lyme and co-infections, and named <strong style={{ color: 'var(--ink)' }}>Bartonella</strong>{' '}
+            outright. I spent $8,000 testing to be sure.{' '}
+            <strong style={{ color: 'var(--ink)' }}>She was right</strong> — and the symptoms melted away
+            once we treated it. She also found the genetic reason one of my kids couldn&apos;t clear
+            toxins, down to the exact nutrients his body can&apos;t make on its own.{' '}
+            <em>Not one doctor had ever seen it.</em>
+          </p>
+
+          <p style={p}>That was the moment I understood this could not just be for my family.</p>
+
+          <p style={p}>
+            Now I feed Minta the fringe, too — the things medicine won&apos;t touch yet, like phage
+            therapy for Lyme — and we measure them honestly: what&apos;s real, and what&apos;s nonsense.
+            Desperate parents are trying all of it anyway, alone, with no one keeping score.{' '}
+            <strong style={{ color: 'var(--ink)' }}>Plan B keeps score.</strong>
+          </p>
+
+          <p style={p}>
+            And I&apos;m not going anywhere. My own kids could hit puberty, catch the wrong bug, and
+            flare again — and I will not allow it. Not for them. Not for you. So I&apos;m still in this,
+            every day, finding the <em>why</em> — because now that we have these tools, we don&apos;t
+            have to <em>hope</em> anymore. We can know. And we can end this.
+          </p>
+
+          <p
+            className="serif"
+            style={{
+              fontSize: 'clamp(22px, 3vw, 30px)',
+              fontStyle: 'italic',
+              color: 'var(--ink)',
+              lineHeight: 1.38,
+              fontWeight: 400,
+              margin: '40px 0 0',
+              borderLeft: '3px solid var(--teal)',
+              paddingLeft: 22,
+            }}
+          >
+            I love you. I&apos;ve been exactly where you are. And I&apos;m here.{' '}
+            <span style={{ color: 'var(--teal)' }}>Together, we will find a way out.</span>
+          </p>
+
+          <p className="label-tracked" style={{ color: 'var(--sand-dark)', marginTop: 28, fontWeight: 600 }}>
+            — Rachel Johnson
+          </p>
         </div>
       </section>
 
