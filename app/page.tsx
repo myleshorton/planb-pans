@@ -2268,10 +2268,6 @@ export default function Home() {
           >
             Join the waitlist →
           </a>
-          <p style={{ fontSize: 14, color: 'var(--ink-soft)', fontWeight: 300, marginTop: 18 }}>
-            Or fund a spot — every <strong>$397</strong> covers one family&apos;s Synthesis.{' '}
-            <a href="/donate" style={{ color: 'var(--teal)' }}>Support a family →</a>
-          </p>
         </div>
       </section>
 

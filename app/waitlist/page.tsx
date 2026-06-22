@@ -108,7 +108,7 @@ export default function WaitlistPage() {
               ['Join the waitlist', 'It&apos;s open — no application, no proof of hardship. If $397 is out of reach, that&apos;s reason enough.'],
               ['Each week, one family is chosen', 'The waitlist is public and transparent. No favourites, no fine print.'],
               ['You get the full Synthesis', 'Every lab read together, what&apos;s been missed, what hasn&apos;t been tried, the tests to order next, and a month-by-month calendar — exactly what the paid families receive.'],
-              ['Your Synthesis goes public — your child stays anonymous', 'That&apos;s the trade, and it&apos;s the whole point. Your child&apos;s name is removed, but the synthesis and symptoms are published in our <a href="/case-studies" style="color:var(--teal)">case studies</a> as &ldquo;what Minta found&rdquo; — so we all learn together. Your hardest season makes the next family&apos;s read sharper.'],
+              ['Your Synthesis goes public — your child stays anonymous', 'That&apos;s the trade, and it&apos;s the whole point. Your child&apos;s name is removed, but the synthesis and symptoms are published in our <a href="/stories" style="color:var(--teal)">stories</a> as &ldquo;what Minta found&rdquo; — so we all learn together. Your hardest season makes the next family&apos;s read sharper.'],
             ].map(([title, body], i) => (
               <li key={i} style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                 <span className="serif" style={{ fontSize: 34, fontWeight: 300, color: 'var(--teal)', lineHeight: 1, minWidth: 34 }}>{i + 1}</span>
@@ -126,10 +126,6 @@ export default function WaitlistPage() {
       <section id="join" style={{ padding: '8px 24px clamp(72px, 9vw, 112px)', scrollMarginTop: 24 }}>
         <div className="pb-container" style={{ maxWidth: 640 }}>
           <WaitlistForm />
-          <p style={{ fontSize: 14, color: 'var(--ink-soft)', fontWeight: 300, textAlign: 'center', marginTop: 24 }}>
-            Want to fund a free spot instead?{' '}
-            <a href="/donate" style={{ color: 'var(--teal)' }}>Support a family →</a>
-          </p>
         </div>
       </section>
     </main>

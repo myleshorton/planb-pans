@@ -215,9 +215,7 @@ export default function PricingPage() {
               <strong style={{ color: 'var(--teal)' }}>one family at no cost</strong> — the full
               Synthesis. The waitlist is open and public, and the finished synthesis is published
               anonymized so we all learn from it.{' '}
-              <a href="/waitlist" style={{ color: 'var(--teal)', fontWeight: 600 }}>Join the waitlist →</a>{' '}
-              Others&apos; tax-deductible donations fund these spots; you can{' '}
-              <a href="/donate" style={{ color: 'var(--teal)' }}>support a family</a> too.
+              <a href="/waitlist" style={{ color: 'var(--teal)', fontWeight: 600 }}>Join the waitlist →</a>
             </p>
           </div>
         </div>
