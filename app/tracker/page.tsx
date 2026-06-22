@@ -219,6 +219,36 @@ export default function TrackerPage() {
         </div>
       </section>
 
+      {/* ADD TO PHONE */}
+      <section style={{ padding: 'clamp(56px, 7vw, 88px) 24px', background: 'var(--cream)', borderTop: '1px solid var(--rule)' }}>
+        <div className="pb-container" style={{ maxWidth: 760 }}>
+          <p className="eyebrow" style={{ marginBottom: 16 }}>📱 On your phone</p>
+          <h2 className="serif" style={{ fontSize: 'clamp(26px, 4vw, 44px)', fontWeight: 300, letterSpacing: '-0.02em', lineHeight: 1.05, color: 'var(--ink)', margin: '0 0 16px' }}>
+            Put the tracker <em style={{ color: 'var(--teal)' }}>on your home screen.</em>
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, maxWidth: 620, margin: '0 0 28px' }}>
+            Plan B installs like a real app — full screen, one tap away, no app store needed. Sixty
+            seconds of logging, right from your pocket.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+            <div style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 8, padding: '20px 22px' }}>
+              <p className="serial" style={{ color: 'var(--teal)', marginBottom: 8 }}>iPhone</p>
+              <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--ink-soft)', fontWeight: 300, margin: 0 }}>
+                Open <strong>app.planbforpans.com</strong> in <strong>Safari</strong> → tap the{' '}
+                <strong>Share</strong> button → <strong>Add to Home Screen</strong>.
+              </p>
+            </div>
+            <div style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 8, padding: '20px 22px' }}>
+              <p className="serial" style={{ color: 'var(--teal)', marginBottom: 8 }}>Android</p>
+              <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--ink-soft)', fontWeight: 300, margin: 0 }}>
+                Open <strong>app.planbforpans.com</strong> in <strong>Chrome</strong> → menu{' '}
+                <strong>(⋮)</strong> → <strong>Install app</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section
         style={{
