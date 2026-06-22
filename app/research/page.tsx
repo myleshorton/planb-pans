@@ -74,6 +74,52 @@ export default function ResearchPage() {
         </div>
       </section>
 
+      {/* LATEST FINDINGS — what Minta is tracking (the daily research radar) */}
+      <section style={{ padding: 'clamp(56px, 8vw, 96px) 24px', borderBottom: '1px solid var(--rule)' }}>
+        <div className="pb-container" style={{ maxWidth: 920 }}>
+          <p className="eyebrow" style={{ marginBottom: 18 }}>Latest · what Minta is tracking</p>
+          <h2
+            className="serif"
+            style={{ fontSize: 'clamp(30px, 4.5vw, 52px)', fontWeight: 300, letterSpacing: '-0.02em', lineHeight: 1.05, color: 'var(--ink)', margin: '0 0 16px' }}
+          >
+            Minta reads the field every day — so your child&apos;s plan reflects the{' '}
+            <em style={{ color: 'var(--teal)' }}>newest science, not a textbook from years ago.</em>
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, maxWidth: 740, margin: '0 0 34px' }}>
+            This is what separates Minta from a regular AI chatbot. Generic AI is frozen at its training
+            date and knows nothing about your child. Minta is <strong style={{ color: 'var(--ink)' }}>continuously
+            fed the newest PANS, Lyme, mold, and methylation research</strong> — and she carries your whole
+            family&apos;s history. A sample of what she&apos;s tracking right now:
+          </p>
+          <div style={{ display: 'grid', gap: 14 }}>
+            {[
+              { date: 'Jun 2026', tag: 'PANS · genetics', title: 'Ultrarare DNA-repair + mitochondrial gene variants found in PANS kids', why: 'A genetic-susceptibility signal pointing straight at the methylation/mitochondrial engine Plan B already works on.', href: 'https://med.stanford.edu/pans/publications.html' },
+              { date: 'Jun 2026', tag: 'PANS · IVIG', title: 'Panzyga Phase III — a placebo-controlled IVIG trial for PANS/PANDAS', why: 'The kind of controlled evidence the field has been missing for immune treatment.', href: 'https://www.pandasppn.org/research-updates/' },
+              { date: 'Jun 2026', tag: 'PANS · feeding', title: 'PANS overlaps with ARFID (obsessive food restriction)', why: 'Confirms what families live: food refusal can be an immune/OCD signal, not pickiness.', href: 'https://med.stanford.edu/pans/publications.html' },
+              { date: 'Jun 2026', tag: 'Lyme · training', title: 'ILADS 2026 conferences + practitioner training (London Apr · Annual Oct)', why: 'Where the newest tick-borne and PANS science gets taught — Plan B stays current here.', href: 'https://www.ilads.org/events/' },
+            ].map((f) => (
+              <a
+                key={f.title}
+                href={f.href}
+                target="_blank"
+                rel="noopener"
+                style={{ display: 'block', textDecoration: 'none', background: 'var(--cream-light)', border: '1px solid var(--rule)', borderRadius: 8, padding: '18px 20px' }}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, marginBottom: 6 }}>
+                  <span style={{ color: 'var(--teal)', fontSize: 12, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{f.tag}</span>
+                  <span style={{ fontSize: 12, color: 'var(--ink-soft)' }}>{f.date}</span>
+                </div>
+                <p style={{ fontSize: 17, fontWeight: 500, color: 'var(--ink)', margin: '0 0 6px', lineHeight: 1.35 }}>{f.title}</p>
+                <p style={{ fontSize: 14.5, color: 'var(--ink-soft)', margin: 0, lineHeight: 1.55 }}>{f.why}</p>
+              </a>
+            ))}
+          </div>
+          <p style={{ fontSize: 13, color: 'var(--ink-soft)', fontStyle: 'italic', marginTop: 20 }}>
+            Updated as new research lands. Educational only — not medical advice.
+          </p>
+        </div>
+      </section>
+
       {/* Constellation — the existing research section, it carries its own intro */}
       <ResearchSection />
 
