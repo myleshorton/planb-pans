@@ -102,7 +102,7 @@ export default function RootLayout({
                   textDecoration: 'none',
                 }}
               >
-                Book a Consult
+                Book a free 15-min consult
               </a>
               <a
                 href="https://app.planbforpans.com/signup"
