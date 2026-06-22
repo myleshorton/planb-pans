@@ -218,6 +218,24 @@ export default function PricingPage() {
               <a href="/waitlist" style={{ color: 'var(--teal)', fontWeight: 600 }}>Join the waitlist →</a>
             </p>
           </div>
+
+          <div style={{ marginTop: 20, background: 'var(--cream-soft)', border: '1px solid var(--rule)', borderRadius: 6, padding: 'clamp(20px, 3vw, 30px)', maxWidth: 760 }}>
+            <p className="serif" style={{ fontSize: 'clamp(18px, 2.2vw, 23px)', fontStyle: 'italic', color: 'var(--ink)', lineHeight: 1.4, fontWeight: 400, margin: '0 0 12px' }}>
+              A note on why Minta has a usage cost.
+            </p>
+            <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, margin: '0 0 12px' }}>
+              Minta runs on the most advanced AI available — the same kind of engine researchers use — and{' '}
+              <strong style={{ color: 'var(--ink)' }}>every conversation has a real cost to run.</strong> We give
+              every family a chunk of Minta for free, but we&apos;re a small non-profit. We can&apos;t cover
+              unlimited AI usage for everyone without the whole thing collapsing.
+            </p>
+            <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, margin: 0 }}>
+              So past your free amount, Minta runs on credits — kept at the{' '}
+              <strong style={{ color: 'var(--teal)' }}>smallest margin we can manage.</strong> It&apos;s simply the
+              honest math of this new world. And the daily tracker — logging symptoms, foods, supplements — is
+              always <strong style={{ color: 'var(--ink)' }}>completely free.</strong>
+            </p>
+          </div>
         </div>
       </section>
 
