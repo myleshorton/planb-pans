@@ -1,13 +1,10 @@
 'use client'
 
-// "Talk to Rachel first — free 15 min" intro-call CTA.
-//
-// ┌─────────────────────────────────────────────────────────────────────┐
-// │  TODO: PLACEHOLDER. When Calendly (or Google Appointments) is set up, │
-// │  replace CALENDLY_URL below with the real booking link — that's the   │
-// │  ONLY change needed; every "Talk to Rachel" button reads from here.   │
-// └─────────────────────────────────────────────────────────────────────┘
-export const CALENDLY_URL = '#' // e.g. 'https://calendly.com/plan-b-rachel/15min'
+import { CALENDLY_URL } from './site-links'
+
+// "Talk to Rachel first — free 15 min" intro-call CTA. The booking link lives in
+// site-links.ts — one swap when the scheduler is live.
+export { CALENDLY_URL }
 
 export function TalkToRachel({ variant = 'outline' }: { variant?: 'outline' | 'quiet' }) {
   const isPlaceholder = CALENDLY_URL === '#'
