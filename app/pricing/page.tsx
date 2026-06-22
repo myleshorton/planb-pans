@@ -3,6 +3,7 @@
 import { useReveal } from '../_components/hooks'
 import { FAMILY_STORIES, FamilyStoryFull } from '../_components/FamilyStories'
 import DeliverablePreview from '../_components/DeliverablePreview'
+import { TalkToRachel } from '../_components/TalkToRachel'
 
 // Public pricing page for planbforpans.com.
 //
@@ -90,6 +91,9 @@ export default function PricingPage() {
             Built by Rachel — a mom of three recovered PANS kids, not a doctor. Every recommendation is a
             question to bring to your practitioner.
           </p>
+          <div style={{ marginTop: 24 }}>
+            <TalkToRachel variant="quiet" />
+          </div>
         </div>
       </section>
 

@@ -1,5 +1,7 @@
 'use client'
 
+import { TalkToRachel } from './TalkToRachel'
+
 // "What Minta does · What Rachel does · Why you need both" — the core value
 // split. Minta = breadth/speed/memory/always-on. Rachel = depth/judgment/
 // accountability/lived-experience. Together = foundation + daily companion.
@@ -165,6 +167,7 @@ export default function WhyBoth() {
           >
             Or book a Synthesis — $397 →
           </a>
+          <TalkToRachel variant="quiet" />
         </div>
       </div>
     </section>
