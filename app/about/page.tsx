@@ -105,7 +105,7 @@ export default function AboutPage() {
               margin: '12px 0 36px',
             }}
           >
-            &ldquo;I can&apos;t stop, Mommy. I don&apos;t want to, but I can&apos;t stop.&rdquo;
+            &ldquo;I can&apos;t stop, Mommy. I want to, but I can&apos;t stop saying it.&rdquo;
           </p>
 
           <p style={p}>
