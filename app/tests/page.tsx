@@ -966,16 +966,79 @@ export default function TestsPage() {
 
           <TestCard
             num="28"
-            name={<>IntellxxDNA — <em style={{ color: 'var(--teal)' }}>the comprehensive panel</em></>}
-            subtitle="The single best DNA test for PANS / functional-medicine work."
+            name={<>23andMe / AncestryDNA — <em style={{ color: 'var(--teal)' }}>the DIY entry point</em></>}
+            subtitle="The cheapest way to read your child's methylation SNPs. Almost everyone should start here."
             rows={[
-              { label: 'What it finds', value: '~700 clinically annotated SNPs across methylation, detox, neurotransmitter, inflammation, mitochondrial, histamine handling, and toxin processing pathways.' },
-              { label: 'Why it matters', value: 'Tells you which methylation form your child can use (folic acid? methylfolate? methionine?), how fast their COMT clears dopamine (impacts OCD treatment), how well their detox pathways handle metals and mold, and a hundred other actionable things.' },
-              { label: 'Why not 23andMe', value: '23andMe is ancestry-focused, not clinical. The raw data is fine but the report doesn&rsquo;t translate into supplement decisions. IntellxxDNA is clinically annotated by functional-medicine physicians.' },
-              { label: 'Cost', value: <><strong>~$500–700</strong> · one-time, for life</> },
-              { label: 'Order yourself', value: <><ExtLink href="https://www.intellxxdna.com">IntellxxDNA</ExtLink> — practitioner required; many functional-medicine telehealth services will order</> },
+              { label: 'What it finds', value: <>A consumer kit gives you a <strong>raw genotype file</strong>. Run that file (free) through <ExtLink href="https://www.strategene.org">StrateGene</ExtLink> (Dr. Ben Lynch) or <ExtLink href="https://geneticgenie.org">Genetic Genie</ExtLink> and you get a methylation report — MTHFR, COMT, MAO-A, CBS, MTRR, VDR and the rest of the SNPs that drive PANS biochemistry.</> },
+              { label: 'Why it matters', value: 'For about $100 you get ~90% of the actionable methylation picture — which B-vitamin forms your child can actually use, how fast they clear dopamine and histamine, where detox is throttled. Run once, use for life.' },
+              { label: 'Order yourself', value: <><ExtLink href="https://www.ancestry.com/dna">AncestryDNA</ExtLink> or <ExtLink href="https://www.23andme.com">23andMe</ExtLink> → download raw data → upload to StrateGene / Genetic Genie. No doctor needed.</> },
+              { label: 'Cost', value: <><strong>~$99–129</strong> for the kit · interpretation is free</> },
+            ]}
+            warn={<Warn>23andMe went through bankruptcy and its database was sold. If privacy concerns you, <strong>AncestryDNA</strong> or <ExtLink href="https://nebula.org">Nebula Genomics</ExtLink> give the same raw file. The value is the raw data + StrateGene, not the brand.</Warn>}
+          />
+
+          <TestCard
+            num="29"
+            name={<>Amy Yasko Nutrigenomic Panel — <em style={{ color: 'var(--teal)' }}>the curated protocol</em></>}
+            subtitle="A purpose-built methylation/detox panel that comes with a ready-made protocol."
+            rows={[
+              { label: 'What it finds', value: '~30 SNPs hand-picked by Dr. Amy Yasko specifically for the methylation + detox + gut-brain pathway her whole protocol is built around — CBS, MTHFR, MTRR, MTR, BHMT, COMT, MAO-A, SUOX, NOS and more.' },
+              { label: 'Why it matters', value: 'Unlike a raw 23andMe file, it comes with Yasko&rsquo;s interpretation framework and a step-by-step supplement protocol. Good for complex methylation/detox kids where you want a done-for-you roadmap, not just data.' },
+              { label: 'Why it might NOT be for you', value: 'Pricier, narrower than a full panel, and built around Yasko&rsquo;s own supplement line (a conflict of interest to keep in mind). If you only want the SNP data, 23andMe → StrateGene is far cheaper and covers the same core genes.' },
+              { label: 'Cost', value: <><strong>~$495</strong> · includes interpretation</> },
+              { label: 'Order yourself', value: <><ExtLink href="https://www.holisticheal.com">Holistic Health (Yasko)</ExtLink> — direct, no practitioner needed.</> },
             ]}
           />
+
+          <TestCard
+            num="30"
+            name={<>IntellxxDNA — <em style={{ color: 'var(--teal)' }}>the clinical-grade panel</em></>}
+            subtitle="The most comprehensive option — when a practitioner is guiding treatment."
+            rows={[
+              { label: 'What it finds', value: '~700 clinically annotated SNPs across methylation, detox, neurotransmitter, inflammation, mitochondrial, histamine handling, and toxin processing.' },
+              { label: 'Why it matters', value: 'Tells you which methylation form your child can use, how fast their COMT clears dopamine (impacts OCD treatment), how well detox handles metals and mold — annotated by functional-medicine physicians with clinical decision support.' },
+              { label: 'Why upgrade from 23andMe', value: '23andMe → StrateGene gives you the major SNPs cheaply and DIY. IntellxxDNA goes further — more genes, clinically curated, with decision support — worth it when a practitioner is actually steering treatment off the results. (GX Sciences is a similar practitioner-ordered panel.)' },
+              { label: 'Cost', value: <><strong>~$500–700</strong> · one-time, for life</> },
+              { label: 'Order yourself', value: <><ExtLink href="https://www.intellxxdna.com">IntellxxDNA</ExtLink> — practitioner required; many functional-medicine telehealth services will order it</> },
+            ]}
+          />
+
+          {/* Which one, and why */}
+          <div
+            style={{
+              background: 'var(--paper)',
+              border: '1px solid var(--teal)',
+              borderLeftWidth: 5,
+              borderRadius: 4,
+              padding: 'clamp(24px, 4vw, 34px)',
+              maxWidth: 760,
+              marginTop: 28,
+            }}
+          >
+            <p className="serial" style={{ color: 'var(--teal)', marginBottom: 14 }}>
+              Which one — and why
+            </p>
+            <p style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--ink)', marginBottom: 14 }}>
+              All three read the same DNA. The difference is <strong>curation, cost, and who orders it</strong> — not the underlying genes.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
+              <li style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--ink-soft)', paddingLeft: 18, position: 'relative' }}>
+                <span style={{ position: 'absolute', left: 0, color: 'var(--teal)' }}>›</span>
+                <strong style={{ color: 'var(--ink)' }}>Start: 23andMe / AncestryDNA → StrateGene (~$100, DIY).</strong> Covers the major methylation SNPs. Right for almost everyone, first. You rarely need more.
+              </li>
+              <li style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--ink-soft)', paddingLeft: 18, position: 'relative' }}>
+                <span style={{ position: 'absolute', left: 0, color: 'var(--teal)' }}>›</span>
+                <strong style={{ color: 'var(--ink)' }}>Step up: Yasko panel (~$495).</strong> When you want a curated interpretation <em>and</em> a ready protocol, and you&rsquo;re working the methylation/detox angle. Just know it&rsquo;s tied to her supplements.
+              </li>
+              <li style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--ink-soft)', paddingLeft: 18, position: 'relative' }}>
+                <span style={{ position: 'absolute', left: 0, color: 'var(--teal)' }}>›</span>
+                <strong style={{ color: 'var(--ink)' }}>Clinical: IntellxxDNA / GX Sciences (~$500–700, practitioner).</strong> When a practitioner is steering treatment off the results and wants clinical-grade annotation.
+              </li>
+            </ul>
+            <p style={{ fontSize: 14.5, lineHeight: 1.7, color: 'var(--ink)', marginTop: 16, fontStyle: 'italic' }}>
+              Bottom line: you almost never need more than one. Start with 23andMe → StrateGene; upgrade only if a practitioner is guiding you or you want a done-for-you protocol.
+            </p>
+          </div>
         </div>
       </section>
 

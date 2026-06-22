@@ -69,7 +69,6 @@ export default function RootLayout({
               <NavLink href="/tests">Tests</NavLink>
               <NavLink href="/tracker">Tracker</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
-              <NavLink href="/donate">Donate</NavLink>
               <NavLink href="/faq">FAQ</NavLink>
               <a
                 href="https://app.planbforpans.com/sign-in"

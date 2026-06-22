@@ -5,6 +5,7 @@ import BucketSection from './_components/BucketSection'
 import MethodSection from './_components/MethodSection'
 import WhyBoth from './_components/WhyBoth'
 import { FamilyStoriesTeaser } from './_components/FamilyStories'
+import { CALENDLY_URL } from './_components/TalkToRachel'
 
 export default function Home() {
   const revealRef = useRef<HTMLElement | null>(null)
@@ -244,6 +245,25 @@ export default function Home() {
                 }}
               >
                 Try Plan B — ask a question →
+              </a>
+              <a
+                href={CALENDLY_URL}
+                style={{
+                  display: 'inline-block',
+                  padding: '16px 32px',
+                  fontFamily: 'var(--font-inter)',
+                  fontSize: 11,
+                  letterSpacing: '0.28em',
+                  textTransform: 'uppercase',
+                  fontWeight: 600,
+                  color: 'var(--teal)',
+                  border: '1px solid var(--teal)',
+                  borderRadius: 4,
+                  textDecoration: 'none',
+                  background: 'transparent',
+                }}
+              >
+                Free 15-min consult →
               </a>
             </div>
 
