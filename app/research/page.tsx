@@ -77,7 +77,7 @@ export default function ResearchPage() {
       {/* LATEST FINDINGS — what Minta is tracking (the daily research radar) */}
       <section style={{ padding: 'clamp(56px, 8vw, 96px) 24px', borderBottom: '1px solid var(--rule)' }}>
         <div className="pb-container" style={{ maxWidth: 920 }}>
-          <p className="eyebrow" style={{ marginBottom: 18 }}>Latest · what Minta is tracking</p>
+          <p className="eyebrow" style={{ marginBottom: 18 }}>New studies to watch · updated daily</p>
           <h2
             className="serif"
             style={{ fontSize: 'clamp(30px, 4.5vw, 52px)', fontWeight: 300, letterSpacing: '-0.02em', lineHeight: 1.05, color: 'var(--ink)', margin: '0 0 16px' }}
@@ -89,14 +89,16 @@ export default function ResearchPage() {
             This is what separates Minta from a regular AI chatbot. Generic AI is frozen at its training
             date and knows nothing about your child. Minta is <strong style={{ color: 'var(--ink)' }}>continuously
             fed the newest PANS, Lyme, mold, and methylation research</strong> — and she carries your whole
-            family&apos;s history. A sample of what she&apos;s tracking right now:
+            family&apos;s history. The newest papers and trials she&apos;s watching, refreshed daily:
           </p>
           <div style={{ display: 'grid', gap: 14 }}>
             {[
-              { date: 'Jun 2026', tag: 'PANS · genetics', title: 'Ultrarare DNA-repair + mitochondrial gene variants found in PANS kids', why: 'A genetic-susceptibility signal pointing straight at the methylation/mitochondrial engine Plan B already works on.', href: 'https://med.stanford.edu/pans/publications.html' },
+              { date: 'Jun 23, 2026', tag: 'PANS · feeding/ARFID', title: 'Breithaupt et al. — PANS & obsessive food restriction (ARFID) overlap, Mass General', why: 'In ARFID youth, 46% carried obsessive-compulsive severity; argues food refusal can be an immune/OCD signal, not pickiness. Minta now reads restrictive eating as a possible immune sign.', href: 'https://journals.sagepub.com/doi/10.1177/10445463261419065' },
+              { date: 'Jun 23, 2026', tag: 'Lyme · new drug class', title: 'Duke — cancer drug-discovery methods aimed at Borrelia + Bartonella', why: 'A genuinely new class of molecularly-targeted therapy for the two hardest tick-borne infections — not herbs, not old antibiotics.', href: 'https://medschool.duke.edu/news/lyme-study-uses-drug-discovery-methods-have-fueled-cancer-breakthroughs' },
+              { date: 'Jun 23, 2026', tag: 'Babesia · trial', title: 'Tafenoquine trial for chronic babesiosis fatigue (90-day oral)', why: 'A real pharmaceutical option for the persistent air-hunger/fatigue tail of Babesia — added to Minta’s "what hasn’t been tried" menu.', href: 'https://www.lymedisease.org/new-clinical-trial-babesiosis' },
+              { date: 'Jun 2026', tag: 'PANS · genetics', title: 'Ultrarare DNA-repair + mitochondrial gene variants found in PANS kids', why: 'A genetic-susceptibility signal pointing straight at the methylation/mitochondrial engine Plan B already works on.', href: 'https://www.pandasppn.org/research-updates/' },
+              { date: 'Jun 2026', tag: 'Mold · MCAS', title: 'Mold/mycotoxins as direct mast-cell (MCAS) triggers — ~25–30% of MCAS carry CIRS', why: 'Reinforces the mold → histamine → neuroinflammation chain that drives many PANS flares.', href: 'https://drtaniadempsey.com/whats-the-connection-between-mast-cell-activation-and-mold/' },
               { date: 'Jun 2026', tag: 'PANS · IVIG', title: 'Panzyga Phase III — a placebo-controlled IVIG trial for PANS/PANDAS', why: 'The kind of controlled evidence the field has been missing for immune treatment.', href: 'https://www.pandasppn.org/research-updates/' },
-              { date: 'Jun 2026', tag: 'PANS · feeding', title: 'PANS overlaps with ARFID (obsessive food restriction)', why: 'Confirms what families live: food refusal can be an immune/OCD signal, not pickiness.', href: 'https://med.stanford.edu/pans/publications.html' },
-              { date: 'Jun 2026', tag: 'Lyme · training', title: 'ILADS 2026 conferences + practitioner training (London Apr · Annual Oct)', why: 'Where the newest tick-borne and PANS science gets taught — Plan B stays current here.', href: 'https://www.ilads.org/events/' },
             ].map((f) => (
               <a
                 key={f.title}
