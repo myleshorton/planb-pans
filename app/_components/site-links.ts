@@ -7,4 +7,4 @@
 // │  is hidden while this is '#', and appears site-wide the moment it's a   │
 // │  real URL.                                                              │
 // └──────────────────────────────────────────────────────────────────────┘
-export const CALENDLY_URL = '#' // e.g. 'https://calendly.com/plan-b-rachel/15min'
+export const CALENDLY_URL = 'https://calendly.com/rachel-planbforpans/30min' // booking is live; set the event DURATION to 15 min in Calendly (URL stays the same)
