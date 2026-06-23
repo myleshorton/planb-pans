@@ -122,6 +122,50 @@ export default function ResearchPage() {
         </div>
       </section>
 
+      {/* CLINICAL TRIALS — relevant PANS/PANDAS studies families can look into */}
+      <section style={{ padding: 'clamp(56px, 8vw, 96px) 24px', borderBottom: '1px solid var(--rule)' }}>
+        <div className="pb-container" style={{ maxWidth: 920 }}>
+          <p className="eyebrow" style={{ marginBottom: 18 }}>Clinical trials · for PANS / PANDAS</p>
+          <h2
+            className="serif"
+            style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 300, letterSpacing: '-0.02em', lineHeight: 1.08, color: 'var(--ink)', margin: '0 0 16px' }}
+          >
+            Open studies worth knowing about.
+          </h2>
+          <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, maxWidth: 720, margin: '0 0 32px' }}>
+            Recruiting or active trials relevant to PANS/PANDAS kids. Status and eligibility change — always confirm at the link before counting on a study.
+          </p>
+          <div style={{ display: 'grid', gap: 14 }}>
+            {[
+              { tag: 'Recruiting · NSAID', title: 'Naproxen for OCD in children with PANDAS', why: 'Tests a simple anti-inflammatory against the OCD of PANDAS — exactly the "calm the brain" lever.', nct: 'NCT04015596', href: 'https://clinicaltrials.gov/study/NCT04015596' },
+              { tag: 'Active · IVIG', title: 'Panzyga Phase III — IVIG vs. placebo in PANS/PANDAS', why: 'The placebo-controlled immune-treatment evidence the field has been missing.', nct: 'NCT04508530', href: 'https://clinicaltrials.gov/study/NCT04508530' },
+              { tag: 'IVIG', title: 'Open-label IVIG in children with PANS', why: 'Immunoglobulin therapy for the immune-driven cases.', nct: 'NCT04609761', href: 'https://clinicaltrials.gov/study/NCT04609761' },
+              { tag: 'Stanford · markers', title: 'Neurobiologic, immunologic & rheumatologic markers in youth with PANS', why: 'Building the biomarker map that could finally make PANS a measurable diagnosis.', nct: 'NCT02889016', href: 'https://clinicaltrials.gov/study/NCT02889016' },
+              { tag: 'Mass General · imaging', title: 'Pediatric Neuropsychiatry & Immunology — neuroinflammation MRI', why: 'Imaging the brain inflammation behind PANDAS/PANS (also enrolling healthy controls).', nct: '', href: 'https://www.massgeneral.org/children/research/pediatric-neuropsychiatry-and-immunology-research-program' },
+              { tag: 'Find more', title: 'PPN research volunteer hub — every open PANS/PANDAS study', why: 'The PANDAS Physicians Network keeps the running list of trials seeking participants.', nct: '', href: 'https://www.pandasppn.org/participate/' },
+            ].map((t) => (
+              <a
+                key={t.title}
+                href={t.href}
+                target="_blank"
+                rel="noopener"
+                style={{ display: 'block', textDecoration: 'none', background: 'var(--cream-light)', border: '1px solid var(--rule)', borderRadius: 8, padding: '18px 20px' }}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, marginBottom: 6 }}>
+                  <span style={{ color: 'var(--teal)', fontSize: 12, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{t.tag}</span>
+                  {t.nct && <span style={{ fontSize: 12, color: 'var(--ink-soft)' }}>{t.nct}</span>}
+                </div>
+                <p style={{ fontSize: 17, fontWeight: 500, color: 'var(--ink)', margin: '0 0 6px', lineHeight: 1.35 }}>{t.title}</p>
+                <p style={{ fontSize: 14.5, color: 'var(--ink-soft)', margin: 0, lineHeight: 1.55 }}>{t.why}</p>
+              </a>
+            ))}
+          </div>
+          <p style={{ fontSize: 13, color: 'var(--ink-soft)', fontStyle: 'italic', marginTop: 20 }}>
+            Not an endorsement or medical advice — talk with your clinical team about whether a trial fits your child.
+          </p>
+        </div>
+      </section>
+
       {/* Constellation — the existing research section, it carries its own intro */}
       <ResearchSection />
 
