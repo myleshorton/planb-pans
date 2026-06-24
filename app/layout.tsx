@@ -232,6 +232,9 @@ export default function RootLayout({
               <Link href="/privacy" style={{ color: 'var(--sand-dark)' }}>
                 Privacy
               </Link>
+              <Link href="/terms" style={{ color: 'var(--sand-dark)' }}>
+                Terms
+              </Link>
               <a
                 href="https://www.facebook.com/profile.php?id=61588842100605"
                 target="_blank"
