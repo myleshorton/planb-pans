@@ -56,10 +56,10 @@ const PACKAGES: Pkg[] = [
   },
   {
     name: 'Fresh Eyes',
-    situation: 'Stalled',
+    situation: 'Stalled · months or years in',
     emoji: '🧭',
     line: 'Doing everything, still stuck.',
-    forWho: 'You’ve tried a lot and your child still isn’t better. You need someone to hold all of it at once.',
+    forWho: 'You’ve been at this for months or years — round after round of treatment, doctor after doctor — and your child still isn’t better. You don’t need another random test. You need fresh eyes on all of it at once.',
     includes: [
       'One deep synthesis of your whole record — labs, symptoms, history, every prior treatment',
       'The driver no one found · the wrong order · the thing that was never addressed',
@@ -125,7 +125,27 @@ export default function PackagesPage() {
         </div>
       </section>
 
-      <section style={{ padding: 'clamp(32px, 5vw, 56px) 24px 88px' }}>
+      {/* Living synthesis subscription — for the many-synthesis complex kids */}
+      <section style={{ padding: '0 24px clamp(28px, 4vw, 44px)' }}>
+        <div className="pb-container" style={{ maxWidth: 720, margin: '0 auto', background: teal, color: '#fff', borderRadius: 14, padding: '26px 28px' }}>
+          <p style={{ fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.85, margin: '0 0 6px' }}>For the long haul · the Living Synthesis</p>
+          <h2 style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(26px, 3.6vw, 34px)', margin: '0 0 10px' }}>
+            When one child needs many syntheses.
+          </h2>
+          <p style={{ fontSize: 15.5, lineHeight: 1.65, opacity: 0.96, margin: '0 0 14px' }}>
+            Complex kids aren’t answered in one pass. The labs come in waves over months, the behaviors shift, and
+            the picture keeps changing. For families in active treatment, the <strong>Living Synthesis</strong> keeps
+            Minta on your case continuously — <strong>every new result re-folded into an updated direction, as often
+            as you need</strong> — plus lab trends and ongoing Minta. No paying per-recalibration.
+          </p>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, flexWrap: 'wrap' }}>
+            <span style={{ fontSize: 32, fontWeight: 700 }}>$39<span style={{ fontSize: 16, fontWeight: 400 }}>/mo</span></span>
+            <span style={{ fontSize: 13.5, opacity: 0.85 }}>unlimited recalibrations · cancel anytime</span>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: 'clamp(8px, 2vw, 16px) 24px 88px' }}>
         <div className="pb-container" style={{ maxWidth: 720, margin: '0 auto', background: '#f3eede', border: `1px solid ${rule}`, borderRadius: 12, padding: '22px 24px' }}>
           <p style={{ fontSize: 15.5, color: ink, fontWeight: 700, margin: '0 0 8px' }}>The honest pricing</p>
           <p style={{ fontSize: 15, color: soft, lineHeight: 1.65, margin: '0 0 10px' }}>
