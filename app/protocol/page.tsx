@@ -211,7 +211,13 @@ export default function ProtocolPage() {
               Alongside the antibiotic, Dr. Swedo — who first described PANDAS — leans on two simple, accessible anti-inflammatories to calm
               the brain: <strong style={{ color: ink }}>around-the-clock ibuprofen</strong> (on a schedule, not just as-needed, to keep the
               inflammation suppressed) and <strong style={{ color: ink }}>lots of fish oil</strong> (high-dose omega-3). Inexpensive, gentle,
-              and often a meaningful part of early recovery. Dosing is your prescriber&rsquo;s call.
+              and often a meaningful part of early recovery.
+            </p>
+            <p style={{ fontSize: 15, color: soft, lineHeight: 1.65, margin: '10px 0 0' }}>
+              <strong style={{ color: ink }}>How long on the ibuprofen?</strong> Most start with a scheduled trial of about{' '}
+              <strong style={{ color: ink }}>4–8 weeks</strong> (the Consortium frames it as roughly a 6-week NSAID trial). If it clearly
+              helps, doctors often continue through the active inflammatory period, then taper; if there&rsquo;s no benefit by ~6 weeks,
+              reassess. Longer-term NSAID use needs prescriber monitoring (stomach + kidneys) — dosing and duration are your prescriber&rsquo;s call.
             </p>
           </div>
           <div style={{ background: '#fdeeee', border: '1px solid #e6b8b8', borderRadius: 12, padding: '18px 20px', marginTop: 16 }}>
@@ -332,6 +338,44 @@ export default function ProtocolPage() {
             <li><strong style={{ color: ink }}>The escalation rule:</strong> early treatment beats late, and when first-line fails, second-line helps — so you <strong>escalate, you don’t wait.</strong></li>
             <li><strong style={{ color: ink }}>When to pivot:</strong> if a kid stops responding to immune treatment entirely (even high-dose steroids), the guideline itself says to shift toward <strong>rehabilitation</strong> — and that’s exactly where Plan B starts hunting for the driver no one found.</li>
           </ul>
+        </div>
+      </section>
+
+      {/* The bigger escalation path: protocol → functional med → homeopathy */}
+      <section style={{ padding: 'clamp(48px, 7vw, 90px) 24px', borderBottom: `1px solid ${rule}`, background: '#f3eede' }}>
+        <div className="pb-container" style={{ maxWidth: 700, margin: '0 auto' }}>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 8px' }}>The bigger picture</p>
+          <h2 style={sectionTitle}>If the protocol isn&rsquo;t enough — the path forward</h2>
+          <p style={{ fontSize: 16.5, lineHeight: 1.7, color: soft, margin: '0 0 30px' }}>
+            Everything above is <strong style={{ color: ink }}>Stage 1</strong>. Most kids caught early get better here. But if your child
+            isn&rsquo;t <em>all the way</em> better, you don&rsquo;t stop — you go deeper. This is the path Plan B walks with you.
+          </p>
+          {([
+            ['1', 'Stage 1 · Conventional', 'The Protocol', 'Everything on this page — find the trigger, the right antibiotic, scheduled anti-inflammatories, and IVIG or plasma exchange when it’s severe. The standard first line, and where most early, mild-to-moderate kids get better.', '#1F6B6B'],
+            ['2', 'Stage 2 · Functional medicine', 'Find the root drivers', 'Not all better? Go deeper than infection: methylation & detox, the gut, mold/CIRS, chronic tick-borne (Lyme, Bartonella, Babesia, Mycoplasma), MCAS, and mineral & immune dysregulation — the roots conventional medicine doesn’t look for. Test them, treat them.', '#6b3fa0'],
+            ['3', 'Stage 3 · Deepest tier', 'Homeopathy & what hasn’t been tried', 'Still not all the way there? Homeopathy, plus the full “what hasn’t been tried” menu — biomagnetism, phage therapy, peptides, and more. Nothing left on the table.', '#9a5b2a'],
+          ] as [string, string, string, string, string][]).map(([n, tag, title, body, color], i) => (
+            <div key={n}>
+              <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start', background: card, border: `2px solid ${color}`, borderRadius: 14, padding: '20px 22px' }}>
+                <div style={{ flexShrink: 0, width: 42, height: 42, borderRadius: '50%', background: color, color: '#fff', fontWeight: 700, fontSize: 20, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{n}</div>
+                <div>
+                  <p style={{ fontSize: 11.5, letterSpacing: '0.12em', textTransform: 'uppercase', color, fontWeight: 700, margin: '2px 0 4px' }}>{tag}</p>
+                  <p style={{ fontSize: 21, fontFamily: 'var(--font-cormorant)', color: ink, margin: '0 0 8px' }}>{title}</p>
+                  <p style={{ fontSize: 15, color: soft, lineHeight: 1.6, margin: 0 }}>{body}</p>
+                </div>
+              </div>
+              {i < 2 && (
+                <div style={{ textAlign: 'center', padding: '8px 0' }}>
+                  <div style={{ color: teal, fontSize: 22, lineHeight: 1 }}>↓</div>
+                  <div style={{ fontSize: 12.5, color: soft, fontStyle: 'italic', fontWeight: 600 }}>Still not all better?</div>
+                </div>
+              )}
+            </div>
+          ))}
+          <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.7, margin: '28px 0 0', textAlign: 'center' }}>
+            <strong style={{ color: ink }}>This is Plan B.</strong> The name is literal — when Plan A runs out, there&rsquo;s a whole map left.
+            We help you work down it, one stage at a time, until your child is <em>all the way</em> better.
+          </p>
         </div>
       </section>
 
