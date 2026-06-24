@@ -92,9 +92,17 @@ export default function PricingPage() {
                 <ul style={{ margin: '0 0 14px', paddingLeft: 18, fontSize: 14, color: soft, lineHeight: 1.6, flex: 1 }}>
                   {pk.includes.map((i) => <li key={i} style={{ marginBottom: 5 }}>{i}</li>)}
                 </ul>
-                {pk.twoStep && (
-                  <p style={{ fontSize: 12.5, color: teal, fontWeight: 600, margin: 0 }}>Both steps — testing direction now, full direction later — included in the one fee.</p>
-                )}
+                <div style={{ borderTop: `1px solid ${rule}`, paddingTop: 12 }}>
+                  {pk.situation === 'Stalled · months or years in' ? (
+                    <p style={{ fontSize: 13.5, color: teal, fontWeight: 700, margin: 0 }}>
+                      <span style={{ fontSize: 20 }}>$397</span> — one full synthesis. You already have the data.
+                    </p>
+                  ) : (
+                    <p style={{ fontSize: 13.5, color: teal, fontWeight: 700, margin: 0, lineHeight: 1.5 }}>
+                      Start at <span style={{ fontSize: 20 }}>$97</span> — your direction now (no labs, stale labs, or thin on labs). When your labs come in, the full synthesis is $397 <em style={{ fontWeight: 600 }}>minus your $97.</em> <span style={{ color: ink }}>$397 total — you never pay twice.</span>
+                    </p>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -119,8 +127,11 @@ export default function PricingPage() {
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap', margin: '0 0 10px' }}>
               <span style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 40, lineHeight: 1, color: ink }}>$20 · $50 · $100</span>
             </div>
-            <p style={{ fontSize: 14.5, color: soft, lineHeight: 1.6, margin: '0 0 12px' }}>
-              Pay-as-you-go token packs — about a month, three months, or six months with Minta. <strong style={{ color: ink }}>No subscription, nothing recurring.</strong> You only pay for the time you use.
+            <p style={{ fontSize: 14.5, color: soft, lineHeight: 1.6, margin: '0 0 8px' }}>
+              Pay-as-you-go — <strong style={{ color: ink }}>no subscription, nothing recurring.</strong> You only pay for the time you use.
+            </p>
+            <p style={{ fontSize: 13.5, color: soft, lineHeight: 1.6, margin: '0 0 12px' }}>
+              What a month with Minta costs <em>you</em>: a <strong style={{ color: ink }}>light user</strong> (a check-in here and there) — about <strong style={{ color: ink }}>$20</strong>. A <strong style={{ color: ink }}>heavy user</strong> (chatting daily, deep in a complex case) — <strong style={{ color: ink }}>$50–$100</strong>. So <strong style={{ color: ink }}>$20</strong> lasts a heavy user about a month — a light user, several.
             </p>
             <a href="https://app.planbforpans.com" style={{ display: 'inline-block', fontSize: 14, fontWeight: 700, color: teal, textDecoration: 'none', borderBottom: `2px solid rgba(31,107,107,0.32)`, paddingBottom: 1 }}>Top up in the app →</a>
           </div>
@@ -132,7 +143,7 @@ export default function PricingPage() {
         <div className="pb-container" style={{ maxWidth: 720, margin: '0 auto', background: '#f3eede', border: `1px solid ${rule}`, borderRadius: 12, padding: '22px 24px' }}>
           <p style={{ fontSize: 15.5, color: ink, fontWeight: 700, margin: '0 0 8px' }}>The honest version</p>
           <p style={{ fontSize: 15, color: soft, lineHeight: 1.65, margin: '0 0 10px' }}>
-            One synthesis is <strong style={{ color: ink }}>$397</strong> — the same depth whatever situation you’re in. If you’re thin on labs, the testing direction <em>and</em> the full direction are both included under that one fee. We don’t charge a family twice just for not having labs yet.
+            A full synthesis is <strong style={{ color: ink }}>$397</strong>. If you don’t have labs yet — or yours are <strong style={{ color: ink }}>stale or thin</strong> — you start with a <strong style={{ color: ink }}>$97 direction</strong> (exactly what to test or re-run), and that $97 is <strong style={{ color: ink }}>credited</strong> toward your synthesis when your results come in. <strong style={{ color: ink }}>$397 total — never twice.</strong>
           </p>
           <p style={{ fontSize: 12.5, color: soft, fontStyle: 'italic', margin: '14px 0 0' }}>
             Plan B gives you direction — not medical advice or treatment. Your licensed medical team makes all clinical decisions. See our <a href="/terms" style={{ color: teal }}>Terms &amp; Medical Disclaimer</a>.
