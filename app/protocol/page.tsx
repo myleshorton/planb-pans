@@ -82,9 +82,10 @@ export default function ProtocolPage() {
           <p style={{ fontSize: 17, lineHeight: 1.75, color: soft, margin: '0 0 16px' }}>
             In <strong style={{ color: ink }}>2017</strong>, a small group of the leading PANS clinicians — the{' '}
             <strong style={{ color: ink }}>PANS Research Consortium</strong> — published the first consensus
-            <strong style={{ color: ink }}> treatment guidelines.</strong> That document is, essentially,{' '}
-            <strong style={{ color: ink }}>what your pediatrician receives</strong> when they go looking for &ldquo;how do I treat
-            this.&rdquo; It is the <strong style={{ color: ink }}>first line.</strong>
+            <strong style={{ color: ink }}> treatment guidelines</strong>{' '}
+            (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5610386/" rel="noopener" style={{ color: teal, fontWeight: 700 }}>read the actual document →</a>).
+            That document is, essentially, <strong style={{ color: ink }}>what your pediatrician receives</strong> when they go looking for
+            &ldquo;how do I treat this.&rdquo; It is the <strong style={{ color: ink }}>first line.</strong>
           </p>
           <p style={{ fontSize: 17, lineHeight: 1.75, color: soft, margin: '0 0 16px' }}>
             It doesn&rsquo;t work for every child — but it is <strong style={{ color: ink }}>always worth a hard, early shot</strong>,
@@ -178,7 +179,16 @@ export default function ProtocolPage() {
               </div>
             ))}
           </div>
-          <div style={{ background: '#fdeeee', border: '1px solid #e6b8b8', borderRadius: 12, padding: '18px 20px', marginTop: 24 }}>
+          <div style={{ background: card, border: `1px solid ${rule}`, borderRadius: 12, padding: '18px 20px', marginTop: 24 }}>
+            <p style={{ fontSize: 13, letterSpacing: '0.1em', textTransform: 'uppercase', color: teal, fontWeight: 700, margin: '0 0 8px' }}>Dr. Swedo&rsquo;s anti-inflammatory basics</p>
+            <p style={{ fontSize: 15, color: soft, lineHeight: 1.65, margin: 0 }}>
+              Alongside the antibiotic, Dr. Swedo — who first described PANDAS — leans on two simple, accessible anti-inflammatories to calm
+              the brain: <strong style={{ color: ink }}>around-the-clock ibuprofen</strong> (on a schedule, not just as-needed, to keep the
+              inflammation suppressed) and <strong style={{ color: ink }}>lots of fish oil</strong> (high-dose omega-3). Inexpensive, gentle,
+              and often a meaningful part of early recovery. Dosing is your prescriber&rsquo;s call.
+            </p>
+          </div>
+          <div style={{ background: '#fdeeee', border: '1px solid #e6b8b8', borderRadius: 12, padding: '18px 20px', marginTop: 16 }}>
             <p style={{ fontSize: 14, fontWeight: 700, color: '#8a1f1f', margin: '0 0 8px' }}>⚠️ One critical caution before any steroid</p>
             <p style={{ fontSize: 15, color: soft, lineHeight: 1.65, margin: 0 }}>
               A steroid burst can calm PANS inflammation — but steroids <strong style={{ color: ink }}>suppress the immune system</strong>,
