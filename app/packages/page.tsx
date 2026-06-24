@@ -1,10 +1,10 @@
-// The four Plan B packages — one engine, four doorways, each meeting a family
-// where they are. Direction-not-treatment language throughout.
+// Plan B pricing — one synthesis price, the situations it meets, a cheaper
+// re-synthesis, and pay-as-you-go Minta token packs. Direction-not-treatment.
 
 export const metadata = {
-  title: 'Packages | Plan B for PANS',
+  title: 'Pricing | Plan B for PANS',
   description:
-    'Four ways into a Plan B synthesis — Starting Point (new to PANS), Full Picture (thin on tests), Fresh Eyes (stalled), and Recalibrate (a new direction). Minta gives you direction; your doctors treat.',
+    'One Plan B synthesis — $397, whatever situation you’re in (new to PANS, thin on tests, or stalled for years). A $97 re-synthesis when new results come in. Pay-as-you-go Minta. Minta gives you direction; your doctors treat.',
 }
 
 const ink = '#2a2a26'
@@ -13,156 +13,129 @@ const soft = '#524d40'
 const rule = '#e3dcc9'
 const card = '#fffdf7'
 
-type Pkg = {
-  name: string
-  situation: string
-  emoji: string
-  line: string
-  forWho: string
-  includes: string[]
-  twoStep: boolean
-  price: string
-}
-
-const PACKAGES: Pkg[] = [
+// The three situations the $397 synthesis meets — same depth, same price.
+const SITUATIONS: { situation: string; line: string; forWho: string; includes: string[]; twoStep: boolean }[] = [
   {
-    name: 'Starting Point',
     situation: 'New to PANS',
-    emoji: '🌱',
     line: 'Don’t waste the wait.',
     forWho: 'Just diagnosed, a months-long wait for a specialist, few or no labs yet.',
     includes: [
       'Full intake + Minta with you during the wait',
       'Daily tracking, so you walk in with a month of data — not a blank page',
-      '① A testing direction — exactly what to order now, so results are in hand before your appointment',
-      '② A treatment direction once your results come back',
+      'A testing direction now, then a treatment direction once results come back',
     ],
     twoStep: true,
-    price: '$397',
   },
   {
-    name: 'Full Picture',
     situation: 'Thin on tests',
-    emoji: '🧩',
     line: 'You can’t direct care from half a map.',
     forWho: 'You have some labs, but not enough to point treatment anywhere.',
     includes: [
-      '① A gap analysis — what you have, what’s missing, and exactly what to order to complete the picture',
-      '② Your full direction once the new results are in',
+      'A gap analysis — what you have, what’s missing, what to order to complete it',
+      'Your full direction once the new results are in',
       'Prioritized — one or two tests at a time, never all at once',
     ],
     twoStep: true,
-    price: '$397',
   },
   {
-    name: 'Fresh Eyes',
     situation: 'Stalled · months or years in',
-    emoji: '🧭',
     line: 'Doing everything, still stuck.',
-    forWho: 'You’ve been at this for months or years — round after round of treatment, doctor after doctor — and your child still isn’t better. You don’t need another random test. You need fresh eyes on all of it at once.',
+    forWho: 'Round after round of treatment, doctor after doctor — and your child still isn’t better. You need fresh eyes on all of it at once.',
     includes: [
       'One deep synthesis of your whole record — labs, symptoms, history, every prior treatment',
-      'The driver no one found · the wrong order · the thing that was never addressed',
+      'The driver no one found · the wrong order · the thing never addressed',
       'A “what hasn’t been tried” pass — the menu beyond the standard protocol',
     ],
     twoStep: false,
-    price: '$397',
-  },
-  {
-    name: 'Recalibrate',
-    situation: 'A new direction',
-    emoji: '🔄',
-    line: 'New results. New direction.',
-    forWho: 'You already have a Plan B synthesis and new labs have come in.',
-    includes: [
-      'A re-synthesis — your new results folded into the existing picture',
-      'An updated direction and why',
-      'Faster + far less, because the foundation is already built',
-    ],
-    twoStep: false,
-    price: '$97',
   },
 ]
 
-export default function PackagesPage() {
+export default function PricingPage() {
   return (
     <main style={{ background: '#faf6ec', color: ink }}>
-      <section style={{ padding: 'clamp(56px, 9vw, 110px) 24px 36px', borderBottom: `1px solid ${rule}` }}>
+      {/* Hero */}
+      <section style={{ padding: 'clamp(56px, 9vw, 110px) 24px 40px', borderBottom: `1px solid ${rule}` }}>
         <div className="pb-container" style={{ maxWidth: 860, margin: '0 auto' }}>
-          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 16px' }}>Packages</p>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 16px' }}>Pricing</p>
           <h1 style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 300, fontSize: 'clamp(34px, 6vw, 62px)', lineHeight: 1.02, letterSpacing: '-0.02em', margin: '0 0 18px' }}>
-            One engine. Four doorways.
+            Simple, honest pricing.
           </h1>
           <p style={{ fontSize: 18, lineHeight: 1.7, color: soft, maxWidth: 680, margin: 0 }}>
-            Wherever you are — just diagnosed, missing tests, or stalled after years — there’s a way in. Minta
-            reads your child’s whole picture and gives you <strong style={{ color: ink }}>direction.</strong> Your
-            doctors treat; we make sure you walk in knowing what to ask and why.
+            One synthesis. One price — wherever you are in this. Minta reads your child’s whole picture and gives you{' '}
+            <strong style={{ color: ink }}>direction.</strong> Your doctors treat; we make sure you walk in knowing what to ask and why.
           </p>
         </div>
       </section>
 
-      <section style={{ padding: 'clamp(40px, 6vw, 72px) 24px' }}>
-        <div className="pb-container" style={{ maxWidth: 960, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 18 }}>
-          {PACKAGES.map((pk) => (
-            <div key={pk.name} style={{ background: card, border: `1px solid ${rule}`, borderRadius: 14, padding: '22px 22px 24px', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: 26 }}>{pk.emoji}</div>
-              <p style={{ color: teal, fontSize: 11.5, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, margin: '8px 0 2px' }}>{pk.situation}</p>
-              <h2 style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 30, lineHeight: 1.05, color: ink, margin: '0 0 6px' }}>{pk.name}</h2>
-              <p style={{ fontSize: 15.5, fontStyle: 'italic', color: ink, margin: '0 0 12px' }}>{pk.line}</p>
-              <p style={{ fontSize: 14, color: soft, lineHeight: 1.55, margin: '0 0 14px' }}>{pk.forWho}</p>
-              <ul style={{ margin: '0 0 16px', paddingLeft: 18, fontSize: 14, color: soft, lineHeight: 1.6, flex: 1 }}>
-                {pk.includes.map((i) => <li key={i} style={{ marginBottom: 5 }}>{i}</li>)}
-              </ul>
-              {pk.twoStep && (
-                <p style={{ fontSize: 12, color: teal, fontWeight: 600, margin: '0 0 12px' }}>✓ Both steps included in one fee</p>
-              )}
-              <div style={{ borderTop: `1px solid ${rule}`, paddingTop: 14, display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                <span style={{ fontSize: 28, fontWeight: 700, color: ink }}>{pk.price}</span>
-                <span style={{ fontSize: 12, color: soft }}>{pk.price === '$97' ? 'or free w/ subscription' : 'one fee'}</span>
+      {/* The Synthesis — one price, big */}
+      <section style={{ padding: 'clamp(44px, 7vw, 80px) 24px clamp(20px, 3vw, 32px)' }}>
+        <div className="pb-container" style={{ maxWidth: 760, margin: '0 auto', background: card, border: `1.5px solid ${teal}`, borderRadius: 18, padding: 'clamp(28px, 4vw, 40px)', textAlign: 'center' }}>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 10px' }}>The Plan B Synthesis</p>
+          <div style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(54px, 9vw, 76px)', lineHeight: 1, color: ink }}>$397</div>
+          <p style={{ fontSize: 14, color: soft, margin: '6px 0 18px' }}>one fee · everything below included</p>
+          <p style={{ fontSize: 16.5, lineHeight: 1.7, color: soft, maxWidth: 560, margin: '0 auto' }}>
+            Your whole record — every lab, symptom, history, and prior treatment — read together, in one pass. The drivers, the order to address them, what to bring each doctor, and your next move. The <strong style={{ color: ink }}>same depth and the same price</strong>, whatever situation you’re in.
+          </p>
+        </div>
+      </section>
+
+      {/* The three situations — no repeated price */}
+      <section style={{ padding: '0 24px clamp(40px, 6vw, 72px)' }}>
+        <div className="pb-container" style={{ maxWidth: 960, margin: '0 auto' }}>
+          <p style={{ textAlign: 'center', fontSize: 14, color: soft, margin: '0 0 22px' }}>The synthesis meets you wherever you are:</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 18 }}>
+            {SITUATIONS.map((pk) => (
+              <div key={pk.situation} style={{ background: card, border: `1px solid ${rule}`, borderRadius: 14, padding: '22px 22px 24px', display: 'flex', flexDirection: 'column' }}>
+                <p style={{ color: teal, fontSize: 11.5, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 6px' }}>{pk.situation}</p>
+                <p style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 24, lineHeight: 1.1, color: ink, margin: '0 0 12px' }}>{pk.line}</p>
+                <p style={{ fontSize: 14, color: soft, lineHeight: 1.55, margin: '0 0 14px' }}>{pk.forWho}</p>
+                <ul style={{ margin: '0 0 14px', paddingLeft: 18, fontSize: 14, color: soft, lineHeight: 1.6, flex: 1 }}>
+                  {pk.includes.map((i) => <li key={i} style={{ marginBottom: 5 }}>{i}</li>)}
+                </ul>
+                {pk.twoStep && (
+                  <p style={{ fontSize: 12.5, color: teal, fontWeight: 600, margin: 0 }}>Both steps — testing direction now, full direction later — included in the one fee.</p>
+                )}
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Living synthesis subscription — for the many-synthesis complex kids */}
-      <section style={{ padding: '0 24px clamp(28px, 4vw, 44px)' }}>
-        <div className="pb-container" style={{ maxWidth: 720, margin: '0 auto', background: teal, color: '#fff', borderRadius: 14, padding: '26px 28px' }}>
-          <p style={{ fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.85, margin: '0 0 6px' }}>For the long haul · the Living Synthesis</p>
-          <h2 style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(26px, 3.6vw, 34px)', margin: '0 0 10px' }}>
-            When one child needs many syntheses.
-          </h2>
-          <p style={{ fontSize: 15.5, lineHeight: 1.65, opacity: 0.96, margin: '0 0 14px' }}>
-            Complex kids aren’t answered in one pass. The labs come in waves over months, the behaviors shift, and
-            the picture keeps changing. For families in active treatment, the <strong>Living Synthesis</strong> keeps
-            Minta on your case — <strong>every new result re-folded into an updated direction as your labs come
-            in</strong> — plus lab trends and daily Minta access (with generous fair-use limits). No paying
-            per-recalibration.
-          </p>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, flexWrap: 'wrap' }}>
-            <span style={{ fontSize: 32, fontWeight: 700 }}>$39<span style={{ fontSize: 16, fontWeight: 400 }}>/mo</span></span>
-            <span style={{ fontSize: 13.5, opacity: 0.85 }}>recalibrations as results come in · fair use · cancel anytime</span>
+            ))}
           </div>
         </div>
       </section>
 
-      <section style={{ padding: 'clamp(8px, 2vw, 16px) 24px 88px' }}>
+      {/* Re-synthesis + ongoing Minta */}
+      <section style={{ padding: '0 24px clamp(40px, 6vw, 72px)' }}>
+        <div className="pb-container" style={{ maxWidth: 960, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 18 }}>
+          <div style={{ background: card, border: `1px solid ${rule}`, borderRadius: 14, padding: '24px 24px 26px' }}>
+            <p style={{ color: teal, fontSize: 11.5, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 8px' }}>When new results come in</p>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, margin: '0 0 10px' }}>
+              <span style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 44, lineHeight: 1, color: ink }}>$97</span>
+              <span style={{ fontSize: 13, color: soft }}>a re-synthesis</span>
+            </div>
+            <p style={{ fontSize: 14.5, color: soft, lineHeight: 1.6, margin: 0 }}>
+              New labs fold into your existing picture for an updated direction — faster and far less, because the foundation is already built.
+            </p>
+          </div>
+          <div style={{ background: card, border: `1px solid ${rule}`, borderRadius: 14, padding: '24px 24px 26px' }}>
+            <p style={{ color: teal, fontSize: 11.5, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 8px' }}>Ongoing time with Minta</p>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap', margin: '0 0 10px' }}>
+              <span style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 40, lineHeight: 1, color: ink }}>$20 · $50 · $100</span>
+            </div>
+            <p style={{ fontSize: 14.5, color: soft, lineHeight: 1.6, margin: '0 0 12px' }}>
+              Pay-as-you-go token packs — about a month, three months, or six months with Minta. <strong style={{ color: ink }}>No subscription, nothing recurring.</strong> You only pay for the time you use.
+            </p>
+            <a href="https://app.planbforpans.com" style={{ display: 'inline-block', fontSize: 14, fontWeight: 700, color: teal, textDecoration: 'none', borderBottom: `2px solid rgba(31,107,107,0.32)`, paddingBottom: 1 }}>Top up in the app →</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Honest pricing + disclaimer */}
+      <section style={{ padding: '0 24px 88px' }}>
         <div className="pb-container" style={{ maxWidth: 720, margin: '0 auto', background: '#f3eede', border: `1px solid ${rule}`, borderRadius: 12, padding: '22px 24px' }}>
-          <p style={{ fontSize: 15.5, color: ink, fontWeight: 700, margin: '0 0 8px' }}>The honest pricing</p>
+          <p style={{ fontSize: 15.5, color: ink, fontWeight: 700, margin: '0 0 8px' }}>The honest version</p>
           <p style={{ fontSize: 15, color: soft, lineHeight: 1.65, margin: '0 0 10px' }}>
-            Every full synthesis is <strong style={{ color: ink }}>$397</strong> — pick the doorway that fits you.
-            The <strong style={{ color: ink }}>Starting Point</strong> and <strong style={{ color: ink }}>Full
-            Picture</strong> packages include <strong style={{ color: ink }}>both</strong> steps — the testing
-            direction now, and the full direction once your labs come back — under that one fee. We don’t charge a
-            family twice just for not having labs yet.
-          </p>
-          <p style={{ fontSize: 15, color: soft, lineHeight: 1.65, margin: 0 }}>
-            A <strong style={{ color: ink }}>Recalibrate</strong> later — when you bring new results — is{' '}
-            <strong style={{ color: ink }}>$97</strong>, or free inside a living-synthesis subscription.
+            One synthesis is <strong style={{ color: ink }}>$397</strong> — the same depth whatever situation you’re in. If you’re thin on labs, the testing direction <em>and</em> the full direction are both included under that one fee. We don’t charge a family twice just for not having labs yet.
           </p>
           <p style={{ fontSize: 12.5, color: soft, fontStyle: 'italic', margin: '14px 0 0' }}>
-            Plan B gives you direction — not medical advice or treatment. Your licensed medical team makes all
-            clinical decisions. See our <a href="/terms" style={{ color: teal }}>Terms &amp; Medical Disclaimer</a>.
+            Plan B gives you direction — not medical advice or treatment. Your licensed medical team makes all clinical decisions. See our <a href="/terms" style={{ color: teal }}>Terms &amp; Medical Disclaimer</a>.
           </p>
         </div>
       </section>
