@@ -138,6 +138,22 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* How tokens work — education */}
+      <section style={{ padding: '0 24px clamp(36px, 5vw, 56px)' }}>
+        <div className="pb-container" style={{ maxWidth: 760, margin: '0 auto', background: card, border: `1px solid ${rule}`, borderRadius: 14, padding: '26px 28px' }}>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 10px' }}>How tokens work</p>
+          <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.7, margin: '0 0 12px' }}>
+            Plan B runs on the most advanced — and most expensive — AI there is. Instead of a flat monthly fee, you buy <strong style={{ color: ink }}>tokens</strong>: units of Minta&rsquo;s time. Every message uses some; you only pay for what you actually use, and <strong style={{ color: ink }}>nothing is recurring.</strong>
+          </p>
+          <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.7, margin: '0 0 12px' }}>
+            Roughly, a <strong style={{ color: ink }}>$20 pack</strong> covers about <strong style={{ color: ink }}>85 conversations</strong> with Minta. A heavy user — working a complex case every day — moves through that in about a month; a light user, checking in here and there, can stretch it over several. The <strong style={{ color: ink }}>$50</strong> and <strong style={{ color: ink }}>$100</strong> packs go further, with a little extra thrown in.
+          </p>
+          <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.7, margin: 0 }}>
+            <strong style={{ color: ink }}>Why tokens, not a subscription?</strong> A child in active treatment talks to Minta constantly; a stable one barely does — it wouldn&rsquo;t be fair to charge them the same. You pay for <em>your</em> use, and when you run low, you top up. That&rsquo;s it.
+          </p>
+        </div>
+      </section>
+
       {/* Honest pricing + disclaimer */}
       <section style={{ padding: '0 24px 88px' }}>
         <div className="pb-container" style={{ maxWidth: 720, margin: '0 auto', background: '#f3eede', border: `1px solid ${rule}`, borderRadius: 12, padding: '22px 24px' }}>

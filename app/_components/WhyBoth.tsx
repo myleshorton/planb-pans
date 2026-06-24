@@ -107,7 +107,7 @@ export default function WhyBoth() {
               '<strong>What&apos;s been missed, and what hasn&apos;t been tried</strong> — the drivers no single specialist connected.',
               'A compact, week-by-week healing journey you can actually follow — with a practitioner letter to bring to each visit.',
             ]}
-            cant="Then ask Minta anything for 30 days to troubleshoot. Keep her after for $49/mo — fed new studies and learning across every family, she evolves daily."
+            cant="Then ask Minta anything to troubleshoot — pay-as-you-go, no subscription. Fed new studies and learning across every family, she evolves daily."
           />
           <Col
             who="Rachel"
