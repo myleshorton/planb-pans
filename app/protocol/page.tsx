@@ -195,6 +195,22 @@ export default function ProtocolPage() {
               </tbody>
             </table>
           </div>
+          <div style={{ background: '#eef5f4', border: `1px solid ${teal}`, borderRadius: 12, padding: '20px 22px', margin: '22px 0 0' }}>
+            <p style={{ fontSize: 13, letterSpacing: '0.1em', textTransform: 'uppercase', color: teal, fontWeight: 700, margin: '0 0 10px' }}>&ldquo;Which one?&rdquo; — and what to fight for while you wait</p>
+            <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.65, margin: '0 0 12px' }}>
+              The right antibiotic depends on <strong style={{ color: ink }}>which infection is driving it</strong> — that&rsquo;s what the
+              bloodwork decides. High strep titers (ASO / anti-DNase B) point to a strep drug; a positive Mycoplasma points to a
+              different class; a tick-borne result points to another. Match the bug to the row above.
+            </p>
+            <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.65, margin: 0 }}>
+              But you don&rsquo;t have to wait helplessly. While results come back, prescribers commonly start an{' '}
+              <strong style={{ color: ink }}>empiric broad-spectrum first line</strong> that covers the most common triggers — most often{' '}
+              <strong style={{ color: ink }}>azithromycin</strong> (it hits <em>both</em> strep and Mycoplasma — the two biggest culprits) or{' '}
+              <strong style={{ color: ink }}>Augmentin (amoxicillin-clavulanate)</strong> (broad strep coverage, with anti-inflammatory
+              properties noted in the PANDAS research). If your child is in an acute flare, <strong style={{ color: ink }}>that&rsquo;s the
+              thing to ask for now</strong> — early treatment matters most. Your prescriber picks the drug and dose.
+            </p>
+          </div>
           <p style={{ fontSize: 13.5, color: soft, fontStyle: 'italic', margin: '16px 0 0' }}>
             For penicillin allergy, the Consortium specifically prefers <strong style={{ color: ink }}>cephalexin</strong> over
             cefadroxil (cefadroxil shares a side-chain with amoxicillin). True anaphylactic allergy → no cephalosporins at all.
