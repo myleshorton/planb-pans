@@ -135,12 +135,13 @@ export default function PackagesPage() {
           <p style={{ fontSize: 15.5, lineHeight: 1.65, opacity: 0.96, margin: '0 0 14px' }}>
             Complex kids aren’t answered in one pass. The labs come in waves over months, the behaviors shift, and
             the picture keeps changing. For families in active treatment, the <strong>Living Synthesis</strong> keeps
-            Minta on your case continuously — <strong>every new result re-folded into an updated direction, as often
-            as you need</strong> — plus lab trends and ongoing Minta. No paying per-recalibration.
+            Minta on your case — <strong>every new result re-folded into an updated direction as your labs come
+            in</strong> — plus lab trends and daily Minta access (with generous fair-use limits). No paying
+            per-recalibration.
           </p>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, flexWrap: 'wrap' }}>
             <span style={{ fontSize: 32, fontWeight: 700 }}>$39<span style={{ fontSize: 16, fontWeight: 400 }}>/mo</span></span>
-            <span style={{ fontSize: 13.5, opacity: 0.85 }}>unlimited recalibrations · cancel anytime</span>
+            <span style={{ fontSize: 13.5, opacity: 0.85 }}>recalibrations as results come in · fair use · cancel anytime</span>
           </div>
         </div>
       </section>
