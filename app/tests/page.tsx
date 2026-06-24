@@ -337,9 +337,15 @@ export default function TestsPage() {
             Most parents don&apos;t have a doctor who&apos;ll order these.{' '}
             <em style={{ fontStyle: 'italic', color: 'var(--teal)' }}>You don&apos;t need one.</em>
           </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--ink-soft)', maxWidth: 680, marginBottom: 18 }}>
+            Here&apos;s the secret: doctors respond differently when a parent shows up{' '}
+            <strong style={{ color: 'var(--ink)' }}>informed, with specifics, and a clear plan.</strong>{' '}
+            Name the tests, and most will order at least the standard, insurance-covered ones. The rest
+            you order yourself — almost everything on this page can be ordered{' '}
+            <strong>without your pediatrician</strong> — then bring the results back.
+          </p>
           <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--ink-soft)', maxWidth: 680, marginBottom: 36 }}>
-            Almost everything on this page can be ordered <strong>without your pediatrician</strong>.
-            There are three routes — most families use all three. Each test below also lists exactly
+            There are three routes, and most families use all three. Each test below lists exactly
             where to order it.
           </p>
 
@@ -419,9 +425,12 @@ export default function TestsPage() {
           </h2>
           <p style={{ fontSize: 17, lineHeight: 1.7, color: 'var(--ink-soft)', maxWidth: 700, marginBottom: 14 }}>
             Upload your results and <strong style={{ color: 'var(--ink)' }}>Minta tells you what actually
-            matters</strong> — which findings are significant, what they mean for your child, and what
-            you can do to improve them. Then she <strong style={{ color: 'var(--ink)' }}>synthesizes every
-            result together</strong> into one comprehensive plan, not a pile of disconnected numbers.
+            matters</strong> — which findings are significant, what they mean for your child, and{' '}
+            <strong style={{ color: 'var(--ink)' }}>why.</strong> Then she brings{' '}
+            <strong style={{ color: 'var(--ink)' }}>every result together under one umbrella</strong> —
+            labs, symptoms, and history — and hands you a <strong style={{ color: 'var(--ink)' }}>clear
+            direction with a why behind every step</strong>, not a pile of disconnected numbers no one
+            connected.
           </p>
           <p className="serif" style={{ fontFamily: 'var(--font-cormorant)', fontStyle: 'italic', fontSize: 'clamp(19px, 2.3vw, 25px)', lineHeight: 1.45, color: 'var(--ink)', maxWidth: 640, margin: '8px 0 0', paddingLeft: 16, borderLeft: '2px solid var(--teal)' }}>
             You don&apos;t need all of these at once. Start with a few, upload them, and let Minta lead
