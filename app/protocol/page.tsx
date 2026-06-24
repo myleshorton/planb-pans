@@ -178,6 +178,16 @@ export default function ProtocolPage() {
               </div>
             ))}
           </div>
+          <div style={{ background: '#fdeeee', border: '1px solid #e6b8b8', borderRadius: 12, padding: '18px 20px', marginTop: 24 }}>
+            <p style={{ fontSize: 14, fontWeight: 700, color: '#8a1f1f', margin: '0 0 8px' }}>⚠️ One critical caution before any steroid</p>
+            <p style={{ fontSize: 15, color: soft, lineHeight: 1.65, margin: 0 }}>
+              A steroid burst can calm PANS inflammation — but steroids <strong style={{ color: ink }}>suppress the immune system</strong>,
+              and if a child has <strong style={{ color: ink }}>active Lyme or another tick-borne infection</strong>, a steroid can make
+              them dramatically <strong style={{ color: ink }}>worse.</strong> So if you live in a tick-endemic area — or there&rsquo;s any
+              tick-borne suspicion — <strong style={{ color: ink }}>rule out Lyme first</strong>, and test through{' '}
+              <strong style={{ color: ink }}>IGeneX</strong>, which is far more sensitive than the standard CDC two-tier test that misses many cases.
+            </p>
+          </div>
         </div>
       </section>
 
