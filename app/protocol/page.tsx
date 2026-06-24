@@ -211,6 +211,28 @@ export default function ProtocolPage() {
               thing to ask for now</strong> — early treatment matters most. Your prescriber picks the drug and dose.
             </p>
           </div>
+          <div style={{ background: card, border: `1px solid ${rule}`, borderRadius: 12, padding: '20px 22px', margin: '18px 0 0' }}>
+            <p style={{ fontSize: 13, letterSpacing: '0.1em', textTransform: 'uppercase', color: teal, fontWeight: 700, margin: '0 0 6px' }}>A named early-onset protocol that works</p>
+            <p style={{ fontSize: 18, color: ink, fontWeight: 400, margin: '0 0 12px', fontFamily: 'var(--font-cormorant)' }}>Dr. Andrew Baumel&rsquo;s two-drug cocktail — a pediatrician&rsquo;s simple, gentle, early approach (Framingham, MA · 155+ children over 6+ years)</p>
+            <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.65, margin: '0 0 10px' }}>
+              Dr. Baumel — a board-certified general pediatrician — treats early, mild-to-moderate PANS right in his regular office with
+              a deliberately simple combination he&rsquo;s leaned on for over six years:
+            </p>
+            <ul style={{ fontSize: 15.5, color: soft, lineHeight: 1.75, margin: '0 0 10px', paddingLeft: 20 }}>
+              <li><strong style={{ color: ink }}>Cephalexin (Keflex) — 50 mg/kg/day, divided twice a day</strong> &nbsp;(the antibiotic, from Dr. Pasternack at Harvard)</li>
+              <li><strong style={{ color: ink }}>Naproxen sodium — 5 mg/kg per dose</strong> &nbsp;(the anti-inflammatory, from Dr. Frankovich at Stanford)</li>
+            </ul>
+            <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.65, margin: 0 }}>
+              His key insight: use these <strong style={{ color: ink }}>mild medications long-term — slow and steady</strong>, not a quick
+              burst. No steroids, IVIG, or Rituximab for mild-to-moderate cases. In his experience, <strong style={{ color: ink }}>most
+              early-caught children respond</strong> and recover without the heavier therapies. He also swabs the whole family for strep and
+              checks for the tell-tale perianal/vaginal strep rash. <em>This is a real protocol a pediatrician can run — bring it to yours.</em>
+            </p>
+            <p style={{ fontSize: 13.5, color: soft, lineHeight: 1.6, margin: '12px 0 0', paddingTop: 12, borderTop: `1px solid ${rule}` }}>
+              This gentle, early, pediatrician-led approach <strong style={{ color: ink }}>isn&rsquo;t formally written into the 2017 Consortium guidelines</strong> — but Dr. Baumel argues, and his six years of results suggest, that it belongs there as the first and simplest option for early cases.{' '}
+              <a href="https://neuroimmune.org/pans-pandas-interview-baumel/" rel="noopener" style={{ color: teal, fontWeight: 700 }}>Read his full interview →</a>
+            </p>
+          </div>
           <p style={{ fontSize: 13.5, color: soft, fontStyle: 'italic', margin: '16px 0 0' }}>
             For penicillin allergy, the Consortium specifically prefers <strong style={{ color: ink }}>cephalexin</strong> over
             cefadroxil (cefadroxil shares a side-chain with amoxicillin). True anaphylactic allergy → no cephalosporins at all.
