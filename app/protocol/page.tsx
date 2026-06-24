@@ -89,6 +89,30 @@ export default function ProtocolPage() {
               </tbody>
             </table>
           </div>
+
+          <div style={{ marginTop: 24, background: '#eef5f4', border: `1px solid ${teal}`, borderRadius: 10, padding: '20px 22px' }}>
+            <p style={{ fontSize: 15.5, color: ink, margin: '0 0 12px', lineHeight: 1.65, fontWeight: 700 }}>
+              Overwhelmed? You don’t order everything, and you don’t do this alone.
+            </p>
+            <p style={{ fontSize: 15, color: soft, margin: '0 0 12px', lineHeight: 1.65 }}>
+              Plan B doesn’t treat your child — <strong style={{ color: ink }}>your doctors do that.</strong> What
+              Minta gives you is <strong style={{ color: teal }}>direction,</strong> in two steps:
+            </p>
+            <p style={{ fontSize: 15, color: soft, margin: '0 0 8px', lineHeight: 1.6 }}>
+              <strong style={{ color: ink }}>1 · A testing direction.</strong> Based on whatever you have right
+              now, Minta tells you exactly which tests to run next to complete the picture — prioritized, one or
+              two at a time, with where to order each.
+            </p>
+            <p style={{ fontSize: 15, color: soft, margin: '0 0 12px', lineHeight: 1.6 }}>
+              <strong style={{ color: ink }}>2 · A treatment direction.</strong> Once your results are in, she
+              shows you what’s driving it, what the options are, in what order, and the <em>why</em> — written as
+              the roadmap and the questions to <strong style={{ color: ink }}>bring to your medical team,</strong>{' '}
+              so they can act with the whole picture in front of them.
+            </p>
+            <p style={{ fontSize: 14, color: soft, margin: 0, lineHeight: 1.55, fontStyle: 'italic' }}>
+              We integrate and direct. Your prescriber decides and treats. That’s the line — and we never cross it.
+            </p>
+          </div>
         </div>
       </section>
 
