@@ -61,8 +61,12 @@ export default function WaitlistPage() {
             }}
           >
             Plan B is a non-profit — cost should never be the reason your kid doesn&apos;t get this.
-            Every week, Rachel takes one family at no charge and builds the full Synthesis, the same
-            one that costs $397. The only ask: it&apos;s done in the open.
+            There are <strong style={{ color: 'var(--ink)' }}>two free paths</strong>, both on this list:
+            every week, Rachel takes <strong style={{ color: 'var(--ink)' }}>one family at no charge</strong> and
+            builds the full Synthesis (the same one that costs $397) — the only ask is it&apos;s done in the open.
+            And if the $20 is the only thing between you and Minta, get on the list for{' '}
+            <strong style={{ color: 'var(--ink)' }}>free Minta usage</strong>, funded by donors. We&apos;d rather
+            help now than make you wait.
           </p>
           <div style={{ marginTop: 36 }}>
             <a
@@ -108,7 +112,7 @@ export default function WaitlistPage() {
               ['Join the waitlist', 'It&apos;s open — no application, no proof of hardship. If $397 is out of reach, that&apos;s reason enough.'],
               ['Each week, one family is chosen', 'The waitlist is public and transparent. No favourites, no fine print.'],
               ['You get the full Synthesis', 'Every lab read together, what&apos;s been missed, what hasn&apos;t been tried, the tests to order next, and a month-by-month calendar — exactly what the paid families receive.'],
-              ['Your Synthesis goes public — your child stays anonymous', 'That&apos;s the trade, and it&apos;s the whole point. Your child&apos;s name is removed, but the synthesis and symptoms are published in our <a href="/stories" style="color:var(--teal)">stories</a> as &ldquo;what Minta found&rdquo; — so we all learn together. Your hardest season makes the next family&apos;s read sharper.'],
+              ['Your Synthesis goes public — your child stays anonymous', 'That&apos;s the trade, and it&apos;s the whole point. Your child&apos;s name is removed, but the synthesis and symptoms are published in our <a href="/sample-synthesis" style="color:var(--teal)">stories</a> as &ldquo;what Minta found&rdquo; — so we all learn together. Your hardest season makes the next family&apos;s read sharper.'],
             ].map(([title, body], i) => (
               <li key={i} style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                 <span className="serif" style={{ fontSize: 34, fontWeight: 300, color: 'var(--teal)', lineHeight: 1, minWidth: 34 }}>{i + 1}</span>
@@ -210,7 +214,7 @@ function WaitlistForm() {
         <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, margin: 0 }}>
           One family is chosen each week. We&apos;ll email you — and either way, every published
           synthesis is yours to learn from at{' '}
-          <a href="/stories" style={{ color: 'var(--teal)' }}>/stories</a>.
+          <a href="/sample-synthesis" style={{ color: 'var(--teal)' }}>/stories</a>.
         </p>
       </div>
     )
