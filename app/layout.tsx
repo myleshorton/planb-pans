@@ -231,6 +231,14 @@ export default function RootLayout({
               <Link href="/privacy" style={{ color: 'var(--sand-dark)' }}>
                 Privacy
               </Link>
+              <a
+                href="https://www.facebook.com/profile.php?id=61588842100605"
+                target="_blank"
+                rel="noopener"
+                style={{ color: 'var(--sand-dark)', textDecoration: 'none' }}
+              >
+                Facebook
+              </a>
             </nav>
             <p style={{ marginTop: 22, fontSize: 12, color: 'var(--sand-dark)' }}>
               © {new Date().getFullYear()} Plan B for PANS
