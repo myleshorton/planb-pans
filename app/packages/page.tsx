@@ -134,6 +134,12 @@ export default function PricingPage() {
               What a month with Minta costs <em>you</em>: a <strong style={{ color: ink }}>light user</strong> (a check-in here and there) — about <strong style={{ color: ink }}>$20</strong>. A <strong style={{ color: ink }}>heavy user</strong> (chatting daily, deep in a complex case) — <strong style={{ color: ink }}>$50–$100</strong>. So <strong style={{ color: ink }}>$20</strong> lasts a heavy user about a month — a light user, several.
             </p>
             <a href="https://app.planbforpans.com" style={{ display: 'inline-block', fontSize: 14, fontWeight: 700, color: teal, textDecoration: 'none', borderBottom: `2px solid rgba(31,107,107,0.32)`, paddingBottom: 1 }}>Top up in the app →</a>
+            <div style={{ borderTop: `1px solid ${rule}`, marginTop: 18, paddingTop: 16 }}>
+              <p style={{ fontSize: 13.5, color: soft, lineHeight: 1.6, margin: '0 0 12px' }}>
+                Can&rsquo;t swing the $20? <strong style={{ color: ink }}>No family is ever turned away because of cost</strong> — Plan B is a non-profit, and we&rsquo;d rather help a child now than wait for funding.
+              </p>
+              <a href="https://app.planbforpans.com/sponsor" style={{ display: 'inline-block', fontSize: 14, fontWeight: 700, color: teal, textDecoration: 'none', borderBottom: `2px solid rgba(31,107,107,0.32)`, paddingBottom: 1 }}>Sponsor a family&rsquo;s Minta →</a>
+            </div>
           </div>
         </div>
       </section>
