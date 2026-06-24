@@ -24,7 +24,18 @@ const SCREEN: [string, string][] = [
   ['Influenza (molecular swab)', 'Active flu — a common, overlooked trigger.'],
   ['Perineal / skin-site culture', 'Strep hiding outside the throat — perianal, impetigo, vulvovaginitis.'],
   ['Family / close-contact throat swabs', 'A silent strep carrier in the house re-infecting your child. Swab the adults who never seem sick.'],
-  ['Lyme — only if endemic', 'Tick-borne infection, but only screened where Lyme is common, and a positive must be confirmed by Western blot.'],
+  ['Lyme — only if endemic', 'Tick-borne infection, but only screened where Lyme is common. In endemic areas, test through IGeneX (more sensitive than the standard CDC two-tier).'],
+  ['CBC with differential', 'A baseline blood count — infection, inflammation, and immune clues in one inexpensive test.'],
+  ['ESR + CRP (inflammation)', 'Whole-body inflammation markers. Often normal in PANS (the inflammation is in the brain), but worth the baseline.'],
+  ['ANA (antinuclear antibody)', 'A screen for broader autoimmunity riding alongside.'],
+  ['Immunoglobulins — IgG, IgA, IgM, IgE', 'Immune-system baseline. Low IgG/IgA can explain infections that never clear.'],
+  ['Pneumococcal antibody titers', 'If infections keep recurring — catches specific antibody deficiency (SPAD), which is its own door to covered IVIG.'],
+  ['Thyroid — TSH, Free T4, TPO + TgAb', 'Autoimmune thyroid can mimic or ride alongside PANS.'],
+  ['Vitamin D (25-OH)', 'Low D worsens immune dysregulation; the Consortium targets above 30 ng/mL.'],
+  ['Ferritin + iron studies', 'Low ferritin tracks with restless sleep and worse symptoms.'],
+  ['B12 + folate', 'Methylation and neurologic cofactors.'],
+  ['EBV panel (VCA IgM/IgG, EBNA, EA)', 'Epstein-Barr — a common viral trigger; EA positivity flags active reactivation.'],
+  ['tTG-IgA (celiac screen)', 'If there are GI symptoms — celiac can drive neuro-behavioral change.'],
 ]
 
 const ABX: [string, string, string, string][] = [
@@ -137,7 +148,22 @@ export default function ProtocolPage() {
             </table>
           </div>
 
-          <div style={{ marginTop: 24, background: '#eef5f4', border: `1px solid ${teal}`, borderRadius: 10, padding: '20px 22px' }}>
+          <div style={{ marginTop: 20, background: card, border: `1px solid ${rule}`, borderRadius: 10, padding: '20px 22px' }}>
+            <p style={{ fontSize: 13, letterSpacing: '0.1em', textTransform: 'uppercase', color: teal, fontWeight: 700, margin: '0 0 12px' }}>How to actually get this bloodwork — two ways</p>
+            <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.65, margin: '0 0 12px' }}>
+              <strong style={{ color: ink }}>① Order it yourself — no doctor needed.</strong> In most states you can order most of these labs direct (they run through Quest or LabCorp; you book a quick blood draw):{' '}
+              <a href="https://www.walkinlab.com/" rel="noopener" style={{ color: teal, fontWeight: 700 }}>Walk-In Lab</a>,{' '}
+              <a href="https://www.questhealth.com/" rel="noopener" style={{ color: teal, fontWeight: 700 }}>Quest Health</a>,{' '}
+              <a href="https://www.labcorp.com/labcorp-ondemand" rel="noopener" style={{ color: teal, fontWeight: 700 }}>Labcorp OnDemand</a>,{' '}
+              <a href="https://www.ultalabtests.com/" rel="noopener" style={{ color: teal, fontWeight: 700 }}>Ulta Lab Tests</a>. A few specialized tests (like IGeneX Lyme) still need a provider to order.
+            </p>
+            <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.65, margin: 0 }}>
+              <strong style={{ color: ink }}>② Have an online doctor order it — and try for insurance.</strong> A telehealth PANS doctor can order the full panel and often get it covered.{' '}
+              <a href="https://app.planbforpans.com/doctors" rel="noopener" style={{ color: teal, fontWeight: 700 }}>See our practitioner directory →</a> — where parents flag <em>which</em> doctors actually order the workup and got insurance to cover it, so you can go straight to the ones who do.
+            </p>
+          </div>
+
+          <div style={{ marginTop: 18, background: '#eef5f4', border: `1px solid ${teal}`, borderRadius: 10, padding: '20px 22px' }}>
             <p style={{ fontSize: 15.5, color: ink, margin: '0 0 12px', lineHeight: 1.65, fontWeight: 700 }}>
               Overwhelmed? You don’t order everything, and you don’t do this alone.
             </p>
