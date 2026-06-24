@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, Fragment } from 'react'
 import BucketSection from './_components/BucketSection'
+import EscalationPath from './_components/EscalationPath'
 import MethodSection from './_components/MethodSection'
 import WhyBoth from './_components/WhyBoth'
 import { FamilyStoriesTeaser } from './_components/FamilyStories'
@@ -472,6 +473,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* The escalation path — crisis → functional med → what hasn't been tried */}
+      <EscalationPath />
 
       {/* Why you need both — the bot + the human */}
       <WhyBoth />
