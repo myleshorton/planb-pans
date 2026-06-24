@@ -70,6 +70,46 @@ export default function ProtocolPage() {
         </div>
       </section>
 
+      {/* What the protocol IS — the story + the "hit it hard while you wait" framing */}
+      <section style={{ padding: 'clamp(44px, 6vw, 72px) 24px', borderBottom: `1px solid ${rule}`, background: '#f3eede' }}>
+        <div className="pb-container" style={{ maxWidth: 760, margin: '0 auto' }}>
+          <h2 style={sectionTitle}>What &ldquo;the protocol&rdquo; even is</h2>
+          <p style={{ fontSize: 17, lineHeight: 1.75, color: soft, margin: '0 0 16px' }}>
+            In <strong style={{ color: ink }}>1998</strong>, Dr. Susan Swedo at the NIH first described <strong style={{ color: ink }}>PANDAS</strong> —
+            a strep infection setting off a sudden, severe neuropsychiatric change in a child overnight. The category later
+            widened to <strong style={{ color: ink }}>PANS</strong> (any infection or trigger, not just strep).
+          </p>
+          <p style={{ fontSize: 17, lineHeight: 1.75, color: soft, margin: '0 0 16px' }}>
+            In <strong style={{ color: ink }}>2017</strong>, a small group of the leading PANS clinicians — the{' '}
+            <strong style={{ color: ink }}>PANS Research Consortium</strong> — published the first consensus
+            <strong style={{ color: ink }}> treatment guidelines.</strong> That document is, essentially,{' '}
+            <strong style={{ color: ink }}>what your pediatrician receives</strong> when they go looking for &ldquo;how do I treat
+            this.&rdquo; It is the <strong style={{ color: ink }}>first line.</strong>
+          </p>
+          <p style={{ fontSize: 17, lineHeight: 1.75, color: soft, margin: '0 0 16px' }}>
+            It doesn&rsquo;t work for every child — but it is <strong style={{ color: ink }}>always worth a hard, early shot</strong>,
+            and the sooner you hit it, the better it tends to go. So if your specialist appointment is{' '}
+            <strong style={{ color: ink }}>months out</strong> and your pediatrician doesn&rsquo;t know where to start —{' '}
+            <strong style={{ color: ink }}>now you do.</strong> Here is the first line, in plain sight. Hit it hard, hit it early.
+          </p>
+          <div style={{ background: card, border: `1px solid ${rule}`, borderRadius: 12, padding: '20px 22px', marginTop: 22 }}>
+            <p style={{ fontSize: 13, letterSpacing: '0.1em', textTransform: 'uppercase', color: teal, fontWeight: 700, margin: '0 0 12px' }}>Can&rsquo;t wait for the appointment? Three moves:</p>
+            <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.6, margin: '0 0 10px' }}>
+              <strong style={{ color: ink }}>① Find a prescriber.</strong> A telehealth PANS doctor can start the first line now —{' '}
+              <a href="https://app.planbforpans.com/doctors" rel="noopener" style={{ color: teal, fontWeight: 700 }}>see the practitioner directory →</a>
+            </p>
+            <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.6, margin: '0 0 10px' }}>
+              <strong style={{ color: ink }}>② Read them this.</strong> &ldquo;My child had a sudden, severe neuropsychiatric onset
+              that fits PANS/PANDAS. I&rsquo;d like to start the PANS Consortium first line — the bloodwork to find the trigger, plus an
+              empiric antibiotic course while we wait. Can we begin today?&rdquo;
+            </p>
+            <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.6, margin: 0 }}>
+              <strong style={{ color: ink }}>③ Ask for this bloodwork</strong> — the exact panel is right below. 👇
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Step 1 — the screen */}
       <section style={{ padding: 'clamp(48px, 7vw, 80px) 24px', borderBottom: `1px solid ${rule}` }}>
         <div className="pb-container" style={{ maxWidth: 880, margin: '0 auto' }}>
