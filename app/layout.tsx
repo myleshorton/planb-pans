@@ -68,6 +68,7 @@ export default function RootLayout({
               <NavLink href="/stories">Stories</NavLink>
               <NavLink href="/pricing">Pricing</NavLink>
               <NavLink href="/tests">Tests</NavLink>
+              <NavLink href="/protocol">Protocol</NavLink>
               <NavLink href="/research">Daily Studies</NavLink>
               <NavLink href="/tracker">Tracker</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>

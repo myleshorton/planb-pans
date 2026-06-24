@@ -1,0 +1,201 @@
+// "What Your Doctor Sees" — the PANS diagnostic workup + treatment decision tree,
+// laid out so parents can walk in informed and decide alongside their clinician.
+// Original Plan B rendering of the JCAP 2017 PANS Consortium guideline logic +
+// standard pediatric (IDSA/AAP/CDC) dosing. Educational — not medical advice.
+
+export const metadata = {
+  title: 'What Your Doctor Sees — The PANS Protocol | Plan B for PANS',
+  description:
+    'The exact tests a good PANS doctor orders to find the trigger, the antibiotic for each infection with standard doses, when IVIG is used and how it gets covered, and the decision tree they follow — laid out so you can decide alongside them.',
+}
+
+const ink = '#2a2a26'
+const teal = '#1F6B6B'
+const soft = '#5b5547'
+const rule = '#e3dcc9'
+const cream = '#faf6ec'
+const card = '#fffdf7'
+
+const SCREEN: [string, string][] = [
+  ['Throat swab — rapid strep + culture', 'Active group A Strep, even with no sore throat. If the rapid test is negative they culture it — rapid tests miss ~15% of strep.'],
+  ['ASO (anti-streptolysin O)', 'A recent strep infection (an antibody). Most useful as serial values over time — a single number says little.'],
+  ['Anti-DNase B', 'A second strep antibody, run with ASO. Together they catch more — but a negative still does not rule strep out.'],
+  ['Mycoplasma PCR + IgM/IgG', 'Active mycoplasma ("walking pneumonia"). PCR confirms current infection; IgG alone can stay high for life, so it is not proof of a current bug.'],
+  ['Influenza (molecular swab)', 'Active flu — a common, overlooked trigger.'],
+  ['Perineal / skin-site culture', 'Strep hiding outside the throat — perianal, impetigo, vulvovaginitis.'],
+  ['Family / close-contact throat swabs', 'A silent strep carrier in the house re-infecting your child. Swab the adults who never seem sick.'],
+  ['Lyme — only if endemic', 'Tick-borne infection, but only screened where Lyme is common, and a positive must be confirmed by Western blot.'],
+]
+
+const ABX: [string, string, string, string][] = [
+  ['Strep (first-line)', 'Amoxicillin or Penicillin V', 'Amoxicillin ~50 mg/kg once daily (max 1 g)', '10 days (some run an initial 3-week course)'],
+  ['Strep — penicillin-allergic', 'Cephalexin or Cefadroxil (Consortium-preferred)', 'Cephalexin 20 mg/kg/dose twice daily', '10 days'],
+  ['Strep — anaphylactic PCN allergy', 'Azithromycin or Clindamycin (avoid all cephalosporins)', 'Azithromycin 12 mg/kg day 1, then 6 mg/kg', '5 days'],
+  ['Mycoplasma', 'Azithromycin (macrolide); tetracyclines if resistant', 'Azithromycin ~10 mg/kg/day', '3–5 days'],
+  ['Sinusitis', 'High-dose Amoxicillin-clavulanate', '80–90 mg/kg/day (amox component), divided', '10–14 days'],
+  ['Acute Lyme / tick-borne', 'Doxycycline (any age now); Amoxicillin alt.', 'Doxycycline 4.4 mg/kg/day (max 200 mg)', '10–14 days'],
+]
+
+const TREE: { step: string; title: string; body: string }[] = [
+  { step: '1', title: 'New PANS diagnosis', body: 'A good doctor treats every new case with an initial anti-strep course — even if strep isn’t found — because strep is the most common, most treatable trigger.' },
+  { step: '2', title: 'Run the infection screen', body: 'The tests above, at onset and at every flare. Find the trigger.' },
+  { step: '3', title: 'Target the infection', body: 'The right antibiotic for the bug they found, at a full course (table below).' },
+  { step: '4', title: 'Calm the brain', body: 'Anti-inflammatories on a schedule (a 6-week trial), and often a short steroid burst — most effective started within 1–3 days of a flare.' },
+  { step: '5', title: 'Grade the severity', body: 'Mild → time + the steps above. Moderate-to-severe → escalate. Extreme → urgent.' },
+  { step: '6', title: 'Moderate-to-severe → IVIG', body: 'Immune-modulating IVIG (1.5–2 g/kg), often the preferred next step, alone or with steroids.' },
+  { step: '7', title: 'Extreme → plasma exchange (TPE)', body: 'First-line for the most severe, life-impacting cases; IVIG or IV steroids as backup. Refer to a neuroimmune center.' },
+]
+
+const sectionTitle: React.CSSProperties = { fontFamily: 'var(--font-cormorant)', fontWeight: 300, fontSize: 'clamp(26px, 4vw, 40px)', lineHeight: 1.05, letterSpacing: '-0.02em', color: ink, margin: '0 0 14px' }
+const th: React.CSSProperties = { textAlign: 'left', fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase', color: teal, padding: '10px 12px', borderBottom: `2px solid ${rule}` }
+const td: React.CSSProperties = { fontSize: 14.5, color: soft, padding: '12px', borderBottom: `1px solid ${rule}`, lineHeight: 1.5, verticalAlign: 'top' }
+
+export default function ProtocolPage() {
+  return (
+    <main style={{ background: cream, color: ink }}>
+      {/* Hero */}
+      <section style={{ padding: 'clamp(56px, 9vw, 110px) 24px 40px', borderBottom: `1px solid ${rule}` }}>
+        <div className="pb-container" style={{ maxWidth: 880, margin: '0 auto' }}>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 16px' }}>What your doctor sees</p>
+          <h1 style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 300, fontSize: 'clamp(34px, 6vw, 64px)', lineHeight: 1.02, letterSpacing: '-0.02em', margin: '0 0 20px' }}>
+            The protocol, in the open.
+          </h1>
+          <p style={{ fontSize: 18, lineHeight: 1.7, color: soft, maxWidth: 680, margin: 0 }}>
+            Doctors respond differently to a parent who shows up informed. So here is exactly what a good PANS
+            doctor <strong style={{ color: ink }}>orders to find the infection</strong>, the{' '}
+            <strong style={{ color: ink }}>antibiotic for each one</strong>, when it escalates to{' '}
+            <strong style={{ color: ink }}>IVIG</strong> — and the <strong style={{ color: ink }}>decision tree</strong>{' '}
+            they follow. Laid out so you can walk in, name it, and decide alongside them.
+          </p>
+        </div>
+      </section>
+
+      {/* Step 1 — the screen */}
+      <section style={{ padding: 'clamp(48px, 7vw, 80px) 24px', borderBottom: `1px solid ${rule}` }}>
+        <div className="pb-container" style={{ maxWidth: 880, margin: '0 auto' }}>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 8px' }}>Step 1 · find the trigger</p>
+          <h2 style={sectionTitle}>The tests doctors order to find the infection</h2>
+          <p style={{ fontSize: 16, lineHeight: 1.7, color: soft, maxWidth: 680, margin: '0 0 24px' }}>
+            These are the labs a PANS-literate doctor runs at onset and at every flare. Name them, and most
+            doctors will order the standard, insurance-covered ones.
+          </p>
+          <div style={{ overflowX: 'auto', border: `1px solid ${rule}`, borderRadius: 10, background: card }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 520 }}>
+              <thead><tr><th style={th}>Test</th><th style={th}>What it’s looking for</th></tr></thead>
+              <tbody>
+                {SCREEN.map(([t, w]) => (
+                  <tr key={t}><td style={{ ...td, fontWeight: 600, color: ink, minWidth: 200 }}>{t}</td><td style={td}>{w}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Decision tree */}
+      <section style={{ padding: 'clamp(48px, 7vw, 80px) 24px', borderBottom: `1px solid ${rule}`, background: '#f3eede' }}>
+        <div className="pb-container" style={{ maxWidth: 720, margin: '0 auto' }}>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 8px' }}>The decision tree</p>
+          <h2 style={sectionTitle}>The path a doctor follows</h2>
+          <div style={{ display: 'grid', gap: 0, marginTop: 18 }}>
+            {TREE.map((n, i) => (
+              <div key={n.step}>
+                <div style={{ display: 'flex', gap: 14, alignItems: 'flex-start', background: card, border: `1px solid ${rule}`, borderRadius: 10, padding: '14px 16px' }}>
+                  <div style={{ flexShrink: 0, width: 30, height: 30, borderRadius: '50%', background: teal, color: '#fff', fontWeight: 700, fontSize: 14, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{n.step}</div>
+                  <div><div style={{ fontSize: 16, fontWeight: 700, color: ink }}>{n.title}</div><div style={{ fontSize: 14, color: soft, lineHeight: 1.5, marginTop: 3 }}>{n.body}</div></div>
+                </div>
+                {i < TREE.length - 1 && <div style={{ textAlign: 'center', color: teal, fontSize: 18, lineHeight: 1.4 }}>↓</div>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Step 2 — targeting (antibiotics) */}
+      <section style={{ padding: 'clamp(48px, 7vw, 80px) 24px', borderBottom: `1px solid ${rule}` }}>
+        <div className="pb-container" style={{ maxWidth: 880, margin: '0 auto' }}>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 8px' }}>Step 2 · target the infection</p>
+          <h2 style={sectionTitle}>The antibiotic for each bug</h2>
+          <p style={{ fontSize: 16, lineHeight: 1.7, color: soft, maxWidth: 700, margin: '0 0 24px' }}>
+            The doses below are the <strong style={{ color: ink }}>standard published pediatric regimens</strong>{' '}
+            (IDSA / AAP / CDC). They are here so you know what “normal” looks like — the exact dose for your
+            child is always your prescriber’s decision.
+          </p>
+          <div style={{ overflowX: 'auto', border: `1px solid ${rule}`, borderRadius: 10, background: card }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 640 }}>
+              <thead><tr><th style={th}>Infection</th><th style={th}>First-line</th><th style={th}>Standard dose</th><th style={th}>Course</th></tr></thead>
+              <tbody>
+                {ABX.map(([inf, drug, dose, dur]) => (
+                  <tr key={inf}><td style={{ ...td, fontWeight: 600, color: ink }}>{inf}</td><td style={td}>{drug}</td><td style={td}>{dose}</td><td style={td}>{dur}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ fontSize: 13.5, color: soft, fontStyle: 'italic', margin: '16px 0 0' }}>
+            For penicillin allergy, the Consortium specifically prefers <strong style={{ color: ink }}>cephalexin</strong> over
+            cefadroxil (cefadroxil shares a side-chain with amoxicillin). True anaphylactic allergy → no cephalosporins at all.
+          </p>
+        </div>
+      </section>
+
+      {/* IVIG + insurance */}
+      <section style={{ padding: 'clamp(48px, 7vw, 80px) 24px', borderBottom: `1px solid ${rule}`, background: '#f3eede' }}>
+        <div className="pb-container" style={{ maxWidth: 760, margin: '0 auto' }}>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 8px' }}>When it’s severe</p>
+          <h2 style={sectionTitle}>IVIG — and how families get it covered</h2>
+          <p style={{ fontSize: 16, lineHeight: 1.7, color: soft, margin: '0 0 16px' }}>
+            For <strong style={{ color: ink }}>moderate-to-severe</strong> PANS, IVIG (immune-modulating
+            immunoglobulin, <strong style={{ color: ink }}>1.5–2 g/kg</strong>, split over 2+ days) is often the
+            preferred next step — alone or with steroids. The most extreme, life-impacting cases go to{' '}
+            <strong style={{ color: ink }}>plasma exchange (TPE)</strong> first. Response to IVIG is often
+            delayed 2–3 weeks, and most kids treated early need only 1–3 courses.
+          </p>
+          <div style={{ background: card, border: `1px solid ${rule}`, borderRadius: 10, padding: '18px 20px' }}>
+            <p style={{ fontSize: 15, fontWeight: 700, color: ink, margin: '0 0 10px' }}>How to get insurance to cover it</p>
+            <ul style={{ margin: 0, paddingLeft: 18, fontSize: 14.5, color: soft, lineHeight: 1.65 }}>
+              <li><strong style={{ color: ink }}>Code it as autoimmune encephalitis.</strong> Until there’s a PANS-specific code, this is the lever — six states (CA, CO, IL, MD, OR, RI) require it. PANS is, literally, an emerging autoimmune encephalopathy.</li>
+              <li><strong style={{ color: ink }}>A letter of medical necessity</strong> mapping the treatment to the insurer’s own policy criteria.</li>
+              <li><strong style={{ color: ink }}>Letters from multiple providers</strong> — several states require a PCP <em>and</em> a specialist to jointly attest.</li>
+              <li><strong style={{ color: ink }}>Attach the peer-reviewed evidence</strong> (the Perlmutter IVIG/TPE trial, the Consortium guidelines) — reviewers often don’t know PANS.</li>
+              <li><strong style={{ color: ink }}>Expect prior authorization</strong> on every request, and document objective inflammation where you can (MRI, EEG, sleep study, autoantibodies, family autoimmune history).</li>
+            </ul>
+            <p style={{ fontSize: 13, color: soft, margin: '12px 0 0' }}>
+              Templates: <a href="https://neuroimmune.org/obtaining-insurance-coverage-for-pans-pandas-treatments/" target="_blank" rel="noopener" style={{ color: teal }}>Neuroimmune Foundation</a> ·{' '}
+              <a href="https://www.pandasppn.org/" target="_blank" rel="noopener" style={{ color: teal }}>PANDAS Physicians Network</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Healing + escalate */}
+      <section style={{ padding: 'clamp(48px, 7vw, 80px) 24px', borderBottom: `1px solid ${rule}` }}>
+        <div className="pb-container" style={{ maxWidth: 760, margin: '0 auto' }}>
+          <h2 style={sectionTitle}>What healing looks like — and when to escalate</h2>
+          <ul style={{ margin: '8px 0 0', paddingLeft: 18, fontSize: 15.5, color: soft, lineHeight: 1.7 }}>
+            <li><strong style={{ color: ink }}>Antibiotics:</strong> recent-onset kids often improve within <strong>days to a few weeks</strong> of the right antibiotic.</li>
+            <li><strong style={{ color: ink }}>Anti-inflammatories:</strong> a <strong>6-week</strong> trial; many kids slip when it’s withdrawn — itself a sign it was helping.</li>
+            <li><strong style={{ color: ink }}>Steroid burst:</strong> works best within <strong>1–3 days</strong> of a flare; flares treated early ran ~6 weeks vs ~11 untreated.</li>
+            <li><strong style={{ color: ink }}>The escalation rule:</strong> early treatment beats late, and when first-line fails, second-line helps — so you <strong>escalate, you don’t wait.</strong></li>
+            <li><strong style={{ color: ink }}>When to pivot:</strong> if a kid stops responding to immune treatment entirely (even high-dose steroids), the guideline itself says to shift toward <strong>rehabilitation</strong> — and that’s exactly where Plan B starts hunting for the driver no one found.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <section style={{ padding: '40px 24px 80px' }}>
+        <div className="pb-container" style={{ maxWidth: 760, margin: '0 auto' }}>
+          <p style={{ fontSize: 13.5, color: soft, lineHeight: 1.6, fontStyle: 'italic' }}>
+            This page is educational — the standard guideline picture (PANS Consortium, JCAP 2017) plus standard
+            pediatric dosing, drawn so you can have a smarter conversation. It is not medical advice. I’m Rachel
+            Johnson, a parent navigator and integrator, not a licensed clinician. Every dose and decision is your
+            child’s prescriber’s. Sources:{' '}
+            <a href="https://www.liebertpub.com/doi/10.1089/cap.2016.0148" target="_blank" rel="noopener" style={{ color: teal }}>Consortium Part II (immune)</a> ·{' '}
+            <a href="https://www.liebertpub.com/doi/10.1089/cap.2016.0151" target="_blank" rel="noopener" style={{ color: teal }}>Part III (infections)</a> ·{' '}
+            <a href="https://www.idsociety.org/practice-guideline/streptococcal-pharyngitis/" target="_blank" rel="noopener" style={{ color: teal }}>IDSA strep</a> ·{' '}
+            <a href="https://www.idsociety.org/practice-guideline/lyme-disease/" target="_blank" rel="noopener" style={{ color: teal }}>IDSA Lyme</a>.
+          </p>
+        </div>
+      </section>
+    </main>
+  )
+}
