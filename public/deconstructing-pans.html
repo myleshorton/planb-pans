@@ -66,10 +66,7 @@
   .spine::after{content:""; position:absolute; left:0; right:0; top:-70px; height:70px; border-radius:3px; background:linear-gradient(180deg, transparent, rgba(255,255,255,.85), transparent); animation:flow 4s ease-in-out 1.7s infinite}
   @keyframes draw{from{transform:scaleY(0)} to{transform:scaleY(1)}}
   @keyframes flow{0%{top:-70px; opacity:0} 12%{opacity:.95} 88%{opacity:.95} 100%{top:100%; opacity:0}}
-  .subset .ic{animation:floaty 4.5s ease-in-out infinite}
-  .beat .n{animation:floaty 5s ease-in-out infinite}
-  @keyframes floaty{0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)}}
-  @media (prefers-reduced-motion:reduce){ .spine::after,.subset .ic,.beat .n{animation:none} }
+  @media (prefers-reduced-motion:reduce){ .spine::after{animation:none} }
 
   .stage{position:relative; margin-bottom:14px}
   .node{position:absolute; left:-52px; top:18px; width:50px; height:50px; border-radius:50%;
@@ -104,7 +101,7 @@
   .subset.primary{grid-column:1 / -1; background:linear-gradient(180deg, rgba(31,107,107,.06), #fff)}
   .subset summary{display:flex; gap:12px; align-items:flex-start; cursor:pointer; list-style:none; outline:none}
   .subset summary::-webkit-details-marker{display:none}
-  .subset .ic{flex-shrink:0; width:40px; height:40px; border-radius:12px; background:var(--cream); border:1.5px solid var(--sc); display:flex; align-items:center; justify-content:center; font-size:20px; margin-top:2px}
+  .subset .ic{flex-shrink:0; width:6px; align-self:stretch; min-height:34px; border-radius:3px; background:var(--sc); border:none; margin-top:4px}
   .subset h4{font-family:'Cormorant',serif; font-weight:600; font-size:21px; line-height:1.05; margin:0 0 5px; color:var(--ink); display:flex; align-items:center; gap:7px}
   .caret{font-family:'Inter',sans-serif; font-size:14px; color:var(--sc); font-weight:800; transition:transform .2s ease; flex-shrink:0}
   .subset[open] .caret{transform:rotate(90deg)}
@@ -206,6 +203,8 @@
 
     <p class="bridge fade" style="animation-delay:.6s">But it&rsquo;s rarely just <em>one</em> thing. <b>Deconstructing PANS</b> means taking it apart piece by piece â the protocol first, then the tests that uncover every hidden driver. If the first line doesn&rsquo;t get your child <b>all the way</b> better, you go deeper. Here&rsquo;s the map, and <b>the test that finds each driver.</b></p>
     <p class="fade" style="animation-delay:.66s; margin:14px 0 0; font-size:14.5px; font-style:italic; color:var(--faint); max-width:600px">Every child&rsquo;s path is different â this is an overview of <b style="color:var(--soft); font-style:normal">what you <em>can</em> do</b>, not a fixed order. You and your team choose the sequence.</p>
+    <div class="modebar fade" style="animation-delay:.7s"><button class="modebtn" onclick="document.body.classList.toggle('detail-on'); this.textContent=document.body.classList.contains('detail-on')?' Simpler view':' Show every detail'"> Show every detail</button></div>
+    <p class="simple-hint fade" style="animation-delay:.72s">Showing the essentials â tap any card to go deeper. Flip the switch for the full clinical depth.</p>
 
     <!-- THE PATH -->
     <div class="path">
@@ -221,14 +220,14 @@
           <ol class="steps">
             <li><b>Treat the infection.</b> Throat culture; if positive, antibiotics â Swedo recommends a <b>full 3-week course</b> (it also covers a possible sinus infection). Re-screen at every flare.</li>
             <li><b>Calm the immune system.</b> An <b>NSAID (ibuprofen)</b> trial â or prednisone. <em>Her note: some kids ease with ibuprofen, some don&rsquo;t â and no response does <b>not</b> rule out PANS/PANDAS.</em> Moderate-to-severe &rarr; <b>steroids Â· IVIG Â· plasmapheresis.</b></li>
-            <li><b>Treat the symptoms.</b> <b>CBT / ERP</b> and often an <b>SSRI</b> for the OCD, anxiety &amp; tics while the medical treatment works.</li>
+            <li><b>Treat the symptoms.</bg if 0; sb>CBT / ERP</b> and often an <b>SSRI</b> for the OCD, anxiety &amp; tics while the medical treatment works.</li>
           </ol>
-          <p class="endnote">ð In Dr. Swedo&rsquo;s own words: <b>&ldquo;This is a curable disorder. Remain hopeful.&rdquo;</b></p>
+          <p class="endnote"> In Dr. Swedo&rsquo;s own words: <b>&ldquo;This is a curable disorder. Remain hopeful.&rdquo;</b></p>
           <p class="tests"><b>The why Â· tests</b><br>ASO + anti-DNase B (strep) Â· throat &amp; perianal culture Â· Mycoplasma PCR/IgM Â· CBC, ESR/CRP, ANA Â· immunoglobulins</p>
           <a class="more" href="https://planbforpans.com/protocol" target="_blank" rel="noopener">See the full protocol â step by step &rarr;</a>
           <p class="src">Source: <a href="https://www.nimh.nih.gov/news/science-updates/2017/guidelines-published-for-treating-pans-pandas" target="_blank" rel="noopener">NIMH treatment guidelines (2017)</a> Â· <a href="https://neuroimmune.org/susan-swedo-pandas-interview/" target="_blank" rel="noopener">Dr. Swedo interview</a></p>
           <details class="ivig">
-            <summary>ð About IVIG â why it works for some, not others <span class="caret">âº</span></summary>
+            <summary> About IVIG â why it works for some, not others <span class="caret">âº</span></summary>
             <div class="detail">
               <div class="trow"><b>What it is:</b> immune-modulating immunoglobulin (1.5â2 g/kg, split over 2+ days) that reboots the misfiring immune attack on the brain. Response is often delayed 2â3 weeks; most kids need 1â3 courses.</div>
               <div class="trow"><b>Why it works for some:</b> when the driver is truly autoimmune / inflammatory and caught reasonably early, IVIG calms the attack and the child turns a corner.</div>
@@ -237,7 +236,7 @@
             </div>
           </details>
           <details class="ivig">
-            <summary>ð The antibiotic for each bug â full doses <span class="caret">âº</span></summary>
+            <summary> The antibiotic for each bug â full doses <span class="caret">âº</span></summary>
             <div class="detail">
               <div class="trow"><b>Strep (first-line):</b> Amoxicillin or Penicillin V â amox ~50 mg/kg once daily (max 1 g) â 10 days (some run an initial 3-week course).</div>
               <div class="trow"><b>Strep, penicillin-allergic:</b> Cephalexin (Consortium-preferred over cefadroxil) â 20 mg/kg/dose twice daily â 10 days.</div>
@@ -249,13 +248,13 @@
             </div>
           </details>
           <details class="ivig">
-            <summary>ð©º Dr. Baumel&rsquo;s gentle early protocol <span class="caret">âº</span></summary>
+            <summary> Dr. Baumel&rsquo;s gentle early protocol <span class="caret">âº</span></summary>
             <div class="detail">
               <div class="trow">A board-certified pediatrician&rsquo;s simple, long-term combo (155+ kids over 6+ years): <b>Cephalexin (Keflex) 50 mg/kg/day divided twice a day</b> + <b>Naproxen sodium 5 mg/kg/dose</b>, used <b>slowly and long-term</b> â no steroids, IVIG, or Rituximab for mild-to-moderate cases. Most early-caught kids respond. <a href="https://neuroimmune.org/pans-pandas-interview-baumel/" target="_blank" rel="noopener" style="color:var(--teal); font-weight:700">Read his interview &rarr;</a></div>
             </div>
           </details>
           <details class="ivig">
-            <summary>ð¥ IVIG â how families get it covered <span class="caret">âº</span></summary>
+            <summary> IVIG â how families get it covered <span class="caret">âº</span></summary>
             <div class="detail">
               <div class="trow"><b>Code it as autoimmune encephalitis</b> â the lever until there&rsquo;s a PANS-specific code (6 states require coverage: CA, CO, IL, MD, OR, RI).</div>
               <div class="trow"><b>Letter of medical necessity</b> mapping the treatment to the insurer&rsquo;s own policy criteria.</div>
@@ -266,7 +265,7 @@
             </div>
           </details>
           <details class="ivig">
-            <summary>ð What healing looks like â and when to escalate <span class="caret">âº</span></summary>
+            <summary> What healing looks like â and when to escalate <span class="caret">âº</span></summary>
             <div class="detail">
               <div class="trow"><b>Antibiotics:</b> recent-onset kids often improve within days to a few weeks of the right one.</div>
               <div class="trow"><b>Anti-inflammatories:</b> a 6-week trial; many kids slip when it&rsquo;s withdrawn â itself a sign it was helping.</div>
@@ -285,11 +284,12 @@
         <div class="card">
           <p class="stage-tag">Stage 2 Â· Functional medicine</p>
           <h2 class="stage-title">Find the root drivers</h2>
-          <p class="stage-body">Go deeper than infection. Each root is its own subset â <b>tap any one</b> to see its tests and what each one finds. Several tests <b>overlap</b> (noted inside), and <b>Lyme often sits upstream.</b> <span class="ess-key">red = the tests I'd call essential</span></p>
-          <div class="intake-flag">â <b>Always at intake:</b> folate / B12 (+ homocysteine; FRAT if there&rsquo;s regression). And <b>ZRT urinary neurotransmitters</b> â an important part of the picture. <span>(below: folate under ð Nutrients Â· ZRT under ð§  Neurotransmitters)</span></div>
-          <div class="order-note"><b>ð How to order:</b> many you can order <b>yourself</b> â folate, B12, immunoglobulins, tryptase, vitamin D â Walk-In Lab Â· Quest Health Â· Labcorp OnDemand. Others need a provider (IGeneX, Galaxy, GI-MAP, mycotoxins, HTMA). Look for the green <span class="pick">Plan B pick</span> tag for the lab we trust most. <b>Not sure which test your child needs, or how to get it? That&rsquo;s exactly what Plan B walks you through.</b></div>
+          <p class="stage-body">Go deeper than infection. Each root is its own subset â <b>tap any one</b> to see its tests and what each one finds. Several tests <b>overlap</b> (noted inside), and <b>Lyme often sits upstream.</bg if 0; sspan class="ess-key">red = the tests I'd call essential</span></p>
+          <div style="margin-top:13px; background:linear-gradient(135deg, var(--teal), #2c5a6b); color:#fdf8ee; border-radius:13px; padding:15px 18px; font-size:14.5px; line-height:1.55; box-shadow:0 16px 38px -26px rgba(31,107,107,.8)"g if 0; sb>Don&rsquo;t know how to read any of this? You don&rsquo;t have to.</b> Plan B interprets <em>and</em> synthesizes every lab for you â pulls it all together and tells you exactly what it means and what to do next.</div>
+          <div class="intake-flag detailed"g if 0; sb>Always at intake:</b> folate / B12 (+ homocysteine; FRAT if there&rsquo;s regression). And <b>ZRT urinary neurotransmitters</b> â an important part of the picture. <span>(below: folate under  Nutrients Â· ZRT under  Neurotransmitters)</span></div>
+          <div class="order-note detailed"><b> How to order:</b> many you can order <b>yourself</b> â folate, B12, immunoglobulins, tryptase, vitamin D â Walk-In Lab Â· Quest Health Â· Labcorp OnDemand. Others need a provider (IGeneX, Galaxy, GI-MAP, mycotoxins, HTMA). Look for the green <span class="pick">Plan B pick</span> tag for the lab we trust most. <b>Not sure which test your child needs, or how to get it? That&rsquo;s exactly what Plan B walks you through.</b></div>
           <div class="start-here">
-            <p class="sh-tag">ð¢ New to PANS? Start here</p>
+            <p class="sh-tag"> New to PANS? Start here</p>
             <p class="sh-b">These you can <b>self-order today</b> (Walk-In Lab Â· Quest Health Â· Labcorp OnDemand) â one blood draw, no doctor:</p>
             <p class="sh-list"><b>ASO + Anti-DNase B</b> (strep) Â· <b>Mycoplasma IgM / IgG</b> Â· <b>CBC + ESR + CRP</b> Â· <b>Immunoglobulins (IgG/A/M/E)</b> Â· <b>Folate + B12 + homocysteine</b> Â· <b>Vitamin D</b> Â· <b>ferritin</b></p>
             <p class="sh-b" style="margin-top:9px">Then layer in: <b>23andMe</b> ($99, genetics) â and the functional tests below (mycotoxins Â· GI-MAP Â· OAT) once you know where to look. <b>Plan B tells you which, in what order.</b></p>
@@ -297,14 +297,14 @@
           <div class="subsets">
 
             <details class="subset primary" style="--sc:var(--teal)">
-              <summary><div class="ic">ð·ï¸</div><div><h4>Lyme &amp; tick-borne <span class="caret">âº</span></h4><p class="sub">Borrelia Â· Bartonella Â· Babesia Â· Mycoplasma Â· Ehrlichia â <b>often the upstream root</b></p><span class="tap">tap for tests + what they find</span></div></summary>
+              <summary><div class="ic"></div><div><h4>Lyme &amp; tick-borne <span class="caret">âº</span></h4><p class="sub">Borrelia Â· Bartonella Â· Babesia Â· Mycoplasma Â· Ehrlichia â <b>often the upstream root</b></p><span class="tap">tap for tests + what they find</span></div></summary>
               <div class="detail">
-                <div class="trow ess"><b>IGeneX</b> <span class="pick">Plan B pick</span> (Western Blot / ImmunoBlot) â far more sensitive than the standard CDC two-tier; catches the bands conventional labs miss.<span class="why">the CDC two-tier misses up to half of cases; IGeneX reports species-specific bands and catches early + late infection others call negative.</span><span class="self">igenex.com â patient self-order + mail-in kit (most states).</span></div>
+                <div class="trow ess"><b>IGeneX</bg if 0; sspan class="pick">Plan B pick</span> (Western Blot / ImmunoBlot) â far more sensitive than the standard CDC two-tier; catches the bands conventional labs miss.<span class="why">the CDC two-tier misses up to half of cases; IGeneX reports species-specific bands and catches early + late infection others call negative.</span><span class="self">igenex.com â patient self-order + mail-in kit (most states).</span></div>
                 <div class="trow"><b>Galaxy Diagnostics</b> â the Bartonella gold standard (triple-draw + PCR + enrichment culture).</div>
                 <div class="trow"><b>T-Labs</b> â broad tick-borne co-infection panel.</div>
                 <div class="trow"><b>DNA Connexions</b> â urine PCR for Borrelia DNA after a provocation dose.</div>
                 <div class="trow ov">â <b>Overlaps:</b> Mycoplasma is also a Stage-1 trigger. Treating Lyme often calms the mold, gut, methylation &amp; MCAS drivers below.</div>
-                <div class="trow" style="border-top:1px solid var(--rule); padding-top:10px; margin-top:3px"><b style="color:var(--teal)">ð¡ï¸ Kill it â the full menu.</b> The right mix is per-child; Plan B sequences it:</div>
+                <div class="trow" style="border-top:1px solid var(--rule); padding-top:10px; margin-top:3px"><b style="color:var(--teal)"> Kill it â the full menu.</b> The right mix is per-child; Plan B sequences it:</div>
                 <div class="trow"><b>Antibiotics</b> â combinations per form + co-infection (doxycycline Â· amoxicillin Â· azithromycin; cyst-busters like tinidazole).</div>
                 <div class="trow"><b>Herbals</b> â Buhner &amp; Cowden protocols (Japanese knotweed Â· cat&rsquo;s claw Â· Cryptolepis Â· red sage).</div>
                 <div class="trow"><b>Dapsone</b> â Horowitz &ldquo;double-dose dapsone&rdquo; (DDD) for persistent Lyme.</div>
@@ -318,23 +318,23 @@
             </details>
 
             <details class="subset" style="--sc:#8a7d2e">
-              <summary><div class="ic">ð</div><div><h4>Mold / CIRS <span class="caret">âº</span></h4><p class="sub">test the child <em>and</em> the house</p><span class="tap">tap for tests</span></div></summary>
+              <summary><div class="ic"></div><div><h4>Mold / CIRS <span class="caret">âº</span></h4><p class="sub">test the child <em>and</em> the house</p><span class="tap">tap for tests</span></div></summary>
               <div class="detail">
-                <div class="trow ess"><b>Urine mycotoxins â RealTime Labs</b> <span class="pick">Plan B pick</span> (or MyMycoLab Â· Mosaic / Great Plains MycoTOX Â· Vibrant) â measures the actual mold toxins stored in the body.<span class="why">measures the actual mycotoxins making the child sick (not just antibodies); the longest-running validated mycotoxin lab.</span><span class="self">realtimelab.com â patient-direct ordering.</span></div>
+                <div class="trow ess"><b>Urine mycotoxins â RealTime Labs</bg if 0; sspan class="pick">Plan B pick</span> (or MyMycoLab Â· Mosaic / Great Plains MycoTOX Â· Vibrant) â measures the actual mold toxins stored in the body.<span class="why">measures the actual mycotoxins making the child sick (not just antibodies); the longest-running validated mycotoxin lab.</span><span class="self">realtimelab.com â patient-direct ordering.</span></div>
                 <div class="trow"><b>OAT (fungal / Aspergillus markers)</b> â urine metabolites flagging fungal colonization.</div>
                 <div class="trow"><b>VCS screen</b> â a 5-minute visual-contrast test for biotoxin exposure.</div>
                 <div class="trow"><b>C4a Â· TGF-Î²1 Â· MSH Â· MMP-9 Â· VIP Â· VEGF</b> â Shoemaker inflammatory markers: how hard the immune system is reacting.</div>
                 <div class="trow"><b>HLA-DR</b> â the genetics: whether the body can clear biotoxins at all.</div>
                 <div class="trow"><b>ERMI / HERTSMI-2</b> â dust test of the HOUSE, to find the source.</div>
                 <div class="trow ov">â <b>Overlaps:</b> the OAT also appears under Gut + Nutrients.</div>
-                <div class="trow" style="border-top:1px solid var(--rule); padding-top:10px; margin-top:3px"><b style="color:var(--teal)">ð¡ï¸ Treat it.</b> Remove the exposure (fix the house) â <b>binders</b> (cholestyramine Â· charcoal Â· clay Â· chlorella; aloe for kids) â <b>antifungals</b> if colonized â nasal <b>BEG / VIP spray</b> (Shoemaker) â sauna Â· glutathione Â· drainage. <b>Order matters</b> (Shoemaker sequence). <em>More on each in the podcast + future studies.</em></div>
+                <div class="trow" style="border-top:1px solid var(--rule); padding-top:10px; margin-top:3px"><b style="color:var(--teal)"> Treat it.</b> Remove the exposure (fix the house) â <b>binders</b> (cholestyramine Â· charcoal Â· clay Â· chlorella; aloe for kids) â <b>antifungals</b> if colonized â nasal <b>BEG / VIP spray</b> (Shoemaker) â sauna Â· glutathione Â· drainage. <b>Order matters</b> (Shoemaker sequence). <em>More on each in the podcast + future studies.</em></div>
               </div>
             </details>
 
             <details class="subset" style="--sc:#5B4B8A">
-              <summary><div class="ic">ð§¬</div><div><h4>Methylation &amp; detox <span class="caret">âº</span></h4><p class="sub">Walsh Â· Yasko Â· MTHFR / COMT / CBS</p><span class="tap">tap for tests</span></div></summary>
+              <summary><div class="ic"></div><div><h4>Methylation &amp; detox <span class="caret">âº</span></h4><p class="sub">Walsh Â· Yasko Â· MTHFR / COMT / CBS</p><span class="tap">tap for tests</span></div></summary>
               <div class="detail">
-                <div class="trow ess"><b>23andMe + StrateGene</b> <span class="pick">Plan B pick</span> â the SNPs (MTHFR, COMTâ¦): your genetic tendencies. Start here ($99 + free).<span class="why">covers every major methylation SNP for $99, and StrateGene maps them onto the pathway free â the same SNPs the $400 panels report.</span><span class="self">23andMe.com â download raw data â upload to StrateGene (free).</span></div>
+                <div class="trow ess"><b>23andMe + StrateGene</bg if 0; sspan class="pick">Plan B pick</span> â the SNPs (MTHFR, COMTâ¦): your genetic tendencies. Start here ($99 + free).<span class="why">covers every major methylation SNP for $99, and StrateGene maps them onto the pathway free â the same SNPs the $400 panels report.</span><span class="self">23andMe.com â download raw data â upload to StrateGene (free).</span></div>
                 <div class="trow"><b>Walsh panel</b> â whole-blood histamine + copper/zinc: the methylation phenotype actually expressing.</div>
                 <div class="trow"><b>Homocysteine + MMA</b> â functional markers of whether methylation is working right now.</div>
                 <div class="trow"><b>HTMA</b> â mineral + detox status.</div>
@@ -344,9 +344,9 @@
             </details>
 
             <details class="subset" style="--sc:#B06A2C">
-              <summary><div class="ic">ð¦ </div><div><h4>Gut &amp; microbiome <span class="caret">âº</span></h4><p class="sub">dysbiosis Â· candida Â· oxalates Â· leaky gut</p><span class="tap">tap for tests</span></div></summary>
+              <summary><div class="ic"></div><div><h4>Gut &amp; microbiome <span class="caret">âº</span></h4><p class="sub">dysbiosis Â· candida Â· oxalates Â· leaky gut</p><span class="tap">tap for tests</span></div></summary>
               <div class="detail">
-                <div class="trow ess"><b>GI-MAP</b> <span class="pick">Plan B pick</span> â PCR stool: pathogens, H. pylori, parasites, dysbiosis.<span class="why">quantitative PCR (not culture) â catches pathogens &amp; dysbiosis culture misses, with numbers you can re-test against.</span><span class="self">Rupa Health or DirectLabs â patient-pay, no practitioner in most states.</span></div>
+                <div class="trow ess"><b>GI-MAP</bg if 0; sspan class="pick">Plan B pick</span> â PCR stool: pathogens, H. pylori, parasites, dysbiosis.<span class="why">quantitative PCR (not culture) â catches pathogens &amp; dysbiosis culture misses, with numbers you can re-test against.</span><span class="self">Rupa Health or DirectLabs â patient-pay, no practitioner in most states.</span></div>
                 <div class="trow"><b>GI-Effects (Genova)</b> â digestion, microbiome balance, calprotectin (gut inflammation).</div>
                 <div class="trow"><b>OAT</b> â yeast + bacterial metabolites + oxalates.</div>
                 <div class="trow"><b>Zonulin</b> â leaky-gut marker.</div>
@@ -355,9 +355,9 @@
             </details>
 
             <details class="subset" style="--sc:#B0466A">
-              <summary><div class="ic">â¡</div><div><h4>MCAS / histamine <span class="caret">âº</span></h4><p class="sub">mast-cell activation</p><span class="tap">tap for tests</span></div></summary>
+              <summary><div class="ic"></div><div><h4>MCAS / histamine <span class="caret">âº</span></h4><p class="sub">mast-cell activation</p><span class="tap">tap for tests</span></div></summary>
               <div class="detail">
-                <div class="trow ess"><b>Tryptase</b> <span class="pick">Plan B pick</span> â mast-cell burden (draw at baseline AND during a flare).<span class="why">the one validated, reproducible mast-cell marker; a baseline-vs-flare comparison is the evidence an allergist / immunologist accepts.</span><span class="self">Walk-In Lab Â· Quest Health Â· Labcorp OnDemand.</span></div>
+                <div class="trow ess"><b>Tryptase</bg if 0; sspan class="pick">Plan B pick</span> â mast-cell burden (draw at baseline AND during a flare).<span class="why">the one validated, reproducible mast-cell marker; a baseline-vs-flare comparison is the evidence an allergist / immunologist accepts.</span><span class="self">Walk-In Lab Â· Quest Health Â· Labcorp OnDemand.</span></div>
                 <div class="trow"><b>Plasma histamine</b> â circulating histamine right now.</div>
                 <div class="trow"><b>DAO</b> â the enzyme that clears histamine; low DAO = it builds up.</div>
                 <div class="trow"><b>Urine N-methylhistamine + PGD2</b> â mast-cell mediators.</div>
@@ -366,18 +366,18 @@
             </details>
 
             <details class="subset" style="--sc:#7A4FA3">
-              <summary><div class="ic">ð§ </div><div><h4>Neurotransmitters <span class="caret">âº</span></h4><p class="sub">the chemistry behind mood Â· OCD Â· rage Â· anxiety</p><span class="tap">tap for tests</span></div></summary>
+              <summary><div class="ic"></div><div><h4>Neurotransmitters <span class="caret">âº</span></h4><p class="sub">the chemistry behind mood Â· OCD Â· rage Â· anxiety</p><span class="tap">tap for tests</span></div></summary>
               <div class="detail">
                 <div class="trow"><b>ZRT urinary neurotransmitters</b> â serotonin Â· dopamine Â· GABA Â· glutamate Â· norepinephrine Â· PEA. An <b>important part of the picture</b> (a pattern signal â best paired with the OAT below).</div>
-                <div class="trow ess"><b>OAT neuro-metabolites</b> <span class="pick">Plan B pick</span> â HVA (dopamine) Â· VMA (norepinephrine) Â· 5-HIAA (serotonin) Â· quinolinate / kynurenate (neuroinflammation).<span class="why">mass-spec metabolites reflect real neurotransmitter turnover â more validated than urinary neurotransmitter panels, and it doubles as a gut / mito / fungal read.</span><span class="self">DirectLabs or the Mosaic patient portal.</span></div>
+                <div class="trow ess"><b>OAT neuro-metabolites</bg if 0; sspan class="pick">Plan B pick</span> â HVA (dopamine) Â· VMA (norepinephrine) Â· 5-HIAA (serotonin) Â· quinolinate / kynurenate (neuroinflammation).<span class="why">mass-spec metabolites reflect real neurotransmitter turnover â more validated than urinary neurotransmitter panels, and it doubles as a gut / mito / fungal read.</span><span class="self">DirectLabs or the Mosaic patient portal.</span></div>
                 <div class="trow ov">â <b>Overlaps:</b> the OAT also flags mold + gut; GABA / glutamate tie back to methylation.</div>
               </div>
             </details>
 
             <details class="subset" style="--sc:#4A6B8A; grid-column:1 / -1">
-              <summary><div class="ic">ð</div><div><h4>Nutrients &amp; minerals <span class="caret">âº</span></h4><p class="sub">thiamine Â· copper Â· zinc Â· iron Â· magnesium Â· B12 / folate Â· vitamin D</p><span class="tap">tap for the full panel</span></div></summary>
+              <summary><div class="ic"></div><div><h4>Nutrients &amp; minerals <span class="caret">âº</span></h4><p class="sub">thiamine Â· copper Â· zinc Â· iron Â· magnesium Â· B12 / folate Â· vitamin D</p><span class="tap">tap for the full panel</span></div></summary>
               <div class="detail">
-                <div class="trow ess"><b>Folate + B12</b> <span class="pick">Plan B pick</span> (+ homocysteine, MMA; FRAT if regression) â methylation cofactors + whether they&rsquo;re working. Always at intake.<span class="why">cheap + functional â homocysteine + MMA show if they actually work, not just sit in range; FRAT catches cerebral folate deficiency the blood level hides.</span><span class="self">Walk-In Lab Â· Quest Health (FRAT needs a provider).</span></div>
+                <div class="trow ess"><b>Folate + B12</bg if 0; sspan class="pick">Plan B pick</span> (+ homocysteine, MMA; FRAT if regression) â methylation cofactors + whether they&rsquo;re working. Always at intake.<span class="why">cheap + functional â homocysteine + MMA show if they actually work, not just sit in range; FRAT catches cerebral folate deficiency the blood level hides.</span><span class="self">Walk-In Lab Â· Quest Health (FRAT needs a provider).</span></div>
                 <div class="trow"><b>RBC thiamine (B1)</b> â true B1 status (serum misses it).</div>
                 <div class="trow"><b>Ceruloplasmin + copper:zinc + %-free copper</b> â the copperâzinc balance Walsh centers on.</div>
                 <div class="trow"><b>RBC magnesium / minerals</b> â intracellular status (serum misses it).</div>
@@ -390,18 +390,18 @@
             </details>
 
             <details class="subset" style="--sc:#2F8B5B">
-              <summary><div class="ic">ð¡ï¸</div><div><h4>Immune function <span class="caret">âº</span></h4><p class="sub">antibody deficiency (SPAD)</p><span class="tap">tap for tests</span></div></summary>
+              <summary><div class="ic"></div><div><h4>Immune function <span class="caret">âº</span></h4><p class="sub">antibody deficiency (SPAD)</p><span class="tap">tap for tests</span></div></summary>
               <div class="detail">
                 <div class="trow"><b>Immunoglobulins (IgG / A / M / E)</b> â overall immune levels.</div>
                 <div class="trow"><b>IgG subclasses</b> â partial deficiencies hiding behind a &ldquo;normal&rdquo; total.</div>
-                <div class="trow ess"><b>Pneumococcal titers (pre/post vaccine)</b> <span class="pick">Plan B pick</span> â can the body make protective antibody? Low = SPAD â the door to covered IVIG.<span class="why">low titers + low IgG / IgA are objective, insurance-recognized proof of immune deficiency â an independent path to covered IVIG.</span><span class="self">Walk-In Lab Â· Quest Health (some require a provider).</span></div>
+                <div class="trow ess"><b>Pneumococcal titers (pre/post vaccine)</bg if 0; sspan class="pick">Plan B pick</span> â can the body make protective antibody? Low = SPAD â the door to covered IVIG.<span class="why">low titers + low IgG / IgA are objective, insurance-recognized proof of immune deficiency â an independent path to covered IVIG.</span><span class="self">Walk-In Lab Â· Quest Health (some require a provider).</span></div>
                 <div class="trow ov">â <b>Overlaps:</b> low titers / SPAD is the bridge to <b>IVIG</b> (see Stage 1).</div>
               </div>
             </details>
 
           </div>
-          <div class="seq-note">âï¸ <b>The order you target these matters â a lot.</b> Some kids need <b>mold cleared before Lyme</b>. Some need <b>methylation supported first</b> so they can even detox. Some need a <b>virus taken out first</b>. The wrong sequence can set a child back â and the right one unlocks everything. <b>Finding the right order for <em>your</em> child is exactly what Plan&nbsp;B does.</b></div>
-          <div class="seq-note" style="background:linear-gradient(135deg, rgba(47,139,91,.10), rgba(31,107,107,.06)); border-color:rgba(47,139,91,.32); margin-top:11px">â±ï¸ <b>When do you start adding supplements?</b> Treat an active infection right away â but hold the deeper protocols until you have your <b>test results</b> (so you target, not guess), the <b>drainage / detox pathways are open</b>, and an acute flare has calmed. Then add <b>one thing at a time</b>, a few calm days apart, so any reaction is traceable. <b>Plan B paces this for you.</b></div>
+          <div class="seq-note"g if 0; sb>The order you target these matters â a lot.</b> Some kids need <b>mold cleared before Lyme</b>. Some need <b>methylation supported first</b> so they can even detox. Some need a <b>virus taken out first</b>. The wrong sequence can set a child back â and the right one unlocks everything. <b>Finding the right order for <em>your</em> child is exactly what Plan&nbsp;B does.</b></div>
+          <div class="seq-note" style="background:linear-gradient(135deg, rgba(47,139,91,.10), rgba(31,107,107,.06)); border-color:rgba(47,139,91,.32); margin-top:11px">â± <b>When do you start adding supplements?</b> Treat an active infection right away â but hold the deeper protocols until you have your <b>test results</b> (so you target, not guess), the <b>drainage / detox pathways are open</b>, and an acute flare has calmed. Then add <b>one thing at a time</b>, a few calm days apart, so any reaction is traceable. <b>Plan B paces this for you.</b></div>
         </div>
       </div>
       <div class="gate"><span>Still not all better?</span></div>
@@ -431,13 +431,13 @@
     <!-- TREAT THE HOUSE -->
     <div class="house fade" style="animation-delay:1.05s">
       <p class="alongside-tag">Don&rsquo;t forget the source</p>
-      <p class="alongside-title">ð  Treat the house â not just the child</p>
+      <p class="alongside-title"> Treat the house â not just the child</p>
       <p class="alongside-body" style="margin-bottom:14px">Mold, dust, and strep don&rsquo;t only live in your child â they live in the home. If the source stays, the child keeps getting re-triggered. Find it, then fix it.</p>
       <div class="support">
         <div class="sgroup">
           <p class="sg-h">Find it in the house</p>
           <p class="sg-b"><b>DIY â hunt it yourself (cheap):</b> a <b>hygrometer</b> (~$15) â keep every room under 50% humidity (mold needs moisture) Â· a <b>moisture meter</b> (~$30) â press it to walls, baseboards &amp; under sinks to find hidden wet spots Â· an <b>infrared / thermal camera</b> (~$40, phone add-on) â cold patches on a wall = hidden water behind it.</p>
-          <p class="sg-b" style="margin-top:9px"><b>Go deeper:</b> <b>ERMI / HERTSMI-2</b> mail-in dust test â an OK <em>first</em> screen, but the score panics people; read it as a clue, not a verdict Â· a professional <b>mold inspection + air sampling</b> (a good IEP) tells you far more Â· follow the moisture: leaks, basements, bathrooms, behind walls, the HVAC, that musty smell.</p>
+          <p class="sg-b" style="margin-top:9px"><b>Go deeper:</bg if 0; sb>ERMI / HERTSMI-2</b> mail-in dust test â an OK <em>first</em> screen, but the score panics people; read it as a clue, not a verdict Â· a professional <b>mold inspection + air sampling</b> (a good IEP) tells you far more Â· follow the moisture: leaks, basements, bathrooms, behind walls, the HVAC, that musty smell.</p>
         </div>
         <div class="sgroup">
           <p class="sg-h">Fix the house</p>
@@ -459,13 +459,13 @@
         </div>
         <div class="sgroup">
           <p class="sg-h">Body, recovery &amp; detox</p>
-          <p class="sg-b"><b>movement &amp; exercise</b> Â· <b>red-light therapy</b> Â· <b>sauna</b> Â· <b>detox &amp; drainage</b> <span>(binders Â· lymph Â· hydration)</span></p>
+          <p class="sg-b"><b>movement &amp; exercise</b> Â· <b>red-light therapy</b> Â· <b>sauna</b> Â· <b>detox &amp; drainage</bg if 0; sspan>(binders Â· lymph Â· hydration)</span></p>
         </div>
       </div>
     </div>
 
     <div class="fade" style="animation-delay:1.15s; margin-top:14px; background:rgba(91,75,138,.06); border:1px dashed rgba(91,75,138,.4); border-radius:14px; padding:16px 20px">
-      <p style="margin:0; font-size:14.5px; color:var(--soft); line-height:1.6"><b style="color:var(--ink)">ð¿ Classical homeopathy</b> can run in the background as a gentle, whole-system foundation â <b style="color:var(--ink)">but start it only once all your functional testing is done</b>, so the remedies don&rsquo;t muddy your results.</p>
+      <p style="margin:0; font-size:14.5px; color:var(--soft); line-height:1.6"><b style="color:var(--ink)"> Classical homeopathy</b> can run in the background as a gentle, whole-system foundation â <b style="color:var(--ink)">but start it only once all your functional testing is done</b>, so the remedies don&rsquo;t muddy your results.</p>
     </div>
 
     <div class="synth-ad fade" style="animation-delay:1.2s">

@@ -71,6 +71,7 @@ export default function RootLayout({
               <NavLink href="/tests">Tests</NavLink>
               <NavLink href="/protocol">Protocol</NavLink>
               <a href="/understanding-pans.html" style={{ fontFamily: 'var(--font-inter)', fontSize: 13, color: 'var(--teal)', fontWeight: 700, textDecoration: 'none', whiteSpace: 'nowrap' }}>Understanding PANS</a>
+              <a href="/deconstructing-pans.html" style={{ fontFamily: 'var(--font-inter)', fontSize: 13, color: 'var(--teal)', fontWeight: 700, textDecoration: 'none', whiteSpace: 'nowrap' }}>The Full Map</a>
               <NavLink href="/research">Daily Studies</NavLink>
               <NavLink href="/tracker">Tracker</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
