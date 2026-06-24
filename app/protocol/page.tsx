@@ -103,8 +103,14 @@ export default function ProtocolPage() {
               that fits PANS/PANDAS. I&rsquo;d like to start the PANS Consortium first line — the bloodwork to find the trigger, plus an
               empiric antibiotic course while we wait. Can we begin today?&rdquo;
             </p>
-            <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.6, margin: 0 }}>
-              <strong style={{ color: ink }}>③ Ask for this bloodwork</strong> — the exact panel is right below. 👇
+            <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.6, margin: '0 0 12px' }}>
+              <strong style={{ color: ink }}>③ Ask for this bloodwork</strong> — when a child changes overnight, run the panel the protocol calls for to find the trigger. The exact list is right below. 👇
+            </p>
+            <p style={{ fontSize: 15, color: soft, lineHeight: 1.6, margin: 0, paddingTop: 12, borderTop: `1px solid ${rule}` }}>
+              <strong style={{ color: ink }}>📄 Hand them the actual guidelines.</strong> Most pediatricians have never seen them — print and bring the real published documents:{' '}
+              <a href="https://www.pandasppn.org/" rel="noopener" style={{ color: teal, fontWeight: 700 }}>PANDAS Physicians Network guidance →</a>,{' '}
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9836684/" rel="noopener" style={{ color: teal, fontWeight: 700 }}>2017 treatment guideline — infections/antibiotics →</a>,{' '}
+              <a href="https://neuroimmune.org/clinicians/pans-diagnosis-and-treatment-guides/" rel="noopener" style={{ color: teal, fontWeight: 700 }}>Neuroimmune clinician guides →</a>.
             </p>
           </div>
         </div>
