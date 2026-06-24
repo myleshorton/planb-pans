@@ -30,6 +30,14 @@
   .wrap{max-width:780px; margin:0 auto; padding:clamp(46px,7vw,88px) 22px 110px; position:relative; z-index:1}
   .fade{opacity:0; transform:translateY(22px); animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
   @keyframes rise{to{opacity:1; transform:none}}
+  /* Simple (default) vs Full-detail mode â progressive disclosure so new parents aren't overwhelmed */
+  .detailed{display:none}
+  body.detail-on .detailed{display:block}
+  .modebar{display:flex; justify-content:center; margin:20px 0 0}
+  .modebtn{font-family:'Inter',sans-serif; font-size:13.5px; font-weight:700; color:var(--teal); background:#fff; border:1.5px solid var(--teal); border-radius:999px; padding:10px 20px; cursor:pointer; box-shadow:0 6px 18px -12px rgba(31,107,107,.6)}
+  body.detail-on .modebtn{background:var(--teal); color:#fff}
+  .simple-hint{text-align:center; font-size:12.5px; color:var(--faint); margin:8px 0 0; font-style:italic}
+  body.detail-on .simple-hint{display:none}
 
   /* ââ what is it ââ */
   .eyebrow{font-size:12px; letter-spacing:.26em; text-transform:uppercase; font-weight:600; color:var(--teal); margin:0 0 14px}
@@ -296,6 +304,16 @@
                 <div class="trow"><b>T-Labs</b> â broad tick-borne co-infection panel.</div>
                 <div class="trow"><b>DNA Connexions</b> â urine PCR for Borrelia DNA after a provocation dose.</div>
                 <div class="trow ov">â <b>Overlaps:</b> Mycoplasma is also a Stage-1 trigger. Treating Lyme often calms the mold, gut, methylation &amp; MCAS drivers below.</div>
+                <div class="trow" style="border-top:1px solid var(--rule); padding-top:10px; margin-top:3px"><b style="color:var(--teal)">ð¡ï¸ Kill it â the full menu.</b> The right mix is per-child; Plan B sequences it:</div>
+                <div class="trow"><b>Antibiotics</b> â combinations per form + co-infection (doxycycline Â· amoxicillin Â· azithromycin; cyst-busters like tinidazole).</div>
+                <div class="trow"><b>Herbals</b> â Buhner &amp; Cowden protocols (Japanese knotweed Â· cat&rsquo;s claw Â· Cryptolepis Â· red sage).</div>
+                <div class="trow"><b>Dapsone</b> â Horowitz &ldquo;double-dose dapsone&rdquo; (DDD) for persistent Lyme.</div>
+                <div class="trow"><b>Biomagnetism</b> â Goiz BPT (Joan Randall, Plan B&rsquo;s practitioner).</div>
+                <div class="trow"><b>Bee venom therapy</b> â apitherapy (melittin directly kills Borrelia).</div>
+                <div class="trow"><b>Methylene blue</b> â biofilm / persister hit + mitochondrial support.</div>
+                <div class="trow"><b>Hyperthermia</b> â whole-body heat therapy (Borrelia is heat-sensitive); specialized clinics.</div>
+                <div class="trow"><b>International clinics â &ldquo;Lyme Mexico&rdquo;</b> â aggressive IV + hyperthermia protocols (e.g., Dr. Omar Morales, CancÃºn).</div>
+                <div class="trow"><b>Also on the menu:</b> phage therapy Â· HBOT Â· disulfiram.</div>
               </div>
             </details>
 
@@ -309,6 +327,7 @@
                 <div class="trow"><b>HLA-DR</b> â the genetics: whether the body can clear biotoxins at all.</div>
                 <div class="trow"><b>ERMI / HERTSMI-2</b> â dust test of the HOUSE, to find the source.</div>
                 <div class="trow ov">â <b>Overlaps:</b> the OAT also appears under Gut + Nutrients.</div>
+                <div class="trow" style="border-top:1px solid var(--rule); padding-top:10px; margin-top:3px"><b style="color:var(--teal)">ð¡ï¸ Treat it.</b> Remove the exposure (fix the house) â <b>binders</b> (cholestyramine Â· charcoal Â· clay Â· chlorella; aloe for kids) â <b>antifungals</b> if colonized â nasal <b>BEG / VIP spray</b> (Shoemaker) â sauna Â· glutathione Â· drainage. <b>Order matters</b> (Shoemaker sequence). <em>More on each in the podcast + future studies.</em></div>
               </div>
             </details>
 

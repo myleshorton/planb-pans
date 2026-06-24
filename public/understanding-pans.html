@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Understanding PANS — Plan B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{ --cream:#F6F1E7; --paper:#FFFDF7; --ink:#2a2a26; --soft:#5b5547; --faint:#8c8470; --rule:#e7e0cf; --teal:#1F6B6B; --green:#2F8B5B; --gold:#C2904B; --blush:#d98a7d; }
+  *{box-sizing:border-box} html,body{margin:0}
+  body{ background:var(--cream); color:var(--ink); font-family:'Inter',system-ui,sans-serif; -webkit-font-smoothing:antialiased; line-height:1.65; }
+  .wrap{max-width:680px; margin:0 auto; padding:0 22px}
+  .fade{opacity:0; transform:translateY(24px); animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes rise{to{opacity:1; transform:none}}
+  h1{font-family:'Cormorant',serif; font-weight:300; font-size:clamp(40px,9vw,72px); line-height:1.02; letter-spacing:-.02em; margin:0 0 18px}
+  h2{font-family:'Cormorant',serif; font-weight:400; font-size:clamp(28px,5.5vw,44px); line-height:1.05; letter-spacing:-.01em; margin:0 0 14px; text-align:center}
+  .eyebrow{font-size:12px; letter-spacing:.24em; text-transform:uppercase; font-weight:600; color:var(--teal); margin:0 0 16px}
+
+  /* hero with a soft sunrise */
+  .hero{position:relative; text-align:center; padding:clamp(70px,12vw,120px) 0 clamp(40px,7vw,70px); overflow:hidden}
+  .sun{position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:560px; height:560px; border-radius:50%;
+    background:radial-gradient(circle at 50% 60%, rgba(217,138,125,.22), rgba(194,144,75,.10) 45%, transparent 70%); pointer-events:none; z-index:0}
+  .hero > *{position:relative; z-index:1}
+  .hero p.lead{font-size:clamp(17px,2.6vw,21px); color:var(--soft); max-width:520px; margin:0 auto}
+  .hero p.lead b{color:var(--ink); font-weight:600}
+
+  section{padding:clamp(40px,7vw,68px) 0}
+  .soft-divider{height:1px; background:linear-gradient(90deg, transparent, var(--rule), transparent); max-width:680px; margin:0 auto}
+
+  /* 3 what's-happening cards */
+  .three{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:30px}
+  .wcard{background:var(--paper); border:1px solid var(--rule); border-radius:20px; padding:22px 18px; text-align:center; box-shadow:0 16px 40px -30px rgba(40,30,20,.5)}
+  .emoji{font-size:38px; line-height:1; display:block; margin:0 auto 12px}
+  .wcard h3{font-family:'Cormorant',serif; font-weight:600; font-size:20px; margin:0 0 6px; color:var(--ink)}
+  .wcard p{font-size:13.5px; color:var(--soft); margin:0; line-height:1.5}
+  @media (max-width:560px){ .three{grid-template-columns:1fr; gap:12px} .wcard{display:flex; align-items:center; gap:16px; text-align:left; padding:18px} .emoji{margin:0; font-size:34px} }
+
+  /* hope band */
+  .hope{background:linear-gradient(180deg, rgba(47,139,91,.10), rgba(47,139,91,.04)); border-radius:26px; padding:clamp(34px,6vw,52px) 26px; text-align:center; margin:0 auto}
+  .hope .big{font-family:'Cormorant',serif; font-style:italic; font-weight:400; font-size:clamp(24px,4.5vw,34px); color:#1f6b41; line-height:1.25; margin:0 0 12px}
+  .hope cite{display:block; font-size:13px; color:var(--soft); font-style:normal}
+
+  /* 3 steps */
+  .steps{display:grid; gap:14px; margin-top:32px}
+  .step{display:flex; gap:18px; align-items:center; background:var(--paper); border:1px solid var(--rule); border-radius:22px; padding:20px 22px; box-shadow:0 16px 40px -32px rgba(40,30,20,.5)}
+  .step .num{flex-shrink:0; width:54px; height:54px; border-radius:50%; background:var(--teal); color:#fff; font-family:'Cormorant',serif; font-size:26px; font-weight:600; display:flex; align-items:center; justify-content:center}
+  .step .se{font-size:30px; flex-shrink:0}
+  .step h3{font-family:'Cormorant',serif; font-weight:600; font-size:22px; margin:0 0 3px; color:var(--ink)}
+  .step p{font-size:14.5px; color:var(--soft); margin:0; line-height:1.5}
+
+  /* journey */
+  .journey{background:var(--paper); border:1px solid var(--rule); border-radius:26px; padding:clamp(30px,5vw,44px) clamp(24px,4vw,38px); box-shadow:0 20px 50px -34px rgba(40,30,20,.55)}
+  .jt{position:relative; margin:24px 0 0; padding-left:30px}
+  .jt::before{content:""; position:absolute; left:8px; top:6px; bottom:18px; width:2px; background:linear-gradient(180deg, var(--blush), var(--gold) 60%, var(--green))}
+  .jstep{position:relative; padding:0 0 18px}
+  .jstep::before{content:""; position:absolute; left:-26px; top:5px; width:12px; height:12px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 4px var(--paper)}
+  .jstep:last-child::before{background:var(--green)}
+  .jstep b{color:var(--ink); font-weight:600; font-size:15.5px}
+  .jstep span{display:block; font-size:13.5px; color:var(--soft); margin-top:1px}
+  .jstep:last-child b{color:#1f6b41}
+  .punch{font-family:'Cormorant',serif; font-style:italic; font-size:clamp(20px,3.6vw,26px); color:var(--ink); text-align:center; margin:22px 0 0; line-height:1.3}
+
+  /* carry / door */
+  .carry{text-align:center}
+  .carry p{font-size:clamp(16px,2.4vw,18.5px); color:var(--soft); max-width:540px; margin:0 auto 8px}
+  .carry p b{color:var(--ink); font-weight:600}
+  .moneynote{font-size:14px; color:var(--soft); background:rgba(47,139,91,.08); border:1px solid rgba(47,139,91,.28); border-radius:14px; padding:14px 18px; max-width:560px; margin:22px auto 0; line-height:1.55}
+  .moneynote b{color:#1f6b41}
+  .door{display:inline-flex; align-items:center; gap:8px; margin-top:26px; background:#fff; border:1.5px solid var(--teal); color:var(--teal); font-weight:700; font-size:15px; padding:13px 24px; border-radius:999px; text-decoration:none; box-shadow:0 10px 26px -16px rgba(31,107,107,.6)}
+
+  /* final cta */
+  .cta{background:linear-gradient(135deg,#1F6B6B,#355f6e); color:#fdf8ee; border-radius:28px; padding:clamp(38px,6vw,58px) 28px; text-align:center}
+  .cta h2{color:#fff}
+  .cta p{font-size:16px; color:rgba(255,253,247,.9); max-width:480px; margin:0 auto 22px}
+  .cta a{display:inline-block; background:#F6F1E7; color:#1F6B6B; font-weight:700; font-size:15px; padding:13px 26px; border-radius:999px; text-decoration:none}
+  .foothome{text-align:center; padding:30px 0 50px; font-size:13px}
+  .foothome a{color:var(--teal); text-decoration:none; font-weight:600}
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div class="sun"></div>
+    <p class="eyebrow fade" style="animation-delay:.05s">Understanding PANS &amp; PANDAS</p>
+    <h1 class="fade" style="animation-delay:.12s">Your child<br>changed overnight.</h1>
+    <p class="lead fade" style="animation-delay:.22s">You&rsquo;re not imagining it, and you&rsquo;re not alone. Whether this started <b>last week</b> — or you&rsquo;ve been fighting for <b>years</b>, exhausted and at the end of your rope — this has a <b>name</b>, a <b>cause</b>, and a <b>way through</b>.</p>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section>
+    <div class="wrap">
+      <h2 class="fade">What&rsquo;s happening</h2>
+      <div class="three">
+        <div class="wcard fade" style="animation-delay:.05s"><span class="emoji">🦠</span><div><h3>A trigger</h3><p>An infection — often strep — sets it off.</p></div></div>
+        <div class="wcard fade" style="animation-delay:.13s"><span class="emoji">🧠</span><div><h3>A misfire</h3><p>The immune system attacks the brain by mistake. That inflammation <em>is</em> the symptoms.</p></div></div>
+        <div class="wcard fade" style="animation-delay:.21s"><span class="emoji">🌱</span><div><h3>A way through</h3><p>Calm the inflammation, clear the trigger, help the body heal.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="hope fade">
+        <p class="big">&ldquo;This is a curable disorder. Remain hopeful.&rdquo;</p>
+        <cite>— Dr. Susan Swedo, who first described PANDAS at the NIH</cite>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="fade">Your first three steps</h2>
+      <div class="steps">
+        <div class="step fade" style="animation-delay:.05s"><div class="num">1</div><span class="se">🩺</span><div><h3>See a doctor</h3><p>Start the first-line protocol — a swab, an antibiotic if it&rsquo;s strep, and an anti-inflammatory.</p></div></div>
+        <div class="step fade" style="animation-delay:.13s"><div class="num">2</div><span class="se">🧪</span><div><h3>Run a few simple tests</h3><p>A handful you can order yourself — to find what&rsquo;s driving it.</p></div></div>
+        <div class="step fade" style="animation-delay:.21s"><div class="num">3</div><span class="se">📲</span><div><h3>Track daily with Minta</h3><p>60 seconds a day. Plan B watches for patterns and tells you the next move.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="fade">You&rsquo;re not the first to walk this</h2>
+      <div class="journey fade">
+        <p style="font-size:15.5px; color:var(--soft); margin:0; text-align:center">One mom had already tried everything the system offered — before Plan B:</p>
+        <div class="jt">
+          <div class="jstep"><b>A functional-medicine doctor</b><span>Helpful, but expensive — and still only one piece of the puzzle.</span></div>
+          <div class="jstep"><b>Three years of homeopathy</b><span>Gentle, but slow, with no map of what was actually driving it.</span></div>
+          <div class="jstep"><b>Pediatrician after pediatrician</b><span>Most had never heard of PANS — or didn&rsquo;t believe it.</span></div>
+          <div class="jstep"><b>Then Plan B found the order.</b><span>The same pieces, finally read together — and treated in the right sequence.</span></div>
+        </div>
+        <p class="punch">It was never about trying <em>more</em> things.<br>It was about the right things, in the right order.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="fade">Already tried everything —<br>and still stuck?</h2>
+      <p class="fade" style="text-align:center; font-size:clamp(16px,2.4vw,18.5px); color:var(--soft); max-width:560px; margin:0 auto 6px">You&rsquo;ve done the protocol, seen the functional doctor, tried homeopathy and a hundred other things. You feel like you&rsquo;ve tried <em>everything</em>, and there&rsquo;s no hope left. <b style="color:var(--ink)">Please hear this: there almost always is.</b> There is more on the map than anyone has shown you — and finding it is exactly what Plan B does.</p>
+      <div class="three" style="grid-template-columns:1fr 1fr; margin-top:26px">
+        <div class="wcard fade" style="text-align:left; display:flex; gap:14px; align-items:flex-start"><span class="emoji" style="margin:0; font-size:28px">🔎</span><div><h3>Read it all together</h3><p>Plan B reads every lab, symptom &amp; past treatment <em>at once</em> — the integration no single doctor had time to do.</p></div></div>
+        <div class="wcard fade" style="text-align:left; display:flex; gap:14px; align-items:flex-start"><span class="emoji" style="margin:0; font-size:28px">🧩</span><div><h3>Find the missed driver</h3><p>Mold · Lyme &amp; co-infections · methylation · gut · MCAS — the roots even functional care often misses or mistimes.</p></div></div>
+        <div class="wcard fade" style="text-align:left; display:flex; gap:14px; align-items:flex-start"><span class="emoji" style="margin:0; font-size:28px">🔢</span><div><h3>Fix the order</h3><p>Often it&rsquo;s not new treatments — it&rsquo;s the right <em>sequence</em> (mold before Lyme, methylation first).</p></div></div>
+        <div class="wcard fade" style="text-align:left; display:flex; gap:14px; align-items:flex-start"><span class="emoji" style="margin:0; font-size:28px">🗝️</span><div><h3>What hasn&rsquo;t been tried</h3><p>The deeper menu — IVIG · biomagnetism · phage · peptides · hyperthermia — surfaced aggressively.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap carry">
+      <h2 class="fade">You don&rsquo;t have to become an expert</h2>
+      <p class="fade"><b>Plan B holds the whole map</b> — every driver, every test, every treatment — so you don&rsquo;t have to. You just take the next step; we tell you what it is.</p>
+      <div class="moneynote fade">💛 <b>Start simple and inexpensive.</b> You only go deeper if your child needs it — and Plan B tells you exactly which tests are worth it for <b>your</b> child, so you never waste money chasing the wrong thing.</div>
+      <div style="text-align:center"><a class="door fade" href="/deconstructing-pans.html">🧭 When you&rsquo;re ready, see the full map →</a></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta fade">
+        <h2>Start where you are</h2>
+        <p>Wherever you are in this — just starting, or years deep — Plan B meets you there and finds the next move.</p>
+        <a href="https://app.planbforpans.com">Begin with Plan B →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="foothome"><a href="https://planbforpans.com">← Back to Plan B</a></div>
+</body>
+</html>
