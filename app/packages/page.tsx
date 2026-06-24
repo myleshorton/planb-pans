@@ -79,6 +79,8 @@ export default function PricingPage() {
           <p style={{ fontSize: 15, color: teal, fontWeight: 700, margin: '16px auto 0', maxWidth: 560 }}>
             Plus a <strong style={{ color: ink }}>15-minute debrief with Rachel</strong> once your synthesis is ready — a quick call or a few emails, whichever you prefer — to walk through it and answer your questions.
           </p>
+          <a href="https://app.planbforpans.com/checkout/synthesis" style={{ display: 'inline-block', marginTop: 26, background: teal, color: '#fffdf7', fontSize: 16.5, fontWeight: 700, padding: '15px 38px', borderRadius: 9, textDecoration: 'none' }}>Get your synthesis →</a>
+          <p style={{ fontSize: 13, color: soft, margin: '12px 0 0' }}>No labs yet? <a href="https://app.planbforpans.com/checkout/synthesis?plan=direction" style={{ color: teal, fontWeight: 600, textDecoration: 'none' }}>Start with a $97 direction →</a></p>
         </div>
       </section>
 
