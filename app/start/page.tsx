@@ -13,22 +13,28 @@ const sand = 'var(--sand)'
 
 const STEPS = [
   {
-    title: 'Understand what this is',
-    body: 'PANS in plain language — what’s actually happening in your child’s brain, and why it’s treatable. A few minutes that make everything after it make sense.',
-    cta: 'Read Understanding PANS',
-    href: '/understanding-pans.html',
-  },
-  {
-    title: 'Know the first moves',
-    body: 'The protocol everyone starts with — calm the brain (anti-inflammatory) and treat the infection — plus the starter bloodwork and three ways to get it ordered.',
-    cta: 'Open The Protocol',
+    title: 'Start treatment — you can begin now',
+    body: 'Take a targeted antibiotic and try an anti-inflammatory (high-dose fish oil + an NSAID). You don’t have to wait for labs to start.',
+    cta: 'See the starter protocol',
     href: '/deconstructing-pans.html#protocol',
   },
   {
-    title: 'See the whole map',
-    body: 'Every driver, test, and treatment — and how they connect. Each piece has its own deep-dive guide for when you’re ready for it.',
-    cta: 'Open the Full Map',
-    href: '/deconstructing-pans.html',
+    title: 'Run a handful of tests to find the driver',
+    body: 'A small, targeted panel — and three simple ways to get it ordered (self-order, hand your doctor the list, or a telehealth doctor).',
+    cta: 'See what to run',
+    href: '/deconstructing-pans.html#protocol',
+  },
+  {
+    title: 'Wait, and see if it helps',
+    body: 'Give it a real trial — a few weeks — and watch how your child responds. Many kids turn the corner right here.',
+    cta: 'Track the response',
+    href: '/tracker',
+  },
+  {
+    title: 'Learn the protocol — and look ahead',
+    body: 'Understand the protocol as it unfolds. And if it doesn’t get your child all the way better, you’re not stuck — that’s where the Field Guide, your Plan B, begins.',
+    cta: 'Open the Field Guide',
+    href: '/learn',
   },
 ]
 
@@ -43,7 +49,7 @@ export default function StartHere() {
             <em style={{ color: teal, fontStyle: 'italic' }}>Take a breath.</em>
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.7, color: soft, maxWidth: 560, margin: '0 auto' }}>
-            You’re in the right place, and you don’t have to figure this out alone. There’s a lot to learn — but you only need the <em>next</em> step. Here are your first three.
+            You’re in the right place. There’s a lot to learn — but you only need the <em>next</em> step. Here are the first moves.
           </p>
         </div>
       </section>
@@ -63,14 +69,11 @@ export default function StartHere() {
         </div>
       </section>
 
-      <section style={{ padding: '0 24px clamp(64px,10vw,110px)' }}>
-        <div style={{ maxWidth: 760, margin: '0 auto', background: 'linear-gradient(135deg, var(--teal), #24566a)', color: '#fdf8ee', borderRadius: 18, padding: 'clamp(28px,5vw,44px)', textAlign: 'center' }}>
-          <p style={{ fontSize: 12, letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 700, color: '#bfe3df', margin: '0 0 14px' }}>Or don’t do it alone</p>
-          <p style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 300, fontSize: 'clamp(26px,4.4vw,38px)', lineHeight: 1.15, margin: '0 0 14px' }}>Let Minta walk you through it.</p>
-          <p style={{ fontSize: 17, lineHeight: 1.65, color: '#eaf4f2', maxWidth: 520, margin: '0 auto 22px' }}>
-            Tell her what’s going on with your child and she’ll tell you what to do next — which tests to run, what to ask your doctor, and where to start. Free to begin.
+      <section style={{ padding: '0 24px clamp(64px,10vw,110px)', textAlign: 'center' }}>
+        <div style={{ maxWidth: 600, margin: '0 auto' }}>
+          <p style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 300, fontSize: 'clamp(22px,3.8vw,32px)', color: ink, lineHeight: 1.3, margin: 0 }}>
+            You don’t have to do all of this today. One step at a time — and if the protocol doesn’t get your child all the way better, you are <em style={{ color: teal, fontStyle: 'italic' }}>not stuck.</em> That’s what the Field Guide is for.
           </p>
-          <a href="https://app.planbforpans.com/signup" rel="noopener" style={{ display: 'inline-block', background: '#fff', color: '#1F6B6B', fontWeight: 800, fontSize: 15, padding: '14px 30px', borderRadius: 10, textDecoration: 'none' }}>Talk to Minta →</a>
         </div>
       </section>
     </main>
