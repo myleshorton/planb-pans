@@ -19,6 +19,7 @@ type Item = { title: string; blurb: string; href?: string }
 const LIVE: Item[] = [
   { title: 'Understanding PANS', blurb: 'Start here — what PANS actually is, in plain language for an exhausted parent.', href: '/understanding-pans.html' },
   { title: 'The Full Map', blurb: 'Every driver, test, and treatment for PANS — deconstructed and connected.', href: '/deconstructing-pans.html' },
+  { title: 'The Protocol', blurb: 'Where everyone starts — the antibiotic + anti-inflammatory + IVIG, the dosing, how long, when to come off, and what to do if your child slips.', href: '/deconstructing-pans.html#protocol' },
   { title: 'Find Mold Yourself', blurb: 'The honest ERMI story + how to find and safely remediate mold without a predatory middleman.', href: '/find-mold.html' },
   { title: 'Phage Therapy', blurb: 'Viruses that kill bacteria and spare the gut — the real providers (Eliava), how to access, the evidence, and how to spot a quack.', href: '/phage.html' },
   { title: 'Lyme & Co-infections', blurb: 'Antibiotics vs herbals (research-backed), the head-to-head herbal protocol ratings, the full kill-menu, and how to find a Lyme doctor.', href: '/lyme.html' },
