@@ -27,10 +27,10 @@ const LIVE: Item[] = [
   { title: 'Homeopathy', blurb: 'The 3 kinds — start classical. The weekend-vs-4-year training gap, the recovery stories, and how to find a true-classical homeopath.', href: '/homeopathy.html' },
   { title: 'IVIG & Immune Treatment', blurb: 'Who qualifies, the infusion day demystified (pre-meds, the rate, headaches, the expected flare), the evidence, and the access fight.', href: '/ivig.html' },
   { title: 'Methylation & Detox', blurb: 'The cleanup engine no specialist owns — HTMA, folate/FRAT, the genetics, and the detox that decides whether anything else works.', href: '/methylation.html' },
+  { title: 'Gut & Microbiome', blurb: 'Which stool test (and which to skip), the gut-brain link, what Minta looks for, and how to reset it.', href: '/gut.html' },
 ]
 
 const COMING: Item[] = [
-  { title: 'Gut & Microbiome', blurb: 'Which stool test, what the markers mean, the gut-brain link, and how to reset it.' },
   { title: 'MCAS & Histamine', blurb: 'Mast-cell activation — the testing, the triggers, and calming the flares.' },
   { title: 'Mold — the full protocol', blurb: 'Beyond finding it: binders, antifungals, drainage, and the order that matters.' },
   { title: 'Diet & Nutrition', blurb: 'Anti-inflammatory, food-first methylation, and what actually moves the needle.' },
