@@ -18,7 +18,6 @@ type Item = { title: string; blurb: string; href?: string }
 
 const LIVE: Item[] = [
   { title: 'Understanding PANS', blurb: 'Start here — what PANS actually is, in plain language for an exhausted parent.', href: '/understanding-pans.html' },
-  { title: 'The Full Map', blurb: 'Every driver, test, and treatment for PANS — deconstructed and connected.', href: '/deconstructing-pans.html' },
   { title: 'The Protocol', blurb: 'Where everyone starts — the antibiotic + anti-inflammatory + IVIG, the dosing, how long, when to come off, and what to do if your child slips.', href: '/deconstructing-pans.html#protocol' },
   { title: 'Find Mold Yourself', blurb: 'The honest ERMI story + how to find and safely remediate mold without a predatory middleman.', href: '/find-mold.html' },
   { title: 'Phage Therapy', blurb: 'Viruses that kill bacteria and spare the gut — the real providers (Eliava), how to access, the evidence, and how to spot a quack.', href: '/phage.html' },
@@ -55,6 +54,14 @@ export default function LearnPage() {
 
       <section style={{ padding: 'clamp(36px, 6vw, 64px) 24px' }}>
         <div className="pb-container" style={{ maxWidth: 960, margin: '0 auto' }}>
+          <a href="/deconstructing-pans.html" style={{ display: 'block', textDecoration: 'none', background: 'linear-gradient(135deg, #1F6B6B, #2c5a6b)', color: '#fdf8ee', borderRadius: 16, padding: 'clamp(24px,4vw,34px)', marginBottom: 26, boxShadow: '0 22px 54px -32px rgba(31,107,107,0.95)' }}>
+            <p style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, color: '#bfe3df', margin: '0 0 10px' }}>Start here · the whole picture</p>
+            <p style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(28px, 4.6vw, 42px)', lineHeight: 1.05, margin: '0 0 12px' }}>The Full Map</p>
+            <p style={{ fontSize: 16.5, lineHeight: 1.6, color: '#eaf4f2', margin: '0 0 16px', maxWidth: 640 }}>How every driver, test, and treatment for PANS connects — the conventional protocol, the root drivers underneath, and what to do when it&rsquo;s still not enough. <strong style={{ color: '#fff' }}>Every guide below is a deep-dive on one piece of this map</strong> — start here to see how it all fits together.</p>
+            <span style={{ fontSize: 13.5, fontWeight: 700, color: '#fff', letterSpacing: '0.04em' }}>Open the Full Map &rarr;</span>
+          </a>
+
+          <p style={{ fontSize: 13, color: teal, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 16px' }}>The deep-dives — one piece of the map at a time</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 18 }}>
             {LIVE.map((it) => (
               <a key={it.title} href={it.href} style={{ display: 'block', textDecoration: 'none', background: card, border: `1.5px solid ${teal}`, borderRadius: 14, padding: '24px 24px 26px' }}>
