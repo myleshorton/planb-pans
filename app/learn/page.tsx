@@ -20,11 +20,11 @@ const LIVE: Item[] = [
   { title: 'Understanding PANS', blurb: 'Start here — what PANS actually is, in plain language for an exhausted parent.', href: '/understanding-pans.html' },
   { title: 'The Full Map', blurb: 'Every driver, test, and treatment for PANS — deconstructed and connected.', href: '/deconstructing-pans.html' },
   { title: 'Find Mold Yourself', blurb: 'The honest ERMI story + how to find and safely remediate mold without a predatory middleman.', href: '/find-mold.html' },
+  { title: 'Phage Therapy', blurb: 'Viruses that kill bacteria and spare the gut — the real providers (Eliava), how to access, the evidence, and how to spot a quack.', href: '/phage.html' },
 ]
 
 const COMING: Item[] = [
   { title: 'Lyme & Co-infections', blurb: 'The full kill-menu — and how to actually find a doctor, get tested, and access every option.' },
-  { title: 'Phage Therapy', blurb: 'Viruses that kill bacteria and spare the gut — the real providers (Eliava & more), how to access, the evidence.' },
   { title: 'Hyperthermia & Clinics', blurb: 'Heat that kills Borrelia — which clinics, who qualifies, how to get in, what it costs.' },
   { title: 'Homeopathy', blurb: 'Classical, done right — and how to find a true-classical practitioner, not a modern imposter.' },
   { title: 'Biomagnetism', blurb: 'What it is, the honest evidence, and how to find a practitioner.' },
@@ -42,7 +42,7 @@ export default function LearnPage() {
             Every treatment, deconstructed.
           </h1>
           <p style={{ fontSize: 18, lineHeight: 1.7, color: soft, maxWidth: 680, margin: 0 }}>
-            The hardest part isn&rsquo;t learning a treatment <em>exists</em> — it&rsquo;s figuring out <strong style={{ color: ink }}>how to actually get it.</strong> Most parents have no idea where to start. So each guide here gives you the same three things: <strong style={{ color: ink }}>what it is</strong>, <strong style={{ color: ink }}>the studies behind it</strong>, and <strong style={{ color: ink }}>exactly how to access it and get help.</strong>
+            The hardest part isn&rsquo;t learning a treatment <em>exists</em> — it&rsquo;s figuring out <strong style={{ color: ink }}>how to actually get it</strong>, and how not to get burned. Most parents have no idea where to start. So each guide answers the same five things: <strong style={{ color: ink }}>what it is</strong>, <strong style={{ color: ink }}>the research behind it</strong>, <strong style={{ color: ink }}>the real risks</strong>, <strong style={{ color: ink }}>exactly how to access it</strong>, and <strong style={{ color: ink }}>how to tell a real practitioner from a quack.</strong>
           </p>
         </div>
       </section>
