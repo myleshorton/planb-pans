@@ -26,10 +26,15 @@ const LIVE: Item[] = [
   { title: 'Biomagnetism', blurb: 'Magnets + the honest evidence — the Joan Randall Protocol, what it seems to do, and why it still needs studies.', href: '/biomagnetism.html' },
   { title: 'Homeopathy', blurb: 'The 3 kinds — start classical. The weekend-vs-4-year training gap, the recovery stories, and how to find a true-classical homeopath.', href: '/homeopathy.html' },
   { title: 'IVIG & Immune Treatment', blurb: 'Who qualifies, the infusion day demystified (pre-meds, the rate, headaches, the expected flare), the evidence, and the access fight.', href: '/ivig.html' },
+  { title: 'Methylation & Detox', blurb: 'The cleanup engine no specialist owns — HTMA, folate/FRAT, the genetics, and the detox that decides whether anything else works.', href: '/methylation.html' },
 ]
 
 const COMING: Item[] = [
-  { title: 'Methylation & Detox', blurb: 'The cleanup engine no specialist owns — testing, and how to interpret it.' },
+  { title: 'Gut & Microbiome', blurb: 'Which stool test, what the markers mean, the gut-brain link, and how to reset it.' },
+  { title: 'MCAS & Histamine', blurb: 'Mast-cell activation — the testing, the triggers, and calming the flares.' },
+  { title: 'Mold — the full protocol', blurb: 'Beyond finding it: binders, antifungals, drainage, and the order that matters.' },
+  { title: 'Diet & Nutrition', blurb: 'Anti-inflammatory, food-first methylation, and what actually moves the needle.' },
+  { title: 'Nervous-system regulation', blurb: 'Vagus-nerve work, craniosacral, and calming a dysregulated brain.' },
 ]
 
 export default function LearnPage() {
@@ -37,7 +42,7 @@ export default function LearnPage() {
     <main style={{ background: '#faf6ec', color: ink }}>
       <section style={{ padding: 'clamp(56px, 9vw, 110px) 24px 36px', borderBottom: `1px solid ${rule}` }}>
         <div className="pb-container" style={{ maxWidth: 860, margin: '0 auto' }}>
-          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 16px' }}>The Plan B Encyclopedia</p>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 16px' }}>The Plan B Field Guide</p>
           <h1 style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 300, fontSize: 'clamp(34px, 6vw, 62px)', lineHeight: 1.02, letterSpacing: '-0.02em', margin: '0 0 18px' }}>
             Every treatment, deconstructed.
           </h1>
