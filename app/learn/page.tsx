@@ -25,11 +25,11 @@ const LIVE: Item[] = [
   { title: 'Hyperthermia & Clinics', blurb: 'Heat that kills Borrelia — the clinics, who qualifies, the real risks, how to get in, and what it costs.', href: '/hyperthermia.html' },
   { title: 'Biomagnetism', blurb: 'Magnets + the honest evidence — the Joan Randall Protocol, what it seems to do, and why it still needs studies.', href: '/biomagnetism.html' },
   { title: 'Homeopathy', blurb: 'The 3 kinds — start classical. The weekend-vs-4-year training gap, the recovery stories, and how to find a true-classical homeopath.', href: '/homeopathy.html' },
+  { title: 'IVIG & Immune Treatment', blurb: 'Who qualifies, the infusion day demystified (pre-meds, the rate, headaches, the expected flare), the evidence, and the access fight.', href: '/ivig.html' },
 ]
 
 const COMING: Item[] = [
   { title: 'Methylation & Detox', blurb: 'The cleanup engine no specialist owns — testing, and how to interpret it.' },
-  { title: 'IVIG & Immune Treatment', blurb: 'When it helps, what you need before you qualify, and how to fight for access.' },
 ]
 
 export default function LearnPage() {
