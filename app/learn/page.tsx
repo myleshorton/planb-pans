@@ -29,10 +29,11 @@ const LIVE: Item[] = [
   { title: 'Methylation & Detox', blurb: 'The cleanup engine no specialist owns — HTMA, folate/FRAT, the genetics, and the detox that decides whether anything else works.', href: '/methylation.html' },
   { title: 'Gut & Microbiome', blurb: 'Which stool test (and which to skip), the gut-brain link, what Minta looks for, and how to reset it.', href: '/gut.html' },
   { title: 'Helminthic Therapy', blurb: 'Worms that calm an over-reactive immune system — the species, where to order, dosing, the antidote, and why non-verbal kids are off the table.', href: '/helminths.html' },
+  { title: 'MCAS & Histamine', blurb: 'Mast-cell activation — the tests an MCAS doctor runs, the treatment cocktail, and why the patch alone is not the cure (find the root).', href: '/mcas.html' },
+  { title: 'FMT — Fecal Transplant', blurb: 'The deepest gut reset — the ASU autism trials, how to access it safely, the risks, and why screening IS the safety.', href: '/fmt.html' },
 ]
 
 const COMING: Item[] = [
-  { title: 'MCAS & Histamine', blurb: 'Mast-cell activation — the testing, the triggers, and calming the flares.' },
   { title: 'Mold — the full protocol', blurb: 'Beyond finding it: binders, antifungals, drainage, and the order that matters.' },
   { title: 'Diet & Nutrition', blurb: 'Anti-inflammatory, food-first methylation, and what actually moves the needle.' },
   { title: 'Nervous-system regulation', blurb: 'Vagus-nerve work, craniosacral, and calming a dysregulated brain.' },

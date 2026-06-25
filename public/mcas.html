@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCAS &amp; Histamine, Deconstructed — Plan B for PANS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#F6F1E7;--cream-light:#FBF8F1;--card:#fffdf7;--ink:#2a2a26;--soft:#524d40;--teal:#1F6B6B;--rust:#A02E2E;--moss:#5C7C4B;--rule:#e3dcc9;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+  .eyebrow{color:var(--teal);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:0 0 16px}
+  h1{font-family:'Cormorant',Georgia,serif;font-weight:300;font-size:clamp(36px,7vw,64px);line-height:1.02;letter-spacing:-.02em;margin:0 0 20px}
+  h2{font-family:'Cormorant',Georgia,serif;font-weight:400;font-size:clamp(26px,4.5vw,40px);line-height:1.1;letter-spacing:-.015em;margin:0 0 16px}
+  h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin:0 0 12px}
+  p{font-size:17px;color:var(--soft);margin:0 0 16px}
+  b,strong{color:var(--ink);font-weight:700}
+  a{color:var(--teal)}
+  section{padding:clamp(40px,7vw,68px) 0;border-bottom:1px solid var(--rule)}
+  .hero{background:var(--cream-light);padding-top:clamp(64px,10vw,100px)}
+  .lead{font-size:19px;line-height:1.7}
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:clamp(20px,4vw,30px);margin:20px 0}
+  .card.flag{border-left:4px solid var(--rust)}
+  .card.key{border-left:4px solid var(--teal)}
+  .card.good{border-left:4px solid var(--moss)}
+  ul{margin:0 0 16px;padding-left:20px}
+  li{font-size:16.5px;color:var(--soft);margin-bottom:11px;line-height:1.55}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);font-weight:700}
+  td b{color:var(--ink)}
+  .src{font-size:14px;color:var(--soft);font-style:italic}
+  .back{display:inline-block;margin-top:8px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Field Guide · Deconstructed</p>
+    <h1>MCAS &amp; histamine.<br><em style="color:var(--teal)">The reactive child&rsquo;s hidden driver.</em></h1>
+    <p class="lead">When a PANS kid flushes, breaks out in hives, reacts to half their food, spirals into anxiety, and reacts <em>to the supplements meant to help</em> &mdash; the mast cell is often the thread tying it together. Here are the facts: <b>what MCAS actually is, the exact tests an MCAS doctor runs, and &mdash; the part Rachel asked for &mdash; what treatment really looks like</b> (the layered &ldquo;MCAS cocktail,&rdquo; step by step). Plus who&rsquo;s a credible specialist, and how to spot a quack. Choose your own adventure from here.</p>
+  </div>
+</section>
+
+<section style="background:var(--cream-light)">
+  <div class="wrap">
+    <div class="card key">
+      <h3>Read this first: MCAS treatment is a patch, not the end.</h3>
+      <p style="margin:0 0 10px">The antihistamines and stabilizers below <b>plug the hole</b> and make life livable &mdash; and a good MCAS specialist is excellent at exactly that. But <b>mast cells fire for a reason.</b> They&rsquo;re almost always reacting to a <b>root driver lighting them up</b> &mdash; chronic infection (<b>Lyme / Bartonella</b> is the classic), <b>mold / mycotoxins</b>, or gut dysbiosis.</p>
+      <p style="margin:0 0 10px"><b>So: plug the hole to stabilize &mdash; then go find the root.</b> Treating only the MCAS is bailing water while the boat keeps filling; the only thing that makes mast cells <em>truly</em> calm is treating what set them off. You often need <b>two people</b> &mdash; an MCAS doctor for the calm, and a Lyme/functional doctor for the leak &mdash; and almost no one sits between them connecting it. <b>That gap is exactly what Minta closes.</b></p>
+      <p style="margin:0; font-style:italic">It can take a long time to realize the patch isn&rsquo;t the cure. This is so you don&rsquo;t lose that time.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What MCAS is</h2>
+    <p><b>Mast Cell Activation Syndrome (MCAS) is when mast cells &mdash; the body&rsquo;s frontline immune sentries &mdash; fire inappropriately,</b> dumping their chemical payload when they shouldn&rsquo;t. Mast cells line the skin, gut, airways, and the lining of blood vessels, and when they degranulate they release a cocktail of <b>mediators</b>: <b>histamine, tryptase, prostaglandins (PGD2), leukotrienes, and heparin</b>, among others. In MCAS that release is chronic and out of proportion to any real threat.</p>
+    <p>Because mast cells are <em>everywhere</em>, the symptoms are <b>multisystem and migrating</b> &mdash; which is exactly why MCAS gets missed for years. The classic picture:</p>
+    <ul>
+      <li><b>Skin</b> &mdash; flushing, hives (urticaria), itching, dermatographism (you can write on the skin).</li>
+      <li><b>Gut</b> &mdash; cramping, nausea, reflux, diarrhea, food reactions, the &ldquo;everything sets me off&rdquo; diet.</li>
+      <li><b>Airway / cardiovascular</b> &mdash; congestion, wheeze, racing heart, blood-pressure swings, near-fainting, anaphylaxis-like episodes with no clear allergen.</li>
+      <li><b>Neuro / psychiatric</b> &mdash; anxiety, irritability, brain fog, insomnia, &ldquo;wired and tired,&rdquo; sudden mood crashes.</li>
+    </ul>
+    <div class="card key">
+      <h3>Why this belongs in a PANS guide</h3>
+      <p style="margin:0">MCAS is one of the <b>core PANS overlaps.</b> Mast cells sit at the crossroads of the immune system and the brain &mdash; they release histamine and inflammatory mediators that <b>directly drive anxiety, irritability, and the neuro-inflammation</b> that fuels a flare. A reactive, mast-cell-primed child is a child whose nervous system is being chemically poked all day. It&rsquo;s also why <b>so many PANS kids react to their own treatment</b> &mdash; the fillers and excipients in a supplement, a new food, a die-off &mdash; can each trip an already-twitchy mast cell. Calm the mast cells and you often lower the whole reactivity floor the rest of the protocol has to work over. <span class="src">Histamine is itself a neurotransmitter; mast-cell mediators cross into and inflame the nervous system. Source: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10866766/" target="_blank" rel="noopener">Using the Right Criteria for MCAS (PMC)</a>.</span></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The tests an MCAS doctor runs</h2>
+    <p>This is the workup Rachel asked us to lay out clearly. The hard truth up front: <b>MCAS is largely a clinical diagnosis</b> &mdash; the labs <em>support</em> it but rarely &ldquo;prove&rdquo; it, because mediators are released in bursts and degrade fast. The single validated rule is <b>tryptase measured in a flare versus the child&rsquo;s own baseline.</b> A good MCAS doctor casts a wider net than that, and times the draws to a reaction.</p>
+
+    <h3 style="margin-top:30px">The mediator panel &mdash; what to draw, and the timing trick</h3>
+    <table>
+      <thead><tr><th>Test</th><th>What it measures / why</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td><b>Serum tryptase</b><br><span class="src">baseline + flare</span></td><td><b>The validated marker.</b> Draw a <b>baseline</b> when well, then a second within <b>~1&ndash;4 hours of a flare.</b> A real, transient rise above the child&rsquo;s own baseline is the strongest objective evidence.</td><td><b>Highest value</b></td></tr>
+        <tr><td><b>Plasma histamine</b></td><td>Histamine released into the blood during activation. <b>Very short half-life</b> &mdash; must be drawn fast and kept chilled, or it&rsquo;s falsely normal.</td><td>Timing-sensitive</td></tr>
+        <tr><td><b>Whole-blood histamine</b></td><td>Total histamine load. This is also the <b>Walsh histadelia marker</b> &mdash; elevated whole-blood histamine flags <b>undermethylation</b>, the bridge between the MCAS picture and the methylation engine. Walsh&rsquo;s normal band is roughly 40&ndash;70 ng/mL.</td><td>Also a methylation read</td></tr>
+        <tr><td><b>24-hr urine N-methylhistamine</b></td><td>The stable <b>breakdown product of histamine.</b> Because it&rsquo;s a metabolite collected over a day, it&rsquo;s <b>more reliable than a single blood histamine</b> &mdash; it doesn&rsquo;t vanish in minutes.</td><td>More reliable than plasma</td></tr>
+        <tr><td><b>24-hr urine PGD2</b><br><span class="src">prostaglandin D2 / 11&beta;-PGF2&alpha;</span></td><td>Prostaglandin D2 (measured as its stable metabolite <b>2,3-dinor-11&beta;-PGF2&alpha;</b>) is mast-cell-specific and often the <b>most sensitive</b> marker when tryptase is unrevealing.</td><td>Often the catch</td></tr>
+        <tr><td><b>24-hr urine leukotriene E4</b></td><td>The stable end-product of the <b>leukotriene</b> arm &mdash; the mediator class that drives airway and inflammatory symptoms. Elevated across all MCAS subtypes.</td><td>Adds the leukotriene arm</td></tr>
+        <tr><td><b>Chromogranin A</b></td><td>A broader mast-cell / neuroendocrine mediator; helps when the histamine and prostaglandin markers are borderline (interpret off PPIs, which raise it).</td><td>Supporting</td></tr>
+        <tr><td><b>DAO</b><br><span class="src">diamine oxidase</span></td><td>The enzyme that <b>clears histamine in the gut.</b> Low DAO points to <b>histamine intolerance</b> &mdash; a related &ldquo;can&rsquo;t-break-it-down&rdquo; problem that often rides alongside MCAS.</td><td>The intolerance angle</td></tr>
+      </tbody>
+    </table>
+    <p class="src" style="margin:0 0 8px"><a href="https://arupconsult.com/content/mast-cell-disorders" target="_blank" rel="noopener">ARUP Consult &mdash; Mast Cell Disorders test selection</a> &middot; <a href="https://www.mayocliniclabs.com/test-catalog/overview/608378" target="_blank" rel="noopener">Mayo &mdash; Mast Cell Mediators, 24-hr urine</a> &middot; <a href="https://www.sciencedirect.com/science/article/abs/pii/S2213219814002839" target="_blank" rel="noopener">Improved identification: tryptase + 24-hr 11&beta;-PGF2&alpha; (JACI: In Practice)</a> &middot; <a href="https://www.secondopinionphysician.com/shop/walsh-protocol-lab-test-whole-blood-histamine/" target="_blank" rel="noopener">Walsh whole-blood histamine / histadelia</a>.</p>
+
+    <h3 style="margin-top:30px">Ruling OUT mastocytosis</h3>
+    <div class="card">
+      <p style="margin:0 0 12px">Before settling on MCAS, a careful doctor <b>rules out clonal mast-cell disease (mastocytosis)</b> &mdash; a different, more serious condition where the body makes too many abnormal mast cells. The screen:</p>
+      <ul style="margin:0">
+        <li><b>Baseline tryptase &gt;20 ng/mL</b> &mdash; a persistently high baseline (not a flare spike) raises the flag for mastocytosis.</li>
+        <li><b>KIT D816V mutation</b> &mdash; the clonal driver mutation; a blood test for it is the key discriminator.</li>
+        <li><b>Bone marrow biopsy</b> &mdash; <b>only if indicated</b> by the above. Not a routine MCAS test &mdash; reserved for when clonal disease is genuinely suspected.</li>
+      </ul>
+    </div>
+
+    <div class="card key">
+      <h3>How the diagnosis is actually made</h3>
+      <p style="margin:0">The widely-used <b>consensus criteria</b> need all three: <b>(1)</b> recurrent symptoms in <b>two or more organ systems</b>; <b>(2)</b> an <b>event-related rise in a mast-cell mediator</b> &mdash; the validated one being serum tryptase climbing to at least <b>120% of baseline + 2 ng/mL</b> during a flare; and <b>(3)</b> a <b>documented response to mast-cell-targeted treatment.</b> Notice the third criterion: <b>the treatment response is itself part of the diagnosis.</b> That&rsquo;s why a careful trial of the cocktail below isn&rsquo;t just therapy &mdash; it&rsquo;s diagnostic. <span class="src">Source: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10866766/" target="_blank" rel="noopener">Using the Right Criteria for MCAS (PMC)</a> &middot; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10960756/" target="_blank" rel="noopener">Reversible tryptase elevation as the best biomarker (PMC)</a>.</span></p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream-light)">
+  <div class="wrap">
+    <h2>What treatment looks like &mdash; the MCAS cocktail</h2>
+    <p><b>This is the heart of what Rachel asked for: what MCAS doctors actually DO.</b> Treatment is a <b>ladder</b>, not a single pill. You build it up one layer at a time, and most stable patients end up on a <b>combination</b> &mdash; the &ldquo;MCAS cocktail.&rdquo; The whole thing rests on one rule for reactive kids: <b>start low, go slow, change one variable at a time.</b> A mast-cell kid can react to the <em>filler</em> in a tablet, so the order and pacing matter as much as the drug.</p>
+
+    <h3 style="margin-top:30px">The ladder, rung by rung</h3>
+    <table>
+      <thead><tr><th>Rung</th><th>What it is</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td><b>1 &middot; Avoidance + diet</b></td><td><b>Always first.</b> Identify and remove triggers; trial a <b>low-histamine diet</b> (and reduce histamine-liberating foods). This is the foundation everything else sits on.</td><td>Low-histamine diet, trigger log, fragrance/heat/stress management</td></tr>
+        <tr><td><b>2 &middot; H1 antihistamine</b></td><td>Blocks histamine at the H1 receptor &mdash; skin, neuro, vascular. Taken <b>daily as a baseline</b>, not just for reactions.</td><td><b>Cetirizine, loratadine, fexofenadine</b>; <b>hydroxyzine</b> (more sedating, useful at night)</td></tr>
+        <tr><td><b>3 &middot; H2 antihistamine</b></td><td>Blocks the H2 receptor &mdash; gut and stomach. <b>Layered on top of</b> the H1, not instead of it. (H1 + H2 together is the core pairing.)</td><td><b>Famotidine</b></td></tr>
+        <tr><td><b>4 &middot; Mast-cell stabilizer</b></td><td>Stops the mast cell from degranulating in the first place. <b>Cromolyn</b> works mostly in the gut (poorly absorbed &mdash; that&rsquo;s the point for GI symptoms); <b>ketotifen</b> is absorbed body-wide <em>and</em> is itself an H1 blocker.</td><td><b>Cromolyn sodium</b> (oral), <b>ketotifen</b></td></tr>
+        <tr><td><b>5 &middot; Leukotriene blocker</b></td><td>Shuts down the leukotriene arm &mdash; airway, inflammatory, and some GI symptoms the antihistamines don&rsquo;t reach.</td><td><b>Montelukast</b></td></tr>
+        <tr><td><b>6 &middot; Natural stabilizers</b></td><td>Flavonoids that stabilize mast cells and lower histamine release &mdash; gentle, often well-tolerated add-ons (watch fillers).</td><td><b>Quercetin, luteolin, vitamin C</b></td></tr>
+        <tr><td><b>7 &middot; DAO enzyme</b></td><td>For the <b>histamine-intolerance</b> piece &mdash; supplemental diamine oxidase taken with meals to help break down dietary histamine in the gut.</td><td><b>DAO supplement</b> (with food)</td></tr>
+        <tr><td><b>8 &middot; Step-up (refractory)</b></td><td>When the cocktail above isn&rsquo;t enough, specialists escalate.</td><td><b>Low-dose aspirin</b> (targets PGD2), <b>omalizumab / Xolair</b> (anti-IgE biologic), <b>low-dose naltrexone (LDN)</b></td></tr>
+      </tbody>
+    </table>
+    <p class="src" style="margin:0 0 8px"><a href="https://www.gaudianiclinic.com/gaudiani-clinic-blog/2022/8/10/gaudiani-clinic-mast-cell-activation-syndrome-mcas-amp-eating-disorders-blog-part-three-fundamentals-of-treating-mcas" target="_blank" rel="noopener">Gaudiani Clinic &mdash; Fundamentals of treating MCAS</a> &middot; <a href="https://www.eds.clinic/articles/cromolyn-vs-ketotifen-and-other-antihistamines-for-mcas" target="_blank" rel="noopener">EDS Clinic &mdash; cromolyn vs ketotifen</a> &middot; <a href="https://www.mastattack.org/2014/10/mcas-treatment/" target="_blank" rel="noopener">Mast Attack &mdash; MCAS treatment</a>.</p>
+
+    <div class="card key">
+      <h3>What &ldquo;the cocktail&rdquo; means</h3>
+      <p style="margin:0 0 12px">The MCAS cocktail isn&rsquo;t one rung &mdash; it&rsquo;s the <b>layered combination</b> most stable patients land on:</p>
+      <p style="margin:0 0 12px;font-size:18px;color:var(--ink)"><b>H1 + H2 + mast-cell stabilizer + leukotriene blocker</b></p>
+      <p style="margin:0">You add them <b>one at a time</b>, holding each long enough to read the effect, so that if the child reacts you know exactly which one did it. That&rsquo;s the whole logic of going slow &mdash; not timidity, but <b>signal.</b> And because mast-cell kids famously react to <b>fillers and excipients</b>, the cleanest formulation (sometimes compounded) can matter as much as the molecule.</p>
+    </div>
+
+    <div class="card good">
+      <h3>The reactive-kid rule, in one line</h3>
+      <p style="margin:0"><b>Start low, go slow, one variable at a time.</b> A child whose mast cells are already primed will react harder and to smaller things &mdash; so the dose you&rsquo;d use in an adult is often the dose that flares the kid. Tiny starting doses, single changes, and patience are how you find the cocktail <em>without</em> setting off the very system you&rsquo;re trying to calm.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>A credible specialist to know</h2>
+    <div class="card key">
+      <h3>Dr. Anne Maitland, MD PhD &mdash; allergist / immunologist</h3>
+      <p style="margin:0 0 12px"><b>One of the most respected MCAS clinicians in the US.</b> MD/PhD from the University of Pennsylvania; Internal Medicine and Allergy &amp; Immunology training at Brigham and Women&rsquo;s and Mount Sinai; board-certified in both Allergy &amp; Immunology and Internal Medicine. She sits on the <b>scientific/medical faculty of The Mast Cell Disease Society</b> and the <b>Ehlers-Danlos Society&rsquo;s</b> international consortium &mdash; the two organizations at the center of this field &mdash; and her clinical focus is squarely on diagnosing and treating mast-cell activation disease.</p>
+      <p style="margin:0 0 12px"><b>Where she practices now:</b> she is <b>Medical Director of Comprehensive Allergy &amp; Asthma Care (Tarrytown, NY)</b> and an Assistant Professor at the <b>Icahn School of Medicine at Mount Sinai.</b> <span class="src">Note: Rachel knew her from the <b>Metrodora Institute</b> in Salt Lake City &mdash; but Maitland left Metrodora in early 2025 and the institute closed its clinical operations in July 2025, so that affiliation is no longer current. We&rsquo;ve updated it here to her present practice.</span></p>
+      <p style="margin:0"><b>She reportedly takes insurance</b> &mdash; <b>verify directly before assuming it</b>, but if so it&rsquo;s a meaningful deal, because <b>most dedicated MCAS care is cash-pay.</b> We list her as a <b>credible reference point</b>, not an outcome endorsement: a name to know in a field with few real experts, not a promise of results. <span class="src">Sources: <a href="https://tmsforacure.org/people/anne-maitland-md-phd/" target="_blank" rel="noopener">The Mast Cell Disease Society &mdash; Anne Maitland, MD, PhD</a> &middot; <a href="https://www.ehlers-danlos.com/anne-maitland/" target="_blank" rel="noopener">The Ehlers-Danlos Society &mdash; Anne Maitland</a> &middot; <a href="https://www.drannemaitland.net/dr-anne-maitland" target="_blank" rel="noopener">Comprehensive Allergy &amp; Asthma Care</a> &middot; <a href="https://thesicktimes.org/2026/01/27/metrodora-promised-comprehensive-treatment-but-within-two-years-it-abruptly-closed/" target="_blank" rel="noopener">The Sick Times &mdash; Metrodora closure</a>.</span></p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream-light)">
+  <div class="wrap">
+    <h2>Choose your path</h2>
+    <p>Start at the top and follow your child. <b>Tap to open.</b></p>
+
+    <details style="background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--teal);border-radius:12px;padding:14px 18px;margin:12px 0">
+      <summary style="cursor:pointer;font-weight:700;color:var(--ink);font-size:16.5px;list-style:none">1 &middot; Does your child flush, hive, react to many foods, or react to their own supplements?</summary>
+      <p style="margin:12px 0 0;font-size:16px">If symptoms span <b>two or more systems</b> (skin + gut + neuro, say) and flare unpredictably &mdash; MCAS is on the table. The tell that clinches it for many PANS families: <b>the child reacts to the very supplements meant to help.</b> Move to the workup &darr;</p>
+    </details>
+
+    <details style="background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--teal);border-radius:12px;padding:14px 18px;margin:12px 0">
+      <summary style="cursor:pointer;font-weight:700;color:var(--ink);font-size:16.5px;list-style:none">2 &middot; Run the mediator panel &mdash; and time it to a flare.</summary>
+      <p style="margin:12px 0 0;font-size:16px"><b>Baseline tryptase</b> when well, then <b>flare tryptase within ~1&ndash;4 hrs.</b> Add <b>24-hr urine N-methylhistamine, PGD2, and leukotriene E4</b>, plus plasma/whole-blood histamine, chromogranin A, and DAO. Rule OUT mastocytosis (baseline tryptase &gt;20, KIT D816V).</p>
+    </details>
+
+    <details style="background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--teal);border-radius:12px;padding:14px 18px;margin:12px 0">
+      <summary style="cursor:pointer;font-weight:700;color:var(--ink);font-size:16.5px;list-style:none">3 &middot; Even if labs are normal, you can trial the treatment.</summary>
+      <p style="margin:12px 0 0;font-size:16px">Remember the third criterion: <b>response to treatment is part of the diagnosis.</b> Start the ladder: <b>low-histamine diet &rarr; H1 &rarr; H2 &rarr; stabilizer (cromolyn/ketotifen) &rarr; montelukast</b>, layering one at a time. A clear improvement is itself evidence.</p>
+    </details>
+
+    <details style="background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--moss);border-radius:12px;padding:14px 18px;margin:12px 0">
+      <summary style="cursor:pointer;font-weight:700;color:var(--ink);font-size:16.5px;list-style:none">4 &middot; Reactive to everything, including tiny doses?</summary>
+      <p style="margin:12px 0 0;font-size:16px"><b>Start lower than you think.</b> Use the cleanest formulations (compounded if needed to dodge fillers), add the natural stabilizers (<b>quercetin/luteolin/vitamin C</b>) and <b>DAO</b> with meals, and change one thing at a time. This is the whole reason MCAS care goes slowly.</p>
+    </details>
+
+    <details style="background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--teal);border-radius:12px;padding:14px 18px;margin:12px 0">
+      <summary style="cursor:pointer;font-weight:700;color:var(--ink);font-size:16.5px;list-style:none">5 &middot; On the full cocktail and still flaring?</summary>
+      <p style="margin:12px 0 0;font-size:16px">This is the refractory step-up &mdash; with a specialist: <b>low-dose aspirin</b> (for the PGD2 flushers), <b>omalizumab (Xolair)</b>, or <b>low-dose naltrexone.</b> A name to know in this field: <b>Dr. Anne Maitland</b> (above).</p>
+    </details>
+
+    <div class="card key" style="margin-top:22px">
+      <p style="margin:0;font-size:16.5px"><b>This is a lot &mdash; and you don&rsquo;t have to read it alone.</b> Minta takes your child&rsquo;s mediator panel, ties it to their <b>daily symptoms, food reactions, and the rest of their labs</b> (including the methylation/histamine link), and helps you build the cocktail <b>one careful rung at a time</b> &mdash; the start-low-go-slow plan no single visit has time to walk with you. <a href="https://app.planbforpans.com"><b>Let Minta do this with you &rarr;</b></a></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Healer or quack? Judge the behavior.</h2>
+    <div class="card">
+      <p style="margin:0"><b>MCAS is a real, consensus-defined condition &mdash; but it&rsquo;s also become a catch-all that some practitioners over-diagnose and monetize.</b> Don&rsquo;t judge by the label; judge the conduct and the incentives.</p>
+    </div>
+    <div class="card flag">
+      <h3>Red flags</h3>
+      <ul>
+        <li><b>Diagnoses MCAS on symptoms alone</b> and never times a tryptase to a flare or runs the urine mediators &mdash; or, the opposite, <b>dismisses MCAS outright</b> because the single resting tryptase was normal.</li>
+        <li><b>Skips the mastocytosis rule-out</b> (baseline tryptase, KIT D816V) when it&rsquo;s warranted.</li>
+        <li><b>Sells you the testing AND a giant proprietary supplement stack AND the treatment</b> &mdash; the conflict of interest.</li>
+        <li><b>Starts a reactive kid on adult doses</b>, changes several things at once, and can&rsquo;t tell you which med caused a reaction.</li>
+        <li>Promises a <b>cure</b>, uses fear/urgency, and tells you to stop your other care.</li>
+      </ul>
+    </div>
+    <div class="card good">
+      <h3>Green flags</h3>
+      <ul>
+        <li><b>Uses the consensus criteria</b> &mdash; multisystem symptoms + a timed mediator + treatment response &mdash; and explains the timing of the draws.</li>
+        <li><b>Rules out mastocytosis</b> before settling on MCAS.</li>
+        <li><b>Builds the cocktail one rung at a time</b>, starts low in kids, and is honest that the treatment trial is itself diagnostic.</li>
+        <li><b>Welcomes your other doctors</b>, reassesses on how the child is actually doing, and doesn&rsquo;t own the pharmacy they&rsquo;re prescribing from.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Bottom line</h2>
+    <p>MCAS is mast cells <b>firing when they shouldn&rsquo;t</b>, spraying histamine and other mediators across every system &mdash; and for a PANS kid it&rsquo;s often the <b>hidden driver of the reactivity</b>, the food intolerance, and the can&rsquo;t-tolerate-the-treatment problem. The workup is real but timing-dependent: <b>tryptase in a flare vs. baseline</b>, plus the <b>24-hr urine mediators</b> (N-methylhistamine, PGD2, leukotriene E4), with mastocytosis ruled out. And the treatment is a <b>ladder you climb slowly</b> &mdash; diet, then <b>H1 + H2 + stabilizer + leukotriene blocker</b>, with natural stabilizers, DAO, and a refractory step-up behind it. The diagnosis and the treatment are the same act: <b>a careful, one-variable-at-a-time trial.</b> This is parent education, not medical advice &mdash; bring it to your team as questions.</p>
+    <div class="card key" style="margin-top:18px">
+      <h3>How Plan B stays honest</h3>
+      <p style="margin:0">Plan B <b>does not partner with drug companies or doctors</b>, and we <b>never endorse anyone whose healing isn&rsquo;t verified by families.</b> We show you the options and <b>how to vet them yourself</b> &mdash; and we&rsquo;re building <b>parent verification</b>: look up a practitioner and see real family reviews before you trust them. <b>Universal bad reviews? Skip.</b></p>
+    </div>
+    <a class="back" href="/learn">&larr; Back to the Field Guide</a>
+  </div>
+</section>
+
+</body>
+</html>
