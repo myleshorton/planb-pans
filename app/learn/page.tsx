@@ -29,10 +29,19 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     ],
   },
   {
-    group: '2 · Find the root drivers',
+    group: '2 · Support the body — alongside everything',
+    sub: 'Low-risk foundations you can start right away, while you chase the rest.',
+    items: [
+      { title: 'Diet & Nutrition', blurb: 'Food as a real PANS lever — the anti-inflammatory foundation, which specialty diet fits your kid’s pattern, and how to find triggers without over-restricting.', href: '/diet.html' },
+      { title: 'Nervous-System Regulation', blurb: 'Calming a fight-or-flight brain — vagus-nerve work, HRV, limbic retraining — the layer that makes everything else tolerable.', href: '/nervous-system.html' },
+    ],
+  },
+  {
+    group: '3 · Find the root drivers',
     sub: 'If the protocol isn’t enough, this is where the answers hide.',
     items: [
       { title: 'Find Mold Yourself', blurb: 'The honest ERMI story + how to find and safely remediate mold without a predatory middleman.', href: '/find-mold.html' },
+      { title: 'Mold — the full protocol', blurb: 'Once mold is implicated: remove → drainage → binders → antifungals → nasal, the 3 binder schools, and the order that matters.', href: '/mold-protocol.html' },
       { title: 'Gut & Microbiome', blurb: 'Which stool test (and which to skip), the gut-brain link, and how to reset it.', href: '/gut.html' },
       { title: 'Methylation & Detox', blurb: 'The cleanup engine no specialist owns — HTMA, folate/FRAT, and the detox (and daily poops) that decide whether anything else works.', href: '/methylation.html' },
       { title: 'Lyme & Co-infections', blurb: 'Antibiotics vs herbals (research-backed), the kill-menu, per-bug dosing, and how to find a Lyme doctor.', href: '/lyme.html' },
@@ -40,14 +49,14 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     ],
   },
   {
-    group: '3 · Immune treatment',
+    group: '4 · Immune treatment',
     sub: 'When the immune attack itself needs calming.',
     items: [
       { title: 'IVIG & Immune Treatment', blurb: 'Who qualifies, the infusion day demystified, the studies (what it clears vs not), and the insurance fight.', href: '/ivig.html' },
     ],
   },
   {
-    group: '4 · Deeper gut resets',
+    group: '5 · Deeper gut resets',
     sub: 'When remove-and-rebuild isn’t enough.',
     items: [
       { title: 'FMT — Fecal Transplant', blurb: 'The deepest gut reset — the ASU autism trials, how to access it safely, and why screening IS the safety.', href: '/fmt.html' },
@@ -55,7 +64,7 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     ],
   },
   {
-    group: '5 · When it’s still not enough',
+    group: '6 · When it’s still not enough',
     sub: 'The deeper menu — what hasn’t been tried.',
     items: [
       { title: 'Hyperthermia & Clinics', blurb: 'Heat that kills Borrelia — the clinics, who qualifies, the real risks, and what it costs.', href: '/hyperthermia.html' },
@@ -67,9 +76,8 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
 ]
 
 const COMING: Item[] = [
-  { title: 'Mold — the full protocol', blurb: 'Beyond finding it: binders, antifungals, drainage, and the order that matters.' },
-  { title: 'Diet & Nutrition', blurb: 'Anti-inflammatory, food-first methylation, and what actually moves the needle.' },
-  { title: 'Nervous-system regulation', blurb: 'Vagus-nerve work, craniosacral, and calming a dysregulated brain.' },
+  { title: 'Kill-menu singles', blurb: 'Bee venom · HBOT · methylene blue · ozone · peptides — each graduating to its own deep-dive.' },
+  { title: 'Practitioner reviews', blurb: 'Enter a name → real parent reviews, so you can skip the bad ones.' },
 ]
 
 export default function LearnPage() {
