@@ -96,7 +96,7 @@ export default function LearnPage() {
             Every treatment, deconstructed.
           </h1>
           <p style={{ fontSize: 18, lineHeight: 1.7, color: soft, maxWidth: 680, margin: 0 }}>
-            The hardest part isn&rsquo;t learning a treatment <em>exists</em> — it&rsquo;s figuring out <strong style={{ color: ink }}>how to actually get it</strong>, and how not to get burned. Most parents have no idea where to start. So each guide answers the same five things: <strong style={{ color: ink }}>what it is</strong>, <strong style={{ color: ink }}>the research behind it</strong>, <strong style={{ color: ink }}>the real risks</strong>, <strong style={{ color: ink }}>exactly how to access it</strong>, and <strong style={{ color: ink }}>how to tell a real practitioner from a quack.</strong>
+            The hardest part of PANS is the moment you <strong style={{ color: ink }}>stall</strong> — when the standard path stops working and no one tells you what&rsquo;s left. <strong style={{ color: ink }}>This is what&rsquo;s left.</strong> Every treatment, laid out honestly, so that when you hit a wall you know the search isn&rsquo;t over — there&rsquo;s a Plan B. Each guide answers the same things: <strong style={{ color: ink }}>what it is</strong>, <strong style={{ color: ink }}>the research</strong>, <strong style={{ color: ink }}>the real risks</strong>, <strong style={{ color: ink }}>how to actually get it</strong>, and <strong style={{ color: ink }}>how to vet a practitioner.</strong>
           </p>
         </div>
       </section>
