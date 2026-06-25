@@ -13,26 +13,26 @@ const sand = 'var(--sand)'
 
 const STEPS = [
   {
-    title: 'Start treatment — you can begin now',
-    body: 'Take a targeted antibiotic and try an anti-inflammatory (high-dose fish oil + an NSAID). You don’t have to wait for labs to start.',
+    title: 'Treat first',
+    body: 'Start a targeted antibiotic and an anti-inflammatory — high-dose fish oil and an NSAID. You can begin today, before any lab comes back.',
     cta: 'See the starter protocol',
     href: '/deconstructing-pans.html#protocol',
   },
   {
-    title: 'Run a handful of tests to find the driver',
-    body: 'A small, targeted panel — and three simple ways to get it ordered (self-order, hand your doctor the list, or a telehealth doctor).',
+    title: 'Test for the driver',
+    body: 'Run a small, focused panel to find what’s behind it — with three easy ways to order it: yourself, through your doctor, or a telehealth doctor.',
     cta: 'See what to run',
     href: '/deconstructing-pans.html#protocol',
   },
   {
-    title: 'Wait, and see if it helps',
-    body: 'Give it a real trial — a few weeks — and watch how your child responds. Many kids turn the corner right here.',
+    title: 'Give it time',
+    body: 'Treat for a few weeks and watch closely. Many children turn the corner right here.',
     cta: 'Track the response',
     href: '/tracker',
   },
   {
-    title: 'Learn the protocol — and look ahead',
-    body: 'Understand the protocol as it unfolds. And if it doesn’t get your child all the way better, you’re not stuck — that’s where the Field Guide, your Plan B, begins.',
+    title: 'Then look ahead',
+    body: 'Learn the protocol as you go. And if your child isn’t all the way better, you’re not out of options — that’s where the Field Guide begins.',
     cta: 'Open the Field Guide',
     href: '/learn',
   },
