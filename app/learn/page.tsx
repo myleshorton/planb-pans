@@ -21,10 +21,10 @@ const LIVE: Item[] = [
   { title: 'The Full Map', blurb: 'Every driver, test, and treatment for PANS — deconstructed and connected.', href: '/deconstructing-pans.html' },
   { title: 'Find Mold Yourself', blurb: 'The honest ERMI story + how to find and safely remediate mold without a predatory middleman.', href: '/find-mold.html' },
   { title: 'Phage Therapy', blurb: 'Viruses that kill bacteria and spare the gut — the real providers (Eliava), how to access, the evidence, and how to spot a quack.', href: '/phage.html' },
+  { title: 'Lyme & Co-infections', blurb: 'Antibiotics vs herbals (research-backed), the head-to-head herbal protocol ratings, the full kill-menu, and how to find a Lyme doctor.', href: '/lyme.html' },
 ]
 
 const COMING: Item[] = [
-  { title: 'Lyme & Co-infections', blurb: 'The full kill-menu — and how to actually find a doctor, get tested, and access every option.' },
   { title: 'Hyperthermia & Clinics', blurb: 'Heat that kills Borrelia — which clinics, who qualifies, how to get in, what it costs.' },
   { title: 'Homeopathy', blurb: 'Classical, done right — and how to find a true-classical practitioner, not a modern imposter.' },
   { title: 'Biomagnetism', blurb: 'What it is, the honest evidence, and how to find a practitioner.' },
