@@ -28,6 +28,7 @@ const LIVE: Item[] = [
   { title: 'IVIG & Immune Treatment', blurb: 'Who qualifies, the infusion day demystified (pre-meds, the rate, headaches, the expected flare), the evidence, and the access fight.', href: '/ivig.html' },
   { title: 'Methylation & Detox', blurb: 'The cleanup engine no specialist owns — HTMA, folate/FRAT, the genetics, and the detox that decides whether anything else works.', href: '/methylation.html' },
   { title: 'Gut & Microbiome', blurb: 'Which stool test (and which to skip), the gut-brain link, what Minta looks for, and how to reset it.', href: '/gut.html' },
+  { title: 'Helminthic Therapy', blurb: 'Worms that calm an over-reactive immune system — the species, where to order, dosing, the antidote, and why non-verbal kids are off the table.', href: '/helminths.html' },
 ]
 
 const COMING: Item[] = [
