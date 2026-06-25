@@ -119,6 +119,14 @@ export default function LearnPage() {
             <span style={{ display: 'inline-block', fontSize: 15, fontWeight: 800, color: '#1F6B6B', background: '#fff', padding: '13px 26px', borderRadius: 10, letterSpacing: '0.02em' }}>Open the Full Map &rarr;</span>
           </a>
 
+          <a href="/by-behavior.html" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, textDecoration: 'none', background: card, border: `1.5px solid ${teal}`, borderRadius: 14, padding: '18px 22px', marginBottom: 34 }}>
+            <span>
+              <span style={{ display: 'block', fontFamily: 'var(--font-cormorant)', fontSize: 23, color: ink, lineHeight: 1.15 }}>Not sure where to start? Start with what you&rsquo;re seeing.</span>
+              <span style={{ display: 'block', fontSize: 14, color: soft, marginTop: 4 }}>Pick a behavior — rage, OCD, tics, anxiety — and we point you to the drivers worth investigating.</span>
+            </span>
+            <span style={{ fontSize: 13, color: teal, fontWeight: 700, whiteSpace: 'nowrap' }}>By behavior &rarr;</span>
+          </a>
+
           {SECTIONS.map((sec) => (
             <div key={sec.group} style={{ marginBottom: 30 }}>
               <p style={{ fontSize: 13, color: teal, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 700, margin: '0 0 2px' }}>{sec.group}</p>
