@@ -16,21 +16,54 @@ const card = '#fffdf7'
 
 type Item = { title: string; blurb: string; href?: string }
 
-const LIVE: Item[] = [
-  { title: 'Understanding PANS', blurb: 'Start here — what PANS actually is, in plain language for an exhausted parent.', href: '/understanding-pans.html' },
-  { title: 'The Protocol', blurb: 'Where everyone starts — the antibiotic + anti-inflammatory + IVIG, the dosing, how long, when to come off, and what to do if your child slips.', href: '/deconstructing-pans.html#protocol' },
-  { title: 'Find Mold Yourself', blurb: 'The honest ERMI story + how to find and safely remediate mold without a predatory middleman.', href: '/find-mold.html' },
-  { title: 'Phage Therapy', blurb: 'Viruses that kill bacteria and spare the gut — the real providers (Eliava), how to access, the evidence, and how to spot a quack.', href: '/phage.html' },
-  { title: 'Lyme & Co-infections', blurb: 'Antibiotics vs herbals (research-backed), the head-to-head herbal protocol ratings, the full kill-menu, and how to find a Lyme doctor.', href: '/lyme.html' },
-  { title: 'Hyperthermia & Clinics', blurb: 'Heat that kills Borrelia — the clinics, who qualifies, the real risks, how to get in, and what it costs.', href: '/hyperthermia.html' },
-  { title: 'Biomagnetism', blurb: 'Magnets + the honest evidence — the Joan Randall Protocol, what it seems to do, and why it still needs studies.', href: '/biomagnetism.html' },
-  { title: 'Homeopathy', blurb: 'The 3 kinds — start classical. The weekend-vs-4-year training gap, the recovery stories, and how to find a true-classical homeopath.', href: '/homeopathy.html' },
-  { title: 'IVIG & Immune Treatment', blurb: 'Who qualifies, the infusion day demystified (pre-meds, the rate, headaches, the expected flare), the evidence, and the access fight.', href: '/ivig.html' },
-  { title: 'Methylation & Detox', blurb: 'The cleanup engine no specialist owns — HTMA, folate/FRAT, the genetics, and the detox that decides whether anything else works.', href: '/methylation.html' },
-  { title: 'Gut & Microbiome', blurb: 'Which stool test (and which to skip), the gut-brain link, what Minta looks for, and how to reset it.', href: '/gut.html' },
-  { title: 'Helminthic Therapy', blurb: 'Worms that calm an over-reactive immune system — the species, where to order, dosing, the antidote, and why non-verbal kids are off the table.', href: '/helminths.html' },
-  { title: 'MCAS & Histamine', blurb: 'Mast-cell activation — the tests an MCAS doctor runs, the treatment cocktail, and why the patch alone is not the cure (find the root).', href: '/mcas.html' },
-  { title: 'FMT — Fecal Transplant', blurb: 'The deepest gut reset — the ASU autism trials, how to access it safely, the risks, and why screening IS the safety.', href: '/fmt.html' },
+// Ordered by where each piece falls in the decision tree — start, find the
+// drivers, escalate, go deeper — so a parent reads them in the order they'd
+// actually face them.
+const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
+  {
+    group: '1 · Start here',
+    sub: 'Understand it, then begin.',
+    items: [
+      { title: 'Understanding PANS', blurb: 'What PANS actually is, in plain language for an exhausted parent.', href: '/understanding-pans.html' },
+      { title: 'The Protocol', blurb: 'Where everyone starts — anti-inflammatory + a targeted antibiotic, the doses, how long, and what to do if your child slips.', href: '/deconstructing-pans.html#protocol' },
+    ],
+  },
+  {
+    group: '2 · Find the root drivers',
+    sub: 'If the protocol isn’t enough, this is where the answers hide.',
+    items: [
+      { title: 'Find Mold Yourself', blurb: 'The honest ERMI story + how to find and safely remediate mold without a predatory middleman.', href: '/find-mold.html' },
+      { title: 'Gut & Microbiome', blurb: 'Which stool test (and which to skip), the gut-brain link, and how to reset it.', href: '/gut.html' },
+      { title: 'Methylation & Detox', blurb: 'The cleanup engine no specialist owns — HTMA, folate/FRAT, and the detox (and daily poops) that decide whether anything else works.', href: '/methylation.html' },
+      { title: 'Lyme & Co-infections', blurb: 'Antibiotics vs herbals (research-backed), the kill-menu, per-bug dosing, and how to find a Lyme doctor.', href: '/lyme.html' },
+      { title: 'MCAS & Histamine', blurb: 'The tests an MCAS doctor runs, the treatment cocktail, and why the patch alone is not the cure (find the root).', href: '/mcas.html' },
+    ],
+  },
+  {
+    group: '3 · Immune treatment',
+    sub: 'When the immune attack itself needs calming.',
+    items: [
+      { title: 'IVIG & Immune Treatment', blurb: 'Who qualifies, the infusion day demystified, the studies (what it clears vs not), and the insurance fight.', href: '/ivig.html' },
+    ],
+  },
+  {
+    group: '4 · Deeper gut resets',
+    sub: 'When remove-and-rebuild isn’t enough.',
+    items: [
+      { title: 'FMT — Fecal Transplant', blurb: 'The deepest gut reset — the ASU autism trials, how to access it safely, and why screening IS the safety.', href: '/fmt.html' },
+      { title: 'Helminthic Therapy', blurb: 'Worms that calm an over-reactive immune system — species, dosing, the antidote, and why non-verbal kids are off the table.', href: '/helminths.html' },
+    ],
+  },
+  {
+    group: '5 · When it’s still not enough',
+    sub: 'The deeper menu — what hasn’t been tried.',
+    items: [
+      { title: 'Hyperthermia & Clinics', blurb: 'Heat that kills Borrelia — the clinics, who qualifies, the real risks, and what it costs.', href: '/hyperthermia.html' },
+      { title: 'Phage Therapy', blurb: 'Viruses that kill bacteria and spare the gut — the real providers, how to access, and how to spot a quack.', href: '/phage.html' },
+      { title: 'Biomagnetism', blurb: 'Magnets + the honest evidence — the Joan Randall Protocol, what it seems to move, and why it still needs study.', href: '/biomagnetism.html' },
+      { title: 'Homeopathy', blurb: 'The 3 kinds — start classical. The training gap, the recovery stories, and how to find a true-classical homeopath.', href: '/homeopathy.html' },
+    ],
+  },
 ]
 
 const COMING: Item[] = [
@@ -56,23 +89,40 @@ export default function LearnPage() {
 
       <section style={{ padding: 'clamp(36px, 6vw, 64px) 24px' }}>
         <div className="pb-container" style={{ maxWidth: 960, margin: '0 auto' }}>
-          <a href="/deconstructing-pans.html" style={{ display: 'block', textDecoration: 'none', background: 'linear-gradient(135deg, #1F6B6B, #2c5a6b)', color: '#fdf8ee', borderRadius: 16, padding: 'clamp(24px,4vw,34px)', marginBottom: 26, boxShadow: '0 22px 54px -32px rgba(31,107,107,0.95)' }}>
-            <p style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, color: '#bfe3df', margin: '0 0 10px' }}>Start here · the whole picture</p>
-            <p style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(28px, 4.6vw, 42px)', lineHeight: 1.05, margin: '0 0 12px' }}>The Full Map</p>
-            <p style={{ fontSize: 16.5, lineHeight: 1.6, color: '#eaf4f2', margin: '0 0 16px', maxWidth: 640 }}>How every driver, test, and treatment for PANS connects — the conventional protocol, the root drivers underneath, and what to do when it&rsquo;s still not enough. <strong style={{ color: '#fff' }}>Every guide below is a deep-dive on one piece of this map</strong> — start here to see how it all fits together.</p>
-            <span style={{ fontSize: 13.5, fontWeight: 700, color: '#fff', letterSpacing: '0.04em' }}>Open the Full Map &rarr;</span>
+          {/* THE FULL MAP — the can't-miss hero with a mini-map visual */}
+          <a href="/deconstructing-pans.html" style={{ display: 'block', textDecoration: 'none', background: 'linear-gradient(135deg, #1F6B6B, #24566a)', color: '#fdf8ee', borderRadius: 18, padding: 'clamp(28px,5vw,46px)', marginBottom: 38, boxShadow: '0 28px 64px -28px rgba(31,107,107,0.95)', border: '1px solid rgba(255,255,255,0.14)' }}>
+            <p style={{ fontSize: 12, letterSpacing: '0.22em', textTransform: 'uppercase', fontWeight: 800, color: '#bfe3df', margin: '0 0 12px' }}>★ Read this first — the whole picture</p>
+            <p style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(36px, 6.5vw, 58px)', lineHeight: 1.0, margin: '0 0 6px' }}>The Full Map</p>
+            <svg viewBox="0 0 620 64" style={{ width: '100%', maxWidth: 560, height: 'auto', display: 'block', margin: '14px 0 6px' }} aria-hidden="true">
+              <path d="M14,48 C130,8 210,8 300,38 C392,68 460,16 600,22" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="2.5" strokeDasharray="1 7" strokeLinecap="round" />
+              <circle cx="14" cy="48" r="7" fill="#ffffff" />
+              <circle cx="210" cy="20" r="6" fill="#bfe3df" />
+              <circle cx="380" cy="50" r="6" fill="#bfe3df" />
+              <circle cx="520" cy="24" r="6" fill="#bfe3df" />
+              <circle cx="600" cy="22" r="8" fill="#ffd966" />
+            </svg>
+            <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: 560, fontSize: 10.5, letterSpacing: '0.07em', textTransform: 'uppercase', color: '#cfe8e4', fontWeight: 600, margin: '0 0 18px' }}>
+              <span>Protocol</span><span>Drivers</span><span>Deeper</span><span>Better</span>
+            </div>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: '#eaf4f2', margin: '0 0 20px', maxWidth: 640 }}>Every driver, test, and treatment for PANS — and how they connect. <strong style={{ color: '#fff' }}>Start here. Every guide below is one piece of this map.</strong></p>
+            <span style={{ display: 'inline-block', fontSize: 15, fontWeight: 800, color: '#1F6B6B', background: '#fff', padding: '13px 26px', borderRadius: 10, letterSpacing: '0.02em' }}>Open the Full Map &rarr;</span>
           </a>
 
-          <p style={{ fontSize: 13, color: teal, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 16px' }}>The deep-dives — one piece of the map at a time</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 18 }}>
-            {LIVE.map((it) => (
-              <a key={it.title} href={it.href} style={{ display: 'block', textDecoration: 'none', background: card, border: `1.5px solid ${teal}`, borderRadius: 14, padding: '24px 24px 26px' }}>
-                <p style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 25, lineHeight: 1.1, color: ink, margin: '0 0 10px' }}>{it.title}</p>
-                <p style={{ fontSize: 14.5, color: soft, lineHeight: 1.55, margin: '0 0 14px' }}>{it.blurb}</p>
-                <span style={{ fontSize: 13, color: teal, fontWeight: 700, letterSpacing: '0.04em' }}>Read &rarr;</span>
-              </a>
-            ))}
-          </div>
+          {SECTIONS.map((sec) => (
+            <div key={sec.group} style={{ marginBottom: 30 }}>
+              <p style={{ fontSize: 13, color: teal, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 700, margin: '0 0 2px' }}>{sec.group}</p>
+              <p style={{ fontSize: 14, color: soft, fontStyle: 'italic', margin: '0 0 14px' }}>{sec.sub}</p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+                {sec.items.map((it) => (
+                  <a key={it.title} href={it.href} style={{ display: 'block', textDecoration: 'none', background: card, border: `1.5px solid ${teal}`, borderRadius: 14, padding: '22px 22px 24px' }}>
+                    <p style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 24, lineHeight: 1.1, color: ink, margin: '0 0 10px' }}>{it.title}</p>
+                    <p style={{ fontSize: 14.5, color: soft, lineHeight: 1.55, margin: '0 0 14px' }}>{it.blurb}</p>
+                    <span style={{ fontSize: 13, color: teal, fontWeight: 700, letterSpacing: '0.04em' }}>Read &rarr;</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
 
           <p style={{ fontSize: 13, color: teal, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: 'clamp(36px, 6vw, 56px) 0 18px' }}>In the works — full how-to-access guides, with studies</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 14 }}>
