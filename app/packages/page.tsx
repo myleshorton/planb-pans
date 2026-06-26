@@ -70,16 +70,24 @@ export default function PricingPage() {
       {/* The Synthesis — one price, big */}
       <section style={{ padding: 'clamp(44px, 7vw, 80px) 24px clamp(20px, 3vw, 32px)' }}>
         <div className="pb-container" style={{ maxWidth: 760, margin: '0 auto', background: card, border: `1.5px solid ${teal}`, borderRadius: 18, padding: 'clamp(28px, 4vw, 40px)', textAlign: 'center' }}>
-          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 10px' }}>The Plan B Synthesis</p>
-          <div style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(54px, 9vw, 76px)', lineHeight: 1, color: ink }}>$397</div>
-          <p style={{ fontSize: 14, color: soft, margin: '6px 0 18px' }}>one fee · everything below included</p>
+          <div style={{ display: 'inline-block', background: '#fff5e6', border: '1px solid #e0b056', color: '#9a6a00', fontSize: 12, fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '5px 14px', borderRadius: 999, margin: '0 0 14px' }}>★ Founding Families · first 20</div>
+          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: 14 }}>
+            <div style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(54px, 9vw, 76px)', lineHeight: 1, color: ink }}>$197</div>
+            <div style={{ fontSize: 24, color: soft, textDecoration: 'line-through', fontFamily: 'var(--font-cormorant)' }}>$397</div>
+          </div>
+          {/* FOUNDING COUNTER — edit the "20" below as families claim spots; set to 0 when full */}
+          <p style={{ fontSize: 15, color: '#9a6a00', fontWeight: 800, margin: '10px 0 2px' }}>20 of 20 founding spots left</p>
+          <p style={{ fontSize: 13.5, color: soft, margin: '0 0 18px' }}>Founding rate for the first 20 families — then it returns to $397.</p>
           <p style={{ fontSize: 16.5, lineHeight: 1.7, color: soft, maxWidth: 560, margin: '0 auto' }}>
-            Your whole record — every lab, symptom, history, and prior treatment — read together, in one pass. The drivers, the order to address them, what to bring each doctor, and your next move. The <strong style={{ color: ink }}>same depth and the same price</strong>, whatever situation you’re in.
+            Your whole record — every lab, symptom, history, and prior treatment — read together, in one pass. The drivers, the order to address them, what to bring each doctor, and your next move. The <strong style={{ color: ink }}>same depth, whatever situation you’re in.</strong>
           </p>
           <p style={{ fontSize: 15, color: teal, fontWeight: 700, margin: '16px auto 0', maxWidth: 560 }}>
-            Plus a <strong style={{ color: ink }}>15-minute debrief with Rachel</strong> once your synthesis is ready — a quick call or a few emails, whichever you prefer — to walk through it and answer your questions.
+            Plus a <strong style={{ color: ink }}>15-minute debrief with Rachel</strong> once your synthesis is ready — a quick call or a few emails, whichever you prefer.
           </p>
-          <a href="https://app.planbforpans.com/checkout/synthesis" style={{ display: 'inline-block', marginTop: 26, background: teal, color: '#fffdf7', fontSize: 16.5, fontWeight: 700, padding: '15px 38px', borderRadius: 9, textDecoration: 'none' }}>Get your synthesis →</a>
+          <p style={{ fontSize: 13.5, color: soft, margin: '14px auto 0', maxWidth: 540, lineHeight: 1.6 }}>
+            All we ask of founding families: <strong style={{ color: ink }}>honest feedback</strong> — and, only if it helps and you choose to, permission to share your <strong style={{ color: ink }}>de-identified</strong> story, so the next family has hope.
+          </p>
+          <a href="https://app.planbforpans.com/checkout/synthesis?plan=founding" style={{ display: 'inline-block', marginTop: 24, background: teal, color: '#fffdf7', fontSize: 16.5, fontWeight: 700, padding: '15px 38px', borderRadius: 9, textDecoration: 'none' }}>Claim a founding spot →</a>
           <p style={{ fontSize: 13, color: soft, margin: '12px 0 0' }}>No labs yet? <a href="https://app.planbforpans.com/checkout/synthesis?plan=direction" style={{ color: teal, fontWeight: 600, textDecoration: 'none' }}>Start with a $97 direction →</a></p>
         </div>
       </section>
