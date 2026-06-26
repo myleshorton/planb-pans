@@ -11,41 +11,49 @@
   :root{--cream:#F6F1E7;--cream-light:#FBF8F1;--card:#fffdf7;--ink:#2a2a26;--soft:#524d40;--teal:#1F6B6B;--ember:#C2693B;--indigo:#5B4B8A;--green:#2F8B5B;--rule:#e3dcc9;}
   *{box-sizing:border-box}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+  .wrap{max-width:600px;margin:0 auto;padding:0 22px}
   .hero{background:var(--cream-light);padding:clamp(54px,9vw,92px) 0 clamp(30px,5vw,44px);text-align:center;border-bottom:1px solid var(--rule)}
   .eyebrow{color:var(--teal);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:0 0 14px}
   h1{font-family:'Cormorant',Georgia,serif;font-weight:300;font-size:clamp(34px,7vw,58px);line-height:1.04;letter-spacing:-.02em;margin:0 0 16px}
   h1 em{color:var(--teal);font-style:italic}
   .lead{font-size:17.5px;color:var(--soft);max-width:520px;margin:0 auto;line-height:1.65}
 
-  .tree{display:flex;flex-direction:column;align-items:center;padding:clamp(36px,6vw,60px) 0 20px}
-  .node{display:block;text-decoration:none;text-align:center;background:var(--card);border:1.5px solid var(--rule);border-radius:14px;padding:15px 22px;min-width:230px;color:var(--ink);box-shadow:0 12px 30px -24px rgba(40,30,20,.6);transition:transform .12s ease,box-shadow .12s ease}
+  .tree{display:flex;flex-direction:column;align-items:center;padding:clamp(36px,6vw,56px) 0 20px}
+  .node{display:block;text-decoration:none;text-align:center;background:var(--card);border:1.5px solid var(--rule);border-radius:14px;padding:15px 22px;min-width:248px;color:var(--ink);box-shadow:0 12px 30px -24px rgba(40,30,20,.6);transition:transform .12s ease,box-shadow .12s ease}
   a.node:hover{transform:translateY(-2px);box-shadow:0 18px 34px -22px rgba(40,30,20,.55)}
   .node .lab{font-family:'Cormorant',Georgia,serif;font-size:22px;line-height:1.1;color:var(--ink)}
-  .node small{display:block;font-size:13px;color:var(--soft);margin-top:3px;font-family:'Inter',sans-serif}
+  .node small{display:block;font-size:13px;color:var(--soft);margin-top:3px}
   .node .num{display:inline-block;width:22px;height:22px;line-height:22px;border-radius:50%;color:#fff;font-size:13px;font-weight:700;margin-right:7px;vertical-align:middle}
-  .start{background:linear-gradient(135deg,var(--teal),#2c5a6b);border-color:transparent;color:#fff}
+  .start{background:linear-gradient(135deg,var(--teal),#2c5a6b);border-color:transparent}
   .start .lab{color:#fff}
   .start small,.dest small{color:rgba(253,248,238,.85)}
   .step{border-color:var(--ember);border-width:2px}
-  .step .num{background:var(--ember)}
-  .deep{border-color:var(--indigo);border-width:2px}
-  .deep .num{background:var(--indigo)}
   .dest{background:linear-gradient(135deg,var(--green),#256f48);border-color:transparent}
   .dest .lab{color:#fff}
 
   .conn{width:2px;height:30px;background:repeating-linear-gradient(var(--rule) 0 4px,transparent 4px 9px);position:relative;margin:4px 0}
   .gate{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;background:var(--cream);border:1px solid var(--rule);border-radius:20px;padding:3px 13px;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;color:var(--soft)}
 
-  .lvl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--teal);margin:2px 0 14px}
+  .lvl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--teal);margin:2px 0 4px;text-align:center}
   .lvl span{display:inline-block;width:20px;height:20px;line-height:20px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px;margin-right:7px}
-  .branch{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;max-width:560px;position:relative;padding-top:14px}
-  .branch::before{content:"";position:absolute;top:0;left:50%;width:2px;height:14px;background:repeating-linear-gradient(var(--rule) 0 4px,transparent 4px 9px)}
-  .drv{min-width:0;padding:11px 18px;border-radius:11px;border:1.5px solid var(--teal)}
-  .drv .lab{font-size:18px}
-  .drv small{font-size:11.5px}
+  .sub{font-size:13px;color:var(--soft);margin:0 0 16px;text-align:center}
 
-  .foot{text-align:center;padding:8px 0 clamp(48px,8vw,80px)}
+  /* expandable branches */
+  .branches{width:100%;max-width:480px;display:flex;flex-direction:column;gap:10px}
+  .br{background:var(--card);border:1.5px solid var(--rule);border-left:4px solid var(--teal);border-radius:12px;overflow:hidden}
+  .br[open]{box-shadow:0 14px 30px -24px rgba(40,30,20,.6)}
+  .br summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;font-family:'Cormorant',Georgia,serif;font-size:21px;color:var(--ink)}
+  .br summary::-webkit-details-marker{display:none}
+  .br summary .lab small{display:block;font-family:'Inter',sans-serif;font-size:12.5px;color:var(--soft);margin-top:1px}
+  .br summary .caret{color:var(--teal);font-weight:800;font-size:15px;transition:transform .15s ease}
+  .br[open] summary .caret{transform:rotate(90deg)}
+  .limbs{padding:2px 16px 14px 24px;display:flex;flex-direction:column;gap:1px;border-top:1px solid var(--rule)}
+  .limb{display:block;text-decoration:none;color:var(--ink);font-size:15px;font-weight:500;padding:9px 0 9px 18px;position:relative;border-left:2px solid var(--rule)}
+  .limb::before{content:"";position:absolute;left:0;top:50%;width:12px;height:2px;background:var(--rule)}
+  .limb:hover{color:var(--teal)}
+  .limb span{display:block;font-size:12.5px;color:var(--soft);font-weight:400}
+
+  .foot{text-align:center;padding:18px 0 clamp(48px,8vw,80px)}
   .foot a{color:var(--teal);font-weight:700;text-decoration:none;font-size:14px}
   .back{display:block;text-align:center;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--teal);text-decoration:none;padding-bottom:40px}
 </style>
@@ -56,7 +64,7 @@
   <div class="wrap">
     <p class="eyebrow">The PANS map</p>
     <h1>The whole journey,<br><em>at a glance.</em></h1>
-    <p class="lead">Not a wall of text &mdash; a map. Start at the top and follow the branches. <b>Tap any box</b> to open it.</p>
+    <p class="lead">Not a wall of text &mdash; a map. Follow it from the top. <b>Tap a branch</b> to open its limbs.</p>
   </div>
 </section>
 
@@ -71,17 +79,76 @@
       <div class="conn"><span class="gate">not all better?</span></div>
 
       <p class="lvl"><span>2</span>Find the driver</p>
-      <div class="branch">
-        <a class="node drv" href="/find-mold.html"><span class="lab">Mold</span></a>
-        <a class="node drv" href="/gut.html"><span class="lab">Gut</span></a>
-        <a class="node drv" href="/methylation.html"><span class="lab">Methylation</span></a>
-        <a class="node drv" href="/lyme.html"><span class="lab">Lyme</span></a>
-        <a class="node drv" href="/mcas.html"><span class="lab">MCAS</span></a>
-        <a class="node drv" href="/ivig.html"><span class="lab">Immune</span></a>
+      <p class="sub">Tap each to open what to test &amp; how to treat it.</p>
+      <div class="branches">
+
+        <details class="br">
+          <summary><span class="lab">Mold &amp; biotoxins<small>brain fog, anxiety, can&rsquo;t tolerate treatment</small></span><span class="caret">&rsaquo;</span></summary>
+          <div class="limbs">
+            <a class="limb" href="/find-mold.html">Find it in your home<span>test the house + the child</span></a>
+            <a class="limb" href="/mold-protocol.html">The mold protocol<span>drainage &rarr; binders &rarr; antifungals</span></a>
+          </div>
+        </details>
+
+        <details class="br">
+          <summary><span class="lab">Gut<small>OCD, mood, GI, immune</small></span><span class="caret">&rsaquo;</span></summary>
+          <div class="limbs">
+            <a class="limb" href="/gut.html">Which test &amp; why<span>GI-MAP &middot; what Minta looks for</span></a>
+            <a class="limb" href="/gut.html">Rebuild the gut<span>the toolkit, what&rsquo;s quacky</span></a>
+            <a class="limb" href="/helminths.html">Helminths<span>where to order, how to dose, the antidote</span></a>
+            <a class="limb" href="/fmt.html">FMT<span>the studies, pros &amp; cons</span></a>
+          </div>
+        </details>
+
+        <details class="br">
+          <summary><span class="lab">Methylation &amp; detox<small>the engine that gates everything</small></span><span class="caret">&rsaquo;</span></summary>
+          <div class="limbs">
+            <a class="limb" href="/methylation.html">What it actually is<span>plain language + the cycle</span></a>
+            <a class="limb" href="/folate-frat.html">Folate &amp; the FRAT test<span>the missed, treatable cause of regression</span></a>
+            <a class="limb" href="/methylation.html">HTMA &amp; minerals<span>how to read it, constipation, thiamine</span></a>
+          </div>
+        </details>
+
+        <details class="br">
+          <summary><span class="lab">Lyme &amp; co-infections<small>rage, air hunger, the waxing-waning picture</small></span><span class="caret">&rsaquo;</span></summary>
+          <div class="limbs">
+            <a class="limb" href="/lyme.html">The full kill menu<span>antibiotics &middot; Buhner &middot; Cowden &middot; dosing</span></a>
+            <a class="limb" href="/phage.html">Phage therapy<span>induced native phage (Biologix)</span></a>
+            <a class="limb" href="/hyperthermia.html">Hyperthermia<span>heat that kills Borrelia</span></a>
+            <a class="limb" href="/biomagnetism.html">Biomagnetism<span>the load-reducer worth studying</span></a>
+          </div>
+        </details>
+
+        <details class="br">
+          <summary><span class="lab">MCAS / histamine<small>reactivity, anxiety, &ldquo;wired and tired&rdquo;</small></span><span class="caret">&rsaquo;</span></summary>
+          <div class="limbs">
+            <a class="limb" href="/mcas.html">What MCAS is &mdash; and the root<span>the cocktail, then find what&rsquo;s driving it</span></a>
+          </div>
+        </details>
+
       </div>
       <div class="conn" style="margin-top:18px"><span class="gate">still not enough?</span></div>
 
-      <a class="node deep" href="/learn"><span class="lab"><span class="num" style="background:var(--indigo)">3</span>What hasn&rsquo;t been tried</span><small>the deeper menu &mdash; your Plan B</small></a>
+      <p class="lvl"><span>3</span>What hasn&rsquo;t been tried</p>
+      <p class="sub">The deeper menu &mdash; your Plan B.</p>
+      <div class="branches">
+        <details class="br" style="border-left-color:var(--indigo)">
+          <summary><span class="lab">The deeper menu<small>still on the table when you&rsquo;ve run the rest</small></span><span class="caret" style="color:var(--indigo)">&rsaquo;</span></summary>
+          <div class="limbs">
+            <a class="limb" href="/hbot.html">HBOT</a>
+            <a class="limb" href="/methylene-blue.html">Methylene blue</a>
+            <a class="limb" href="/bee-venom.html">Bee venom</a>
+            <a class="limb" href="/ozone.html">Ozone therapy</a>
+            <a class="limb" href="/peptides.html">Peptides</a>
+            <a class="limb" href="/disulfiram.html">Disulfiram</a>
+            <a class="limb" href="/homeopathy.html">Classical homeopathy</a>
+            <a class="limb" href="/learn">See the whole Field Guide<span>every option, deconstructed</span></a>
+          </div>
+        </details>
+      </div>
+      <div class="conn"><span class="gate">still not all the way back?</span></div>
+
+      <a class="node" style="border:2px solid var(--ember)" href="/ivig.html"><span class="lab">Consider IVIG</span><small>the immune-attack reset &mdash; powerful, but rule out &amp; treat the root first so it doesn&rsquo;t backfire</small></a>
       <div class="conn"></div>
 
       <div class="node dest"><span class="lab">All the way better</span></div>
