@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The PANS Map — Plan B for PANS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#F6F1E7;--cream-light:#FBF8F1;--card:#fffdf7;--ink:#2a2a26;--soft:#524d40;--teal:#1F6B6B;--ember:#C2693B;--indigo:#5B4B8A;--green:#2F8B5B;--rule:#e3dcc9;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+  .hero{background:var(--cream-light);padding:clamp(54px,9vw,92px) 0 clamp(30px,5vw,44px);text-align:center;border-bottom:1px solid var(--rule)}
+  .eyebrow{color:var(--teal);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:0 0 14px}
+  h1{font-family:'Cormorant',Georgia,serif;font-weight:300;font-size:clamp(34px,7vw,58px);line-height:1.04;letter-spacing:-.02em;margin:0 0 16px}
+  h1 em{color:var(--teal);font-style:italic}
+  .lead{font-size:17.5px;color:var(--soft);max-width:520px;margin:0 auto;line-height:1.65}
+
+  .tree{display:flex;flex-direction:column;align-items:center;padding:clamp(36px,6vw,60px) 0 20px}
+  .node{display:block;text-decoration:none;text-align:center;background:var(--card);border:1.5px solid var(--rule);border-radius:14px;padding:15px 22px;min-width:230px;color:var(--ink);box-shadow:0 12px 30px -24px rgba(40,30,20,.6);transition:transform .12s ease,box-shadow .12s ease}
+  a.node:hover{transform:translateY(-2px);box-shadow:0 18px 34px -22px rgba(40,30,20,.55)}
+  .node .lab{font-family:'Cormorant',Georgia,serif;font-size:22px;line-height:1.1;color:var(--ink)}
+  .node small{display:block;font-size:13px;color:var(--soft);margin-top:3px;font-family:'Inter',sans-serif}
+  .node .num{display:inline-block;width:22px;height:22px;line-height:22px;border-radius:50%;color:#fff;font-size:13px;font-weight:700;margin-right:7px;vertical-align:middle}
+  .start{background:linear-gradient(135deg,var(--teal),#2c5a6b);border-color:transparent;color:#fff}
+  .start .lab{color:#fff}
+  .step{border-color:var(--ember);border-width:2px}
+  .step .num{background:var(--ember)}
+  .deep{border-color:var(--indigo);border-width:2px}
+  .deep .num{background:var(--indigo)}
+  .dest{background:linear-gradient(135deg,var(--green),#256f48);border-color:transparent}
+  .dest .lab{color:#fff}
+
+  .conn{width:2px;height:30px;background:repeating-linear-gradient(var(--rule) 0 4px,transparent 4px 9px);position:relative;margin:4px 0}
+  .gate{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;background:var(--cream);border:1px solid var(--rule);border-radius:20px;padding:3px 13px;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;color:var(--soft)}
+
+  .lvl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--teal);margin:2px 0 14px}
+  .lvl span{display:inline-block;width:20px;height:20px;line-height:20px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px;margin-right:7px}
+  .branch{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;max-width:560px;position:relative;padding-top:14px}
+  .branch::before{content:"";position:absolute;top:0;left:50%;width:2px;height:14px;background:repeating-linear-gradient(var(--rule) 0 4px,transparent 4px 9px)}
+  .drv{min-width:0;padding:11px 18px;border-radius:11px;border:1.5px solid var(--teal)}
+  .drv .lab{font-size:18px}
+  .drv small{font-size:11.5px}
+
+  .foot{text-align:center;padding:8px 0 clamp(48px,8vw,80px)}
+  .foot a{color:var(--teal);font-weight:700;text-decoration:none;font-size:14px}
+  .back{display:block;text-align:center;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--teal);text-decoration:none;padding-bottom:40px}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">The PANS map</p>
+    <h1>The whole journey,<br><em>at a glance.</em></h1>
+    <p class="lead">Not a wall of text &mdash; a map. Start at the top and follow the branches. <b>Tap any box</b> to open it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="tree">
+
+      <div class="node start"><span class="lab">Your child</span><small>sudden OCD, rage, tics, anxiety, regression</small></div>
+      <div class="conn"></div>
+
+      <a class="node step" href="/deconstructing-pans.html#protocol"><span class="lab"><span class="num" style="background:var(--ember)">1</span>Start the protocol</span><small>a targeted antibiotic + an anti-inflammatory</small></a>
+      <div class="conn"><span class="gate">not all better?</span></div>
+
+      <p class="lvl"><span>2</span>Find the driver</p>
+      <div class="branch">
+        <a class="node drv" href="/find-mold.html"><span class="lab">Mold</span></a>
+        <a class="node drv" href="/gut.html"><span class="lab">Gut</span></a>
+        <a class="node drv" href="/methylation.html"><span class="lab">Methylation</span></a>
+        <a class="node drv" href="/lyme.html"><span class="lab">Lyme</span></a>
+        <a class="node drv" href="/mcas.html"><span class="lab">MCAS</span></a>
+        <a class="node drv" href="/ivig.html"><span class="lab">Immune</span></a>
+      </div>
+      <div class="conn" style="margin-top:18px"><span class="gate">still not enough?</span></div>
+
+      <a class="node deep" href="/learn"><span class="lab"><span class="num" style="background:var(--indigo)">3</span>What hasn&rsquo;t been tried</span><small>the deeper menu &mdash; your Plan B</small></a>
+      <div class="conn"></div>
+
+      <div class="node dest"><span class="lab">All the way better</span></div>
+
+    </div>
+    <p class="foot"><a href="/by-behavior.html">Not sure which driver? Start with a behavior &rarr;</a></p>
+  </div>
+  <a class="back" href="/deconstructing-pans.html">Prefer the full written map? &rarr;</a>
+</section>
+
+</body>
+</html>
