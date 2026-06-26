@@ -16,6 +16,10 @@ const faqs = [
     a: "No. Plan B is a thinking partner, not a replacement for clinical care. It helps you understand what's out there, track what's actually moving the needle for your kid, and walk into appointments with sharper questions. Your doctors stay your doctors. Plan B helps you use them better.",
   },
   {
+    q: 'How is this different from ChatGPT or Claude?',
+    a: "Plan B runs on the most advanced AI there is — so the engine is the same caliber. The difference is everything built around it. A blank chatbox forgets your child the moment you close it; Minta remembers your whole picture — every lab, symptom, and prior treatment — and re-reads it as new results come in. A general chatbot is a generalist; Minta is built on the PANS field's frameworks — Walsh, Yasko, Shoemaker, O'Hara, Crista, Nathan — and the safety rules that keep her from guessing (she won't hand you a supplement protocol off stale labs). She learns across families, anonymized, so she can see what's actually moved the needle for kids like yours — something no solo chat can do. And she produces what a wall of text can't: a doctor-ready packet, what to bring each specialist, the order to do things in, and a daily loop that flags when your child isn't responding. Claude is the engine; Plan B is the workshop built around your child — for the 95% of parents who don't have the time to become expert prompt-engineers at 2am.",
+  },
+  {
     q: 'What if Minta is wrong?',
     a: "Minta is still learning. She can and does make mistakes — especially on unusual presentations. Always verify anything critical with a practitioner. Flag bad responses and Minta gets sharper for every family after you. That's how it compounds.",
   },
