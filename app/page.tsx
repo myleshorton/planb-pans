@@ -5,6 +5,7 @@ import BucketSection from './_components/BucketSection'
 import EscalationPath from './_components/EscalationPath'
 import MethodSection from './_components/MethodSection'
 import WhyBoth from './_components/WhyBoth'
+import RegularAIvsMinta from './_components/RegularAIvsMinta'
 import { FamilyStoriesTeaser } from './_components/FamilyStories'
 import { CALENDLY_URL } from './_components/TalkToRachel'
 
@@ -479,6 +480,9 @@ export default function Home() {
 
       {/* Why you need both — the bot + the human */}
       <WhyBoth />
+
+      {/* Why not just a chatbot — regular AI vs Minta */}
+      <RegularAIvsMinta />
 
       {/* Where they were → the new angle (Tommy + Daniel, anonymized) */}
       <FamilyStoriesTeaser />
