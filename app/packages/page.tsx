@@ -1,6 +1,8 @@
 // Plan B pricing — one synthesis price, the situations it meets, a cheaper
 // re-synthesis, and pay-as-you-go Minta token packs. Direction-not-treatment.
 
+import FoundingSpots from '../_components/FoundingSpots'
+
 export const metadata = {
   title: 'Pricing | Plan B for PANS',
   description:
@@ -75,8 +77,8 @@ export default function PricingPage() {
             <div style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(54px, 9vw, 76px)', lineHeight: 1, color: ink }}>$197</div>
             <div style={{ fontSize: 24, color: soft, textDecoration: 'line-through', fontFamily: 'var(--font-cormorant)' }}>$397</div>
           </div>
-          {/* FOUNDING COUNTER — edit the "20" below as families claim spots; set to 0 when full */}
-          <p style={{ fontSize: 15, color: '#9a6a00', fontWeight: 800, margin: '10px 0 2px' }}>20 of 20 founding spots left</p>
+          {/* Live counter — reads real FOUNDING20 redemptions from /api/founding-spots */}
+          <FoundingSpots />
           <p style={{ fontSize: 13.5, color: soft, margin: '0 0 18px' }}>Founding rate for the first 20 families — then it returns to $397.</p>
           <p style={{ fontSize: 16.5, lineHeight: 1.7, color: soft, maxWidth: 560, margin: '0 auto' }}>
             Your whole record — every lab, symptom, history, and prior treatment — read together, in one pass. The drivers, the order to address them, what to bring each doctor, and your next move. The <strong style={{ color: ink }}>same depth, whatever situation you’re in.</strong>
