@@ -35,6 +35,7 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
       { title: 'Methylation & Detox', blurb: 'The cleanup engine no specialist owns — HTMA, folate/FRAT, and the detox (and daily poops) that decide whether anything else works. If it’s clogged, nothing else will.', href: '/methylation.html' },
       { title: 'Diet & Nutrition', blurb: 'Food as a real PANS lever — the anti-inflammatory foundation, which specialty diet fits your kid’s pattern, and how to find triggers without over-restricting.', href: '/diet.html' },
       { title: 'Nervous-System Regulation', blurb: 'Calming a fight-or-flight brain — vagus-nerve work, HRV, limbic retraining — the layer that makes everything else tolerable.', href: '/nervous-system.html' },
+      { title: 'Brain Retraining for Kids', blurb: 'The "calm the system first" step for a sensitive kid — DNRS (Annie Hopper) as the lead, plus the kid-native tools (tapping, SSP, co-regulation) that make detox survivable.', href: '/brain-retraining-kids.html' },
     ],
   },
   {
