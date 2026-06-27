@@ -47,8 +47,8 @@ export default function WaitlistPage() {
               maxWidth: 1080,
             }}
           >
-            Can&apos;t afford it?{' '}
-            <em style={{ color: 'var(--teal)' }}>One family a week, free.</em>
+            The Synthesis is free.{' '}
+            <em style={{ color: 'var(--teal)' }}>Done in the open.</em>
           </h1>
           <p
             style={{
@@ -60,13 +60,12 @@ export default function WaitlistPage() {
               marginTop: 28,
             }}
           >
-            Plan B is a non-profit — cost should never be the reason your kid doesn&apos;t get this.
-            There are <strong style={{ color: 'var(--ink)' }}>two free paths</strong>, both on this list:
-            every week, Rachel takes <strong style={{ color: 'var(--ink)' }}>one family at no charge</strong> and
-            builds the full Synthesis (the same one that costs $397) — the only ask is it&apos;s done in the open.
-            And if the $20 is the only thing between you and Minta, get on the list for{' '}
-            <strong style={{ color: 'var(--ink)' }}>free Minta usage</strong>, funded by donors. We&apos;d rather
-            help now than make you wait.
+            Plan B is a non-profit, and the Synthesis is free for every family. This list is for the
+            families who let their Synthesis be <strong style={{ color: 'var(--ink)' }}>done in the open</strong> —
+            each week Rachel takes one and builds the full Synthesis with the work published (your child stays
+            anonymous), so we all learn together. And if even the metered Minta tokens are out of reach, get on the
+            list for <strong style={{ color: 'var(--ink)' }}>free Minta usage</strong>, funded by donors. We&apos;d
+            rather help now than make you wait.
           </p>
           <div style={{ marginTop: 36 }}>
             <a
@@ -109,9 +108,9 @@ export default function WaitlistPage() {
 
           <ol style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 22 }}>
             {[
-              ['Join the waitlist', 'It&apos;s open — no application, no proof of hardship. If $397 is out of reach, that&apos;s reason enough.'],
+              ['Join the waitlist', 'It&apos;s open — no application, no proof of hardship. Willing to have your Synthesis done in the open is reason enough.'],
               ['Each week, one family is chosen', 'The waitlist is public and transparent. No favourites, no fine print.'],
-              ['You get the full Synthesis', 'Every lab read together, what&apos;s been missed, what hasn&apos;t been tried, the tests to order next, and a month-by-month calendar — exactly what the paid families receive.'],
+              ['You get the full Synthesis — free', 'Every lab read together, what&apos;s been missed, what hasn&apos;t been tried, the tests to order next, and a month-by-month calendar. The Synthesis is free for every family; this is the cohort whose work is published.'],
               ['Your Synthesis goes public — your child stays anonymous', 'That&apos;s the trade, and it&apos;s the whole point. Your child&apos;s name is removed, but the synthesis and symptoms are published in our <a href="/sample-synthesis-2" style="color:var(--teal)">stories</a> as &ldquo;what Minta found&rdquo; — so we all learn together. Your hardest season makes the next family&apos;s read sharper.'],
             ].map(([title, body], i) => (
               <li key={i} style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>

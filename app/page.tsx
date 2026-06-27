@@ -2110,7 +2110,7 @@ export default function Home() {
                   ['Reads every modality together', '—', '—', '—', '✓'],
                   ['Remembers your kid&apos;s full history', '—', '—', 'partial', '✓'],
                   ['Gets sharper with every family', '—', '—', '—', '✓'],
-                  ['Cost', 'free', 'free', '$300–$2,000 per visit', 'free tier · $397 synthesis'],
+                  ['Cost', 'free', 'free', '$300–$2,000 per visit', 'free synthesis · pay-as-you-go Minta'],
                   ['Data belongs to', 'Meta', 'forum owner', 'their chart', 'you'],
                 ].map((row, i) => (
                   <tr

@@ -97,7 +97,7 @@ export default function StoriesPage() {
                 fontWeight: 500,
               }}
             >
-              See how it works — $397 Synthesis →
+              See how it works — free Synthesis →
             </a>
           </div>
         </div>

@@ -1,12 +1,12 @@
-// Plan B pricing — one synthesis price, the situations it meets, a cheaper
-// re-synthesis, and pay-as-you-go Minta token packs. Direction-not-treatment.
-
-import FoundingSpots from '../_components/FoundingSpots'
+// Plan B pricing — the Synthesis is free (Plan B is a non-profit). The only
+// charge is pay-as-you-go Minta tokens, which cover the actual AI cost. A warm
+// "support the studies" donation path funds it for the next family.
+// Direction-not-treatment.
 
 export const metadata = {
   title: 'Pricing | Plan B for PANS',
   description:
-    'One Plan B synthesis — $397, whatever situation you’re in (new to PANS, thin on tests, or stalled for years). A $97 re-synthesis when new results come in. Pay-as-you-go Minta. Minta gives you direction; your doctors treat.',
+    'The Plan B Synthesis is free — Plan B is a non-profit, and a real person reads your child’s whole picture. The only thing you ever pay for is metered Minta tokens (pay-as-you-go, with a generous free amount first). Donations fund the studies and keep it free for the next family.',
 }
 
 const ink = '#2a2a26'
@@ -15,8 +15,8 @@ const soft = '#524d40'
 const rule = '#e3dcc9'
 const card = '#fffdf7'
 
-// The three situations the $397 synthesis meets — same depth, same price.
-const SITUATIONS: { situation: string; line: string; forWho: string; includes: string[]; twoStep: boolean }[] = [
+// The three situations the (free) synthesis meets — same depth, every family.
+const SITUATIONS: { situation: string; line: string; forWho: string; includes: string[] }[] = [
   {
     situation: 'New to PANS',
     line: 'Don’t waste the wait.',
@@ -26,7 +26,6 @@ const SITUATIONS: { situation: string; line: string; forWho: string; includes: s
       'Daily tracking, so you walk in with a month of data — not a blank page',
       'A testing direction now, then a treatment direction once results come back',
     ],
-    twoStep: true,
   },
   {
     situation: 'Thin on tests',
@@ -37,7 +36,6 @@ const SITUATIONS: { situation: string; line: string; forWho: string; includes: s
       'Your full direction once the new results are in',
       'Prioritized — one or two tests at a time, never all at once',
     ],
-    twoStep: true,
   },
   {
     situation: 'Stalled · months or years in',
@@ -48,7 +46,6 @@ const SITUATIONS: { situation: string; line: string; forWho: string; includes: s
       'The driver no one found · the wrong order · the thing never addressed',
       'A “what hasn’t been tried” pass — the menu beyond the standard protocol',
     ],
-    twoStep: false,
   },
 ]
 
@@ -60,41 +57,50 @@ export default function PricingPage() {
         <div className="pb-container" style={{ maxWidth: 860, margin: '0 auto' }}>
           <p style={{ color: teal, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 16px' }}>Pricing</p>
           <h1 style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 300, fontSize: 'clamp(34px, 6vw, 62px)', lineHeight: 1.02, letterSpacing: '-0.02em', margin: '0 0 18px' }}>
-            Simple, honest pricing.
+            The Synthesis is free.
           </h1>
           <p style={{ fontSize: 18, lineHeight: 1.7, color: soft, maxWidth: 680, margin: 0 }}>
-            One synthesis. One price — wherever you are in this. Minta reads your child’s whole picture and gives you{' '}
-            <strong style={{ color: ink }}>direction.</strong> Your doctors treat; we make sure you walk in knowing what to ask and why.
+            Plan B is a non-profit. Minta reads your child’s whole picture and gives you{' '}
+            <strong style={{ color: ink }}>direction</strong> — and the Synthesis costs nothing. The only thing you ever pay for is{' '}
+            <strong style={{ color: ink }}>metered Minta tokens</strong>, pay-as-you-go, after a generous free amount. Your doctors treat; we make sure you walk in knowing what to ask and why.
           </p>
         </div>
       </section>
 
-      {/* The Synthesis — one price, big */}
+      {/* The Synthesis — free */}
       <section style={{ padding: 'clamp(44px, 7vw, 80px) 24px clamp(20px, 3vw, 32px)' }}>
         <div className="pb-container" style={{ maxWidth: 760, margin: '0 auto', background: card, border: `1.5px solid ${teal}`, borderRadius: 18, padding: 'clamp(28px, 4vw, 40px)', textAlign: 'center' }}>
-          <div style={{ display: 'inline-block', background: '#fff5e6', border: '1px solid #e0b056', color: '#9a6a00', fontSize: 12, fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '5px 14px', borderRadius: 999, margin: '0 0 14px' }}>★ Founding Families · first 20</div>
-          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: 14 }}>
-            <div style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(54px, 9vw, 76px)', lineHeight: 1, color: ink }}>$197</div>
-            <div style={{ fontSize: 24, color: soft, textDecoration: 'line-through', fontFamily: 'var(--font-cormorant)' }}>$397</div>
-          </div>
-          {/* Live counter — reads real FOUNDING20 redemptions from /api/founding-spots */}
-          <FoundingSpots />
-          <p style={{ fontSize: 13.5, color: soft, margin: '0 0 18px' }}>Founding rate for the first 20 families — then it returns to $397.</p>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', fontWeight: 700, margin: '0 0 14px' }}>The Plan B Synthesis</p>
+          <div style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(60px, 11vw, 92px)', lineHeight: 1, color: ink, margin: '0 0 18px' }}>Free.</div>
           <p style={{ fontSize: 16.5, lineHeight: 1.7, color: soft, maxWidth: 560, margin: '0 auto' }}>
+            A complete, integrated read of everything going on with your child — built by a real person. Plan B is a non-profit, and the Synthesis is <strong style={{ color: ink }}>free.</strong>
+          </p>
+          <p style={{ fontSize: 16.5, lineHeight: 1.7, color: soft, maxWidth: 560, margin: '14px auto 0' }}>
             Your whole record — every lab, symptom, history, and prior treatment — read together, in one pass. The drivers, the order to address them, what to bring each doctor, and your next move. The <strong style={{ color: ink }}>same depth, whatever situation you’re in.</strong>
           </p>
           <p style={{ fontSize: 15, color: teal, fontWeight: 700, margin: '16px auto 0', maxWidth: 560 }}>
             Plus a <strong style={{ color: ink }}>15-minute debrief with Rachel</strong> once your synthesis is ready — a quick call or a few emails, whichever you prefer.
           </p>
-          <p style={{ fontSize: 13.5, color: soft, margin: '14px auto 0', maxWidth: 540, lineHeight: 1.6 }}>
-            All we ask of founding families: <strong style={{ color: ink }}>honest feedback</strong> — and, only if it helps and you choose to, permission to share your <strong style={{ color: ink }}>de-identified</strong> story, so the next family has hope.
-          </p>
-          <a href="https://app.planbforpans.com/checkout/synthesis?plan=founding" style={{ display: 'inline-block', marginTop: 24, background: teal, color: '#fffdf7', fontSize: 16.5, fontWeight: 700, padding: '15px 38px', borderRadius: 9, textDecoration: 'none' }}>Claim a founding spot →</a>
-          <p style={{ fontSize: 13, color: soft, margin: '12px 0 0' }}>No labs yet? <a href="https://app.planbforpans.com/checkout/synthesis?plan=direction" style={{ color: teal, fontWeight: 600, textDecoration: 'none' }}>Start with a $97 direction →</a></p>
+          <a href="https://app.planbforpans.com/signup" style={{ display: 'inline-block', marginTop: 24, background: teal, color: '#fffdf7', fontSize: 16.5, fontWeight: 700, padding: '15px 38px', borderRadius: 9, textDecoration: 'none' }}>Get your synthesis — free →</a>
         </div>
       </section>
 
-      {/* The three situations — no repeated price */}
+      {/* Support the studies — pay it forward */}
+      <section style={{ padding: 'clamp(20px, 3vw, 28px) 24px clamp(36px, 5vw, 56px)' }}>
+        <div className="pb-container" style={{ maxWidth: 760, margin: '0 auto', background: '#f1efe2', border: `1.5px solid ${teal}`, borderRadius: 16, padding: 'clamp(26px, 4vw, 36px)', textAlign: 'center' }}>
+          <p style={{ color: teal, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 700, margin: '0 0 12px' }}>Pay it forward</p>
+          <h2 style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 'clamp(28px, 4.4vw, 40px)', lineHeight: 1.1, color: ink, margin: '0 0 14px' }}>
+            Support the studies
+          </h2>
+          <p style={{ fontSize: 16.5, lineHeight: 1.7, color: soft, maxWidth: 580, margin: '0 auto' }}>
+            Plan B is a non-profit, and the Synthesis is free for every family. If it helped yours and you’re able, a gift goes straight to the work: <strong style={{ color: ink }}>donations fund the cohort studies, keep Rachel’s time on it, and keep it free for the next family.</strong>
+          </p>
+          <a href="https://app.planbforpans.com/donate" style={{ display: 'inline-block', marginTop: 22, background: teal, color: '#fffdf7', fontSize: 16, fontWeight: 700, padding: '14px 34px', borderRadius: 9, textDecoration: 'none' }}>Donate / Support the studies →</a>
+          <p style={{ fontSize: 13, color: soft, margin: '14px 0 0' }}>Entirely optional — never a wall. Every family gets the Synthesis free, gift or no gift.</p>
+        </div>
+      </section>
+
+      {/* The three situations — every family, same depth */}
       <section style={{ padding: '0 24px clamp(40px, 6vw, 72px)' }}>
         <div className="pb-container" style={{ maxWidth: 960, margin: '0 auto' }}>
           <p style={{ textAlign: 'center', fontSize: 14, color: soft, margin: '0 0 22px' }}>The synthesis meets you wherever you are:</p>
@@ -110,11 +116,11 @@ export default function PricingPage() {
                 <div style={{ borderTop: `1px solid ${rule}`, paddingTop: 12 }}>
                   {pk.situation === 'Stalled · months or years in' ? (
                     <p style={{ fontSize: 13.5, color: teal, fontWeight: 700, margin: 0 }}>
-                      <span style={{ fontSize: 20 }}>$397</span> — one full synthesis. You already have the data.
+                      <span style={{ fontSize: 18 }}>Free</span> — one full synthesis. You already have the data.
                     </p>
                   ) : (
                     <p style={{ fontSize: 13.5, color: teal, fontWeight: 700, margin: 0, lineHeight: 1.5 }}>
-                      Start at <span style={{ fontSize: 20 }}>$97</span> — your direction now (no labs, stale labs, or thin on labs). When your labs come in, the full synthesis is $397 <em style={{ fontWeight: 600 }}>minus your $97.</em> <span style={{ color: ink }}>$397 total — you never pay twice.</span>
+                      <span style={{ fontSize: 18 }}>Free</span> — your direction now (no labs, stale labs, or thin on labs), then your full synthesis when the new results come in. <span style={{ color: ink }}>Both free — Plan B is a non-profit.</span>
                     </p>
                   )}
                 </div>
@@ -130,11 +136,11 @@ export default function PricingPage() {
           <div style={{ background: card, border: `1px solid ${rule}`, borderRadius: 14, padding: '24px 24px 26px' }}>
             <p style={{ color: teal, fontSize: 11.5, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 8px' }}>When new results come in</p>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, margin: '0 0 10px' }}>
-              <span style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 44, lineHeight: 1, color: ink }}>$97</span>
+              <span style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 44, lineHeight: 1, color: ink }}>Free</span>
               <span style={{ fontSize: 13, color: soft }}>a re-synthesis</span>
             </div>
             <p style={{ fontSize: 14.5, color: soft, lineHeight: 1.6, margin: 0 }}>
-              New labs fold into your existing picture for an updated direction — faster and far less, because the foundation is already built.
+              New labs fold into your existing picture for an updated direction — re-read as your child’s story changes, for as long as you need it, free.
             </p>
           </div>
           <div style={{ background: card, border: `1px solid ${rule}`, borderRadius: 14, padding: '24px 24px 26px' }}>
@@ -143,7 +149,7 @@ export default function PricingPage() {
               <span style={{ fontFamily: 'var(--font-cormorant)', fontWeight: 400, fontSize: 40, lineHeight: 1, color: ink }}>$20 · $50 · $100</span>
             </div>
             <p style={{ fontSize: 14.5, color: soft, lineHeight: 1.6, margin: '0 0 8px' }}>
-              Pay-as-you-go — <strong style={{ color: ink }}>no subscription, nothing recurring.</strong> You only pay for the time you use.
+              The Synthesis and Minta’s core are free — a <strong style={{ color: ink }}>generous free amount comes first.</strong> After that, metered tokens are the only charge, and they just cover the actual AI cost. Pay-as-you-go — <strong style={{ color: ink }}>no subscription, nothing recurring.</strong>
             </p>
             <p style={{ fontSize: 13.5, color: soft, lineHeight: 1.6, margin: '0 0 12px' }}>
               What a month with Minta costs <em>you</em>: a <strong style={{ color: ink }}>light user</strong> (a check-in here and there) — about <strong style={{ color: ink }}>$20</strong>. A <strong style={{ color: ink }}>heavy user</strong> (chatting daily, deep in a complex case) — <strong style={{ color: ink }}>$50–$100</strong>. So <strong style={{ color: ink }}>$20</strong> lasts a heavy user about a month — a light user, several.
@@ -164,7 +170,7 @@ export default function PricingPage() {
         <div className="pb-container" style={{ maxWidth: 760, margin: '0 auto', background: card, border: `1px solid ${rule}`, borderRadius: 14, padding: '26px 28px' }}>
           <p style={{ color: teal, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, margin: '0 0 10px' }}>How tokens work</p>
           <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.7, margin: '0 0 12px' }}>
-            Plan B runs on the most advanced — and most expensive — AI there is. Instead of a flat monthly fee, you buy <strong style={{ color: ink }}>tokens</strong>: units of Minta&rsquo;s time. Every message uses some; you only pay for what you actually use, and <strong style={{ color: ink }}>nothing is recurring.</strong>
+            The Synthesis and Minta&rsquo;s core are <strong style={{ color: ink }}>free</strong> — and a generous free amount of Minta time comes before you pay anything. Plan B runs on the most advanced — and most expensive — AI there is, so once that runs out you buy <strong style={{ color: ink }}>tokens</strong>: units of Minta&rsquo;s time that just cover the actual AI cost. Every message uses some; you only pay for what you actually use, and <strong style={{ color: ink }}>nothing is recurring.</strong>
           </p>
           <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.7, margin: '0 0 12px' }}>
             Roughly, a <strong style={{ color: ink }}>$20 pack</strong> covers about <strong style={{ color: ink }}>85 conversations</strong> with Minta. A heavy user — working a complex case every day — moves through that in about a month; a light user, checking in here and there, can stretch it over several. The <strong style={{ color: ink }}>$50</strong> and <strong style={{ color: ink }}>$100</strong> packs go further <em>and</em> give you more time per dollar — <strong style={{ color: ink }}>the $50 is about 10% more generous than the $20, and the $100 about 15% more</strong> (roughly <strong style={{ color: ink }}>~240 chats</strong> for $50 and <strong style={{ color: ink }}>~500</strong> for $100, versus the ~213 and ~425 you&rsquo;d get at the $20 rate). The bigger the pack, the better the rate.
@@ -180,7 +186,7 @@ export default function PricingPage() {
         <div className="pb-container" style={{ maxWidth: 720, margin: '0 auto', background: '#f3eede', border: `1px solid ${rule}`, borderRadius: 12, padding: '22px 24px' }}>
           <p style={{ fontSize: 15.5, color: ink, fontWeight: 700, margin: '0 0 8px' }}>The honest version</p>
           <p style={{ fontSize: 15, color: soft, lineHeight: 1.65, margin: '0 0 10px' }}>
-            A full synthesis is <strong style={{ color: ink }}>$397</strong>. If you don’t have labs yet — or yours are <strong style={{ color: ink }}>stale or thin</strong> — you start with a <strong style={{ color: ink }}>$97 direction</strong> (exactly what to test or re-run), and that $97 is <strong style={{ color: ink }}>credited</strong> toward your synthesis when your results come in. <strong style={{ color: ink }}>$397 total — never twice.</strong>
+            The full Synthesis is <strong style={{ color: ink }}>free</strong> — Plan B is a non-profit. If you don’t have labs yet — or yours are <strong style={{ color: ink }}>stale or thin</strong> — you start with a free <strong style={{ color: ink }}>direction</strong> (exactly what to test or re-run), then your full Synthesis once results come in. The only thing you ever pay for is <strong style={{ color: ink }}>metered Minta tokens</strong>, after a generous free amount — and if Plan B helped you, a <strong style={{ color: ink }}>donation</strong> keeps it free for the next family.
           </p>
           <p style={{ fontSize: 12.5, color: soft, fontStyle: 'italic', margin: '14px 0 0' }}>
             Plan B gives you direction — not medical advice or treatment. Your licensed medical team makes all clinical decisions. See our <a href="/terms" style={{ color: teal }}>Terms &amp; Medical Disclaimer</a>.

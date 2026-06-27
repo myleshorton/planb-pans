@@ -5,7 +5,7 @@ import { useReveal } from '../_components/hooks'
 const faqs = [
   {
     q: 'Is it free?',
-    a: "Plan B is a non-profit, and getting started is free — upload your labs, track your kid, and ask Minta a few questions at no cost. The full Synthesis — a complete, integrated read of everything that's going on, built by a real person — is $397, because it takes hours of human time. And every week, one family gets that Synthesis for free; if cost is the barrier, get on the waitlist.",
+    a: "Yes. Plan B is a non-profit, and the Synthesis is free — a complete, integrated read of everything that's going on with your child, built by a real person. The only thing you ever pay for is metered Minta tokens: pay-as-you-go, just covering the actual AI cost, with a generous free amount first. If Plan B has helped you and you're able, donations fund the studies and keep it free for the next family.",
   },
   {
     q: "What about my kid\u2019s privacy?",
