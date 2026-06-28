@@ -82,6 +82,7 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
       { title: 'Camel & Donkey Milk', blurb: 'Gentle, lower-allergen immune/gut-support milks some families try — the small camel-milk autism research, donkey milk for cow’s-milk allergy, raw-vs-pasteurized risk, and the honest “emerging, not proven” label.', href: '/camel-donkey-milk.html' },
       { title: 'Serum Immunoglobulins (SBI Protect)', blurb: 'Powdered, oral IgG (serum-bovine immunoglobulin) that binds toxins and calms gut immunity — not IVIG. The gut-barrier and endotoxin-binding research, who it helps, how to dose, and the honest evidence.', href: '/serum-immunoglobulins.html' },
       { title: 'Intranasal Immunoglobulins', blurb: 'Immunoglobulins delivered to the nose — a far gentler, lower-cost cousin of IVIG aimed at the olfactory route into the brain. What it is, why it’s not IVIG, the early evidence, and how families access it.', href: '/nasal-immunoglobulins.html' },
+      { title: 'LDN — Low-Dose Naltrexone', blurb: 'Jill Crista’s lead “regulate immunity” tool: a tiny dose of an old drug that rebalances an over-reactive immune system and quiets neuroinflammation. How it works, pediatric dosing, the honest evidence — plus colostrum and the rest of the immune toolkit.', href: '/ldn.html' },
     ],
   },
 ]
