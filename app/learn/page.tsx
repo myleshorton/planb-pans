@@ -25,7 +25,13 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     sub: 'Understand it, then begin.',
     items: [
       { title: 'Understanding PANS', blurb: 'What PANS actually is, in plain language for an exhausted parent.', href: '/understanding-pans.html' },
+      { title: 'Is It PANS or PANDAS?', blurb: 'How to tell the difference, the overlap, and why treatment is similar either way.', href: '/pans-vs-pandas.html' },
+      { title: 'PANS Symptoms Checklist', blurb: 'The sudden-onset cluster — OCD, tics, rage, regression, handwriting, food restriction — what to watch for.', href: '/pans-symptoms-children.html' },
+      { title: 'My Child Suddenly Changed', blurb: 'Overnight personality change, new OCD or tics or rage — could it be PANS, and what to do first.', href: '/sudden-onset-ocd-tics-child.html' },
+      { title: 'How to Get a Diagnosis', blurb: 'The workup and tests — and how to order the foundational labs yourself.', href: '/how-to-get-pans-diagnosis.html' },
       { title: 'The Protocol', blurb: 'Where everyone starts — anti-inflammatory + a targeted antibiotic, the doses, how long, and what to do if your child slips.', href: '/deconstructing-pans.html#protocol' },
+      { title: 'Treatment Options', blurb: 'The full map — treat the infection, find the driver, calm the system, and the deeper menu.', href: '/pans-treatment-options.html' },
+      { title: 'Why Treatment Isn’t Working', blurb: 'The missed drivers behind relapse — mold, Lyme, methylation — and what to investigate next.', href: '/pans-treatment-not-working.html' },
     ],
   },
   {
