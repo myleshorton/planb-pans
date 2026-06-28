@@ -3,8 +3,17 @@ import Link from 'next/link'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://planbforpans.com'),
   title: 'Plan B for PANS & PANDAS — A path out of the fire',
   description: 'A path out of the fire — built from every modality, every family, every hard-won answer. A clinical synthesis engine for PANS, PANDAS, autism, and severe dysregulation.',
+  openGraph: {
+    siteName: 'Plan B for PANS',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
 }
 
 export default function RootLayout({
