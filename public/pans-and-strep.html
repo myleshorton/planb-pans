@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PANS, PANDAS &amp; Strep: How Strep Triggers Sudden Behavior Changes — Plan B for PANS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#F6F1E7;--cream-light:#FBF8F1;--card:#fffdf7;--ink:#2a2a26;--soft:#524d40;--teal:#1F6B6B;--rust:#A02E2E;--moss:#5C7C4B;--ochre:#A87000;--rule:#e3dcc9;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+  .eyebrow{color:var(--teal);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:0 0 16px}
+  h1{font-family:'Cormorant',Georgia,serif;font-weight:300;font-size:clamp(36px,7vw,64px);line-height:1.02;letter-spacing:-.02em;margin:0 0 20px}
+  h2{font-family:'Cormorant',Georgia,serif;font-weight:400;font-size:clamp(26px,4.5vw,40px);line-height:1.1;letter-spacing:-.015em;margin:0 0 16px}
+  h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin:0 0 12px}
+  p{font-size:17px;color:var(--soft);margin:0 0 16px}
+  b,strong{color:var(--ink);font-weight:700}
+  a{color:var(--teal)}
+  section{padding:clamp(40px,7vw,68px) 0;border-bottom:1px solid var(--rule)}
+  .hero{background:var(--cream-light);padding-top:clamp(64px,10vw,100px)}
+  .lead{font-size:19px;line-height:1.7}
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:clamp(20px,4vw,30px);margin:20px 0}
+  .card.flag{border-left:4px solid var(--rust)}
+  .card.key{border-left:4px solid var(--teal)}
+  .card.good{border-left:4px solid var(--moss)}
+  ul{margin:0 0 16px;padding-left:20px}
+  li{font-size:16.5px;color:var(--soft);margin-bottom:11px;line-height:1.55}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);font-weight:700}
+  td b{color:var(--ink)}
+  .src{font-size:14px;color:var(--soft);font-style:italic}
+  .back{display:inline-block;margin-top:8px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  .cta{background:linear-gradient(135deg,#1F6B6B,#2c5e63);border-radius:18px;padding:clamp(26px,5vw,40px);margin:26px 0;text-align:center}
+  .cta h3{color:#bfe3df;margin:0 0 10px}
+  .cta p{color:rgba(255,253,247,.92);font-size:17px;margin:0 0 20px}
+  .cta a.btn{display:inline-block;background:#F6F1E7;color:#1F6B6B;font-weight:700;font-size:15.5px;padding:14px 28px;border-radius:999px;text-decoration:none}
+  .cta small{display:block;color:rgba(255,253,247,.7);font-size:13px;margin-top:14px}
+</style>
+<!-- seo:planb -->
+<meta name="description" content="How strep triggers sudden OCD, tics, and behavior changes in children — the PANDAS mechanism, why a negative throat swab doesn't rule it out, and what to test and do next.">
+<link rel="canonical" href="https://planbforpans.com/pans-and-strep.html">
+<meta property="og:title" content="PANS, PANDAS &amp; Strep: How Strep Triggers Sudden Behavior Changes — Plan B for PANS">
+<meta property="og:description" content="How strep triggers sudden OCD, tics, and behavior changes in children — the PANDAS mechanism, why a negative throat swab doesn't rule it out, and what to test and do next.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Plan B for PANS">
+<meta property="og:url" content="https://planbforpans.com/pans-and-strep.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "PANS, PANDAS & Strep: How Strep Triggers Sudden Behavior Changes — Plan B for PANS",
+  "description": "How strep triggers sudden OCD, tics, and behavior changes in children — the PANDAS mechanism, why a negative throat swab doesn't rule it out, and what to test and do next.",
+  "url": "https://planbforpans.com/pans-and-strep.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plan B for PANS"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can strep cause sudden behavior changes in a child?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in some children. A strep infection can set off an immune response that, in susceptible kids, cross-reacts with the brain (especially the basal ganglia) and inflames it. The result can be an abrupt onset of OCD, tics, anxiety, rage, or regression — sometimes within days. This pattern is known as PANDAS, the strep-triggered form of PANS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does strep trigger OCD or PANDAS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Strep bacteria disguise themselves with surface molecules that resemble human tissue. When the immune system makes antibodies against strep, those antibodies can mistakenly target the child's own brain — an effect called molecular mimicry. The resulting inflammation in the basal ganglia drives the sudden OCD, tics, and behavior changes seen in PANDAS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a child have PANDAS with a negative strep test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A throat swab only catches active strep in the throat at that moment, and strep can live in other places (sinuses, perianal skin) or have already resolved. Clinicians often add strep antibody titers (ASO and anti-DNase B) and consider recent exposures. A negative swab does not rule out a strep trigger — it just means the search should widen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What tests look for a strep trigger in PANS or PANDAS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A throat culture or rapid strep test checks for active infection. ASO and anti-DNase B titers look for evidence of a recent strep infection and can be trended over time. A perianal swab can catch strep that lives outside the throat. Because titers vary, clinicians weigh them alongside the clinical story rather than relying on a single number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is PANDAS treated by treating the strep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treating an active strep infection with an appropriate antibiotic is usually the first step, alongside calming the brain inflammation. But strep is only the spark in some children — others have additional or different drivers. The honest approach is to treat the strep if it's there, then keep looking for anything else that may be keeping the fire lit."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Field Guide &middot; Root Drivers</p>
+    <h1>PANS, PANDAS &amp; strep.<br><em style="color:var(--teal)">How a sore throat changes a child overnight.</em></h1>
+    <p class="lead">If your child changed almost overnight &mdash; new OCD, tics, rage, or fears &mdash; and there was a strep infection somewhere in the story, you&rsquo;re in the right place. <b>Strep is the best-documented trigger of sudden neuropsychiatric change in children.</b> Here is how it works, why a clean throat swab doesn&rsquo;t close the door, and what to actually do.</p>
+    <p style="font-family:'Cormorant',Georgia,serif; font-size:17px; font-style:italic; color:var(--teal); margin:16px 0 0; padding-left:14px; border-left:3px solid var(--teal)">I walked this part of the labyrinth myself &mdash; knocked on the doors, read the research, and came back with the map. You don&rsquo;t have to find the way out alone.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How strep changes the brain</h2>
+    <p>Strep bacteria are masters of disguise. To hide from the immune system, they coat themselves in surface molecules that closely resemble human tissue &mdash; including tissue in the brain. When a child fights off strep, the immune system makes antibodies against it. In <b>susceptible kids</b>, some of those antibodies don&rsquo;t stop at the strep &mdash; they <b>cross-react with the child&rsquo;s own brain</b>, especially a region called the <b>basal ganglia</b> that governs movement, mood, and the &ldquo;loop&rdquo; behaviors of OCD.</p>
+    <p>This is called <b>molecular mimicry.</b> The immune system isn&rsquo;t broken &mdash; it&rsquo;s fooled. The resulting inflammation is what shows up, often within days, as the abrupt OCD, tics, anxiety, rage, separation fears, handwriting changes, and food refusal that frightened parents describe.</p>
+    <div class="card key">
+      <h3>The cleanest way to hold it</h3>
+      <p style="margin:0"><b>This is the PANDAS story</b> &mdash; <em>Pediatric Autoimmune Neuropsychiatric Disorders Associated with Streptococcal infections.</em> PANDAS is the <b>strep-triggered slice</b> of the broader PANS umbrella. Same brain inflammation, same sudden change &mdash; with strep named as the spark.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The signature</h2>
+    <p>Not every child who gets strep develops this &mdash; most don&rsquo;t. But when strep <em>is</em> the trigger, the pattern tends to look like this:</p>
+    <ul>
+      <li><b>Abrupt onset.</b> Parents can often name the week, sometimes the day. A child who was fine is suddenly, dramatically different.</li>
+      <li><b>OCD and/or tics</b> as the core &mdash; new rituals, intrusive fears, repetitive movements or sounds.</li>
+      <li><b>A cluster around it:</b> intense anxiety, mood swings, irritability or rage, emotional regression (acting much younger), deteriorating handwriting, trouble in school, sleep disruption, and sometimes new urinary urgency.</li>
+      <li><b>A flaring, relapsing course</b> &mdash; symptoms can spike with the next infection and ebb in between.</li>
+    </ul>
+    <p class="src" style="margin:0">A strep infection doesn&rsquo;t always announce itself with a sore throat &mdash; it can be quiet, or live somewhere other than the throat. The behavior change is sometimes the loudest sign that something happened.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What to test &mdash; and the swab trap</h2>
+    <p>If you suspect a strep trigger, here is the workup worth knowing:</p>
+    <table>
+      <thead><tr><th>Test</th><th>What it tells you</th></tr></thead>
+      <tbody>
+        <tr><td><b>Rapid strep / throat culture</b></td><td>Active strep in the throat <em>right now.</em> Misses past infections and strep living elsewhere.</td></tr>
+        <tr><td><b>ASO titer</b></td><td>Antibody evidence of a recent strep infection. Rises and falls over weeks.</td></tr>
+        <tr><td><b>Anti-DNase B titer</b></td><td>A second strep antibody that peaks later than ASO &mdash; running both catches more.</td></tr>
+        <tr><td><b>Perianal swab</b></td><td>Catches strep that colonizes the skin around the bottom &mdash; a common hidden reservoir in kids.</td></tr>
+      </tbody>
+    </table>
+    <div class="card flag">
+      <p style="margin:0"><b>The most common trap:</b> a negative throat swab gets read as &ldquo;not strep, so not PANDAS, so probably nothing.&rdquo; But a swab only catches active throat strep <em>at that moment.</em> Strep can have already resolved, can live in the sinuses or perianal skin, or the trigger may have been a different infection entirely. <b>A clean swab doesn&rsquo;t close the door &mdash; it just means widen the search.</b></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What treatment looks like</h2>
+    <div class="card good">
+      <p style="margin:0">If active strep is found, the first step is usually an <b>appropriate antibiotic</b> to clear it, alongside <b>calming the brain inflammation</b> (often an anti-inflammatory approach). But here is the honest part: <b>strep is the spark in some kids, not all of them.</b> A child can have a strep trigger <em>and</em> other drivers underneath &mdash; another infection, mold, immune dysregulation, a stalled detox engine. If the child clears strep but doesn&rsquo;t fully recover, that&rsquo;s the signal to keep looking, not to give up.</p>
+    </div>
+    <p style="margin-top:18px">This is parent education, not medical advice. The point isn&rsquo;t to self-treat &mdash; it&rsquo;s to walk into your appointments knowing the right questions, so a negative swab or a single normal titer doesn&rsquo;t end the conversation prematurely.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h3>Free Synthesis</h3>
+      <p><b>Strep in the story, but no one&rsquo;s connecting the dots?</b> Plan B reads your child&rsquo;s history, symptoms, and any labs together and turns it into a clear plan: which strep tests to run, what to ask your doctor, and what else might be driving it. Your first Synthesis is free.</p>
+      <a class="btn" href="https://app.planbforpans.com/signup">Start your free Synthesis &rarr;</a>
+      <small>Parent education, not medical advice. You stay in charge.</small>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Where to go from here</h2>
+    <ul>
+      <li><a href="/deconstructing-pans.html"><b>What is PANS/PANDAS, and how we fix it</b></a> &mdash; the full map of drivers, tests, and treatments, on one page.</li>
+      <li><a href="/pans-vs-pandas.html"><b>Is it PANS or PANDAS?</b></a> &mdash; how the two terms relate, and why strep is the dividing line.</li>
+      <li><a href="/pans-symptoms-children.html"><b>PANS symptoms in children</b></a> &mdash; the full sudden-onset checklist to compare against.</li>
+      <li><a href="/how-to-get-pans-diagnosis.html"><b>How to get a PANS diagnosis</b></a> &mdash; the workup and the labs you can start.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Bottom line</h2>
+    <p><b>Strep is the best-documented trigger of sudden neuropsychiatric change in children</b> &mdash; it can fool the immune system into inflaming the brain. But a single negative swab doesn&rsquo;t rule it out, and strep isn&rsquo;t always the only driver. Test thoroughly, treat what you find, and keep searching if your child doesn&rsquo;t fully come back. This is parent education, not medical advice &mdash; bring it to your team as questions.</p>
+    <div class="card key" style="margin-top:18px">
+      <h3>How Plan B stays honest</h3>
+      <p style="margin:0">Plan B <b>does not partner with drug companies or doctors</b>, and we <b>never endorse anyone whose healing isn&rsquo;t verified by families.</b> We show you the options and <b>how to vet them yourself</b> &mdash; and we&rsquo;re building <b>parent verification</b>: look up a practitioner and see real family reviews before you trust them. <b>Universal bad reviews? Skip.</b></p>
+    </div>
+    <p style="margin-top:8px">Keep reading: <a href="/strep-rage-personality-change.html"><b>strep, rage &amp; sudden personality change</b></a> &middot; <a href="/sudden-tics-pandas-strep.html"><b>sudden tics &amp; PANDAS</b></a> &middot; <a href="/pans-vs-pandas.html"><b>PANS vs PANDAS</b></a>.</p>
+    <a class="back" href="/learn">&larr; Back to the Field Guide</a>
+  </div>
+</section>
+
+</body>
+</html>
