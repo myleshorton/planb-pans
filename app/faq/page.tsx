@@ -5,7 +5,7 @@ import { useReveal } from '../_components/hooks'
 const faqs = [
   {
     q: 'Is it free?',
-    a: "Your Synthesis is included — a complete, integrated read of everything going on with your child, built by a real person. After that, you pay only for Minta tokens: units of her time that cover the actual AI cost. About $20 covers roughly 5 months, pay-as-you-go, nothing recurring. Plan B is a non-profit, and no family is ever turned away for cost.",
+    a: "Your Synthesis is included — a complete, integrated read of everything going on with your child, built by a real person. After that, you pay only for Minta tokens: units of her time that cover the actual AI cost. about $20 covers months of Minta, pay-as-you-go, nothing recurring. Plan B is a non-profit, and no family is ever turned away for cost.",
   },
   {
     q: "What about my kid\u2019s privacy?",

@@ -1,12 +1,12 @@
 // Plan B pricing — this page is about tokens. Plan B runs on tokens: units of
-// Minta's time that cover the actual AI cost. About $20 covers roughly 5 months
+// Minta's time that cover the actual AI cost. about $20 covers months of Minta
 // for most families. Pay-as-you-go, nothing recurring. The Synthesis is included;
 // tokens cover ongoing Minta. Non-profit — no family is ever turned away for cost.
 
 export const metadata = {
   title: 'Pricing | Plan B for PANS',
   description:
-    'Plan B runs on tokens — units of Minta’s time that cover the actual AI cost. About $20 covers roughly 5 months for most families. Pay-as-you-go, nothing recurring. Your Synthesis is included.',
+    'Plan B runs on tokens — units of Minta’s time that cover the actual AI cost. about $20 covers months of Minta for most families. Pay-as-you-go, nothing recurring. Your Synthesis is included.',
 }
 
 const ink = '#2a2a26'
@@ -17,7 +17,7 @@ const card = '#fffdf7'
 
 // Token packs — pay-as-you-go, bigger packs go a little further per dollar.
 const PACKS: { price: string; covers: string; note: string }[] = [
-  { price: '$20', covers: '≈ 5 months', note: 'For most families' },
+  { price: '$20', covers: 'months of use', note: 'For most families' },
   { price: '$50', covers: 'goes further', note: '≈ 10% more generous per dollar' },
   { price: '$100', covers: 'goes furthest', note: '≈ 15% more generous per dollar' },
 ]
@@ -34,7 +34,7 @@ export default function PricingPage() {
           </h1>
           <p style={{ fontSize: 18, lineHeight: 1.7, color: soft, maxWidth: 680, margin: 0 }}>
             Tokens are simply units of Minta&rsquo;s time — they cover the actual AI cost, nothing more.
-            A little goes a long way: <strong style={{ color: ink }}>about $20 covers roughly 5 months</strong> for
+            A little goes a long way: <strong style={{ color: ink }}>about $20 covers months of Minta</strong> for
             most families. <strong style={{ color: ink }}>Pay-as-you-go — no subscription, nothing recurring.</strong>
           </p>
           <p style={{ fontSize: 14.5, lineHeight: 1.6, color: soft, maxWidth: 680, margin: '14px 0 0' }}>
@@ -76,7 +76,7 @@ export default function PricingPage() {
             pay for what you actually use. Nothing is recurring; you top up when you run low.
           </p>
           <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.7, margin: 0 }}>
-            The scale is gentle — <strong style={{ color: ink }}>about $20 covers roughly 5 months</strong> for a typical family.
+            The scale is gentle — <strong style={{ color: ink }}>about $20 covers months of Minta</strong> for a typical family.
             The bigger the top-up, the better the rate: the <strong style={{ color: ink }}>$50</strong> is about 10% more generous
             per dollar than the $20, and the <strong style={{ color: ink }}>$100</strong> about 15% more.
           </p>
