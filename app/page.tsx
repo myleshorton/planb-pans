@@ -7,7 +7,6 @@ import MethodSection from './_components/MethodSection'
 import WhyBoth from './_components/WhyBoth'
 import RegularAIvsMinta from './_components/RegularAIvsMinta'
 import { FamilyStoriesTeaser } from './_components/FamilyStories'
-import { CALENDLY_URL } from './_components/TalkToRachel'
 
 export default function Home() {
   const revealRef = useRef<HTMLElement | null>(null)
@@ -95,50 +94,47 @@ export default function Home() {
                 marginBottom: 26,
               }}
             >
-              A non-profit for PANS, PANDAS, autism &amp; severe dysregulation
+              Plan B for PANS
             </p>
 
             <h1
               style={{
                 fontFamily: 'var(--font-cormorant)',
-                fontSize: 'clamp(50px, 8.8vw, 100px)',
+                fontSize: 'clamp(44px, 7.4vw, 86px)',
                 fontWeight: 300,
-                letterSpacing: '-0.028em',
-                lineHeight: 1,
+                letterSpacing: '-0.026em',
+                lineHeight: 1.02,
                 marginBottom: 16,
                 color: 'var(--ink)',
               }}
             >
-              <span className="word" style={{ animationDelay: '0.16s' }}>When</span>{' '}
-              <span className="word" style={{ animationDelay: '0.24s' }}>there&apos;s</span>{' '}
+              <span className="word" style={{ animationDelay: '0.16s' }}>We&apos;ll figure out what&apos;s</span>{' '}
               <span
                 className="word"
                 style={{
                   fontStyle: 'italic',
                   color: 'var(--teal)',
                   fontWeight: 400,
-                  animationDelay: '0.34s',
+                  animationDelay: '0.24s',
                 }}
               >
-                no 911 to call.
-              </span>
+                actually wrong
+              </span>{' '}
+              <span className="word" style={{ animationDelay: '0.32s' }}>with your child</span>{' '}
+              <span className="word" style={{ animationDelay: '0.4s' }}>— and give you the</span>{' '}
+              <span
+                className="word"
+                style={{
+                  fontStyle: 'italic',
+                  color: 'var(--teal)',
+                  fontWeight: 400,
+                  animationDelay: '0.48s',
+                }}
+              >
+                roadmap
+              </span>{' '}
+              <span className="word" style={{ animationDelay: '0.56s' }}>to get them better.</span>
             </h1>
-            <p
-              className="rise delay-2"
-              style={{
-                fontFamily: 'var(--font-cormorant)',
-                fontSize: 'clamp(22px, 3vw, 34px)',
-                fontWeight: 400,
-                fontStyle: 'italic',
-                letterSpacing: '-0.01em',
-                lineHeight: 1.25,
-                color: 'var(--teal)',
-                margin: 0,
-                marginBottom: 32,
-              }}
-            >
-              When you&apos;re stalled, Minta has your Plan B.
-            </p>
 
             <p
               className="rise delay-3"
@@ -148,32 +144,24 @@ export default function Home() {
                 lineHeight: 1.7,
                 fontWeight: 300,
                 maxWidth: 600,
+                marginTop: 28,
                 marginBottom: 20,
               }}
             >
-              When your kid is in free-fall and no practitioner can see the full picture —{' '}
+              Share your child&apos;s labs and history. A{' '}
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
-                Plan B is the layer that can.
-              </em>{' '}
-              At its core is{' '}
-              <em style={{ color: 'var(--teal)', fontStyle: 'normal', fontWeight: 600 }}>
-                Minta
+                real person
               </em>
-              {' '}— a clinical AI{' '}
+              , working with the most advanced AI there is, reads every piece together — the way a
+              brilliant integrative doctor would if they had unlimited time — and hands you one clear
+              picture:{' '}
               <em style={{ color: 'var(--ink)', fontStyle: 'normal', fontWeight: 600 }}>
-                trained on PANS
-              </em>
-              : every research-backed modality, every published teaching, every cohort study
-              we can put on the record. She learns{' '}
-              <em style={{ color: 'var(--ink)', fontStyle: 'italic', fontWeight: 600 }}>
-                your
+                what&apos;s driving this, why nothing has worked yet, what to ask each doctor, and
+                exactly what to do next.
               </em>{' '}
-              child&apos;s full history — then works alongside our human-led{' '}
               <em style={{ color: 'var(--teal)', fontStyle: 'normal', fontWeight: 600 }}>
-                Synthesis
-              </em>{' '}
-              to hand you what to try next, and the exact questions to bring to your next
-              appointment.
+                It&apos;s free.
+              </em>
             </p>
             <p
               className="rise delay-3"
@@ -221,12 +209,12 @@ export default function Home() {
               }}
             >
               <a
-                href="https://app.planbforpans.com/intake"
+                href="https://app.planbforpans.com/signup"
                 rel="noopener"
                 className="cta-teal"
                 style={{ textDecoration: 'none' }}
               >
-                Start your intake →
+                Start your free Synthesis →
               </a>
               <a
                 href="https://app.planbforpans.com/try"
@@ -247,25 +235,6 @@ export default function Home() {
                 }}
               >
                 Try Plan B — ask a question →
-              </a>
-              <a
-                href={CALENDLY_URL}
-                style={{
-                  display: 'inline-block',
-                  padding: '16px 32px',
-                  fontFamily: 'var(--font-inter)',
-                  fontSize: 11,
-                  letterSpacing: '0.28em',
-                  textTransform: 'uppercase',
-                  fontWeight: 600,
-                  color: 'var(--teal)',
-                  border: '1px solid var(--teal)',
-                  borderRadius: 4,
-                  textDecoration: 'none',
-                  background: 'transparent',
-                }}
-              >
-                Free 15-min consult →
               </a>
             </div>
 
@@ -471,6 +440,138 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS — your path to a roadmap (near the top, by design) */}
+      <section
+        style={{
+          padding: 'clamp(64px, 9vw, 100px) 24px',
+          background: 'var(--paper)',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 1080 }}>
+          <div style={{ marginBottom: 44, maxWidth: 820 }}>
+            <p className="eyebrow" style={{ marginBottom: 18 }}>
+              How it works
+            </p>
+            <h2
+              className="serif"
+              style={{
+                fontSize: 'clamp(34px, 5.4vw, 58px)',
+                fontWeight: 300,
+                letterSpacing: '-0.02em',
+                lineHeight: 1.02,
+                margin: 0,
+                color: 'var(--ink)',
+              }}
+            >
+              Your path to a{' '}
+              <em style={{ color: 'var(--teal)' }}>roadmap</em>.
+            </h2>
+            <p
+              style={{
+                fontSize: 17,
+                lineHeight: 1.75,
+                color: 'var(--ink-soft)',
+                fontWeight: 300,
+                marginTop: 18,
+                maxWidth: 680,
+              }}
+            >
+              Three steps. The first two are on us — what&apos;s wrong, and the plan. Then you&apos;re
+              never alone working it.
+            </p>
+          </div>
+
+          <div
+            className="how-start-grid"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: 0,
+              borderTop: '1px solid var(--ink)',
+              borderBottom: '1px solid var(--ink)',
+            }}
+          >
+            {[
+              {
+                n: '01',
+                t: 'Share what you have',
+                b: 'Your child&apos;s labs and history. <em>No labs yet? The Synthesis tells you exactly what to run.</em>',
+              },
+              {
+                n: '02',
+                t: 'Get your Synthesis',
+                b: 'One integrated read of everything — what&apos;s wrong, why, and the roadmap: what to ask, what to test, in what order.',
+              },
+              {
+                n: '03',
+                t: 'Work the plan — never alone',
+                b: 'Minta (your AI guide) and a 60-second daily tracker walk every step and adapt as your child changes.',
+              },
+            ].map((s, i, arr) => (
+              <div
+                key={s.n}
+                style={{
+                  padding: '32px 28px',
+                  borderRight: i < arr.length - 1 ? '1px solid var(--sand)' : 'none',
+                  position: 'relative',
+                }}
+              >
+                <p
+                  className="serif"
+                  style={{
+                    fontSize: 52,
+                    fontWeight: 300,
+                    letterSpacing: '-0.02em',
+                    lineHeight: 1,
+                    color: 'var(--teal)',
+                    margin: 0,
+                    marginBottom: 12,
+                  }}
+                >
+                  {s.n}
+                </p>
+                <p
+                  className="serif"
+                  style={{
+                    fontSize: 24,
+                    fontWeight: 400,
+                    letterSpacing: '-0.01em',
+                    lineHeight: 1.15,
+                    color: 'var(--ink)',
+                    margin: 0,
+                    marginBottom: 14,
+                  }}
+                >
+                  {s.t}
+                </p>
+                <p
+                  style={{
+                    fontSize: 14.5,
+                    lineHeight: 1.75,
+                    color: 'var(--ink-soft)',
+                    fontWeight: 300,
+                  }}
+                  dangerouslySetInnerHTML={{ __html: s.b }}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div style={{ marginTop: 36 }}>
+            <a
+              href="https://app.planbforpans.com/signup"
+              rel="noopener"
+              className="cta-teal"
+              style={{ textDecoration: 'none' }}
+            >
+              Start your free Synthesis →
+            </a>
           </div>
         </div>
       </section>
@@ -1659,9 +1760,10 @@ export default function Home() {
               }}
             >
               Make this your trusted advisor while you&apos;re waiting six weeks for the next
-              intake appointment — or when the $2,000 half-hour consult isn&apos;t an option.
-              Every log adds to your kid&apos;s picture <em>and</em> the library that helps the
-              next family. Use it. Share it. Come back.
+              intake appointment — or when the $2,000 half-hour specialist consult isn&apos;t an
+              option. Your free Synthesis is the path that always is. Every log adds to your
+              kid&apos;s picture <em>and</em> the library that helps the next family. Use it.
+              Share it. Come back.
             </p>
           </div>
 
@@ -1918,127 +2020,6 @@ export default function Home() {
             </a>
             .
           </p>
-        </div>
-      </section>
-
-      {/* HOW TO START — 3 steps */}
-      <section
-        style={{
-          padding: '100px 24px',
-          background: 'var(--cream)',
-        }}
-      >
-        <div className="pb-container" style={{ maxWidth: 1080 }}>
-          <div style={{ marginBottom: 44, textAlign: 'center' }}>
-            <p className="eyebrow" style={{ marginBottom: 18 }}>
-              How to start
-            </p>
-            <h2
-              className="serif"
-              style={{
-                fontSize: 'clamp(34px, 5.4vw, 54px)',
-                fontWeight: 300,
-                letterSpacing: '-0.018em',
-                lineHeight: 1.05,
-                margin: 0,
-                color: 'var(--ink)',
-              }}
-            >
-              Three steps.{' '}
-              <em style={{ color: 'var(--teal)' }}>Nothing else to figure out.</em>
-            </h2>
-          </div>
-          <div
-            className="how-start-grid"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: 0,
-              borderTop: '1px solid var(--ink)',
-              borderBottom: '1px solid var(--ink)',
-            }}
-          >
-            {[
-              {
-                n: '01',
-                t: 'Do the intake',
-                b: "Twenty minutes, or break it across days. Pregnancy, birth, triggers, meds, symptoms, everything you&apos;ve tried. The more detail, the sharper Minta&apos;s read.",
-                eta: '~20 min',
-              },
-              {
-                n: '02',
-                t: 'Log daily',
-                b: 'Thirty seconds before bed. Mood rating, med changes, new symptoms, flare notes. Six weeks in, the pattern becomes visible.',
-                eta: '30 sec / day',
-              },
-              {
-                n: '03',
-                t: 'Ask Minta anything',
-                b: "2am meltdown, new symptom, stuck on protocol choice — Minta has your full record and runs the correlations a single visit can&apos;t.",
-                eta: 'anytime',
-              },
-            ].map((s, i, arr) => (
-              <div
-                key={s.n}
-                style={{
-                  padding: '32px 28px',
-                  borderRight: i < arr.length - 1 ? '1px solid var(--sand)' : 'none',
-                  position: 'relative',
-                }}
-              >
-                <p
-                  className="serif"
-                  style={{
-                    fontSize: 52,
-                    fontWeight: 300,
-                    letterSpacing: '-0.02em',
-                    lineHeight: 1,
-                    color: 'var(--teal)',
-                    margin: 0,
-                    marginBottom: 12,
-                  }}
-                >
-                  {s.n}
-                </p>
-                <p
-                  className="serif"
-                  style={{
-                    fontSize: 26,
-                    fontWeight: 400,
-                    letterSpacing: '-0.01em',
-                    lineHeight: 1.15,
-                    color: 'var(--ink)',
-                    margin: 0,
-                    marginBottom: 14,
-                  }}
-                >
-                  {s.t}
-                </p>
-                <p
-                  style={{
-                    fontSize: 14,
-                    lineHeight: 1.75,
-                    color: 'var(--ink-soft)',
-                    fontWeight: 300,
-                    marginBottom: 14,
-                  }}
-                  dangerouslySetInnerHTML={{ __html: s.b }}
-                />
-                <p
-                  className="mono"
-                  style={{
-                    fontSize: 10,
-                    letterSpacing: '0.2em',
-                    color: 'var(--sand-dark)',
-                    fontWeight: 600,
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  {s.eta}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

@@ -79,6 +79,9 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
       { title: 'Phage Therapy', blurb: 'Viruses that kill bacteria and spare the gut — the real providers, how to access, and how to spot a quack.', href: '/phage.html' },
       { title: 'Biomagnetism', blurb: 'Magnets + the honest evidence — the Joan Randall Protocol, what it seems to move, and why it still needs study.', href: '/biomagnetism.html' },
       { title: 'Homeopathy', blurb: 'The 3 kinds — start classical. The training gap, the recovery stories, and how to find a true-classical homeopath.', href: '/homeopathy.html' },
+      { title: 'Camel & Donkey Milk', blurb: 'Gentle, lower-allergen immune/gut-support milks some families try — the small camel-milk autism research, donkey milk for cow’s-milk allergy, raw-vs-pasteurized risk, and the honest “emerging, not proven” label.', href: '/camel-donkey-milk.html' },
+      { title: 'Serum Immunoglobulins (SBI Protect)', blurb: 'Powdered, oral IgG (serum-bovine immunoglobulin) that binds toxins and calms gut immunity — not IVIG. The gut-barrier and endotoxin-binding research, who it helps, how to dose, and the honest evidence.', href: '/serum-immunoglobulins.html' },
+      { title: 'Intranasal Immunoglobulins', blurb: 'Immunoglobulins delivered to the nose — a far gentler, lower-cost cousin of IVIG aimed at the olfactory route into the brain. What it is, why it’s not IVIG, the early evidence, and how families access it.', href: '/nasal-immunoglobulins.html' },
     ],
   },
 ]

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import './globals.css'
-import { CALENDLY_URL } from './_components/site-links'
 
 export const metadata: Metadata = {
   title: 'Plan B for PANS & PANDAS — A path out of the fire',
@@ -89,7 +88,8 @@ export default function RootLayout({
                 Sign In
               </a>
               <a
-                href={CALENDLY_URL}
+                href="https://app.planbforpans.com/signup"
+                rel="noopener"
                 style={{
                   fontFamily: 'var(--font-inter)',
                   fontSize: 11,
@@ -104,7 +104,7 @@ export default function RootLayout({
                   textDecoration: 'none',
                 }}
               >
-                Book a free 15-min consult
+                Get your free Synthesis
               </a>
               <a
                 href="https://app.planbforpans.com/signup"
