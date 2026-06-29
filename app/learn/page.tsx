@@ -26,7 +26,6 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     items: [
       { title: 'The Behavior → Pathogen Map', blurb: 'Read a child\'s behavior backward to the biology underneath it — which symptoms point to strep, Bartonella, mold, yeast, or a viral driver, and what to test for each. The master key to everything else here.', href: '/behavior-pathogen-map.html' },
       { title: 'Autism — the Treatable Drivers', blurb: 'The root-cause case for autism: the medical drivers (gut, immune, methylation, infection, mold) that are actually treatable, what the research shows, and where to start looking.', href: '/root-cause-autism-treatable-drivers.html' },
-      { title: 'ADHD — the Treatable Drivers', blurb: 'The same root-cause lens on ADHD: the inflammation, gut, methylation, and infection drivers underneath the label — and the workup that finds them.', href: '/root-cause-adhd-treatable-drivers.html' },
     ],
   },
   {
@@ -51,24 +50,15 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
       { title: 'Diet & Nutrition', blurb: 'Food as a real PANS lever — the anti-inflammatory foundation, which specialty diet fits your kid’s pattern, and how to find triggers without over-restricting.', href: '/diet.html' },
       { title: 'Nervous-System Regulation', blurb: 'Calming a fight-or-flight brain — vagus-nerve work, HRV, limbic retraining — the layer that makes everything else tolerable.', href: '/nervous-system.html' },
       { title: 'Brain Retraining for Kids', blurb: 'The "calm the system first" step for a sensitive kid — DNRS (Annie Hopper) as the lead, plus the kid-native tools (tapping, SSP, co-regulation) that make detox survivable.', href: '/brain-retraining-kids.html' },
-    ],
-  },
-  {
-    group: 'Behavior & regulation',
-    sub: 'Parent-to-parent tools for the household — the daily behavior work that runs alongside the medical work, never instead of it.',
-    items: [
-      { title: 'The Meltdown Playbook', blurb: 'What to actually do in the middle of a meltdown — stay calm, hold the rules, plus planned ignoring and the regulation break — and the honest PANS caveat: you cannot discipline away a neuroinflammatory flare.', href: '/meltdown-playbook-stay-calm-hold-the-rules.html' },
       { title: 'Screens, Dopamine & the Point System', blurb: 'A real family\'s carrot-and-stick reset for a screen-obsessed, dopamine-driven kid — points to grow good behavior, strikes (a written reflection) to deter the bad — that calmed their whole home.', href: '/screen-time-dopamine-point-system.html' },
     ],
   },
   {
     group: 'Is it PANS — or something else?',
-    sub: 'When the label is unclear. PANS overlaps with autism and ADHD far more than most clinicians realize.',
+    sub: 'When the label is unclear. PANS overlaps with autism far more than most clinicians realize.',
     items: [
       { title: 'PANS and Autism', blurb: 'How PANS and autism overlap and feed each other, why autistic kids are at higher (not lower) risk, and how to tell a flare from a baseline.', href: '/pans-and-autism.html' },
       { title: 'Is It Autism or PANS?', blurb: 'The sudden-onset clue that separates a PANS flare from autism — and why it\'s often both, not either-or.', href: '/is-it-autism-or-pans.html' },
-      { title: 'ADHD and PANS', blurb: 'When "ADHD" is actually a PANS flare — the overlap, the sudden-onset tell, and the drivers worth ruling out before settling on the label.', href: '/adhd-and-pans.html' },
-      { title: 'Is It ADHD or PANS?', blurb: 'How to distinguish gradual, lifelong ADHD from an abrupt PANS onset — and what to test if the timeline doesn\'t fit.', href: '/is-it-adhd-or-pans.html' },
     ],
   },
   {
@@ -79,8 +69,6 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
       { title: 'PANS and Lyme', blurb: 'The tick-borne connection — how Lyme and co-infections drive sudden OCD and rage, why standard tests miss them, and what to test and do next.', href: '/pans-and-lyme.html' },
       { title: 'Find Mold Yourself', blurb: 'The honest ERMI story + how to find and safely remediate mold without a predatory middleman.', href: '/find-mold.html' },
       { title: 'Mold — the full protocol', blurb: 'Once mold is implicated: remove → drainage → binders → antifungals → nasal, the 3 binder schools, and the order that matters.', href: '/mold-protocol.html' },
-      { title: 'PANS and Mold', blurb: 'How mold toxicity drives sudden neuropsychiatric symptoms, why the source is so often invisible, what to test, and how to find and remove it.', href: '/pans-and-mold.html' },
-      { title: 'Mold Illness (CIRS) in Children', blurb: 'The biotoxin illness behind mold-driven PANS — the multi-system symptoms, the testing that catches it, and the treatment sequence that matters.', href: '/mold-illness-cirs-children.html' },
       { title: 'Gut & Microbiome', blurb: 'Which stool test (and which to skip), the gut-brain link, and how to reset it.', href: '/gut.html' },
       { title: 'Yeast & Candida', blurb: 'The behaviors it drives — the giddy "drunk" affect, OCD, sugar cravings — and a gentle, low-and-slow protocol for the super-sensitive kid who can\'t take die-off.', href: '/yeast.html' },
       { title: 'Lyme & Co-infections', blurb: 'Antibiotics vs herbals (research-backed), the kill-menu, per-bug dosing, and how to find a Lyme doctor.', href: '/lyme.html' },
