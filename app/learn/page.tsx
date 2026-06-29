@@ -21,32 +21,25 @@ type Item = { title: string; blurb: string; href?: string }
 // actually face them.
 const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
   {
-    group: 'The root-cause map',
-    sub: 'Start with the big picture — the three pieces that reframe everything below.',
-    items: [
-      { title: 'The Behavior → Pathogen Map', blurb: 'Read a child\'s behavior backward to the biology underneath it — which symptoms point to strep, Bartonella, mold, yeast, or a viral driver, and what to test for each. The master key to everything else here.', href: '/behavior-pathogen-map.html' },
-      { title: 'Autism — the Treatable Drivers', blurb: 'The root-cause case for autism: the medical drivers (gut, immune, methylation, infection, mold) that are actually treatable, what the research shows, and where to start looking.', href: '/root-cause-autism-treatable-drivers.html' },
-    ],
-  },
-  {
     group: '1 · Start here',
     sub: 'Understand it, then begin.',
     items: [
-      { title: 'Understanding PANS', blurb: 'What PANS actually is, in plain language for an exhausted parent.', href: '/understanding-pans.html' },
-      { title: 'Is It PANS or PANDAS?', blurb: 'How to tell the difference, the overlap, and why treatment is similar either way.', href: '/pans-vs-pandas.html' },
-      { title: 'PANS Symptoms Checklist', blurb: 'The sudden-onset cluster — OCD, tics, rage, regression, handwriting, food restriction — what to watch for.', href: '/pans-symptoms-children.html' },
+      { title: 'Understanding PANS', blurb: 'What PANS (and PANDAS) actually is, and the sudden-onset symptom cluster to watch for — in plain language for an exhausted parent.', href: '/understanding-pans.html' },
       { title: 'The Protocol', blurb: 'Where everyone starts — anti-inflammatory + a targeted antibiotic, the doses, how long, and what to do if your child slips.', href: '/deconstructing-pans.html#protocol' },
     ],
   },
   {
-    group: '2 · Support the body — alongside everything',
-    sub: 'Start these early. And check the cleanup engine first — if methylation/detox is clogged, nothing else will work.',
+    group: 'Check methylation first',
+    sub: 'Before you try anything else. If your child is undermethylating or detox is clogged, treatments can BACKFIRE — this is the engine no specialist owns, and the bottleneck Plan B was built around.',
     items: [
-      { title: 'Methylation & Detox', blurb: 'The cleanup engine no specialist owns — HTMA, folate/FRAT, and the detox (and daily poops) that decide whether anything else works. If it’s clogged, nothing else will.', href: '/methylation.html' },
+      { title: 'Methylation & Detox', blurb: 'HTMA, folate/FRAT, and the detox (and daily poops) that decide whether anything else works — and why pushing treatments before you check this can make a sensitive kid worse.', href: '/methylation.html' },
+    ],
+  },
+  {
+    group: '2 · Support the body',
+    sub: 'The daily foundation that runs alongside everything.',
+    items: [
       { title: 'Diet & Nutrition', blurb: 'Food as a real PANS lever — the anti-inflammatory foundation, which specialty diet fits your kid’s pattern, and how to find triggers without over-restricting.', href: '/diet.html' },
-      { title: 'Nervous-System Regulation', blurb: 'Calming a fight-or-flight brain — vagus-nerve work, HRV, limbic retraining — the layer that makes everything else tolerable.', href: '/nervous-system.html' },
-      { title: 'Brain Retraining for Kids', blurb: 'The "calm the system first" step for a sensitive kid — DNRS (Annie Hopper) as the lead, plus the kid-native tools (tapping, SSP, co-regulation) that make detox survivable.', href: '/brain-retraining-kids.html' },
-      { title: 'Screens, Dopamine & the Point System', blurb: 'A real family\'s carrot-and-stick reset for a screen-obsessed, dopamine-driven kid — points to grow good behavior, strikes (a written reflection) to deter the bad — that calmed their whole home.', href: '/screen-time-dopamine-point-system.html' },
     ],
   },
   {
@@ -61,6 +54,7 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     group: '3 · Find the root drivers',
     sub: 'If the protocol isn’t enough, this is where the answers hide.',
     items: [
+      { title: 'The Behavior → Pathogen Map', blurb: 'Read a child\'s behavior backward to the biology underneath — which symptoms point to strep, Bartonella, mold, yeast, or a viral driver, and what to test for each. The master key to the drivers below.', href: '/behavior-pathogen-map.html' },
       { title: 'Why Treatment Isn’t Working', blurb: 'The missed drivers behind relapse — mold, Lyme, methylation — and what to investigate next.', href: '/pans-treatment-not-working.html' },
       { title: 'PANS, PANDAS & Strep', blurb: 'How strep triggers sudden OCD, tics, and behavior changes — the molecular-mimicry mechanism, what to test, and why a negative throat swab doesn\'t rule it out.', href: '/pans-and-strep.html' },
       { title: 'PANS and Lyme', blurb: 'The tick-borne connection — how Lyme and co-infections drive sudden OCD and rage, why standard tests miss them, and what to test and do next.', href: '/pans-and-lyme.html' },
@@ -102,6 +96,7 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
       { title: 'Methylene Blue', blurb: 'Mitochondrial + anti-biofilm support — and the serotonin-syndrome warning if your child is on an SSRI. USP grade only.', href: '/methylene-blue.html' },
       { title: 'Bee Venom Therapy', blurb: 'Melittin kills Borrelia in the lab — but anaphylaxis is the headline: EpiPen on hand, test-sting first, never for young or allergic kids.', href: '/bee-venom.html' },
       { title: 'Ozone Therapy', blurb: 'Oxidative therapy for chronic infection — the routes, the honest (thin) evidence, the gas-embolism rule, and why Plan B steers away from the IV forms in kids.', href: '/ozone.html' },
+      { title: 'EBOO (Blood Ozonation)', blurb: 'The most intensive ozone form — "ozone dialysis" for refractory chronic Lyme/mold. Experimental, invasive, adult-studied; a deeper-menu option, never first-line, and extra caution in kids.', href: '/eboo.html' },
       { title: 'Peptide Therapies', blurb: 'TA1, BPC-157, LL-37 and more — what each does, the honest evidence per peptide, and why sourcing (not the molecule) is the real risk.', href: '/peptides.html' },
       { title: 'Disulfiram for Lyme', blurb: 'The best human persister-remission data — and a real toxicity ceiling plus an absolute no-alcohol rule. Eyes wide open.', href: '/disulfiram.html' },
       { title: 'Phage Therapy', blurb: 'Viruses that kill bacteria and spare the gut — the real providers, how to access, and how to spot a quack.', href: '/phage.html' },
@@ -110,6 +105,15 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
       { title: 'Red Light Therapy', blurb: 'Photobiomodulation for the inflamed brain — what near-infrared light does for mitochondria and neuroinflammation, the honest (early) evidence in autism and PANS, and at-home vs clinic.', href: '/red-light-therapy-autism-pans.html' },
       { title: 'MeRT', blurb: 'Magnetic e-Resonance Therapy — EEG-guided TMS aimed at the autistic brain. What it is, how it differs from standard TMS, the evidence so far, and how families access it.', href: '/mert-for-autism.html' },
       { title: 'Neurofeedback & Biofeedback', blurb: 'Training the dysregulated brain and nervous system directly — what neurofeedback and biofeedback are, the evidence in ADHD and autism, and how to find a real provider.', href: '/neurofeedback-biofeedback-autism-adhd.html' },
+    ],
+  },
+  {
+    group: 'Calm the system & behavior at home',
+    sub: 'The regulation + daily-behavior layer — alongside the medical work, never instead of it.',
+    items: [
+      { title: 'Nervous-System Regulation', blurb: 'Calming a fight-or-flight brain — vagus-nerve work, HRV, limbic retraining — the layer that makes everything else tolerable.', href: '/nervous-system.html' },
+      { title: 'Brain Retraining for Kids', blurb: 'DNRS (Annie Hopper) as the lead, plus the kid-native tools (tapping, SSP, co-regulation) that make detox survivable.', href: '/brain-retraining-kids.html' },
+      { title: 'Screens, Dopamine & the Point System', blurb: 'A real family\'s carrot-and-stick reset for a screen-obsessed, dopamine-driven kid — points to grow good behavior, strikes (a written reflection) to deter the bad — that calmed their whole home.', href: '/screen-time-dopamine-point-system.html' },
     ],
   },
 ]
