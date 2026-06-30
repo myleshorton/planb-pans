@@ -33,6 +33,7 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     sub: 'Before you try anything else. If your child is undermethylating or detox is clogged, treatments can BACKFIRE — this is the engine no specialist owns, and the bottleneck Plan B was built around.',
     items: [
       { title: 'Methylation & Detox', blurb: 'HTMA, folate/FRAT, and the detox (and daily poops) that decide whether anything else works — and why pushing treatments before you check this can make a sensitive kid worse.', href: '/methylation.html' },
+      { title: 'The Methylation Web', blurb: 'Methylation is one gear in a connected engine — folate, transsulfuration, glutathione, neurotransmitters, ammonia, and energy all wired to the same hub. Why a "normal" methylation panel can sit on top of a jammed cycle, and why you can’t read one marker alone.', href: '/methylation-web.html' },
       { title: 'Read your raw SNPs — free', blurb: 'Drop your 23andMe file and get your methylation genetics read through three frameworks (Yasko · Lynch · Kara Fitzgerald) — tendencies, not prescriptions. Free.', href: 'https://app.planbforpans.com/genetics' },
     ],
   },
