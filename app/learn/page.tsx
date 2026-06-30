@@ -24,6 +24,7 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     group: '1 · Start here',
     sub: 'Understand it, then begin.',
     items: [
+      { title: 'Start here: understand this first (plain English)', blurb: 'The simplest possible explanation for a scared parent with zero biology background. Four plain ideas — genes are the blueprint, methylation is the maintenance crew, mitochondria are the batteries, the infection is what lit the fire — and the one thing that matters most: the order to do things in (understand & find → support the engine → THEN the deep kill), so your child gets better instead of crashing.', href: '/start-here.html' },
       { title: 'Understanding PANS', blurb: 'What PANS (and PANDAS) actually is, and the sudden-onset symptom cluster to watch for — in plain language for an exhausted parent.', href: '/understanding-pans.html' },
       { title: 'Where to Start — The Testing Map', blurb: 'Where do I even begin with testing? A tiered, scaffolded map: cast a wide net ONCE (Tier 1), then follow only the branches your results flag. Elevates the two tests almost every family misses — a comprehensive methylation panel and an organic-acids (mitochondrial) test — even two years in.', href: '/testing-map.html' },
       { title: 'The Protocol', blurb: 'Where everyone starts — anti-inflammatory + a targeted antibiotic, the doses, how long, and what to do if your child slips.', href: '/deconstructing-pans.html#protocol' },
