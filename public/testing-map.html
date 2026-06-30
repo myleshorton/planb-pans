@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where to Start — The Testing Map for PANS: the Tier-1 Workup Most Families Never Get — Plan B for PANS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#F6F1E7;--cream-light:#FBF8F1;--card:#fffdf7;--ink:#2a2a26;--soft:#524d40;--teal:#1F6B6B;--rust:#A02E2E;--moss:#5C7C4B;--ochre:#A87000;--rule:#e3dcc9;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+  .eyebrow{color:var(--teal);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:0 0 16px}
+  h1{font-family:'Cormorant',Georgia,serif;font-weight:300;font-size:clamp(36px,7vw,64px);line-height:1.02;letter-spacing:-.02em;margin:0 0 20px}
+  h2{font-family:'Cormorant',Georgia,serif;font-weight:400;font-size:clamp(26px,4.5vw,40px);line-height:1.1;letter-spacing:-.015em;margin:0 0 16px}
+  h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin:0 0 12px}
+  p{font-size:17px;color:var(--soft);margin:0 0 16px}
+  b,strong{color:var(--ink);font-weight:700}
+  a{color:var(--teal)}
+  section{padding:clamp(40px,7vw,68px) 0;border-bottom:1px solid var(--rule)}
+  .hero{background:var(--cream-light);padding-top:clamp(64px,10vw,100px)}
+  .lead{font-size:19px;line-height:1.7}
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:clamp(20px,4vw,30px);margin:20px 0}
+  .card.flag{border-left:4px solid var(--rust)}
+  .card.key{border-left:4px solid var(--teal)}
+  .card.good{border-left:4px solid var(--moss)}
+  .card.tier{border-left:4px solid var(--ochre)}
+  ul{margin:0 0 16px;padding-left:20px}
+  li{font-size:16.5px;color:var(--soft);margin-bottom:11px;line-height:1.55}
+  .pill{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:3px 9px;border-radius:5px;vertical-align:middle}
+  .pill.missed{color:#fff;background:var(--rust)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+  th,td{text-align:left;padding:10px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);font-weight:700}
+  td b{color:var(--ink)}
+  .src{font-size:14px;color:var(--soft);font-style:italic}
+  .back{display:inline-block;margin-top:8px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+</style>
+<!-- seo:planb -->
+<meta name="description" content="Where to start with PANS testing: a tiered, scaffolded map. Tier 1 casts a wide net once — foundational bloods, the methylation panel, infection triggers, genetics, and one comprehensive functional/OAT panel. The two tests families never get, and how to scaffold from the results.">
+<link rel="canonical" href="https://planbforpans.com/testing-map.html">
+<meta property="og:title" content="Where to Start — The Testing Map for PANS — Plan B for PANS">
+<meta property="og:description" content="A tiered, scaffolded testing map for PANS. Cast a wide net once with Tier 1 — the foundational bloods, the methylation panel, and the one comprehensive functional/OAT panel most families never get — then scaffold out from what it flags.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Plan B for PANS">
+<meta property="og:url" content="https://planbforpans.com/testing-map.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Where to Start — The Testing Map for PANS — Plan B for PANS",
+  "description": "A tiered, scaffolded testing map for PANS. Tier 1 casts a wide net once; Tier 2 follows only the branches Tier 1 flags; Tier 3 is the deep, specialized work. The two most-missed essentials are a comprehensive methylation panel and an organic-acids (mitochondrial) test.",
+  "url": "https://planbforpans.com/testing-map.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plan B for PANS"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What tests should I start with for PANS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start by casting a wide net once, so you don't start and stop. Tier 1 is five things run together: foundational bloods (CBC, CMP, full thyroid, ferritin and iron with CRP, vitamin D, B12, folate, zinc, copper, ceruloplasmin, RBC magnesium); a comprehensive methylation panel (homocysteine, whole-blood histamine, MMA, RBC folate, B6 as P5P); the infection triggers that drive PANS (strep titers, Mycoplasma, EBV, HHV-6); genetics from 23andMe raw data; and one comprehensive functional panel — an Organic Acids Test (OAT) or a Genova NutrEval. From there you only follow the branches your Tier 1 results actually flag."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the two most-missed tests in PANS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A comprehensive methylation panel and an organic-acids (mitochondrial) test. Most families never get either, even two years in. The methylation panel reads the body's cleanup-and-detox engine; the organic-acids test (OAT) or NutrEval reads mitochondrial energy, neurotransmitters, gut markers, and nutrient status in one. They are the highest-yield, most-overlooked pieces of the whole workup, which is why they belong in the first wide-net round, not later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I act on a genetic result like MTHFR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not on genetics alone. A gene predicts a tendency; it does not prove the cycle is actually struggling. Read function against genetics: if a gene predicts a weak step and the functional panel confirms it is expressing, that is a real bottleneck worth acting on. If the gene predicts a problem but the function comes back normal, the body is compensating — don't treat the gene. Test first, then decide."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Field Guide &middot; Where to Start</p>
+    <h1>The testing map.<br><em style="color:var(--teal)">Where to even begin.</em></h1>
+    <p class="lead">There are dozens of tests in the PANS world, and no one hands you the order. So you run one, wait, run another, and two years later you still don&rsquo;t have the picture. This is the map: <b>three tiers</b>, scaffolded, so you cast a wide net <b>once</b> &mdash; then follow only the branches your results actually light up. The goal isn&rsquo;t every test. It&rsquo;s the <b>right first round</b>, so you stop starting and stopping.</p>
+    <p style="font-family:'Cormorant',Georgia,serif; font-size:17px; font-style:italic; color:var(--teal); margin:16px 0 0; padding-left:14px; border-left:3px solid var(--teal)">If you&rsquo;ve been told to &ldquo;just watch and wait,&rdquo; or you&rsquo;ve been at this for years and still feel like you&rsquo;re guessing &mdash; start here. You don&rsquo;t have to find the way out alone.</p>
+  </div>
+</section>
+
+<section style="background:var(--cream-light)">
+  <div class="wrap">
+    <div class="card key">
+      <h3>Start here &mdash; the one thing to take away</h3>
+      <p style="margin:0;font-size:18px;line-height:1.65"><b>If you&rsquo;re new &mdash; OR two years in and have <em>never</em> done a comprehensive methylation panel or an organic-acids (mitochondrial) test &mdash; start here.</b> Most families never get the full workup, and these two are the <b>most-missed.</b> Here&rsquo;s what&rsquo;s essential first, and how to scaffold out.</p>
+    </div>
+    <p>Almost every stalled family we meet is missing the same two pieces. Not because they&rsquo;re exotic &mdash; because <b>no single specialist orders them.</b> The neurologist runs strep titers. The GI doctor runs a stool test. Nobody runs the <b>cleanup engine</b> (methylation) or the <b>energy engine</b> (mitochondria / organic acids) &mdash; the two layers that decide whether anything else even <em>works.</em> So we put them in the very first round, on purpose.</p>
+    <div class="card good">
+      <p style="margin:0"><b>The Plan B frame, in one breath:</b> <b>test first</b> (don&rsquo;t guess from genetics or symptoms), <b>food-first while you test</b> (the anti-inflammatory foundation runs the whole time), <b>no supplement doses on a webpage</b> (that&rsquo;s your clinician&rsquo;s job, anchored to <em>your</em> child&rsquo;s results), and <b>confirm every order with a clinician</b> &mdash; many of these functional panels need a functional or integrative doctor, or to be requested by name.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The map, at a glance</h2>
+    <p>Tier 1 is the <b>hub</b> &mdash; a wide net you cast once. Tier 2 are the <b>branches</b>, and you only walk the ones Tier 1 flags. Tier 3 is the deep, specialized work, reached only when the scaffold points there. <b>Read it outward from the center.</b></p>
+    <div style="text-align:center; margin:26px 0">
+      <svg viewBox="0 0 380 380" style="width:100%; max-width:440px; height:auto" role="img" aria-label="A tiered testing map: Tier 1 at the hub, Tier 2 branches around it, Tier 3 at the outer edge">
+        <!-- outer tier ring -->
+        <circle cx="190" cy="190" r="168" fill="none" stroke="rgba(168,112,0,.18)" stroke-width="1.5" stroke-dasharray="2 7"/>
+        <circle cx="190" cy="190" r="118" fill="none" stroke="rgba(31,107,107,.18)" stroke-width="1.5" stroke-dasharray="2 7"/>
+        <!-- spokes from hub to Tier-2 branches -->
+        <g stroke="rgba(31,107,107,.32)" stroke-width="2">
+          <line x1="190" y1="190" x2="190" y2="72"/>
+          <line x1="190" y1="190" x2="292" y2="131"/>
+          <line x1="190" y1="190" x2="292" y2="249"/>
+          <line x1="190" y1="190" x2="190" y2="308"/>
+          <line x1="190" y1="190" x2="88" y2="249"/>
+          <line x1="190" y1="190" x2="88" y2="131"/>
+        </g>
+        <!-- hub -->
+        <circle cx="190" cy="190" r="44" fill="var(--teal)"/>
+        <text x="190" y="184" text-anchor="middle" font-family="Cormorant, serif" font-size="20" fill="#fff">Tier 1</text>
+        <text x="190" y="202" text-anchor="middle" font-family="Inter, sans-serif" font-size="9.5" fill="#dceeec">cast the net once</text>
+        <!-- Tier 2 branch nodes -->
+        <g font-family="Inter, sans-serif" font-size="10.5" fill="var(--soft)" text-anchor="middle">
+          <circle cx="190" cy="72" r="7" fill="var(--rust)"/><text x="190" y="56">methylation off</text>
+          <circle cx="292" cy="131" r="7" fill="var(--teal)"/><text x="292" y="115">mito / energy</text>
+          <circle cx="292" cy="249" r="7" fill="var(--ochre)"/><text x="292" y="271">infection signal</text>
+          <circle cx="190" cy="308" r="7" fill="var(--moss)"/><text x="190" y="328">gut signal</text>
+          <circle cx="88" cy="249" r="7" fill="var(--rust)"/><text x="88" y="271">mold / CIRS</text>
+          <circle cx="88" cy="131" r="7" fill="var(--ochre)"/><text x="88" y="115">minerals · neuro</text>
+        </g>
+        <!-- Tier 3 marker on outer ring -->
+        <circle cx="190" cy="22" r="6" fill="var(--ink)"/>
+        <text x="190" y="12" text-anchor="middle" font-family="Inter, sans-serif" font-size="9.5" fill="var(--soft)">Tier 3 &mdash; deep / specialized</text>
+        <!-- animated token travelling hub -> branch -->
+        <g>
+          <circle r="6" fill="#fff" stroke="var(--teal)" stroke-width="2"/>
+          <animateMotion dur="4.5s" repeatCount="indefinite" path="M190,190 L190,72 M190,190 L292,249"/>
+        </g>
+      </svg>
+      <p style="font-size:13px; color:var(--soft); font-style:italic; margin:6px 0 0">One wide net at the center; branches you only follow when the center flags them; the deep work at the rim.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream-light)">
+  <div class="wrap">
+    <p class="eyebrow">Tier 1</p>
+    <h2>Start here &mdash; cast a wide net <em>once</em></h2>
+    <p>Run these <b>together</b>, not one at a time. The point is to stop the start-and-stop. Five groups &mdash; and two of them are the pieces almost everyone skips.</p>
+
+    <div class="card tier">
+      <h3>1 &middot; Foundational bloods</h3>
+      <p style="margin:0">CBC, CMP, <b>full thyroid</b> (TSH, free T4, free T3, TPO antibodies), <b>ferritin + a full iron panel + CRP</b>, <b>25-OH vitamin D</b>, B12, folate, zinc, copper, ceruloplasmin, and <b>RBC magnesium</b>. <em>This rules out the common, fixable causes first</em> &mdash; low iron, low D, thyroid, a simple deficiency &mdash; before you go hunting for anything exotic. Cheap, standard, and the floor under everything else.</p>
+    </div>
+
+    <div class="card key">
+      <h3>2 &middot; The methylation panel <span class="pill missed">Most-missed #1</span></h3>
+      <p style="margin:0"><b>Homocysteine, whole-blood histamine, MMA (methylmalonic acid), RBC folate, and B6 as P5P.</b> This reads the body&rsquo;s <b>cleanup-and-detox engine</b> &mdash; whether your child can clear toxins and the die-off any treatment produces. When this is blocked, kill protocols backfire and treatments &ldquo;stop working.&rdquo; <b>Almost no one orders it.</b> It belongs in the first round. <a href="/methylation.html"><b>Why methylation gates everything &rarr;</b></a></p>
+    </div>
+
+    <div class="card tier">
+      <h3>3 &middot; Infection triggers (the PANS driver)</h3>
+      <p style="margin:0"><b>Strep titers (ASO + anti-DNase B), Mycoplasma (IgG / IgM / PCR), an EBV panel, and HHV-6.</b> PANS is, at its core, an immune reaction to a trigger &mdash; so you look for the triggers up front. A negative throat swab doesn&rsquo;t clear strep; titers and PCR catch what a single swab misses.</p>
+    </div>
+
+    <div class="card tier">
+      <h3>4 &middot; Genetics (the blueprint)</h3>
+      <p style="margin:0"><b>23andMe Ancestry raw data &rarr; Plan B&rsquo;s read.</b> The cheap Ancestry test covers every major methylation and detox SNP. It&rsquo;s the <em>blueprint</em> &mdash; it predicts which cycles <em>tend</em> to run weak &mdash; but a blueprint is not a diagnosis (that&rsquo;s the overlay rule, below). <a href="/get-your-snps-from-23andme.html"><b>How to get your child&rsquo;s SNPs &rarr;</b></a></p>
+    </div>
+
+    <div class="card key">
+      <h3>5 &middot; One comprehensive functional panel <span class="pill missed">Most-missed #2</span></h3>
+      <p style="margin:0"><b>An OAT (Organic Acids Test, urine) OR a Genova NutrEval.</b> This single panel reads <b>mitochondria / energy + methylation markers + neurotransmitter breakdown + gut/yeast markers + nutrient status</b> all at once &mdash; the widest, highest-yield test on the map, and the <b>second thing families never get.</b> The OAT is the mitochondrial / energy window in particular. <a href="/mitochondria.html"><b>The energy layer &amp; the OAT &rarr;</b></a></p>
+    </div>
+
+    <p style="margin:0;font-size:15px;color:var(--soft)"><b>Why these five, together:</b> the bloods catch the simple stuff, the infection panel finds the trigger, and the methylation panel + the OAT/NutrEval read the two engines &mdash; cleanup and energy &mdash; that decide whether treating the trigger will actually hold. Genetics tells you where to <em>look</em>. One round, the whole picture.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Tier 2</p>
+    <h2>Scaffold from the results</h2>
+    <p>These are <b>branches.</b> You don&rsquo;t run them up front &mdash; you follow only the ones Tier 1 actually flags. That&rsquo;s the whole point of casting the wide net first: it tells you which of these to walk.</p>
+    <table>
+      <thead><tr><th>If Tier 1 shows&hellip;</th><th>Follow this branch</th></tr></thead>
+      <tbody>
+        <tr><td><b>Methylation off</b><br>(high homocysteine / histamine)</td><td>Urine amino acids (transsulfuration / CBS), the SAMe:SAH ratio.</td></tr>
+        <tr><td><b>Mito / energy off</b><br>(OAT markers, fatigue)</td><td>CoQ10, carnitine + an acylcarnitine profile, lactate / pyruvate.</td></tr>
+        <tr><td><b>Infection signal</b></td><td>Tick-borne work-up (IGeneX / Galaxy), Coxsackie / enterovirus, deeper viral panels.</td></tr>
+        <tr><td><b>Gut signal</b></td><td>A comprehensive stool test (GI-MAP / GI Effects).</td></tr>
+        <tr><td><b>Mold / water-damage exposure</b> or CIRS signs</td><td>Mycotoxin urine + the CIRS panel (MSH, TGF-&beta;1, C4a, MMP-9, VEGF).</td></tr>
+        <tr><td><b>Minerals / copper off</b></td><td>24-hour urine copper.</td></tr>
+        <tr><td><b>Mood / neuro</b></td><td>Urinary neurotransmitters.</td></tr>
+      </tbody>
+    </table>
+    <div class="card good">
+      <p style="margin:0"><b>This is the discipline that saves money and stress:</b> you don&rsquo;t run a $400 mycotoxin panel unless mold is on the table, and you don&rsquo;t chase tick-borne testing unless there&rsquo;s a signal. <b>Let Tier 1 point.</b></p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream-light)">
+  <div class="wrap">
+    <p class="eyebrow">Tier 3</p>
+    <h2>Deep / specialized</h2>
+    <p>Only if the scaffold points here. These are the targeted, expensive, or invasive tests you reach for when a Tier 2 branch is clearly lit and you need to go further.</p>
+    <ul>
+      <li><b>Pyrroles (HPL / kryptopyrrole)</b> &mdash; Walsh&rsquo;s pyrrole marker, tied to zinc + B6 depletion.</li>
+      <li><b>Advanced tick-borne testing</b> &mdash; deeper Lyme / co-infection panels when the first round signals but doesn&rsquo;t resolve.</li>
+      <li><b>DUTCH hormones</b> &mdash; a dried-urine hormone and adrenal map when the picture points to HPA-axis or hormone involvement.</li>
+      <li><b>Immune deep-dive / IVIG candidacy</b> &mdash; the full immune work-up that establishes whether immunotherapy is on the table.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The overlay rule &mdash; read function <em>against</em> genetics</h2>
+    <p>This is the single most important habit on the whole map, and the one that prevents the most harm. A gene is a <b>tendency, not a verdict.</b> You hold the blueprint (genetics) next to the live readout (the functional panel) and you act only where they <em>agree.</em></p>
+    <div class="card key">
+      <ul style="margin:0">
+        <li><b>Gene predicts a weak cycle <em>and</em> the panel confirms it&rsquo;s expressing</b> &rarr; a real, expressing bottleneck. <b>Act on it.</b></li>
+        <li><b>Gene predicts a problem but function comes back normal</b> &rarr; the body is compensating. <b>Don&rsquo;t act on the gene.</b> Test first; the genetics alone can send you chasing a problem that isn&rsquo;t there.</li>
+      </ul>
+    </div>
+    <p style="margin:0">We learned this the expensive way more than once: a scary-looking SNP that, on the functional panel, was running perfectly fine. <b>Treating the gene instead of the child</b> is how families end up over-supplementing a kid who didn&rsquo;t need it. The map is built to stop that: <b>the functional panel is the tie-breaker, every time.</b></p>
+  </div>
+</section>
+
+<section style="background:var(--cream-light)">
+  <div class="wrap">
+    <h2>Go deeper on the two most-missed engines</h2>
+    <p>The whole reason Tier 1 elevates the methylation panel and the OAT/NutrEval is that these two engines &mdash; cleanup and energy &mdash; gate everything else. Here&rsquo;s the deep read on each:</p>
+    <div class="card">
+      <ul style="margin:0">
+        <li><a href="/methylation.html"><b>Methylation &amp; Detox</b></a> &mdash; the cleanup engine no specialist owns: how to test it, read it, and support it gently (and why pushing treatments before you check it can make a sensitive kid worse).</li>
+        <li><a href="/methylation-web.html"><b>The Methylation Web</b></a> &mdash; why methylation is one gear in a connected engine, and why a &ldquo;normal&rdquo; single marker can sit on top of a jammed cycle.</li>
+        <li><a href="/mitochondria.html"><b>Mitochondrial Dysfunction</b></a> &mdash; the energy layer, the Cell Danger Response, and the full OAT / CoQ10 / carnitine / lactate-pyruvate testing menu.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Bottom line</h2>
+    <p>You don&rsquo;t need every test &mdash; you need the <b>right first round.</b> Cast the wide net once (Tier 1), and make sure it includes the two pieces families almost never get: a <b>comprehensive methylation panel</b> and an <b>organic-acids (mitochondrial) test.</b> Then follow only the branches your results light up (Tier 2), and save the deep, specialized work (Tier 3) for when the scaffold clearly points there. Read <b>function against genetics</b> the whole way, so you treat the child and not the blueprint. <b>Food-first while you test; confirm every order with a clinician.</b> This is parent education, not medical advice &mdash; bring it to your team as questions.</p>
+    <div class="card key" style="margin-top:18px">
+      <h3>Let Minta hold the map for you</h3>
+      <p style="margin:0">Tier 1 is a lot to order, and the results are a lot to read. Upload them and <b>Minta reads the methylation panel, the OAT/NutrEval, the bloods, and the genetics <em>together</em></b> &mdash; flags what&rsquo;s actually off, applies the overlay rule for you, and turns it into the <b>specific Tier-2 branches</b> to bring to your practitioner. <a href="https://app.planbforpans.com"><b>Let Minta do this for you &rarr;</b></a></p>
+    </div>
+    <a class="back" href="/learn">&larr; Back to the Field Guide</a>
+  </div>
+</section>
+
+</body>
+</html>

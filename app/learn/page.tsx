@@ -25,6 +25,7 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     sub: 'Understand it, then begin.',
     items: [
       { title: 'Understanding PANS', blurb: 'What PANS (and PANDAS) actually is, and the sudden-onset symptom cluster to watch for — in plain language for an exhausted parent.', href: '/understanding-pans.html' },
+      { title: 'Where to Start — The Testing Map', blurb: 'Where do I even begin with testing? A tiered, scaffolded map: cast a wide net ONCE (Tier 1), then follow only the branches your results flag. Elevates the two tests almost every family misses — a comprehensive methylation panel and an organic-acids (mitochondrial) test — even two years in.', href: '/testing-map.html' },
       { title: 'The Protocol', blurb: 'Where everyone starts — anti-inflammatory + a targeted antibiotic, the doses, how long, and what to do if your child slips.', href: '/deconstructing-pans.html#protocol' },
     ],
   },
