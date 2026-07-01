@@ -11,33 +11,47 @@
   :root{--cream:#F6F1E7;--cream-light:#FBF8F1;--card:#fffdf7;--ink:#2a2a26;--soft:#524d40;--teal:#1F6B6B;--rust:#A02E2E;--moss:#5C7C4B;--ochre:#A87000;--rule:#e3dcc9;}
   *{box-sizing:border-box}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
-  .eyebrow{color:var(--teal);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:0 0 16px}
-  h1{font-family:'Cormorant',Georgia,serif;font-weight:300;font-size:clamp(36px,7vw,64px);line-height:1.02;letter-spacing:-.02em;margin:0 0 20px}
-  h2{font-family:'Cormorant',Georgia,serif;font-weight:400;font-size:clamp(26px,4.5vw,40px);line-height:1.1;letter-spacing:-.015em;margin:0 0 16px}
+  .wrap{max-width:680px;margin:0 auto;padding:0 24px}
+  .eyebrow{color:var(--teal);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:0 0 18px}
+  h1{font-family:'Cormorant',Georgia,serif;font-weight:300;font-size:clamp(38px,7vw,66px);line-height:1.02;letter-spacing:-.02em;margin:0 0 24px}
+  h2{font-family:'Cormorant',Georgia,serif;font-weight:400;font-size:clamp(28px,4.5vw,42px);line-height:1.1;letter-spacing:-.015em;margin:0 0 18px}
   h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin:0 0 12px}
   p{font-size:17px;color:var(--soft);margin:0 0 16px}
   b,strong{color:var(--ink);font-weight:700}
   a{color:var(--teal)}
-  section{padding:clamp(40px,7vw,68px) 0;border-bottom:1px solid var(--rule)}
-  .hero{background:var(--cream-light);padding-top:clamp(64px,10vw,100px)}
-  .lead{font-size:19px;line-height:1.7}
-  .card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:clamp(20px,4vw,30px);margin:20px 0}
-  .card.flag{border-left:4px solid var(--rust)}
-  .card.key{border-left:4px solid var(--teal)}
-  .card.good{border-left:4px solid var(--moss)}
-  .card.tier{border-left:4px solid var(--ochre)}
-  ul{margin:0 0 16px;padding-left:20px}
-  li{font-size:16.5px;color:var(--soft);margin-bottom:11px;line-height:1.55}
-  .num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;font-family:'Cormorant',serif;font-size:18px;font-weight:500;margin-right:10px;vertical-align:-6px}
-  .step{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--teal);border-radius:12px;padding:18px 20px;margin:14px 0}
-  .step .n{flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant',serif;font-size:19px;font-weight:500;margin-top:2px}
-  .step.kill{border-left-color:var(--rust)}
-  .step.kill .n{background:var(--rust)}
-  .step p{margin:0;font-size:16px}
-  .step h4{margin:0 0 5px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink)}
-  .back{display:inline-block;margin-top:8px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
-  .pull{font-family:'Cormorant',Georgia,serif;font-size:clamp(22px,4vw,30px);font-style:italic;line-height:1.25;color:var(--teal);margin:8px 0;padding-left:18px;border-left:3px solid var(--teal)}
+  section{padding:clamp(72px,13vw,128px) 0;border-bottom:1px solid var(--rule)}
+  .hero{background:var(--cream-light);padding:clamp(96px,18vw,180px) 0 clamp(80px,14vw,140px);text-align:center}
+  .hero .wrap{max-width:600px}
+  .lead{font-size:20px;line-height:1.7}
+
+  /* one-idea panels */
+  .panel{max-width:560px;margin:0 auto;text-align:center}
+  .panel .ic{font-size:54px;line-height:1;margin:0 0 22px;display:block}
+  .panel h2{margin:0 0 18px}
+  .panel p{font-size:19px;line-height:1.7;margin:0}
+
+  /* the order path */
+  .path{max-width:560px;margin:0 auto}
+  .stepline{display:flex;gap:22px;align-items:flex-start;margin:0 0 clamp(36px,7vw,64px)}
+  .stepline:last-child{margin-bottom:0}
+  .stepline .n{flex:0 0 auto;width:48px;height:48px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant',serif;font-size:26px;font-weight:500}
+  .stepline.kill .n{background:var(--rust)}
+  .stepline h4{margin:6px 0 8px;font-family:'Cormorant',Georgia,serif;font-weight:500;font-size:24px;letter-spacing:-.01em;color:var(--ink)}
+  .stepline p{margin:0;font-size:17px}
+  .pull{font-family:'Cormorant',Georgia,serif;font-size:clamp(24px,4.5vw,34px);font-style:italic;line-height:1.3;color:var(--teal);text-align:center;max-width:540px;margin:clamp(40px,7vw,60px) auto 0}
+
+  /* small distinction callout */
+  .callout{max-width:560px;margin:0 auto;border-left:4px solid var(--moss);background:var(--card);border-radius:0 12px 12px 0;padding:24px 28px}
+  .callout p{margin:0;font-size:17px;line-height:1.7}
+
+  /* next-step button */
+  .next{display:block;max-width:560px;margin:0 auto;background:var(--teal);color:#fff;border-radius:16px;padding:clamp(28px,5vw,40px);text-align:center;text-decoration:none}
+  .next .k{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;opacity:.85;margin:0 0 10px}
+  .next .t{display:block;font-family:'Cormorant',Georgia,serif;font-weight:400;font-size:clamp(26px,4.5vw,36px);line-height:1.15}
+  .crosslinks{max-width:560px;margin:clamp(40px,7vw,56px) auto 0}
+  .crosslinks li{font-size:16px;color:var(--soft);margin-bottom:14px;line-height:1.55}
+  .crosslinks ul{margin:0;padding-left:20px}
+  .back{display:block;text-align:center;max-width:560px;margin:clamp(40px,7vw,56px) auto 0;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
 </style>
 <!-- seo:planb -->
 <meta name="description" content="The simplest plain-English explanation of PANS for a scared parent with zero biology background: genes are the blueprint, methylation is the maintenance crew, mitochondria are the batteries, and the infection is what lit the fire — plus the order to do things: understand and find, support the engine, then the deep kill last.">
@@ -99,145 +113,119 @@
 <section class="hero">
   <div class="wrap">
     <p class="eyebrow">Field Guide &middot; Understand this first</p>
-    <h1>Start here.<br><em style="color:var(--teal)">In plain English.</em></h1>
-    <p class="lead">If you just landed here scared and overwhelmed, with no science background, this page is for you. No jargon. No supplement names or doses. Just <b>four simple ideas</b> that make the whole PANS picture click &mdash; and then the <b>one thing that matters most:</b> the order to do things in, so your child gets better instead of crashing. Read it slowly. You don&rsquo;t need to understand everything today. You need to understand <em>this.</em></p>
-    <p style="font-family:'Cormorant',Georgia,serif; font-size:17px; font-style:italic; color:var(--teal); margin:16px 0 0; padding-left:14px; border-left:3px solid var(--teal)">Take a breath. This is the on-ramp &mdash; the map before the map. You don&rsquo;t have to find the way out alone.</p>
+    <h1>Before anything else &mdash; understand this.<br><em style="color:var(--teal)">In plain English.</em></h1>
+    <p class="lead">If you just landed here scared and overwhelmed, this is the on-ramp. Read it slowly &mdash; you don&rsquo;t have to find the way out alone.</p>
+  </div>
+</section>
+
+<section style="background:var(--cream)">
+  <div class="wrap" style="text-align:center;max-width:560px">
+    <p class="eyebrow">Four things to understand</p>
+    <h2>Hold these four, and the whole picture clicks.</h2>
   </div>
 </section>
 
 <section style="background:var(--cream-light)">
   <div class="wrap">
-    <h2>Four ideas, and you&rsquo;ve got the whole picture</h2>
-    <p>Everything in PANS comes down to four plain things: <b>a blueprint, a maintenance crew, a set of batteries, and a fire.</b> If you hold just these four, the rest of this guide makes sense. Here they are, one at a time.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2><span class="num">1</span>Genes are the <em>blueprint</em></h2>
-    <p>Your child&rsquo;s genes are the blueprint they were born with. They tell you what the body <b>might</b> struggle with &mdash; like knowing a certain car model <b>tends to have weak brakes.</b> Useful to know. But the blueprint <b>can&rsquo;t tell you whether the brakes are actually worn right now.</b> For that, you have to look at the real car.</p>
-    <div class="card flag">
-      <h3>The trap to avoid</h3>
-      <p style="margin:0">Parents get a genetic test back, see a scary-looking gene (you&rsquo;ll hear names like <b>MTHFR</b>), and think they finally have <b>the answer.</b> They don&rsquo;t &mdash; they have <b>the prediction, not the reality.</b> The gene says &ldquo;this part <em>might</em> run weak.&rdquo; Only a test of how the body is <em>actually</em> running today can tell you if it really is. <b>Never treat the blueprint. Treat the child.</b></p>
-    </div>
-  </div>
-</section>
-
-<section style="background:var(--cream-light)">
-  <div class="wrap">
-    <h2><span class="num">2</span>Methylation is the <em>maintenance crew</em></h2>
-    <p>Inside the body there&rsquo;s a maintenance crew that works around the clock. It <b>builds and repairs</b> (including the brain chemicals that steady <b>mood and focus</b>), it <b>calms inflammation</b>, and it <b>hauls out toxins.</b> Its name is <b>methylation</b> &mdash; but you can just think of it as the crew.</p>
-    <p>When the crew keeps up, the body cleans up after itself and your kid feels steady. <b>When the crew falls behind, everything slips at once</b> &mdash; mood, focus, sleep, handling stress, and the ability to clear toxins out.</p>
-    <div class="card key">
-      <h3>Here&rsquo;s the part that matters most</h3>
-      <p style="margin:0 0 12px">Genes like <b>MTHFR</b> only tell you the crew <b>might</b> be short-staffed. They don&rsquo;t tell you it actually is.</p>
-      <p style="margin:0 0 12px"><b>A simple blood test is how you check whether the crew is really behind today</b> &mdash; the marker is called <b>homocysteine.</b> You support your child based on the <b>blood</b>, never the gene alone.</p>
-      <p style="margin:0"><b>This is huge:</b> lots of kids have the &ldquo;bad&rdquo; gene and a crew that&rsquo;s keeping up just fine. Pushing supplements at a crew that&rsquo;s already fine can actually make things <b>worse.</b> So: check the blood first, then help.</p>
+    <div class="panel">
+      <span class="ic">🧬</span>
+      <h2>Your genes are a blueprint.</h2>
+      <p>They show what <em>might</em> go wrong &mdash; not what <em>is</em> wrong right now.</p>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2><span class="num">3</span>Mitochondria are the <em>batteries</em></h2>
-    <p>In every single cell there are tiny power plants called <b>mitochondria</b> &mdash; think of them as the <b>batteries</b> that make all the energy your kid runs on. When the batteries are charged, your child can think clearly, recover from a hard day, and bounce back from getting sick.</p>
-    <p>Infection, mold, and inflammation <b>drain the batteries.</b> A kid with drained batteries <b>crashes, can&rsquo;t bounce back, feels foggy, and is exhausted</b> in a way that sleep doesn&rsquo;t fix.</p>
-    <div class="card good">
-      <h3>The crew and the batteries are one system</h3>
-      <p style="margin:0">Here&rsquo;s the connection people miss: the maintenance crew (idea&nbsp;2) literally <b>builds parts for the batteries.</b> So when methylation falls behind, the batteries run down too. They aren&rsquo;t two separate problems to chase &mdash; <b>they&rsquo;re one engine.</b> Fix the crew and you help the batteries. That&rsquo;s why Plan B treats them together.</p>
+    <div class="panel">
+      <span class="ic">🔧</span>
+      <h2>Methylation is the body&rsquo;s maintenance crew.</h2>
+      <p>When it falls behind, mood, focus, sleep, and detox all slip. <em>Blood &mdash; not the gene &mdash; tells you if the crew is actually behind.</em></p>
     </div>
   </div>
 </section>
 
 <section style="background:var(--cream-light)">
   <div class="wrap">
-    <h2><span class="num">4</span>The infection is <em>what lit the fire</em></h2>
-    <p>In PANS, the sudden change you saw in your child &mdash; the overnight OCD, the rage, the tics, the regression &mdash; was usually <b>set off by an infection.</b> Most often it&rsquo;s <b>strep</b>; sometimes it&rsquo;s <b>Mycoplasma</b> (a lung bug) or a <b>virus.</b> That infection is <b>what lit the fire.</b></p>
-    <div class="card key">
-      <p style="margin:0"><b>Find it early.</b> Catching the trigger is often the <b>fastest way to calm a flare</b> &mdash; and you simply <b>can&rsquo;t fix what you haven&rsquo;t found.</b> So early on, a big part of the job is looking carefully for what lit the fire in the first place.</p>
+    <div class="panel">
+      <span class="ic">🔋</span>
+      <h2>Mitochondria are the batteries.</h2>
+      <p>Infection, mold, and inflammation drain them &rarr; crashes and exhaustion. The crew helps build them, so they fail together.</p>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <p class="eyebrow">The heart of this page</p>
-    <h2>The order to do things in</h2>
-    <p>This is the part to really hold onto. Once you understand the four ideas, <b>the order matters more than almost anything else.</b> Do these things in the wrong order and a sensitive kid gets <b>worse.</b> Do them in this order and the body can actually handle the work. Here&rsquo;s the sequence:</p>
-
-    <div class="step">
-      <div class="n">1</div>
-      <div>
-        <h4>Day 1 &mdash; Understand + Find</h4>
-        <p>Start by getting the picture: the <b>genes</b> (the blueprint), the <b>blood</b> (what&rsquo;s actually happening right now), and the <b>infection trigger</b> (what lit the fire). You can&rsquo;t fix what you haven&rsquo;t found &mdash; so first you look.</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="n">2</div>
-      <div>
-        <h4>Support the engine</h4>
-        <p>Give the <b>maintenance crew</b> and the <b>batteries</b> what the <b>blood</b> says they actually need &mdash; and <b>open the drains</b> so the body can take out the trash. You can also <b>put out an active fire</b> here: a current strep or Mycoplasma infection gets treated now with standard, targeted treatment. Get the engine working <em>before</em> you ask it to do heavy lifting.</p>
-      </div>
-    </div>
-
-    <div class="step kill">
-      <div class="n">3</div>
-      <div>
-        <h4>THEN the deep kill &mdash; last</h4>
-        <p>Chronic, dug-in infections &mdash; things like <b>Lyme</b> and <b>Bartonella</b> &mdash; come <b>last.</b> Not because they don&rsquo;t matter, but because clearing them creates a huge cleanup job. You wait until the engine (crew&nbsp;+&nbsp;batteries) can actually handle that cleanup.</p>
-      </div>
-    </div>
-
-    <div class="card key" style="margin-top:24px">
-      <h3>The one distinction that prevents the most harm</h3>
-      <p style="margin:0 0 12px">There are <b>two very different kinds of &ldquo;killing,&rdquo;</b> and mixing them up is where families get hurt:</p>
-      <p style="margin:0 0 12px"><b>Putting out the active fire</b> &mdash; treating a <em>current</em>, acute infection (a fresh strep or Mycoplasma) with standard targeted treatment. <b>This is fine early.</b> It&rsquo;s a quick, contained job.</p>
-      <p style="margin:0"><b>The long demolition</b> &mdash; going after <em>chronic, stealth</em> infections like Lyme and Bartonella that have been dug in for a long time. This <b>floods the body with die-off</b> (dead bugs and the toxins they release), so it <b>waits</b> until the engine is ready. Same word, &ldquo;kill&rdquo; &mdash; completely different size of job.</p>
+    <div class="panel">
+      <span class="ic">🔥</span>
+      <h2>The infection is what lit the fire.</h2>
+      <p>Finding it early is often the fastest way to calm a flare.</p>
     </div>
   </div>
 </section>
 
 <section style="background:var(--cream-light)">
   <div class="wrap">
-    <h2>Why this order &mdash; the picture that makes it stick</h2>
-    <p>Killing infections always makes a <b>mess</b> &mdash; dead bugs and the toxins they release. That mess has to get <b>hauled out by the maintenance crew, through the drains.</b> If you start killing <em>before</em> the crew and the batteries are working, the mess <b>backs up</b> with nowhere to go &mdash; and that&rsquo;s when the child crashes.</p>
+    <div style="text-align:center;max-width:560px;margin:0 auto clamp(48px,8vw,72px)">
+      <p class="eyebrow">The heart of this page</p>
+      <h2>The order that matters.</h2>
+    </div>
+
+    <div class="path">
+      <div class="stepline">
+        <div class="n">1</div>
+        <div>
+          <h4>Understand + Find</h4>
+          <p>The genes, the blood, the trigger.</p>
+        </div>
+      </div>
+      <div class="stepline">
+        <div class="n">2</div>
+        <div>
+          <h4>Support the engine</h4>
+          <p>Give the crew + batteries what the <em>blood</em> shows they need.</p>
+        </div>
+      </div>
+      <div class="stepline kill">
+        <div class="n">3</div>
+        <div>
+          <h4>Then kill</h4>
+          <p>The chronic infections (Lyme, Bartonella) come last.</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center;max-width:540px;margin:clamp(44px,8vw,64px) auto 0">Killing makes a mess the crew has to haul out. Start before the engine is running, and a sensitive kid crashes.</p>
     <p class="pull">&ldquo;You don&rsquo;t demolish the house before the trash service is running.&rdquo;</p>
-    <p>Get the trash service running first &mdash; <b>support the engine, open the drains.</b> <em>Then</em> you can start the demolition, and the body can carry the mess out instead of drowning in it.</p>
-    <div class="card flag">
-      <p style="margin:0">We say this gently, because it&rsquo;s the hardest lesson in PANS: <b>starting a kill phase before the engine was ready is exactly what harms some kids.</b> The treatment wasn&rsquo;t &ldquo;wrong&rdquo; &mdash; the <b>order</b> was. That&rsquo;s the whole reason this page exists, and the whole reason the order above comes before anything else.</p>
-    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>The Plan B frame, in one breath</h2>
-    <div class="card good">
-      <ul style="margin:0">
-        <li><b>Test first.</b> Don&rsquo;t guess from a gene or a symptom &mdash; check what&rsquo;s actually happening in the blood, then act on that.</li>
-        <li><b>Food-first while you test.</b> A calm, anti-inflammatory way of eating is the foundation that runs the whole time &mdash; it costs nothing and helps from day one.</li>
-        <li><b>This is parent education, not medical advice.</b> No doses here on purpose &mdash; the specifics belong to <em>your</em> clinician, anchored to <em>your</em> child&rsquo;s results. Bring this to your team as <b>questions</b>, not instructions.</li>
-      </ul>
+    <div class="callout">
+      <p>Treating a <em>current</em> infection &mdash; a strep right now &mdash; is fine early. It&rsquo;s the <em>chronic</em> kill that waits for the engine to be ready.</p>
     </div>
   </div>
 </section>
 
 <section style="background:var(--cream-light)">
   <div class="wrap">
-    <h2>Now &mdash; here&rsquo;s exactly what to test, in order</h2>
-    <p>You&rsquo;ve got the four ideas and the sequence. The natural next step is <b>Day&nbsp;1: understand and find.</b> The testing map lays out the exact first round of tests &mdash; what to run together so you stop starting and stopping.</p>
-    <div class="card key">
-      <p style="margin:0 0 8px"><a href="/testing-map.html"><b>Where to Start &mdash; The Testing Map &rarr;</b></a> &mdash; the precise first round of tests, in order, so you cast a wide net once instead of guessing for two years.</p>
-    </div>
-    <p style="margin:18px 0 10px">When you&rsquo;re ready to go one layer deeper on the four ideas above:</p>
-    <div class="card">
-      <ul style="margin:0">
-        <li><a href="/methylation.html"><b>Methylation &amp; Detox</b></a> &mdash; the maintenance crew up close: how to test it, read it, and support it gently (and why pushing treatments before you check it can make a sensitive kid worse).</li>
-        <li><a href="/mitochondria.html"><b>Mitochondrial Dysfunction</b></a> &mdash; the batteries: why your kid crashes after exertion or illness and doesn&rsquo;t bounce back, and how to support energy without pushing through the crash.</li>
-        <li><a href="/methylation-web.html"><b>The Methylation Web</b></a> &mdash; why the crew and the batteries are really <em>one connected engine</em>, and why a single &ldquo;normal&rdquo; number can sit on top of a jammed cycle.</li>
+    <a class="next" href="/testing-map.html">
+      <span class="k">Now</span>
+      <span class="t">What to test, in order &rarr;</span>
+    </a>
+
+    <div class="crosslinks">
+      <ul>
+        <li><a href="/methylation.html"><b>Methylation &amp; Detox</b></a> &mdash; the maintenance crew up close.</li>
+        <li><a href="/mitochondria.html"><b>Mitochondrial Dysfunction</b></a> &mdash; why your kid crashes and can&rsquo;t bounce back.</li>
+        <li><a href="/methylation-web.html"><b>The Methylation Web</b></a> &mdash; why the crew and batteries are one engine.</li>
       </ul>
     </div>
+
+    <p style="text-align:center;max-width:560px;margin:clamp(36px,6vw,48px) auto 0;font-size:14px">Parent education, not medical advice. No doses here &mdash; test first, food-first, and bring this to your team as questions.</p>
+
     <a class="back" href="/learn">&larr; Back to the Field Guide</a>
   </div>
 </section>
