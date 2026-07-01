@@ -104,8 +104,15 @@ const SECTIONS: Section[] = [
   },
   {
     group: '6 · The deep menu',
-    sub: 'Most families never need past here. When the standard path is exhausted, this is what hasn’t been tried — grouped by what it targets, in rough order of how well it’s studied.',
+    sub: 'Most families never need past here. When the standard path is exhausted, this is what hasn’t been tried — and we lead with the gentlest, lowest-risk options first. Formal studies are often thin out here; thin studies don’t mean it doesn’t work — some families credit the safest of these with real turnarounds when nothing else moved. Caution is reserved for the few that carry genuine risk.',
     subgroups: [
+      {
+        label: 'High anecdotal success, low formal research',
+        items: [
+          { title: 'Biomagnetism', blurb: 'Low-risk, low-cost magnet therapy — the Joan Randall Protocol. The formal evidence is thin, but the risk is near-zero and families credit it with real turnarounds when little else moved the needle. When the downside is this small, it’s worth a look.', href: '/biomagnetism.html' },
+          { title: 'Homeopathy', blurb: 'Safe, gentle, and contested in the literature — but with real recovery stories behind it, including sudden shifts in OCD and intrusive thoughts. One PANS therapist told us her own child healed on homeopathy alone. Start classical: how to find a true-classical homeopath, and why it’s worth trying when the risk is essentially nil.', href: '/homeopathy.html' },
+        ],
+      },
       {
         label: 'Oxygen & energy',
         items: [
