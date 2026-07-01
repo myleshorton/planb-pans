@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Methylation &amp; Detox in PANS: MTHFR and Why Treatment Relapses — Plan B for PANS</title>
+<title>Methylation, Detox &amp; Energy — the engine everything else depends on — Plan B for PANS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,35 +11,40 @@
   :root{--cream:#F6F1E7;--cream-light:#FBF8F1;--card:#fffdf7;--ink:#2a2a26;--soft:#524d40;--teal:#1F6B6B;--rust:#A02E2E;--moss:#5C7C4B;--ochre:#A87000;--rule:#e3dcc9;}
   *{box-sizing:border-box}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
-  .eyebrow{color:var(--teal);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:0 0 16px}
-  h1{font-family:'Cormorant',Georgia,serif;font-weight:300;font-size:clamp(36px,7vw,64px);line-height:1.02;letter-spacing:-.02em;margin:0 0 20px}
-  h2{font-family:'Cormorant',Georgia,serif;font-weight:400;font-size:clamp(26px,4.5vw,40px);line-height:1.1;letter-spacing:-.015em;margin:0 0 16px}
-  h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin:0 0 12px}
+  .wrap{max-width:680px;margin:0 auto;padding:0 24px}
+  .eyebrow{color:var(--teal);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:0 0 18px}
+  h1{font-family:'Cormorant',Georgia,serif;font-weight:300;font-size:clamp(38px,7vw,66px);line-height:1.02;letter-spacing:-.02em;margin:0 0 24px}
+  h2{font-family:'Cormorant',Georgia,serif;font-weight:400;font-size:clamp(28px,4.5vw,42px);line-height:1.1;letter-spacing:-.015em;margin:0 0 18px}
   p{font-size:17px;color:var(--soft);margin:0 0 16px}
   b,strong{color:var(--ink);font-weight:700}
   a{color:var(--teal)}
-  section{padding:clamp(40px,7vw,68px) 0;border-bottom:1px solid var(--rule)}
-  .hero{background:var(--cream-light);padding-top:clamp(64px,10vw,100px)}
-  .lead{font-size:19px;line-height:1.7}
-  .card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:clamp(20px,4vw,30px);margin:20px 0}
-  .card.flag{border-left:4px solid var(--rust)}
-  .card.key{border-left:4px solid var(--teal)}
-  .card.good{border-left:4px solid var(--moss)}
-  ul{margin:0 0 16px;padding-left:20px}
-  li{font-size:16.5px;color:var(--soft);margin-bottom:11px;line-height:1.55}
-  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
-  th,td{text-align:left;padding:10px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
-  th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);font-weight:700}
-  td b{color:var(--ink)}
-  .src{font-size:14px;color:var(--soft);font-style:italic}
-  .back{display:inline-block;margin-top:8px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  section{padding:clamp(72px,13vw,128px) 0;border-bottom:1px solid var(--rule)}
+  .hero{background:var(--cream-light);padding:clamp(96px,18vw,180px) 0 clamp(80px,14vw,140px);text-align:center}
+  .hero .wrap{max-width:600px}
+  .lead{font-size:20px;line-height:1.7}
+
+  /* one-idea panels */
+  .panel{max-width:560px;margin:0 auto;text-align:center}
+  .panel .ic{font-size:54px;line-height:1;margin:0 0 22px;display:block}
+  .panel h2{margin:0 0 18px}
+  .panel p{font-size:19px;line-height:1.7;margin:0}
+
+  .pull{font-family:'Cormorant',Georgia,serif;font-size:clamp(24px,4.5vw,34px);font-style:italic;line-height:1.3;color:var(--teal);text-align:center;max-width:540px;margin:clamp(40px,7vw,60px) auto 0}
+
+  /* next-step button */
+  .next{display:block;max-width:560px;margin:0 auto;background:var(--teal);color:#fff;border-radius:16px;padding:clamp(28px,5vw,40px);text-align:center;text-decoration:none}
+  .next .k{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;opacity:.85;margin:0 0 10px}
+  .next .t{display:block;font-family:'Cormorant',Georgia,serif;font-weight:400;font-size:clamp(26px,4.5vw,36px);line-height:1.15}
+  .crosslinks{max-width:560px;margin:clamp(40px,7vw,56px) auto 0}
+  .crosslinks li{font-size:16px;color:var(--soft);margin-bottom:14px;line-height:1.55}
+  .crosslinks ul{margin:0;padding-left:20px}
+  .back{display:block;text-align:center;max-width:560px;margin:clamp(40px,7vw,56px) auto 0;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
 </style>
 <!-- seo:planb -->
-<meta name="description" content="Methylation and detox in PANS: the overlooked bottleneck that explains why some kids cannot clear infections, MTHFR/COMT testing, and how to support the engine.">
+<meta name="description" content="Methylation, detox, and mitochondria are one connected engine — the body's cleanup-and-power system that gates whether a PANS kid can clear infections and tolerate treatment. Genes (MTHFR) say the crew might be short-staffed; blood (homocysteine) says if it actually is. Naviaux's Cell Danger Response, and how to test the whole engine.">
 <link rel="canonical" href="https://planbforpans.com/methylation.html">
-<meta property="og:title" content="Methylation &amp; Detox in PANS: MTHFR and Why Treatment Relapses — Plan B for PANS">
-<meta property="og:description" content="Methylation and detox in PANS: the overlooked bottleneck that explains why some kids cannot clear infections, MTHFR/COMT testing, and how to support the engine.">
+<meta property="og:title" content="Methylation, Detox &amp; Energy — the engine everything else depends on — Plan B for PANS">
+<meta property="og:description" content="Methylation, detox, and mitochondria are one connected engine — the body's cleanup-and-power system that decides whether a PANS kid can clear infections and tolerate treatment. Test the engine before you push the kill.">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Plan B for PANS">
 <meta property="og:url" content="https://planbforpans.com/methylation.html">
@@ -48,8 +53,8 @@
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Methylation & Detox in PANS: MTHFR and Why Treatment Relapses — Plan B for PANS",
-  "description": "Methylation and detox in PANS: the overlooked bottleneck that explains why some kids cannot clear infections, MTHFR/COMT testing, and how to support the engine.",
+  "name": "Methylation, Detox & Energy — the engine everything else depends on — Plan B for PANS",
+  "description": "Methylation, detox, and mitochondria are one connected engine — the body's cleanup-and-power system that gates whether a PANS kid can clear infections and tolerate treatment. Genes say the crew might be short-staffed; blood says if it actually is. Naviaux's Cell Danger Response, and how to test the whole engine.",
   "url": "https://planbforpans.com/methylation.html",
   "publisher": {
     "@type": "Organization",
@@ -67,7 +72,7 @@
       "name": "Does MTHFR or methylation affect PANS and autism?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The methylation cycle runs constantly to build neurotransmitters, detoxify, and switch genes on and off. When it is blocked by slow genes like MTHFR and missing cofactors (B12, folate, B6), toxins and inflammation pile up and treatments backfire because the body cannot clear die-off — a commonly overlooked bottleneck in PANS and autism."
+        "text": "Methylation is the body's maintenance crew — it builds and repairs, calms inflammation, and hauls out toxins and infection die-off. When it is blocked by slow genes like MTHFR and missing cofactors (B12, folate, B6), the cleanup stalls and treatments backfire because the body cannot clear the die-off. Genes only say the crew might be short-staffed; a blood marker called homocysteine tells you whether it actually is."
       }
     },
     {
@@ -75,15 +80,15 @@
       "name": "Why do PANS treatments keep relapsing?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If the detox and methylation engine cannot keep up, kill protocols generate die-off the body cannot clear, so the child flares instead of improving. Constipation must be fixed and maintained daily before any kill protocol, because a constipated child reabsorbs the toxins they are trying to eliminate."
+        "text": "Killing an infection makes a mess of dead bugs and toxins the cleanup engine has to haul out. If methylation, drainage, and the mitochondria that power them can't keep up, the die-off backs up and the child flares instead of improving. The fix is to support the engine and open drainage first, then kill low and slow — you don't demolish the house before the trash service is running."
       }
     },
     {
       "@type": "Question",
-      "name": "Can blocked folate cause regression or speech loss?",
+      "name": "What is the Cell Danger Response?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Folate-receptor autoantibodies can block folate from reaching the brain even when blood folate looks normal (cerebral folate deficiency) — found in 70 of 93 autistic children in one study. Leucovorin (folinic acid) can bypass the blocked receptor, sometimes with dramatic results, which is why methylation and folate are tested together."
+        "text": "Mitochondria are the cell's batteries and also its threat sensors. When they detect danger — infection, mold, toxins, inflammation — they stop prioritizing energy and switch into a protective defense mode that Dr. Robert Naviaux calls the Cell Danger Response. When the drivers never clear, they stay stuck there, which is why the child has no energy reserve, crashes after exertion, and doesn't bounce back."
       }
     }
   ]
@@ -94,296 +99,106 @@
 
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Field Guide &middot; Deconstructed</p>
-    <h1>Methylation &amp; detox.<br><em style="color:var(--teal)">The engine no specialist owns.</em></h1>
-    <p class="lead">The most overlooked piece of the whole PANS picture &mdash; and the one that explains why some kids get <b>worse</b> on treatments that should help. Methylation and detox are the body&rsquo;s <b>cleanup engine</b>: how it makes neurotransmitters, processes folate and B12, and <b>clears infections, toxins, and the debris of treatment.</b> When the engine is blocked, killing the bug just floods a body that can&rsquo;t take out the trash. Here&rsquo;s how to test it, read it, and support it &mdash; including the two tests parents are never told to run.</p>
-    <p style="font-family:'Cormorant',Georgia,serif; font-size:17px; font-style:italic; color:var(--teal); margin:16px 0 0; padding-left:14px; border-left:3px solid var(--teal)">I walked this part of the labyrinth myself &mdash; knocked on the doors, read the research, and came back with the map. You don&rsquo;t have to find the way out alone.</p>
+    <p class="eyebrow">Field Guide &middot; The engine</p>
+    <h1>The engine: methylation, detox &amp; energy.<br><em style="color:var(--teal)">The one everything else depends on.</em></h1>
+    <p class="lead">The body&rsquo;s cleanup-and-power system &mdash; and the reason some kids get <b>worse</b> on treatments that should help. When the engine can&rsquo;t keep up, killing the bug just floods a body that can&rsquo;t take out the trash. Read it slowly.</p>
   </div>
 </section>
 
 <section style="background:var(--cream-light)">
   <div class="wrap">
-    <h2>First — what <em>is</em> methylation?</h2>
-    <p>You&rsquo;ve heard the word. Here&rsquo;s what it actually means. Methylation is one of the busiest jobs in the body &mdash; it happens <b>over a billion times a second</b>, in every cell. The body grabs a tiny chemical tag called a <b>methyl group</b> and sticks it onto something to switch it <b>on or off.</b></p>
-    <div style="text-align:center; margin:24px 0">
-      <svg viewBox="0 0 360 300" style="width:100%; max-width:380px; height:auto" role="img" aria-label="The methylation cycle, animated">
-        <circle cx="180" cy="150" r="108" fill="none" stroke="rgba(31,107,107,.22)" stroke-width="2" stroke-dasharray="2 7"/>
-        <g font-family="Inter, sans-serif" font-size="11" fill="var(--soft)" text-anchor="middle">
-          <circle cx="180" cy="42" r="5" fill="var(--teal)"/><text x="180" y="28">folate + B12 in</text>
-          <circle cx="288" cy="150" r="5" fill="var(--teal)"/><text x="300" y="153">make SAMe</text>
-          <circle cx="180" cy="258" r="5" fill="var(--teal)"/><text x="180" y="278">do the work</text>
-          <circle cx="72" cy="150" r="5" fill="var(--teal)"/><text x="60" y="153">recycle</text>
-        </g>
-        <text x="180" y="146" text-anchor="middle" font-family="Cormorant, serif" font-size="23" fill="var(--ink)">methylation</text>
-        <text x="180" y="166" text-anchor="middle" font-family="Inter, sans-serif" font-size="10.5" fill="var(--soft)">a billion times a second</text>
+    <div class="panel">
+      <span class="ic">🔧</span>
+      <h2>Methylation is the maintenance crew.</h2>
+      <p>All day it builds and repairs, calms inflammation, and hauls out toxins. Genes like <b>MTHFR</b> only say the crew <em>might</em> be short-staffed &mdash; a blood marker called <b>homocysteine</b> tells you whether it actually is.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="panel">
+      <span class="ic">🧹</span>
+      <h2>Detox &amp; glutathione are the drains.</h2>
+      <p>Where toxins and infection die-off get hauled out. <b>Glutathione</b> is the body&rsquo;s master detoxifier &mdash; when it runs low, the body loses the very tool it needs to clear a kill protocol.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream-light)">
+  <div class="wrap">
+    <div class="panel">
+      <span class="ic">🔋</span>
+      <h2>Mitochondria are the batteries.</h2>
+      <p>They make the cell&rsquo;s energy. Infection, mold, and inflammation drain them &rarr; crashes and exhaustion. Under threat they flip to defense mode &mdash; Naviaux&rsquo;s <b>Cell Danger Response</b> &mdash; and get stuck there.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="panel">
+      <span class="ic">🔗</span>
+      <h2>It&rsquo;s one connected system.</h2>
+      <p>The crew builds the batteries&rsquo; parts (<b>CoQ10, carnitine, creatine</b>), the drains shield the batteries from their own exhaust, and a flare jams both gears at once. That&rsquo;s why fatigue and the mood/methylation symptoms always travel together.</p>
+    </div>
+
+    <div style="text-align:center; margin:clamp(40px,8vw,64px) auto 0; max-width:420px">
+      <svg viewBox="0 0 360 200" style="width:100%; height:auto" role="img" aria-label="Methylation, detox, and mitochondria as one connected engine">
+        <line x1="80" y1="100" x2="180" y2="100" stroke="rgba(31,107,107,.4)" stroke-width="1.8"/>
+        <line x1="180" y1="100" x2="280" y2="100" stroke="rgba(31,107,107,.4)" stroke-width="1.8"/>
+        <circle cx="80" cy="100" r="40" fill="none" stroke="var(--teal)" stroke-width="2"/>
+        <text x="80" y="96" text-anchor="middle" font-family="Cormorant, serif" font-size="15" fill="var(--ink)">crew</text>
+        <text x="80" y="114" text-anchor="middle" font-family="Inter, sans-serif" font-size="9.5" fill="var(--soft)">methylation</text>
+        <circle cx="280" cy="100" r="40" fill="none" stroke="var(--ochre)" stroke-width="2"/>
+        <text x="280" y="96" text-anchor="middle" font-family="Cormorant, serif" font-size="15" fill="var(--ink)">batteries</text>
+        <text x="280" y="114" text-anchor="middle" font-family="Inter, sans-serif" font-size="9.5" fill="var(--soft)">mitochondria</text>
+        <circle cx="180" cy="100" r="34" fill="var(--moss)"/>
+        <text x="180" y="97" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#fff">drains</text>
+        <text x="180" y="112" text-anchor="middle" font-family="Inter, sans-serif" font-size="8.5" fill="#eef3ea">glutathione</text>
         <g>
-          <circle r="11" fill="var(--moss)"/>
-          <text font-family="Inter, sans-serif" font-size="8" fill="#fff" text-anchor="middle" dy="3">CH3</text>
-          <animateMotion dur="6s" repeatCount="indefinite" path="M180,42 A108,108 0 1,1 179.9,42"/>
+          <circle r="8" fill="var(--ink)"/>
+          <text font-family="Inter, sans-serif" font-size="7" fill="#fff" text-anchor="middle" dy="2.5">CH3</text>
+          <animateMotion dur="5s" repeatCount="indefinite" path="M80,100 H280 M280,100 H80"/>
         </g>
       </svg>
-      <p style="font-size:13px; color:var(--soft); font-style:italic; margin:6px 0 0">The methyl group (CH3), handed around the cycle &mdash; making mood chemicals, clearing toxins, switching genes on and off.</p>
+      <p style="font-size:13px; color:var(--soft); font-style:italic; margin:8px 0 0">One engine. The crew builds the batteries&rsquo; parts, the drains shield them, and a flare seizes the whole thing.</p>
     </div>
-    <p>That one move runs a staggering list of jobs: it <b>builds and recycles the brain chemicals</b> that set mood (serotonin, dopamine, GABA), <b>turns genes on and off</b>, <b>detoxifies</b> &mdash; clearing toxins, used-up hormones, and histamine &mdash; and <b>repairs DNA and insulates nerves.</b> Think of it as the body&rsquo;s master <b>dimmer switch</b>, flipping a billion times a second to keep everything clean and running.</p>
-    <p style="margin:0"><b>When it runs well, the body cleans up after itself.</b> When it&rsquo;s blocked &mdash; slow genes (like MTHFR) plus missing cofactors (B12, folate, B6) &mdash; the cleanup stalls: toxins and inflammation pile up, brain chemistry gets dysregulated, and treatments backfire because the body can&rsquo;t clear the die-off. That&rsquo;s the bottleneck.</p>
-  </div>
-</section>
 
-<section>
-  <div class="wrap">
-    <div class="card key">
-      <h3>What this targets</h3>
-      <p style="margin:0">This addresses the <b>clearance / detox engine</b> &mdash; the piece that <b>gates everything else</b>: whether a child can tolerate a treatment and clear the die-off it produces. When the engine is the bottleneck, supporting it tends to ease the <b>mood, anxiety, and regression</b> (via the folate/FRAT pathway) and makes the rest of the protocol survivable. The honest caveat: only testing &mdash; minerals, folate/FRAT, methylation SNPs read together &mdash; tells you whether this is actually your child&rsquo;s bottleneck.</p>
-    </div>
-    <h2>Why it&rsquo;s the bottleneck</h2>
-    <p>No single specialist owns this. Neurologists, immunologists, and ID doctors aren&rsquo;t trained in the <b>biochemistry of clearance</b> &mdash; so the methylation/detox engine is the gap that gets missed. But it&rsquo;s often <em>the</em> reason a kid stalls: if the body can&rsquo;t methylate and can&rsquo;t drain, it can&rsquo;t clear what&rsquo;s making it sick on its own &mdash; and it can&rsquo;t handle the die-off when you start a kill protocol.</p>
-    <div class="card key">
-      <p style="margin:0"><b>The reframe:</b> killing infections is doing the work <em>for</em> the child. <b>Fixing the engine helps the body clear them itself</b> &mdash; and tolerate the treatments that target the rest.</p>
-    </div>
+    <p class="pull">&ldquo;Fix the engine and the body clears infections itself.&rdquo;</p>
   </div>
 </section>
 
 <section style="background:var(--cream-light)">
   <div class="wrap">
-    <h2>Choose your path</h2>
-    <p>Start with what you&rsquo;re seeing and follow it down. <b>Tap to open.</b></p>
+    <div class="panel">
+      <span class="ic">🧪</span>
+      <h2>How to test the engine.</h2>
+      <p>Read function <em>against</em> genetics. The genes say where a child <em>might</em> be weak; the blood + urine say whether that weakness is actually expressing. Treat the expression, never the prediction.</p>
+    </div>
 
-    <details style="background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--teal);border-radius:12px;padding:14px 18px;margin:12px 0">
-      <summary style="cursor:pointer;font-weight:700;color:var(--ink);font-size:16.5px;list-style:none">1 &middot; Minerals look off (copper, zinc, iron)?</summary>
-      <p style="margin:12px 0 0;font-size:16px">Run <b>HTMA</b> + <b>RBC/serum minerals + copper/ceruloplasmin + zinc + the Walsh panel</b> &mdash; and read them <em>together</em>, not one value at a time. See <a href="#htma"><b>HTMA</b></a> below.</p>
-    </details>
-
-    <details style="background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--teal);border-radius:12px;padding:14px 18px;margin:12px 0">
-      <summary style="cursor:pointer;font-weight:700;color:var(--ink);font-size:16.5px;list-style:none">2 &middot; Regression, speech loss, or relentless OCD?</summary>
-      <p style="margin:12px 0 0;font-size:16px">Run the <b>FRAT (folate-receptor antibody) test</b> &mdash; blood folate can look normal while folate can&rsquo;t reach the brain. This is the box almost no one checks. See <a href="#frat"><b>Folate + FRAT</b></a> below.</p>
-    </details>
-
-    <details style="background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--rust);border-radius:12px;padding:14px 18px;margin:12px 0">
-      <summary style="cursor:pointer;font-weight:700;color:var(--ink);font-size:16.5px;list-style:none">3 &middot; A treatment made your kid WORSE?</summary>
-      <p style="margin:12px 0 0;font-size:16px">Don&rsquo;t assume the treatment is wrong &mdash; the <b>clearance engine can&rsquo;t keep up with the die-off.</b> Step back, <b>open the exits</b> (methylation support + binders, lymph, hydration, bowel + liver), then resume low and slow. See <a href="#drainage"><b>Detox = the clearance engine</b></a> below.</p>
-    </details>
-
-    <details style="background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--teal);border-radius:12px;padding:14px 18px;margin:12px 0">
-      <summary style="cursor:pointer;font-weight:700;color:var(--ink);font-size:16.5px;list-style:none">4 &middot; Want the genetic picture cheaply?</summary>
-      <p style="margin:12px 0 0;font-size:16px"><b>23andMe Ancestry ($99)</b> &rarr; download your raw data &rarr; run it through <b>Genetic Genie (free)</b> &mdash; that covers every major methylation SNP, the same ones the $400 panels report. See <a href="#framework"><b>The framework</b></a> below.</p>
-      <p style="margin:12px 0 0;font-size:16px"><b>Plan B reads your raw SNPs for you</b> &mdash; free, more genes than StrateGene, cross-checked against your labs. You just need to download your raw data first (<a href="/get-your-snps-from-23andme.html"><b>here&rsquo;s how &rarr;</b></a>)</p>
-    </details>
-  </div>
-</section>
-
-<section id="htma">
-  <div class="wrap">
-    <h2>HTMA &mdash; and what to actually do with it</h2>
-    <p><b>Hair tissue mineral analysis</b> shows minerals, toxic metals, and &mdash; the part that matters most &mdash; the <b>ratios between them.</b> The key ones:</p>
-    <table>
-      <thead><tr><th>Ratio</th><th>What it hints at</th></tr></thead>
-      <tbody>
-        <tr><td><b>Ca / Mg</b></td><td>Blood-sugar / stress &ldquo;spark plug&rdquo; balance.</td></tr>
-        <tr><td><b>Na / K</b></td><td>Adrenal / stress state (the &ldquo;vitality&rdquo; ratio).</td></tr>
-        <tr><td><b>Ca / K</b></td><td>Thyroid expression at the cell.</td></tr>
-        <tr><td><b>Zn / Cu</b></td><td>The big one for PANS &mdash; <b>copper dysregulation</b>, which drives anxiety, rage, and neuro symptoms.</td></tr>
-      </tbody>
-    </table>
-    <div class="card flag">
-      <h3>The honest catch &mdash; the test is good, the interpretation is the gap</h3>
-      <p style="margin:0">Most HTMA practitioners are <b>trained by the labs that sell the test</b> and follow the company&rsquo;s <b>algorithm</b> &mdash; kitchen-sink supplement advice that often <b>contradicts your specialists</b>, leaving you unsure who to trust. HTMA is genuinely valuable; the <b>interpretation</b> is where it falls apart.</p>
-    </div>
-    <h3 style="margin-top:8px">How to read it right</h3>
-    <ul>
-      <li><b>Don&rsquo;t react to single values.</b> Hair levels swing; look at the <b>ratios and the pattern over time</b> (re-test to see direction), not one number.</li>
-      <li><b>Pair it with blood.</b> HTMA tells one half of the story; <b>RBC / serum minerals + copper + ceruloplasmin + zinc + the Walsh panel</b> tell the other. Read them as one.</li>
-      <li><b>Anchor to symptoms.</b> A &ldquo;high&rdquo; number with no matching picture is noise; a pattern that explains the behavior is signal.</li>
-    </ul>
-    <div class="card key">
-      <p style="margin:0"><b>This is the synthesis no single specialist seems able to do</b> &mdash; reading hair + blood + OAT <em>together</em> through the Walsh protocol. It&rsquo;s exactly what Minta does. (A real example: a child&rsquo;s <b>high copper</b> was caught and tracked on HTMA, and came down over a couple of months of ionic foot baths &mdash; visible only because someone was reading the trend, not a single value.)</p>
-    </div>
-    <div class="card">
-      <h3>Where to get a good hair test (HTMA)</h3>
-      <ul>
-        <li><b>Doctor&rsquo;s Data</b> &mdash; <a href="https://www.doctorsdata.com" target="_blank" rel="noopener">doctorsdata.com</a>. CLIA-certified, <b>washes the sample</b>, and widely trusted. A solid default choice.</li>
-        <li><b>Trace Elements Inc.</b> &mdash; <a href="https://www.traceelements.com" target="_blank" rel="noopener">traceelements.com</a>. The other major HTMA lab (Walsh-aligned). It does <b>not</b> wash the sample, which shifts the numbers &mdash; so results aren&rsquo;t directly comparable across labs. <b>Pick one lab and stay with it</b> so your trends mean something.</li>
-        <li>Most HTMA is <b>practitioner-ordered</b>; some direct-to-consumer portals carry Doctor&rsquo;s Data.</li>
-      </ul>
-      <p style="margin:0"><b>The point isn&rsquo;t to interpret it yourself.</b> Get a reputable hair test, and <b>Plan B&rsquo;s synthesis reads it for you</b> &mdash; alongside blood, OAT, and genetics &mdash; so you don&rsquo;t fall into the interpretation trap described just above.</p>
-    </div>
-  </div>
-</section>
-
-<section id="frat">
-  <div class="wrap">
-    <h2>Folate + the FRAT test</h2>
-    <p>This is the box <b>almost no one checks</b> &mdash; and for a regressed, speech-losing, or OCD-locked kid, it can be the answer.</p>
-    <div class="card key">
-      <h3>What FRAT is</h3>
-      <p style="margin:0"><b>FRAT = the Folate Receptor Antibody Test.</b> Some kids make <b>autoantibodies against the folate receptor</b> at the blood-brain barrier &mdash; so even when <b>blood folate looks perfectly normal, folate can&rsquo;t get into the brain</b> (cerebral folate deficiency). Standard folate testing <b>misses it entirely.</b> Run it for <b>every PANS / autism kid</b>, especially with regression, speech loss, or relentless OCD.</p>
-      <p style="margin:14px 0 0;font-size:15.5px"><b>Where to order:</b> the <b>FRAT (Folate Receptor Antibody Test) by ReligenDX</b> &mdash; info at <a href="https://www.fratnow.com" target="_blank" rel="noopener">fratnow.com</a>; order online (at-home draw or a partner lab) at <a href="https://frat.health" target="_blank" rel="noopener">frat.health</a>.</p>
-    </div>
-    <h3 style="margin-top:8px">If it&rsquo;s positive</h3>
-    <ul>
-      <li><b>Leucovorin (folinic acid)</b> bypasses the blocked receptor and gets folate into the brain &mdash; results can be dramatic.</li>
-      <li>A <b>dairy-free trial</b> can lower the antibodies (they cross-react with a milk protein) &mdash; a cheap first move.</li>
-    </ul>
-    <div class="card flag">
-      <h3>Safety &mdash; do not freelance this</h3>
-      <p style="margin:0"><b>Do NOT take leucovorin unless you&rsquo;re FRAT-positive and actually need it.</b> Given when it&rsquo;s not needed, or pushed too fast, it can cause <b>real flare-ups.</b> Low and slow, with your practitioner.</p>
-    </div>
-    <h3 style="margin-top:8px">The research</h3>
-    <ul>
-      <li>Frye&rsquo;s team found folate-receptor autoantibodies in <b>70 of 93</b> autistic children tested. <span class="src"><a href="https://drfryemdphd.com/folate/" target="_blank" rel="noopener">Frye, MD/PhD &mdash; Cerebral Folate Deficiency</a></span></li>
-      <li>A <b>randomized, double-blind, placebo-controlled trial</b>: folinic acid significantly improved <b>verbal communication</b> in autistic children with language impairment. <span class="src"><a href="https://www.nature.com/articles/mp2016168" target="_blank" rel="noopener">Frye et al., Molecular Psychiatry</a></span></li>
-      <li>Meta-analysis: children with ASD were <b>~19&times; more likely</b> to carry a folate-receptor autoantibody than typically-developing kids. <span class="src"><a href="https://www.mdpi.com/2075-4426/12/5/721" target="_blank" rel="noopener">Rossignol &amp; Frye, J. Pers. Med. 2021</a></span></li>
-    </ul>
-    <p style="margin:0;font-size:14.5px;color:var(--soft)">The FRAT is run through specialty labs (e.g., Religen). Cliff notes: <b>blood folate normal &ne; brain folate normal.</b> Test the antibodies; if positive, leucovorin (carefully) can change everything.</p>
-  </div>
-</section>
-
-<section id="framework">
-  <div class="wrap">
-    <h2>The methylation framework</h2>
-    <p>Methylation is a <b>cycle</b> &mdash; produce, transport, use, and clear methyl groups that run detox, neurotransmitters, and gene expression. Three teachers map it, and they agree more than they differ:</p>
-    <ul>
-      <li><b>Walsh</b> &mdash; the phenotype that&rsquo;s actually expressing (whole-blood histamine + copper/zinc): <b>over- vs under-methylation</b>, copper overload, pyrrole.</li>
-      <li><b>Yasko</b> &mdash; the staged, nucleotide-supported SNP protocol (RNA support, methyl donors low and slow).</li>
-      <li><b>Lynch</b> &mdash; the pathway-stage model that turns raw SNPs into a readable map.</li>
-    </ul>
-    <div class="card key">
-      <h3>Start cheap</h3>
-      <p style="margin:0"><b>23andMe Ancestry ($99)</b> &rarr; download your <b>raw data</b> &rarr; run it free through <b>Genetic Genie</b> &mdash; <a href="https://geneticgenie.org" target="_blank" rel="noopener">geneticgenie.org</a> &mdash; and you get every major methylation SNP (<b>MTHFR, COMT, CBS, MAO</b>), the same ones the $400 panels report. The expensive panels buy <b>curation, not more data.</b> (Lynch&rsquo;s StrateGene is a deeper $95 option if you want it &mdash; not the default.) Full walkthrough: <a href="/get-your-snps-from-23andme.html"><b>How to get your child&rsquo;s SNPs from 23andMe &rarr;</b></a></p>
-    </div>
-    <p style="margin:0"><b>Food first.</b> Before megadosing methyl donors (which can backfire in over-methylators), the gentlest lever is <b>methylation-supporting food</b> &mdash; leafy greens, legumes, the &ldquo;epinutrients&rdquo; (Kara Fitzgerald&rsquo;s work). Match the support to the phenotype; more is not better.</p>
-  </div>
-</section>
-
-<section id="drainage">
-  <div class="wrap">
-    <h2>Detox = the clearance engine</h2>
-    <p>This is the rule that explains the most heartbreaking moments in PANS treatment:</p>
-    <div class="card flag">
-      <p style="margin:0"><b>When a kill protocol (antibiotics, herbs) makes your child WORSE &mdash; behaviors flare, not fade &mdash; it usually isn&rsquo;t the wrong treatment.</b> The <b>clearance engine can&rsquo;t keep up with the die-off:</b> methylation and the drainage pathways are blocked, so the endotoxin and neurotoxin load overwhelms a body that can&rsquo;t take out the trash. The killing is working &mdash; the exits aren&rsquo;t open.</p>
-    </div>
-    <h3 style="margin-top:8px">What to do</h3>
-    <ul>
-      <li><b>Step back from the kill</b> and <b>open the exits first:</b> methylation support (matched to the phenotype), <b>gentle binders</b> (kid-appropriate / food-based for sensitive kids), lymph, hydration, bowel + liver.</li>
-      <li><b>Then resume, low and slow.</b> The same treatment is usually tolerable once the body can drain.</li>
-      <li>This is the same logic as Shoemaker&rsquo;s mold sequencing (drainage before/with the kill) &mdash; the exits come first.</li>
-    </ul>
-
-    <h3 style="margin-top:24px" id="constipation">Constipation &mdash; the exit that has to stay open</h3>
-    <p><b>Before anything else: get your child pooping &mdash; big, complete bowel movements, every single day.</b> It is the <b>first</b> thing to fix and the most important drainage pathway, and <b>most PANS kids are backed up.</b> A constipated child <b>reabsorbs the very toxins and die-off they&rsquo;re trying to clear</b> &mdash; so detox stalls, the load builds, and behaviors flare. Non-negotiable, before and during any kill protocol.</p>
-    <p><b>And look upstream &mdash; mold can shut the gut down.</b> Mycotoxins inhibit gut motility: in one mold-exposed household, <b>3 of 5 people couldn&rsquo;t go.</b> If a child suddenly stops pooping, suspect the <em>environment</em>, not just the diet.</p>
-    <div class="card key">
-      <p style="margin:0"><b>The hard rule: no kill herbs &mdash; or any antimicrobial &mdash; until your child is pooping daily.</b> If the bowels aren&rsquo;t moving, the die-off has nowhere to go, and you just poison a backed-up body (that&rsquo;s the flare). <b>Open this exit first. Then start the kill.</b></p>
-    </div>
-    <div class="card good">
-      <h3>The Plan B way &mdash; gentle, mineral-first, root-cause</h3>
-      <ul>
-        <li><b>Magnesium &mdash; first-line, daily.</b> Nancy O&rsquo;Hara favors <b>magnesium taurate (~1,500 mg/day)</b> &mdash; well-absorbed and <b>calming</b> (double duty for the nervous system), titrated up to <b>bowel tolerance</b> (the dose that gives a soft daily stool). Magnesium glycinate is a gentle alternative.</li>
-        <li><b>Magnesium citrate &mdash; emergencies only.</b> It&rsquo;s the stronger osmotic/laxative form &mdash; reserve it for an acute, stuck episode, <b>not</b> daily use.</li>
-        <li><b>Water + soluble fiber + food:</b> real hydration · ground <b>flax / chia</b> · <b>prunes, pears, kiwi</b> · cooked vegetables.</li>
-        <li><b>Vitamin C to bowel tolerance</b> · <b>daily movement</b> · abdominal massage · castor-oil packs · a squatty-potty.</li>
-        <li><b>Fix the root:</b> gut dysbiosis, low thyroid, magnesium deficiency, poor bile flow, and dysmotility all drive constipation &mdash; treat those, don&rsquo;t just push stool.</li>
-      </ul>
-    </div>
-    <div class="card flag">
-      <p style="margin:0"><b>What Plan B does NOT use:</b> <b>Miralax (PEG 3350)</b> &mdash; there are real parent-reported neuro/behavioral concerns in sensitive kids &mdash; <b>senna and other stimulant laxatives</b>, and <b>drugstore OTC laxatives.</b> Gentle, mineral-first, and root-cause &mdash; not a quick chemical fix off the CVS shelf.</p>
-    </div>
-  </div>
-</section>
-
-<section style="background:var(--cream-light)">
-  <div class="wrap">
-    <h2>Thiamine (B1) &mdash; the missed cofactor</h2>
-    <p>One of the most overlooked deficiencies in chronically-ill kids &mdash; with a definitive text: <b>Dr. Derrick Lonsdale &amp; Dr. Chandler Marrs, <em>&ldquo;Thiamine Deficiency Disease, Dysautonomia, and High Calorie Malnutrition.&rdquo;</em></b> The thesis: thiamine runs <b>mitochondrial energy metabolism</b>, and when it&rsquo;s low the autonomic nervous system misfires &mdash; <b>dysautonomia</b> (POTS-like heart-rate &amp; temperature swings), <b>GI dysmotility and constipation</b>, fatigue, anxiety, brain fog, sensory overload, irritability. The cruel twist they call <b>&ldquo;high-calorie malnutrition&rdquo;</b>: a kid can eat plenty &mdash; especially sugar and processed carbs &mdash; while starved of the B1 needed to actually <em>use</em> that fuel. Stress, infection, and a high-sugar diet burn through it fast. <span class="src">Lonsdale &amp; Marrs, <a href="https://www.sciencedirect.com/book/monograph/9780128103876/thiamine-deficiency-disease-dysautonomia-and-high-calorie-malnutrition" target="_blank" rel="noopener">Academic Press, 2017</a>.</span></p>
-    <div class="card key">
-      <h3>How to test it &mdash; and treat it right</h3>
-      <ul>
-        <li><b>Test:</b> serum B1 misses it. Ask for <b>RBC (whole-blood) thiamine</b> or <b>erythrocyte transketolase</b> &mdash; the functional measures. <span style="color:var(--soft)">(Order it the three ways: self-order via Walk-In Lab / Quest; print it for your doctor; or a telehealth doctor sends the requisition.)</span></li>
-        <li><b>Treat &mdash; the form matters:</b> plain thiamine HCl absorbs poorly. The forms that actually get in (and cross into the brain) are <b>benfotiamine</b> (fat-soluble) and especially <b>TTFD / allithiamine (lipothiamine)</b>. <b>Start LOW and go slow</b> &mdash; repletion can cause a temporary &ldquo;paradox&rdquo; reaction as metabolism switches back on &mdash; and pair it with <b>magnesium</b> (its required cofactor).</li>
-      </ul>
-    </div>
-    <div class="card good">
-      <p style="margin:0"><b>Who knows how to look for this:</b> <b>Dr. Erica Peirson, ND</b> (Portland, OR; telehealth) is one of the few online doctors who actually screens for and treats thiamine deficiency &mdash; <b>recommended by Chandler Marrs herself.</b> A naturopath focused on special-needs and complex kids. <span class="src">(A reference, not an outcome endorsement &mdash; verify current availability + insurance.)</span></p>
-    </div>
+    <p style="max-width:560px;margin:clamp(36px,6vw,48px) auto 0;text-align:center">The everyday read: <b>homocysteine, B12, folate (serum + RBC), whole-blood histamine, FRAT</b> for brain folate, and an <b>OAT (Organic Acids Test)</b> that covers the energy &amp; neurotransmitter end &mdash; anchored to <b>23andMe raw SNPs</b> (MTHFR, COMT, CBS, MTR/MTRR). The full tiered map lives one tap away.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>The full mineral &amp; methylation picture</h2>
-    <p>Pulled together, the workup that actually feeds a synthesis: <b>HTMA</b> (hair) + <b>RBC / serum minerals</b> + <b>copper / ceruloplasmin</b> + <b>zinc</b> + the <b>Walsh panel</b> + <b>folate / B12 + homocysteine + MMA</b> + <b>FRAT</b> + <b>23andMe raw data &rarr; Genetic Genie</b>. Hair and blood tell different halves; reading them as one is where the answer lives.</p>
-    <div class="card key" style="margin-top:6px">
-      <p style="margin:0;font-size:16.5px"><b>This is a lot to hold &mdash; and you don&rsquo;t have to.</b> Minta reads your child&rsquo;s <b>hair + blood + OAT + genetics together</b> through the Walsh protocol, flags what&rsquo;s actually off, and turns it into <b>specific, sequenced suggestions</b> to bring your practitioner &mdash; the cross-test synthesis no single specialist seems able to do. <a href="https://app.planbforpans.com"><b>Let Minta do this for you &rarr;</b></a></p>
-    </div>
-  </div>
-</section>
+    <a class="next" href="/testing-map.html">
+      <span class="k">Now</span>
+      <span class="t">What to test, in order &rarr;</span>
+    </a>
 
-<section>
-  <div class="wrap">
-    <h2>Bottom line</h2>
-    <p>Methylation and detox are the <b>engine no one owns</b> &mdash; and the reason a lot of PANS kids stall or flare. The honest evidence: the <b>FRAT/leucovorin</b> work is genuinely research-backed (Frye&rsquo;s RCT + meta-analysis); the broader methylation frameworks are <b>clinical and biochemical, not RCT-proven</b> &mdash; which doesn&rsquo;t mean they&rsquo;re wrong, it means the engine is under-studied. Test it, read it as a whole, support it gently, and <b>open the exits before you push the kill.</b> Parent education, not medical advice &mdash; bring it to your team as questions.</p>
-    <div class="card key" style="margin-top:18px">
-      <h3>How Plan B stays honest</h3>
-      <p style="margin:0">Plan B <b>does not partner with drug companies or doctors</b>, and we <b>never endorse anyone whose healing isn&rsquo;t verified by families.</b> We show you the options and <b>how to vet them yourself</b> &mdash; and we&rsquo;re building <b>parent verification</b>: look up a practitioner and see real family reviews before you trust them. <b>Universal bad reviews? Skip.</b></p>
+    <div class="crosslinks">
+      <ul>
+        <li><a href="/how-to-use-genetics.html"><b>How to actually use a genetic test</b></a> &mdash; a blueprint, not a diagnosis. How to read it right.</li>
+        <li><a href="/behavior-pathogen-map.html"><b>The Behavior &rarr; Pathogen Map</b></a> &mdash; the infections that keep the engine stuck in defense mode.</li>
+        <li><a href="https://app.planbforpans.com"><b>Let Minta read it for you</b></a> &mdash; hair + blood + OAT + genetics, together, as one engine.</li>
+      </ul>
     </div>
+
+    <p style="text-align:center;max-width:560px;margin:clamp(36px,6vw,48px) auto 0;font-size:14px">Parent education, not medical advice. No doses here &mdash; test first, food-first, low and slow, and bring this to your team as questions.</p>
+
     <a class="back" href="/learn">&larr; Back to the Field Guide</a>
-  </div>
-</section>
-
-<section id="run-the-workup" style="background:var(--cream-light)">
-  <div class="wrap">
-    <h2>Run the full methylation workup &rarr; upload to Minta</h2>
-    <p>Here&rsquo;s the whole picture in one place &mdash; <b>where to order each test.</b> You don&rsquo;t have to run them all at once; start where your child&rsquo;s story points (see <a href="#htma"><b>Choose your path</b></a> above).</p>
-    <p style="margin:0 0 6px"><b>The Complete Methylation Workup</b> &mdash; a clean packet to print and hand to your doctor. Grouped by sample type. You don&rsquo;t need every line at once; start where your child&rsquo;s story points.</p>
-    <div class="card key">
-      <h3>&#9312; &nbsp;Blood &mdash; core methylation markers</h3>
-      <ul>
-        <li><b>Homocysteine</b></li>
-        <li><b>Methylmalonic acid (MMA)</b></li>
-        <li><b>Vitamin B12 (serum)</b> + <b>active B12 (holotranscobalamin)</b></li>
-        <li><b>Folate &mdash; serum AND RBC folate</b> (both; they tell different things)</li>
-        <li><b>Vitamin B6 as plasma P5P</b> (the active form)</li>
-        <li><b>Vitamin B2 (riboflavin)</b></li>
-        <li><b>Whole-blood histamine</b> &mdash; the Walsh marker: <b>high = undermethylation, low = overmethylation</b></li>
-      </ul>
-      <h3 style="margin-top:18px">&#9312; &nbsp;Blood &mdash; minerals (the Walsh layer)</h3>
-      <ul>
-        <li><b>Copper + Ceruloplasmin</b> &mdash; together these give <b>free/unbound copper</b>, the number that matters in PANS</li>
-        <li><b>Zinc</b> (plasma or RBC)</li>
-        <li><b>Ferritin + iron panel</b></li>
-        <li><b>Vitamin D (25-OH)</b></li>
-      </ul>
-      <h3 style="margin-top:18px">&#9312; &nbsp;Blood &mdash; brain folate</h3>
-      <ul>
-        <li><b>FRAT</b> (Folate Receptor Antibody Test) &mdash; ReligenDX, <a href="https://www.fratnow.com" target="_blank" rel="noopener">fratnow.com</a>. Blood folate can look normal while folate can&rsquo;t reach the brain &mdash; this is the box almost no one checks.</li>
-      </ul>
-      <p style="margin:0;font-size:14.5px;color:var(--soft)"><b>(Advanced):</b> SAMe:SAH ratio &mdash; specialty labs only, for a deeper methylation read.</p>
-    </div>
-    <div class="card key">
-      <h3>&#9313; &nbsp;Urine</h3>
-      <ul>
-        <li><b>Pyrroles</b> (kryptopyrrole / HPL) &mdash; Walsh&rsquo;s pyrrole marker; ties to zinc + B6 depletion</li>
-        <li><b>Organic Acids Test (OAT)</b> &mdash; Mosaic Diagnostics, <a href="https://www.mosaicdx.com" target="_blank" rel="noopener">mosaicdx.com</a></li>
-      </ul>
-    </div>
-    <div class="card key">
-      <h3>&#9314; &nbsp;Hair</h3>
-      <ul>
-        <li><b>HTMA</b> (hair tissue mineral analysis) &mdash; Doctor&rsquo;s Data, <a href="https://www.doctorsdata.com" target="_blank" rel="noopener">doctorsdata.com</a>. The number to watch: the <b>Zn:Cu ratio</b>.</li>
-      </ul>
-    </div>
-    <div class="card key">
-      <h3>&#9315; &nbsp;Genetics (your SNPs)</h3>
-      <ul>
-        <li><b>23andMe Ancestry</b> &mdash; <a href="https://www.23andme.com" target="_blank" rel="noopener">23andme.com</a> &rarr; <b>download your RAW DATA</b> (the actual SNPs &mdash; not the ancestry or health reports) &rarr; run it through <b>Genetic Genie (FREE)</b> &mdash; <a href="https://geneticgenie.org" target="_blank" rel="noopener">geneticgenie.org</a> &mdash; for the methylation / detox SNPs (<b>MTHFR, COMT, MAO, CBS, MTR/MTRR, BHMT</b>).</li>
-        <li><b>You only need the cheap Ancestry test</b> &mdash; not a health upgrade. Step-by-step: <a href="/get-your-snps-from-23andme.html"><b>How to actually get your child&rsquo;s SNPs from 23andMe &rarr;</b></a></li>
-        <li><b>Plan B reads your raw SNPs for you</b> &mdash; free, more genes than StrateGene, cross-checked against your labs. You just need to download your raw data first (<a href="/get-your-snps-from-23andme.html"><b>here&rsquo;s how &rarr;</b></a>)</li>
-      </ul>
-    </div>
-    <div class="card good">
-      <p style="margin:0"><b>Then upload all of it to Minta.</b> It reads <b>hair + blood + OAT + genetics together</b> &mdash; including reading your <b>SNPs through the Walsh + Yasko methylation lens</b> &mdash; and tells you exactly where you stand and what to do next.</p>
-    </div>
-    <p style="font-size:14.5px;color:var(--soft)"><b>Honest note:</b> several of these are <b>practitioner-ordered</b> (some are direct-to-consumer). Minta helps you know exactly what to ask for.</p>
-    <p style="margin-top:22px"><a href="https://app.planbforpans.com" style="display:inline-block;background:var(--teal);color:var(--cream-light);text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.02em;padding:14px 28px;border-radius:10px">Upload to Minta &rarr;</a></p>
   </div>
 </section>
 

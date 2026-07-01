@@ -32,11 +32,10 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     ],
   },
   {
-    group: 'Check methylation first',
-    sub: 'Before you try anything else. If your child is undermethylating or detox is clogged, treatments can BACKFIRE — this is the engine no specialist owns, and the bottleneck Plan B was built around.',
+    group: 'Check the engine first',
+    sub: 'Before you try anything else. If your child is undermethylating, detox is clogged, or the mitochondria are drained, treatments can BACKFIRE — this is the engine no specialist owns, and the bottleneck Plan B was built around.',
     items: [
-      { title: 'Methylation & Detox', blurb: 'HTMA, folate/FRAT, and the detox (and daily poops) that decide whether anything else works — and why pushing treatments before you check this can make a sensitive kid worse.', href: '/methylation.html' },
-      { title: 'The Methylation Web', blurb: 'Methylation is one gear in a connected engine — folate, transsulfuration, glutathione, neurotransmitters, ammonia, and energy all wired to the same hub. Why a "normal" methylation panel can sit on top of a jammed cycle, and why you can’t read one marker alone.', href: '/methylation-web.html' },
+      { title: 'Methylation, Detox & Energy', blurb: 'The body’s cleanup-and-power engine — methylation (the maintenance crew), detox/glutathione (the drains), and the mitochondria (the batteries), all one connected system. Why genes only say the crew might be short-staffed and blood tells you if it actually is, Naviaux’s Cell Danger Response, and why pushing a kill before the engine is running can make a sensitive kid worse.', href: '/methylation.html' },
       { title: 'Read your raw SNPs — free', blurb: 'Drop your 23andMe file and get your methylation genetics read through three frameworks (Yasko · Lynch · Kara Fitzgerald) — tendencies, not prescriptions. Free.', href: 'https://app.planbforpans.com/genetics' },
     ],
   },
@@ -45,7 +44,6 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     sub: 'The daily foundation that runs alongside everything.',
     items: [
       { title: 'Diet & Nutrition', blurb: 'Food as a real PANS lever — the anti-inflammatory foundation, which specialty diet fits your kid’s pattern, and how to find triggers without over-restricting.', href: '/diet.html' },
-      { title: 'Mitochondrial Dysfunction', blurb: 'The energy layer — why your kid crashes after exertion or illness and doesn’t bounce back. Naviaux’s Cell Danger Response (energy mode flips to defense mode), the full testing menu (OAT, CoQ10, carnitine, lactate/pyruvate), and gentle, test-anchored support that never pushes through the crash.', href: '/mitochondria.html' },
     ],
   },
   {
