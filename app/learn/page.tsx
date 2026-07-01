@@ -76,6 +76,14 @@ const SECTIONS: Section[] = [
         ],
       },
       {
+        label: 'High anecdotal success, low research — run in the background',
+        items: [
+          { title: 'Biomagnetism', blurb: 'Low-risk, low-cost magnet therapy (the Joan Randall Protocol). Formal evidence is thin, but the risk is near-zero and families credit it with real turnarounds. Once you know what you\'re targeting, run it in the background — in parallel with the real work.', href: '/biomagnetism.html' },
+          { title: 'Homeopathy', blurb: 'Safe, gentle, contested in the studies — but with real recovery stories, including OCD and intrusive thoughts resolving. One PANS therapist\'s daughter, who had failed O\'Hara / IVIG / antibiotics, came back 100% on homeopathy. Once you know your targets, weave it in and let it run in the background. Start classical.', href: '/homeopathy.html' },
+          { title: 'Muscle Testing (self-testing)', blurb: 'How parents "ask the body" yes/no — the sway test, the O-ring, the arm test, step by step. Honest about the thin evidence (it\'s subjective), but low-risk and free. Use it only AFTER a thorough functional-medicine workup — then, once you know your targets, to help choose and sequence in the background. Never a substitute for labs.', href: '/muscle-testing.html' },
+        ],
+      },
+      {
         label: 'Environmental',
         items: [
           { title: 'Find Mold Yourself', blurb: 'The honest ERMI story + how to find and safely remediate mold without a predatory middleman.', href: '/find-mold.html' },
@@ -104,15 +112,8 @@ const SECTIONS: Section[] = [
   },
   {
     group: '6 · The deep menu',
-    sub: 'Most families never need past here. When the standard path is exhausted, this is what hasn’t been tried — and we lead with the gentlest, lowest-risk options first. Formal studies are often thin out here; thin studies don’t mean it doesn’t work — some families credit the safest of these with real turnarounds when nothing else moved. Caution is reserved for the few that carry genuine risk.',
+    sub: 'Most families never need past here. When the standard path is exhausted, this is what hasn’t been tried — grouped by what it targets. Caution is reserved for the few that carry genuine risk.',
     subgroups: [
-      {
-        label: 'High anecdotal success, low formal research',
-        items: [
-          { title: 'Biomagnetism', blurb: 'Low-risk, low-cost magnet therapy — the Joan Randall Protocol. The formal evidence is thin, but the risk is near-zero and families credit it with real turnarounds when little else moved the needle. When the downside is this small, it’s worth a look.', href: '/biomagnetism.html' },
-          { title: 'Homeopathy', blurb: 'Safe, gentle, and contested in the literature — but with real recovery stories behind it, including sudden shifts in OCD and intrusive thoughts. One PANS therapist told us her own child healed on homeopathy alone. Start classical: how to find a true-classical homeopath, and why it’s worth trying when the risk is essentially nil.', href: '/homeopathy.html' },
-        ],
-      },
       {
         label: 'Oxygen & energy',
         items: [
@@ -145,14 +146,12 @@ const SECTIONS: Section[] = [
         ],
       },
       {
-        label: 'The far edge — thin evidence, big caution',
+        label: '⚠ Real risks — expert supervision only',
         caution: true,
         items: [
           { title: 'Ozone Therapy', blurb: 'Oxidative therapy for chronic infection — the routes, the honest (thin) evidence, the gas-embolism rule, and why Plan B steers away from the IV forms in kids.', href: '/ozone.html' },
           { title: 'EBOO (Blood Ozonation)', blurb: 'The most intensive ozone form — "ozone dialysis" for refractory chronic Lyme/mold. Experimental, invasive, adult-studied; a deeper-menu option, never first-line, and extra caution in kids.', href: '/eboo.html' },
           { title: 'Bee Venom Therapy', blurb: 'Melittin kills Borrelia in the lab — but anaphylaxis is the headline: EpiPen on hand, test-sting first, never for young or allergic kids.', href: '/bee-venom.html' },
-          { title: 'Biomagnetism', blurb: 'Magnets + the honest evidence — the Joan Randall Protocol, what it seems to move, and why it still needs study.', href: '/biomagnetism.html' },
-          { title: 'Homeopathy', blurb: 'The 3 kinds — start classical. The training gap, the recovery stories, and how to find a true-classical homeopath.', href: '/homeopathy.html' },
         ],
       },
     ],
