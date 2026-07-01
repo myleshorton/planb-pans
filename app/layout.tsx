@@ -222,6 +222,9 @@ export default function RootLayout({
                 fontWeight: 500,
               }}
             >
+              <a href="/why-plan-b.html" style={{ color: 'var(--sand-dark)', textDecoration: 'none' }}>
+                Why Plan B
+              </a>
               <Link href="/tracker" style={{ color: 'var(--sand-dark)' }}>
                 Tracker
               </Link>
