@@ -262,6 +262,9 @@ export default function RootLayout({
             <p style={{ marginTop: 22, fontSize: 12, color: 'var(--sand-dark)' }}>
               © {new Date().getFullYear()} Plan B for PANS
             </p>
+            <p style={{ marginTop: 10, fontSize: 11.5, lineHeight: 1.6, color: 'var(--sand-dark)', maxWidth: 760 }}>
+              Plan B integrates and interprets published frameworks &mdash; including those of Walsh, Yasko, Shoemaker, O&rsquo;Hara, Crista, Nathan and others &mdash; for educational purposes. It is not affiliated with, endorsed by, or reviewed by any named practitioner; names are used only to attribute the ideas described. Nothing here is medical advice &mdash; always confirm with your own practitioner.
+            </p>
           </div>
         </footer>
       </body>
