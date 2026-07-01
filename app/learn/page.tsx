@@ -25,7 +25,6 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     sub: 'Understand it, then begin.',
     items: [
       { title: 'Start here: understand this first (plain English)', blurb: 'The simplest possible explanation for a scared parent with zero biology background. Four plain ideas — genes are the blueprint, methylation is the maintenance crew, mitochondria are the batteries, the infection is what lit the fire — and the one thing that matters most: the order to do things in (understand & find → support the engine → THEN the deep kill), so your child gets better instead of crashing.', href: '/start-here.html' },
-      { title: 'Understanding PANS', blurb: 'What PANS (and PANDAS) actually is, and the sudden-onset symptom cluster to watch for — in plain language for an exhausted parent.', href: '/understanding-pans.html' },
       { title: 'Where to Start — The Testing Map', blurb: 'Where do I even begin with testing? A tiered, scaffolded map: cast a wide net ONCE (Tier 1), then follow only the branches your results flag. Elevates the two tests almost every family misses — a comprehensive methylation panel and an organic-acids (mitochondrial) test — even two years in.', href: '/testing-map.html' },
       { title: 'How to actually use a genetic test', blurb: 'A genetic test like 23andMe is a blueprint — it shows what your kid might struggle with, but on its own it\'s just a spreadsheet of letters. The whole value is the read: a practitioner like Yasko interprets it — and Minta does it free, then overlays the bloodwork that shows what\'s really happening now. Plus the 3 simple steps to order both.', href: '/how-to-use-genetics.html' },
       { title: 'The Protocol', blurb: 'Where everyone starts — anti-inflammatory + a targeted antibiotic, the doses, how long, and what to do if your child slips.', href: '/deconstructing-pans.html#protocol' },
@@ -47,18 +46,9 @@ const SECTIONS: { group: string; sub: string; items: Item[] }[] = [
     ],
   },
   {
-    group: 'Is it PANS — or something else?',
-    sub: 'When the label is unclear. PANS overlaps with autism far more than most clinicians realize.',
-    items: [
-      { title: 'PANS and Autism', blurb: 'How PANS and autism overlap and feed each other, why autistic kids are at higher (not lower) risk, and how to tell a flare from a baseline.', href: '/pans-and-autism.html' },
-      { title: 'Is It Autism or PANS?', blurb: 'The sudden-onset clue that separates a PANS flare from autism — and why it\'s often both, not either-or.', href: '/is-it-autism-or-pans.html' },
-    ],
-  },
-  {
     group: '3 · Find the root drivers',
     sub: 'If the protocol isn’t enough, this is where the answers hide.',
     items: [
-      { title: 'The Behavior → Pathogen Map', blurb: 'Read a child\'s behavior backward to the biology underneath — which symptoms point to strep, Bartonella, mold, yeast, or a viral driver, and what to test for each. The master key to the drivers below.', href: '/behavior-pathogen-map.html' },
       { title: 'Why Treatment Isn’t Working', blurb: 'The missed drivers behind relapse — mold, Lyme, methylation — and what to investigate next.', href: '/pans-treatment-not-working.html' },
       { title: 'PANS, PANDAS & Strep', blurb: 'How strep triggers sudden OCD, tics, and behavior changes — the molecular-mimicry mechanism, what to test, and why a negative throat swab doesn\'t rule it out.', href: '/pans-and-strep.html' },
       { title: 'PANS and Lyme', blurb: 'The tick-borne connection — how Lyme and co-infections drive sudden OCD and rage, why standard tests miss them, and what to test and do next.', href: '/pans-and-lyme.html' },
