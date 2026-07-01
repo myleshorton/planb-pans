@@ -180,8 +180,8 @@ export default function Contact() {
             <div style={{ marginBottom: '48px' }}>
               <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '12px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#999', marginBottom: '16px' }}>Connect With Us</p>
               <div style={{ display: 'flex', gap: '16px' }}>
-                <a href="#" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #e0e0e0', paddingBottom: '4px' }}>Podcast</a>
-                <a href="#" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #e0e0e0', paddingBottom: '4px' }}>Resources</a>
+                <a href="/podcast" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #e0e0e0', paddingBottom: '4px' }}>Podcast</a>
+                <a href="/learn" style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '14px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #e0e0e0', paddingBottom: '4px' }}>Resources</a>
               </div>
             </div>
 

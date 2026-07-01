@@ -52,11 +52,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.priority,
   }))
 
+  // noindex redirect stubs — must never be emitted in the sitemap.
+  const EXCLUDED_HTML = new Set([
+    'methylation-web.html',
+    'mitochondria.html',
+  ])
+
   // Glob every Field Guide entry under public/*.html — never hardcode a stale list.
   const publicDir = path.join(process.cwd(), 'public')
   const htmlFiles = fs
     .readdirSync(publicDir)
-    .filter((f) => f.endsWith('.html'))
+    .filter((f) => f.endsWith('.html') && !EXCLUDED_HTML.has(f))
     .sort()
 
   const htmlEntries: MetadataRoute.Sitemap = htmlFiles.map((file) => ({

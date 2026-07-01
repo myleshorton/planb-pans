@@ -111,7 +111,7 @@ export default function WaitlistPage() {
               ['Join the waitlist', 'It&apos;s open — no application, no proof of hardship. Willing to have your Synthesis done in the open is reason enough.'],
               ['Each week, one family is chosen', 'The waitlist is public and transparent. No favourites, no fine print.'],
               ['You get the full Synthesis — free', 'Every lab read together, what&apos;s been missed, what hasn&apos;t been tried, the tests to order next, and a month-by-month calendar. The Synthesis is free for every family; this is the cohort whose work is published.'],
-              ['Your Synthesis goes public — your child stays anonymous', 'That&apos;s the trade, and it&apos;s the whole point. Your child&apos;s name is removed, but the synthesis and symptoms are published in our <a href="/sample-synthesis-2" style="color:var(--teal)">stories</a> as &ldquo;what Minta found&rdquo; — so we all learn together. Your hardest season makes the next family&apos;s read sharper.'],
+              ['Your Synthesis goes public — your child stays anonymous', 'That&apos;s the trade, and it&apos;s the whole point. Your child&apos;s name is removed, but the synthesis and symptoms are published in our <a href="/stories" style="color:var(--teal)">stories</a> as &ldquo;what Minta found&rdquo; — so we all learn together. Your hardest season makes the next family&apos;s read sharper.'],
             ].map(([title, body], i) => (
               <li key={i} style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                 <span className="serif" style={{ fontSize: 34, fontWeight: 300, color: 'var(--teal)', lineHeight: 1, minWidth: 34 }}>{i + 1}</span>
@@ -213,7 +213,7 @@ function WaitlistForm() {
         <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', fontWeight: 300, margin: 0 }}>
           One family is chosen each week. We&apos;ll email you — and either way, every published
           synthesis is yours to learn from at{' '}
-          <a href="/sample-synthesis-2" style={{ color: 'var(--teal)' }}>/stories</a>.
+          <a href="/stories" style={{ color: 'var(--teal)' }}>/stories</a>.
         </p>
       </div>
     )
