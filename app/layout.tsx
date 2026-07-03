@@ -81,6 +81,7 @@ export default function RootLayout({
               <NavLink href="/tracker">Tracker</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
               <NavLink href="/faq">FAQ</NavLink>
+              <NavLink href="/donate">Donate</NavLink>
               <a
                 href="https://app.planbforpans.com/sign-in"
                 rel="noopener"
@@ -196,6 +197,25 @@ export default function RootLayout({
             >
               Free for families · Donation-funded
             </p>
+            <Link
+              href="/donate"
+              style={{
+                display: 'inline-block',
+                marginTop: 24,
+                fontFamily: 'var(--font-inter)',
+                fontSize: 11,
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                color: 'var(--cream)',
+                background: 'var(--teal)',
+                padding: '13px 28px',
+                fontWeight: 600,
+                borderRadius: 4,
+                textDecoration: 'none',
+              }}
+            >
+              Donate → Keep Minta free
+            </Link>
             <p
               className="mono"
               style={{
