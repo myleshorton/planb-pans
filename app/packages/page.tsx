@@ -26,9 +26,9 @@ const BUY_CONCIERGE = 'https://app.planbforpans.com/buy?plan=concierge'
 const APP = 'https://app.planbforpans.com'
 
 const PACKS: { price: string; covers: string; note: string }[] = [
-  { price: '$20', covers: '~85 chats · about a month', note: 'For most families' },
-  { price: '$50', covers: '~240 chats · about 3 months', note: '≈ 10% more generous per dollar' },
-  { price: '$100', covers: '~500 chats · about 6 months', note: '≈ 15% more generous per dollar' },
+  { price: '$20', covers: 'A starter top-up', note: 'Try it and see how far it takes you' },
+  { price: '$50', covers: 'Goes further', note: 'A better rate per message' },
+  { price: '$100', covers: 'Goes furthest', note: 'The best rate per message' },
 ]
 
 type Tier = {
@@ -147,10 +147,17 @@ export default function PricingPage() {
       <section style={{ padding: 'clamp(20px, 4vw, 40px) 24px clamp(20px, 3vw, 32px)' }}>
         <div className="pb-container" style={{ maxWidth: 960, margin: '0 auto' }}>
           <p style={{ color: teal, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 700, margin: '0 0 8px' }}>Minta AI — pay only for what you use</p>
-          <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.7, margin: '0 0 22px', maxWidth: 720 }}>
+          <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.7, margin: '0 0 14px', maxWidth: 720 }}>
             Everyone gets a <strong style={{ color: ink }}>free taste</strong> of Minta. After that you cover your own
-            usage — no subscription, no markup. Minta runs on the most advanced AI there is and re-reads your child&rsquo;s
-            full record on every message, so every answer is real and specific. Top up a token pack whenever you need more.
+            usage — no subscription, no markup, not a cent of profit. Here&rsquo;s the honest part:{' '}
+            <strong style={{ color: ink }}>Minta runs on the most advanced AI in the world, and it is genuinely expensive.</strong>{' '}
+            Every single message re-reads your child&rsquo;s <em>entire</em> record — every lab, every note, the whole picture —
+            which is exactly why the answers are so good, and exactly why they cost real money to produce.
+          </p>
+          <p style={{ fontSize: 15.5, color: soft, lineHeight: 1.7, margin: '0 0 22px', maxWidth: 720 }}>
+            So be prepared: <strong style={{ color: ink }}>a top-up buys fewer messages than a normal chatbot would</strong> —
+            because this isn&rsquo;t small talk, it&rsquo;s a specialist reading your kid&rsquo;s full file each time. You&rsquo;re
+            paying only what that actually costs us to run, and every answer stays saved in your vault to keep.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 18 }}>
             {PACKS.map((p) => (
