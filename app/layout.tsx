@@ -1,11 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import './globals.css'
-import { CALENDLY_URL } from './_components/site-links'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://planbforpans.com'),
   title: 'Plan B for PANS & PANDAS — A path out of the fire',
   description: 'A path out of the fire — built from every modality, every family, every hard-won answer. A clinical synthesis engine for PANS, PANDAS, autism, and severe dysregulation.',
+  openGraph: {
+    siteName: 'Plan B for PANS',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
 }
 
 export default function RootLayout({
@@ -73,6 +81,7 @@ export default function RootLayout({
               <NavLink href="/tracker">Tracker</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
               <NavLink href="/faq">FAQ</NavLink>
+              <NavLink href="/donate">Donate</NavLink>
               <a
                 href="https://app.planbforpans.com/sign-in"
                 rel="noopener"
@@ -89,7 +98,8 @@ export default function RootLayout({
                 Sign In
               </a>
               <a
-                href={CALENDLY_URL}
+                href="https://app.planbforpans.com/signup"
+                rel="noopener"
                 style={{
                   fontFamily: 'var(--font-inter)',
                   fontSize: 11,
@@ -104,7 +114,7 @@ export default function RootLayout({
                   textDecoration: 'none',
                 }}
               >
-                Book a free 15-min consult
+                Get your free Synthesis
               </a>
               <a
                 href="https://app.planbforpans.com/signup"
@@ -187,6 +197,25 @@ export default function RootLayout({
             >
               Free for families · Donation-funded
             </p>
+            <Link
+              href="/donate"
+              style={{
+                display: 'inline-block',
+                marginTop: 24,
+                fontFamily: 'var(--font-inter)',
+                fontSize: 11,
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                color: 'var(--cream)',
+                background: 'var(--teal)',
+                padding: '13px 28px',
+                fontWeight: 600,
+                borderRadius: 4,
+                textDecoration: 'none',
+              }}
+            >
+              Donate → Keep Minta free
+            </Link>
             <p
               className="mono"
               style={{
@@ -213,6 +242,9 @@ export default function RootLayout({
                 fontWeight: 500,
               }}
             >
+              <a href="/why-plan-b.html" style={{ color: 'var(--sand-dark)', textDecoration: 'none' }}>
+                Why Plan B
+              </a>
               <Link href="/tracker" style={{ color: 'var(--sand-dark)' }}>
                 Tracker
               </Link>
@@ -228,6 +260,9 @@ export default function RootLayout({
               </Link>
               <Link href="/contact" style={{ color: 'var(--sand-dark)' }}>
                 Contact
+              </Link>
+              <Link href="/disclaimer" style={{ color: 'var(--sand-dark)' }}>
+                Disclaimer
               </Link>
               <Link href="/privacy" style={{ color: 'var(--sand-dark)' }}>
                 Privacy
@@ -246,6 +281,9 @@ export default function RootLayout({
             </nav>
             <p style={{ marginTop: 22, fontSize: 12, color: 'var(--sand-dark)' }}>
               © {new Date().getFullYear()} Plan B for PANS
+            </p>
+            <p style={{ marginTop: 10, fontSize: 11.5, lineHeight: 1.6, color: 'var(--sand-dark)', maxWidth: 760 }}>
+              Plan B integrates and interprets published frameworks &mdash; including those of Walsh, Yasko, Shoemaker, O&rsquo;Hara, Crista, Nathan and others &mdash; for educational purposes. It is not affiliated with, endorsed by, or reviewed by any named practitioner; names are used only to attribute the ideas described. Nothing here is medical advice &mdash; always confirm with your own practitioner.
             </p>
           </div>
         </footer>

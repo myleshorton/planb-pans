@@ -2,18 +2,19 @@
 
 import { CALENDLY_URL } from './site-links'
 
-// "Talk to Rachel first — free 15 min" intro-call CTA. The booking link lives in
-// site-links.ts — one swap when the scheduler is live.
+// "Start your free Synthesis" CTA. Plan B doesn't advertise a pre-sale consult —
+// the founder isn't a consultant — so this points families straight at the free
+// Synthesis signup. (CALENDLY_URL is re-exported for any remaining importers.)
 export { CALENDLY_URL }
 
-export function TalkToRachel({ variant = 'outline' }: { variant?: 'outline' | 'quiet' }) {
-  const isPlaceholder = CALENDLY_URL === '#'
+const SIGNUP_URL = 'https://app.planbforpans.com/signup'
 
+export function TalkToRachel({ variant = 'outline' }: { variant?: 'outline' | 'quiet' }) {
   if (variant === 'quiet') {
     return (
       <a
-        href={CALENDLY_URL}
-        {...(isPlaceholder ? { 'aria-disabled': true } : {})}
+        href={SIGNUP_URL}
+        rel="noopener"
         style={{
           color: 'var(--teal)',
           fontSize: 15,
@@ -22,15 +23,15 @@ export function TalkToRachel({ variant = 'outline' }: { variant?: 'outline' | 'q
           textUnderlineOffset: 4,
         }}
       >
-        Talk to Rachel first — free 15 min →
+        Start your free Synthesis →
       </a>
     )
   }
 
   return (
     <a
-      href={CALENDLY_URL}
-      {...(isPlaceholder ? { 'aria-disabled': true } : {})}
+      href={SIGNUP_URL}
+      rel="noopener"
       style={{
         display: 'inline-block',
         padding: '16px 30px',
@@ -43,7 +44,7 @@ export function TalkToRachel({ variant = 'outline' }: { variant?: 'outline' | 'q
         fontWeight: 500,
       }}
     >
-      Talk to Rachel first — free 15 min →
+      Start your free Synthesis →
     </a>
   )
 }

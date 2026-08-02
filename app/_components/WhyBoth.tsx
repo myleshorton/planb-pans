@@ -98,7 +98,7 @@ export default function WhyBoth() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 22 }}>
           <Col
             who="The Synthesis"
-            role="What you actually get · $397"
+            role="What you actually get · free"
             color="var(--teal)"
             lead="Every piece, in one place."
             points={[
@@ -165,7 +165,7 @@ export default function WhyBoth() {
               border: '1px solid var(--rule)', borderRadius: 6, textDecoration: 'none', fontSize: 15, fontWeight: 500,
             }}
           >
-            Or book a Synthesis — $397 →
+            Or get your free Synthesis →
           </a>
           <TalkToRachel />
         </div>
