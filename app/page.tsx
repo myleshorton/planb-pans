@@ -7,6 +7,7 @@ import MethodSection from './_components/MethodSection'
 import WhyBoth from './_components/WhyBoth'
 import RegularAIvsMinta from './_components/RegularAIvsMinta'
 import { FamilyStoriesTeaser } from './_components/FamilyStories'
+import Testimonials from './_components/Testimonials'
 
 export default function Home() {
   const revealRef = useRef<HTMLElement | null>(null)
@@ -587,6 +588,9 @@ export default function Home() {
 
       {/* Where they were → the new angle (Tommy + Daniel, anonymized) */}
       <FamilyStoriesTeaser />
+
+      {/* Unsolicited family testimonials (anonymized) */}
+      <Testimonials />
 
       {/* THESIS — stated plainly */}
       <section
