@@ -6,6 +6,7 @@ import EscalationPath from './_components/EscalationPath'
 import MethodSection from './_components/MethodSection'
 import WhyBoth from './_components/WhyBoth'
 import { FamilyStoriesTeaser } from './_components/FamilyStories'
+import Testimonials from './_components/Testimonials'
 import { CALENDLY_URL } from './_components/TalkToRachel'
 
 export default function Home() {
@@ -482,6 +483,9 @@ export default function Home() {
 
       {/* Where they were → the new angle (Tommy + Daniel, anonymized) */}
       <FamilyStoriesTeaser />
+
+      {/* Unsolicited family testimonials (anonymized) */}
+      <Testimonials />
 
       {/* THESIS — stated plainly */}
       <section
