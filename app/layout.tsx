@@ -69,7 +69,7 @@ export default function RootLayout({
               <NavLink href="/packages">Pricing</NavLink>
               <a href="https://app.planbforpans.com/sample-synthesis-2" rel="noopener" style={{ fontFamily: 'var(--font-inter)', fontSize: 13, color: 'var(--teal)', fontWeight: 700, textDecoration: 'none', whiteSpace: 'nowrap' }}>See a Synthesis →</a>
               <a href="/learn" style={{ fontFamily: 'var(--font-inter)', fontSize: 13, color: 'var(--teal)', fontWeight: 700, textDecoration: 'none', whiteSpace: 'nowrap' }}>Field Guide</a>
-              <NavLink href="/research">Daily Studies</NavLink>
+              <NavLink href="/research">Research</NavLink>
               <NavLink href="/tracker">Tracker</NavLink>
               <NavLink href="/podcast">Podcast</NavLink>
               <NavLink href="/faq">FAQ</NavLink>

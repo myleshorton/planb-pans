@@ -77,7 +77,7 @@ export default function ResearchPage() {
       {/* LATEST FINDINGS — what Minta is tracking (the daily research radar) */}
       <section style={{ padding: 'clamp(56px, 8vw, 96px) 24px', borderBottom: '1px solid var(--rule)' }}>
         <div className="pb-container" style={{ maxWidth: 920 }}>
-          <p className="eyebrow" style={{ marginBottom: 18 }}>New studies to watch · updated daily</p>
+          <p className="eyebrow" style={{ marginBottom: 18 }}>New studies to watch · updated monthly</p>
           <h2
             className="serif"
             style={{ fontSize: 'clamp(30px, 4.5vw, 52px)', fontWeight: 300, letterSpacing: '-0.02em', lineHeight: 1.05, color: 'var(--ink)', margin: '0 0 16px' }}
