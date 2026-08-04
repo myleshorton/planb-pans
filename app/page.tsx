@@ -445,6 +445,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* WHY PLAN B EXISTS — the mission, right after the hero */}
+      <section
+        style={{
+          padding: 'clamp(64px, 9vw, 100px) 24px',
+          background: 'var(--paper)',
+          borderTop: '1px solid var(--rule)',
+          borderBottom: '1px solid var(--rule)',
+        }}
+      >
+        <div className="pb-container" style={{ maxWidth: 820 }}>
+          <p className="eyebrow" style={{ marginBottom: 18 }}>
+            Why Plan B exists
+          </p>
+          <h2
+            className="serif"
+            style={{
+              fontSize: 'clamp(30px, 4.6vw, 48px)',
+              fontWeight: 300,
+              letterSpacing: '-0.02em',
+              lineHeight: 1.08,
+              margin: 0,
+              color: 'var(--ink)',
+            }}
+          >
+            Your child&rsquo;s doctor isn&rsquo;t ordering the right labs &mdash; and it&rsquo;s usually{' '}
+            <em style={{ color: 'var(--teal)' }}>not their fault</em>.
+          </h2>
+          <div
+            style={{
+              marginTop: 24,
+              fontSize: 17,
+              lineHeight: 1.8,
+              color: 'var(--ink-soft)',
+              fontWeight: 300,
+              maxWidth: 720,
+            }}
+          >
+            <p style={{ margin: '0 0 18px' }}>
+              PANS/PANDAS falls between specialties. Neurology, immunology, infectious disease, and
+              psychiatry each see a sliver; none owns the whole picture. It&rsquo;s barely taught,
+              it&rsquo;s not in the guidelines, and it doesn&rsquo;t fit a 15-minute visit.
+            </p>
+            <p style={{ margin: '0 0 18px' }}>
+              So the OCD, the rage, the tics, the regression get sent to behavioral health &mdash; and
+              the immune, infectious, and metabolic drivers underneath never get tested.{' '}
+              <strong style={{ color: 'var(--ink)', fontWeight: 500 }}>
+                Families spend years being dismissed.
+              </strong>
+            </p>
+            <p style={{ margin: '0 0 18px' }}>
+              Plan B holds the whole picture no single specialist has time to hold. We assemble the
+              workup that should have been done &mdash; every test coded and insurance-ready &mdash;
+              put an ordering clinician behind it so it actually happens, and read every result
+              ourselves. Then we connect you to someone who&rsquo;ll treat.
+            </p>
+            <p style={{ margin: 0, fontSize: 19, color: 'var(--ink)', fontWeight: 400 }}>
+              That&rsquo;s the gap. That&rsquo;s why we&rsquo;re here.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* HOW IT WORKS — your path to a roadmap (near the top, by design) */}
       <section
         style={{
